@@ -103,15 +103,19 @@ def main():
     else:
         print("Loading timm model %s..."%args.model)
         model = timm.create_model(args.model, pretrained=True).eval()
+
+    # Fix the bug due to new version of the torch
+    # By default, torch.load() now uses weights_only=True, for security
+
+    # if args.ckpt is not None:
+    #     print("Loading checkpoint from %s..."%args.ckpt)
+    #     ckpt = torch.load(args.ckpt, map_location='cpu')
+    #     model.load_state_dict(ckpt['model'])
+
     if args.ckpt is not None:
         print("Loading checkpoint from %s..."%args.ckpt)
-
-        # ckpt = torch.load(args.ckpt, map_location='cpu')
-        # Fix the bug due to new version of the torch
-        # By default, torch.load() now uses weights_only=True, for security
-        ckpt = torch.load(args.ckpt, map_location='cpu', weights_only=False)
-
-        model.load_state_dict(ckpt['model'])
+        model = torch.load(args.ckpt, map_location='cpu', weights_only=False)
+        
     model.to(device)
     print(model)
     input_size = [3, 224, 224]
