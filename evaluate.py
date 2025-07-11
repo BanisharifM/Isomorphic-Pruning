@@ -105,8 +105,7 @@ def main():
 
     if args.ckpt is not None:
         print("Loading checkpoint from %s..." % args.ckpt)
-        ckpt = torch.load(args.ckpt, map_location='cpu')
-        model.load_state_dict(ckpt)
+        model = torch.load(args.ckpt, map_location='cpu', weights_only=False)
 
     model.to(device)
     model.eval()
