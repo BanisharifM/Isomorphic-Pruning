@@ -6,7 +6,7 @@
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=32
-#SBATCH --mem=32G
+#SBATCH --mem=64G
 #SBATCH --time=01:00:00
 #SBATCH --output=logs/slurm/prune_deit_4.2G_%j.out
 #SBATCH --error=logs/slurm/prune_deit_4.2G_%j.err
@@ -29,5 +29,5 @@ $CONDA_PYTHON prune.py \
     --train-batch-size 64 \
     --val-batch-size 64 \
     --taylor-batchs 50 \
-    --save-as /work/hdd/bewo/mahdi/Isomorphic-Pruning/output/pruned/deit_4.2G.pth \
+    --save-as /work/hdd/bewo/mahdi/Isomorphic-Pruning/output/pruned/deit_4.2G_v2.pth \
     --val-resize 256
