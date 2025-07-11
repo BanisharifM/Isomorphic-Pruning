@@ -1,5 +1,7 @@
-timm
+timm==0.6.7
 fastcore
 tqdm
 wandb
 torch_pruning>=1.4.1
+tqdm
+huggingface_hub==0.15.1
