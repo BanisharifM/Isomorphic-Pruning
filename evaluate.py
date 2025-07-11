@@ -6,11 +6,12 @@ import torchvision.transforms as T
 from tqdm import tqdm
 from torchvision.transforms.functional import InterpolationMode
 import torch.nn as nn
+import torch.serialization
 import timm
 import torch_pruning as tp
 import pbench
 pbench.forward_patch.patch_timm_forward() # patch timm.forward() to support pruning on ViT
-
+torch.serialization.add_safe_globals([timm.models.deit.VisionTransformerDistilled])
 
 import argparse
 
@@ -112,11 +113,18 @@ def main():
     #     ckpt = torch.load(args.ckpt, map_location='cpu')
     #     model.load_state_dict(ckpt['model'])
 
-    if args.ckpt is not None:
-        print("Loading checkpoint from %s..."%args.ckpt)
-        model = torch.load(args.ckpt, map_location='cpu', weights_only=False)
+    # if args.ckpt is not None:
+    #     print("Loading checkpoint from %s..."%args.ckpt)
+    #     model = torch.load(args.ckpt, map_location='cpu', weights_only=False)
         
+    # model.to(device)
+
+    if args.ckpt is not None:
+        print("Loading checkpoint from %s..." % args.ckpt)
+        model = torch.load(args.ckpt, map_location='cpu', weights_only=False)
     model.to(device)
+    model.eval()
+
     print(model)
     input_size = [3, 224, 224]
     example_inputs = torch.randn(1, *input_size).to(device)

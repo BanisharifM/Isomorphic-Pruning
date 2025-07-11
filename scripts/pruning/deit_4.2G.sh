@@ -8,6 +8,5 @@ python prune.py --data-path data/imagenet \
     --train-batch-size 64 \
     --val-batch-size 64 \
     --taylor-batchs 50 \
-    s
     -save-as output/pruned/deit_4.2G.pth \
     --val-resize 256

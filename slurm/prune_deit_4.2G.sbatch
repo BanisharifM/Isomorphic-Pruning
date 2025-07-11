@@ -19,7 +19,7 @@ CONDA_PYTHON="/u/ssoma1/.conda/envs/iso_env/bin/python"
 
 # === Your customized pruning command ===
 $CONDA_PYTHON prune.py \
-    --data-path /work/hdd/bewo/ssoma1/imagenet_data \
+    --data-path /work/hdd/bewo/mahdi/imagenet \
     --model deit_base_distilled_patch16_224 \
     --pruning-type taylor \
     --pruning-ratio 0.5 \

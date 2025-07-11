@@ -19,7 +19,7 @@ CONDA_PYTHON="/u/ssoma1/.conda/envs/iso_env/bin/python"
 
 # === Run evaluation ===
 $CONDA_PYTHON evaluate.py \
-    --data-path /work/hdd/bewo/ssoma1/imagenet_data \
+    --data-path /work/hdd/bewo/mahdi/imagenet \
     --model deit_base_distilled_patch16_224.fb_in1k \
     --ckpt /work/hdd/bewo/mahdi/Isomorphic-Pruning/output/pruned/deit_4.2G.pth \
     --val-resize 256 \
