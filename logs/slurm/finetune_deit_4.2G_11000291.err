@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 381, in <module>
+    from torch.distributed.elastic.rendezvous.utils import _parse_rendezvous_config
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/elastic/rendezvous/__init__.py", line 142, in <module>
+    from .registry import _register_default_handlers, _register_out_of_tree_handlers
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/elastic/rendezvous/registry.py", line 19, in <module>
+    from importlib_metadata import entry_points
+ModuleNotFoundError: No module named 'importlib_metadata'

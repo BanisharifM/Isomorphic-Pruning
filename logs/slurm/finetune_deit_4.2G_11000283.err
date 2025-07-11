@@ -1,0 +1,134 @@
+W0711 06:59:45.952222 3086293 torch/distributed/run.py:766] 
+W0711 06:59:45.952222 3086293 torch/distributed/run.py:766] *****************************************
+W0711 06:59:45.952222 3086293 torch/distributed/run.py:766] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0711 06:59:45.952222 3086293 torch/distributed/run.py:766] *****************************************
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 12, in <module>
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 12, in <module>
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 12, in <module>
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 12, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 12, in <module>
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 12, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 12, in <module>
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 12, in <module>
+    import pbench
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/__init__.py", line 1, in <module>
+            import pbench    import pbench    import pbench        
+import pbench
+import pbench
+import pbenchimport pbench  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/__init__.py", line 1, in <module>
+
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/__init__.py", line 1, in <module>
+
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/__init__.py", line 1, in <module>
+
+
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/__init__.py", line 1, in <module>
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/__init__.py", line 1, in <module>
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/__init__.py", line 1, in <module>
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/__init__.py", line 1, in <module>
+                    from . import extension, forward_patch, isomorphic_pruner, utils, data        from . import extension, forward_patch, isomorphic_pruner, utils, datafrom . import extension, forward_patch, isomorphic_pruner, utils, data    from . import extension, forward_patch, isomorphic_pruner, utils, datafrom . import extension, forward_patch, isomorphic_pruner, utils, data
+from . import extension, forward_patch, isomorphic_pruner, utils, datafrom . import extension, forward_patch, isomorphic_pruner, utils, data
+
+from . import extension, forward_patch, isomorphic_pruner, utils, data
+
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/extension.py", line 2, in <module>
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/extension.py", line 2, in <module>
+
+
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/extension.py", line 2, in <module>
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/extension.py", line 2, in <module>
+
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/extension.py", line 2, in <module>
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/extension.py", line 2, in <module>
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/extension.py", line 2, in <module>
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/extension.py", line 2, in <module>
+                import timm            import timm    import timmimport timm
+import timmimport timmimport timm
+import timm
+
+ModuleNotFoundError
+
+
+ModuleNotFoundError
+ModuleNotFoundErrorModuleNotFoundError: ModuleNotFoundErrorModuleNotFoundErrorModuleNotFoundError: ModuleNotFoundError: : No module named 'timm': : : No module named 'timm': No module named 'timm'No module named 'timm'
+No module named 'timm'No module named 'timm'No module named 'timm'
+No module named 'timm'
+
+
+
+
+
+W0711 06:59:50.039012 3086293 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3086366 closing signal SIGTERM
+W0711 06:59:50.039619 3086293 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3086368 closing signal SIGTERM
+E0711 06:59:50.043007 3086293 torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 3086361) of binary: /sw/external/python/anaconda3/bin/python
+Traceback (most recent call last):
+  File "/u/ssoma1/.local/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-07-11_06:59:50
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 3086362)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-07-11_06:59:50
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 3086363)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-07-11_06:59:50
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 3086364)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[4]:
+  time      : 2025-07-11_06:59:50
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 4 (local_rank: 4)
+  exitcode  : 1 (pid: 3086365)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[5]:
+  time      : 2025-07-11_06:59:50
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 6 (local_rank: 6)
+  exitcode  : 1 (pid: 3086367)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-07-11_06:59:50
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3086361)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

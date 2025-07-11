@@ -5,3 +5,4 @@ wandb
 torch_pruning>=1.4.1
 tqdm
 huggingface_hub==0.15.1
+importlib_metadata
