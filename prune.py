@@ -287,10 +287,10 @@ def main():
         print("Accuracy: %.4f => %.4f"%(acc_ori, acc_pruned))
 
     if args.save_as is not None:
-        print("Saving the pruned model to %s..."%args.save_as)
+        print("Saving the pruned model (state_dict) to %s..." % args.save_as)
         os.makedirs(os.path.dirname(args.save_as), exist_ok=True)
         model.zero_grad()
-        torch.save(model, args.save_as)
+        torch.save(model.state_dict(), args.save_as)
 
 if __name__=='__main__':
     main()
