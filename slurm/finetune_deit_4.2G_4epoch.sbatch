@@ -27,7 +27,7 @@ $CONDA_PYTHON -m torch.distributed.run \
     train.py \
     --model "/work/hdd/bewo/mahdi/Isomorphic-Pruning/output/pruned/deit_4.2G_v2.pth" \
     --teacher-model regnety_160.deit_in1k \
-    --epochs 300 \
+    --epochs 4 \
     --batch-size 256 \
     --opt adamw \
     --lr 0.0005 \
@@ -44,6 +44,5 @@ $CONDA_PYTHON -m torch.distributed.run \
     --random-erase 0.25 \
     --cutmix-alpha 1.0 \
     --data-path "/work/hdd/bewo/mahdi/imagenet" \
-    --output-dir "/work/hdd/bewo/mahdi/Isomorphic-Pruning/output/finetuned/deit_4.2G_v2" \
-    --interpolation bicubic \
-    --resume "/work/hdd/bewo/mahdi/Isomorphic-Pruning/output/finetuned/deit_4.2G_v2/checkpoint.pth"
+    --output-dir "/work/hdd/bewo/mahdi/Isomorphic-Pruning/output/finetuned/deit_4.2G_v2_4Epochs" \
+    --interpolation bicubic

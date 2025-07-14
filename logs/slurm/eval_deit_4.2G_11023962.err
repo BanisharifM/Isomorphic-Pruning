@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/evaluate.py", line 123, in <module>
+    main()
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/evaluate.py", line 110, in main
+    model.to(device)
+AttributeError: 'dict' object has no attribute 'to'

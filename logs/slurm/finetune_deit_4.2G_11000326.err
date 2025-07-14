@@ -1,0 +1,226 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank1]:[W711 10:50:30.439297813 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank2]:[W711 10:50:30.439311999 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank3]:[W711 10:50:30.441859157 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank0]:[W711 10:50:30.442298770 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+wandb: Currently logged in as: saisoma239 (saisoma239-iowa-state-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.0
+wandb: Run data is saved locally in /u/ssoma1/mahdi/Isomorphic-Pruning/wandb/run-20250711_105031-w5rtqjsi
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run _work_hdd_bewo_mahdi_Isomorphic-Pruning_output_pruned_deit_4.2G_v2.pth
+wandb: ⭐️ View project at https://wandb.ai/saisoma239-iowa-state-university/Pruning
+wandb: 🚀 View run at https://wandb.ai/saisoma239-iowa-state-university/Pruning/runs/w5rtqjsi
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:370: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if args.amp else None
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:370: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if args.amp else None
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:370: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if args.amp else None
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:370: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if args.amp else None
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:49: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=scaler is not None):
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:49: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=scaler is not None):
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:49: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=scaler is not None):
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:49: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=scaler is not None):
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+Traceback (most recent call last):
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 641, in <module>
+[rank1]:     main(args)
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 459, in main
+[rank1]:     train_one_epoch(model, teacher_model, criterion, optimizer, data_loader, device, epoch, args, model_ema, scaler)
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 46, in train_one_epoch
+[rank1]:     for i, (image, target) in enumerate(metric_logger.log_every(data_loader, args.print_freq, header)):
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/utils.py", line 127, in log_every
+[rank1]:     for obj in iterable:
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+[rank1]:     data = self._next_data()
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1488, in _next_data
+[rank1]:     return self._process_data(data, worker_id)
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1550, in _process_data
+[rank1]:     data.reraise()
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/_utils.py", line 750, in reraise
+[rank1]:     raise exception
+[rank1]: PIL.UnidentifiedImageError: Caught UnidentifiedImageError in DataLoader worker process 1.
+[rank1]: Original Traceback (most recent call last):
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+[rank1]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank1]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+[rank1]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 245, in __getitem__
+[rank1]:     sample = self.loader(path)
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 284, in default_loader
+[rank1]:     return pil_loader(path)
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 263, in pil_loader
+[rank1]:     img = Image.open(f)
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/PIL/Image.py", line 3580, in open
+[rank1]:     raise UnidentifiedImageError(msg)
+[rank1]: PIL.UnidentifiedImageError: cannot identify image file <_io.BufferedReader name='/work/hdd/bewo/mahdi/imagenet/train/n03532672/n03532672_38829.JPEG'>
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 641, in <module>
+[rank3]:     main(args)
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 459, in main
+[rank3]:     train_one_epoch(model, teacher_model, criterion, optimizer, data_loader, device, epoch, args, model_ema, scaler)
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 46, in train_one_epoch
+[rank3]:     for i, (image, target) in enumerate(metric_logger.log_every(data_loader, args.print_freq, header)):
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/utils.py", line 127, in log_every
+[rank3]:     for obj in iterable:
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+[rank3]:     data = self._next_data()
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1488, in _next_data
+[rank3]:     return self._process_data(data, worker_id)
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1550, in _process_data
+[rank3]:     data.reraise()
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/_utils.py", line 750, in reraise
+[rank3]:     raise exception
+[rank3]: PIL.UnidentifiedImageError: Caught UnidentifiedImageError in DataLoader worker process 1.
+[rank3]: Original Traceback (most recent call last):
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+[rank3]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank3]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+[rank3]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 245, in __getitem__
+[rank3]:     sample = self.loader(path)
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 284, in default_loader
+[rank3]:     return pil_loader(path)
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 263, in pil_loader
+[rank3]:     img = Image.open(f)
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/PIL/Image.py", line 3580, in open
+[rank3]:     raise UnidentifiedImageError(msg)
+[rank3]: PIL.UnidentifiedImageError: cannot identify image file <_io.BufferedReader name='/work/hdd/bewo/mahdi/imagenet/train/n03532672/n03532672_38829.JPEG'>
+
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 641, in <module>
+    main(args)
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 459, in main
+    train_one_epoch(model, teacher_model, criterion, optimizer, data_loader, device, epoch, args, model_ema, scaler)
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 46, in train_one_epoch
+    for i, (image, target) in enumerate(metric_logger.log_every(data_loader, args.print_freq, header)):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/utils.py", line 127, in log_every
+    for obj in iterable:
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1488, in _next_data
+    return self._process_data(data, worker_id)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1550, in _process_data
+    data.reraise()
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/_utils.py", line 750, in reraise
+    raise exception
+PIL.UnidentifiedImageError: Caught UnidentifiedImageError in DataLoader worker process 1.
+Original Traceback (most recent call last):
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 245, in __getitem__
+    sample = self.loader(path)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 284, in default_loader
+    return pil_loader(path)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 263, in pil_loader
+    img = Image.open(f)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/PIL/Image.py", line 3580, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BufferedReader name='/work/hdd/bewo/mahdi/imagenet/train/n03532672/n03532672_38829.JPEG'>
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 641, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 459, in main
+[rank0]:     train_one_epoch(model, teacher_model, criterion, optimizer, data_loader, device, epoch, args, model_ema, scaler)
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 46, in train_one_epoch
+[rank0]:     for i, (image, target) in enumerate(metric_logger.log_every(data_loader, args.print_freq, header)):
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/pbench/utils.py", line 127, in log_every
+[rank0]:     for obj in iterable:
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1488, in _next_data
+[rank0]:     return self._process_data(data, worker_id)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1550, in _process_data
+[rank0]:     data.reraise()
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/_utils.py", line 750, in reraise
+[rank0]:     raise exception
+[rank0]: PIL.UnidentifiedImageError: Caught UnidentifiedImageError in DataLoader worker process 1.
+[rank0]: Original Traceback (most recent call last):
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 245, in __getitem__
+[rank0]:     sample = self.loader(path)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 284, in default_loader
+[rank0]:     return pil_loader(path)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 263, in pil_loader
+[rank0]:     img = Image.open(f)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/PIL/Image.py", line 3580, in open
+[rank0]:     raise UnidentifiedImageError(msg)
+[rank0]: PIL.UnidentifiedImageError: cannot identify image file <_io.BufferedReader name='/work/hdd/bewo/mahdi/imagenet/train/n03532672/n03532672_38829.JPEG'>
+
+W0711 14:12:34.960042 1375248 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1375314 closing signal SIGTERM
+W0711 14:12:34.961791 1375248 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1375315 closing signal SIGTERM
+W0711 14:12:34.962052 1375248 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1375316 closing signal SIGTERM
+E0711 14:12:37.392294 1375248 torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 1375313) of binary: /u/ssoma1/.conda/envs/iso_env/bin/python
+Traceback (most recent call last):
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 896, in <module>
+    main()
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-07-11_14:12:34
+  host      : gpua050.delta.ncsa.illinois.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1375313)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

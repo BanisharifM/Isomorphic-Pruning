@@ -1,0 +1,976 @@
+| distributed init (rank 0): env://
+| distributed init (rank 1): env://
+| distributed init (rank 2): env://
+| distributed init (rank 3): env://
+gpua050:1375313:1375313 [0] NCCL INFO Bootstrap: Using eth1:172.28.23.50<0>
+gpua050:1375313:1375313 [0] NCCL INFO cudaDriverVersion 12040
+gpua050:1375313:1375313 [0] NCCL INFO NCCL version 2.26.2+cuda12.2
+gpua050:1375313:1375313 [0] NCCL INFO Comm config Blocking set to 1
+gpua050:1375316:1375316 [3] NCCL INFO cudaDriverVersion 12040
+gpua050:1375316:1375316 [3] NCCL INFO Bootstrap: Using eth1:172.28.23.50<0>
+gpua050:1375316:1375316 [3] NCCL INFO NCCL version 2.26.2+cuda12.2
+gpua050:1375314:1375314 [1] NCCL INFO cudaDriverVersion 12040
+gpua050:1375314:1375314 [1] NCCL INFO Bootstrap: Using eth1:172.28.23.50<0>
+gpua050:1375314:1375314 [1] NCCL INFO NCCL version 2.26.2+cuda12.2
+gpua050:1375315:1375315 [2] NCCL INFO cudaDriverVersion 12040
+gpua050:1375316:1375316 [3] NCCL INFO Comm config Blocking set to 1
+gpua050:1375314:1375314 [1] NCCL INFO Comm config Blocking set to 1
+gpua050:1375315:1375315 [2] NCCL INFO Bootstrap: Using eth1:172.28.23.50<0>
+gpua050:1375315:1375315 [2] NCCL INFO NCCL version 2.26.2+cuda12.2
+gpua050:1375315:1375315 [2] NCCL INFO Comm config Blocking set to 1
+gpua050:1375313:1375358 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal net plugin.
+gpua050:1375315:1375361 [2] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal net plugin.
+gpua050:1375316:1375359 [3] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal net plugin.
+gpua050:1375314:1375360 [1] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal net plugin.
+gpua050:1375313:1375358 [0] NCCL INFO NET/IB : No device found.
+gpua050:1375315:1375361 [2] NCCL INFO NET/IB : No device found.
+gpua050:1375316:1375359 [3] NCCL INFO NET/IB : No device found.
+gpua050:1375314:1375360 [1] NCCL INFO NET/IB : No device found.
+gpua050:1375313:1375358 [0] NCCL INFO NET/IB : Using [RO]; OOB eth1:172.28.23.50<0>
+gpua050:1375315:1375361 [2] NCCL INFO NET/IB : Using [RO]; OOB eth1:172.28.23.50<0>
+gpua050:1375314:1375360 [1] NCCL INFO NET/IB : Using [RO]; OOB eth1:172.28.23.50<0>
+gpua050:1375316:1375359 [3] NCCL INFO NET/IB : Using [RO]; OOB eth1:172.28.23.50<0>
+gpua050:1375316:1375359 [3] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.50<0> [1]hsn0:172.28.86.50<0> [2]hsn0.561:141.142.254.50<0>
+gpua050:1375313:1375358 [0] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.50<0> [1]hsn0:172.28.86.50<0> [2]hsn0.561:141.142.254.50<0>
+gpua050:1375314:1375360 [1] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.50<0> [1]hsn0:172.28.86.50<0> [2]hsn0.561:141.142.254.50<0>
+gpua050:1375315:1375361 [2] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.50<0> [1]hsn0:172.28.86.50<0> [2]hsn0.561:141.142.254.50<0>
+gpua050:1375316:1375359 [3] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpua050:1375316:1375359 [3] NCCL INFO Using network Socket
+gpua050:1375313:1375358 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpua050:1375313:1375358 [0] NCCL INFO Using network Socket
+gpua050:1375314:1375360 [1] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpua050:1375315:1375361 [2] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpua050:1375314:1375360 [1] NCCL INFO Using network Socket
+gpua050:1375315:1375361 [2] NCCL INFO Using network Socket
+gpua050:1375316:1375359 [3] NCCL INFO ncclCommInitRankConfig comm 0xbd6cfe0 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c7000 commId 0x5d89044df4f5aa5f - Init START
+gpua050:1375313:1375358 [0] NCCL INFO ncclCommInitRankConfig comm 0xbc58580 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 7000 commId 0x5d89044df4f5aa5f - Init START
+gpua050:1375315:1375361 [2] NCCL INFO ncclCommInitRankConfig comm 0xc14f000 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 85000 commId 0x5d89044df4f5aa5f - Init START
+gpua050:1375314:1375360 [1] NCCL INFO ncclCommInitRankConfig comm 0xaa13ea0 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 46000 commId 0x5d89044df4f5aa5f - Init START
+gpua050:1375316:1375359 [3] NCCL INFO RAS client listening socket at ::1<28028>
+gpua050:1375313:1375358 [0] NCCL INFO RAS client listening socket at ::1<28028>
+gpua050:1375315:1375361 [2] NCCL INFO RAS client listening socket at ::1<28028>
+gpua050:1375314:1375360 [1] NCCL INFO RAS client listening socket at ::1<28028>
+gpua050:1375314:1375360 [1] NCCL INFO Bootstrap timings total 0.001006 (create 0.000025, send 0.000118, recv 0.000445, ring 0.000069, delay 0.000000)
+gpua050:1375313:1375358 [0] NCCL INFO Bootstrap timings total 0.001064 (create 0.000024, send 0.000103, recv 0.000433, ring 0.000164, delay 0.000000)
+gpua050:1375316:1375359 [3] NCCL INFO Bootstrap timings total 0.001118 (create 0.000024, send 0.000108, recv 0.000211, ring 0.000299, delay 0.000000)
+gpua050:1375315:1375361 [2] NCCL INFO Bootstrap timings total 0.001039 (create 0.000026, send 0.000123, recv 0.000242, ring 0.000075, delay 0.000000)
+gpua050:1375313:1375358 [0] NCCL INFO Setting affinity for GPU 0 to ffff0000,00000000
+gpua050:1375313:1375358 [0] NCCL INFO NVLS multicast support is not available on dev 0
+gpua050:1375314:1375360 [1] NCCL INFO Setting affinity for GPU 1 to ffff,00000000
+gpua050:1375314:1375360 [1] NCCL INFO NVLS multicast support is not available on dev 1
+gpua050:1375315:1375361 [2] NCCL INFO Setting affinity for GPU 2 to ffff0000
+gpua050:1375315:1375361 [2] NCCL INFO NVLS multicast support is not available on dev 2
+gpua050:1375316:1375359 [3] NCCL INFO Setting affinity for GPU 3 to ffff
+gpua050:1375316:1375359 [3] NCCL INFO NVLS multicast support is not available on dev 3
+gpua050:1375314:1375360 [1] NCCL INFO comm 0xaa13ea0 rank 1 nRanks 4 nNodes 1 localRanks 4 localRank 1 MNNVL 0
+gpua050:1375313:1375358 [0] NCCL INFO comm 0xbc58580 rank 0 nRanks 4 nNodes 1 localRanks 4 localRank 0 MNNVL 0
+gpua050:1375315:1375361 [2] NCCL INFO comm 0xc14f000 rank 2 nRanks 4 nNodes 1 localRanks 4 localRank 2 MNNVL 0
+gpua050:1375316:1375359 [3] NCCL INFO comm 0xbd6cfe0 rank 3 nRanks 4 nNodes 1 localRanks 4 localRank 3 MNNVL 0
+gpua050:1375314:1375360 [1] NCCL INFO Trees [0] 3/-1/-1->1->0 [1] 3/-1/-1->1->0 [2] 3/-1/-1->1->0 [3] 3/-1/-1->1->0 [4] 2/-1/-1->1->3 [5] 2/-1/-1->1->3 [6] 2/-1/-1->1->3 [7] 2/-1/-1->1->3 [8] 0/-1/-1->1->-1 [9] 0/-1/-1->1->-1 [10] 0/-1/-1->1->-1 [11] 0/-1/-1->1->-1 [12] 3/-1/-1->1->0 [13] 3/-1/-1->1->0 [14] 3/-1/-1->1->0 [15] 3/-1/-1->1->0 [16] 2/-1/-1->1->3 [17] 2/-1/-1->1->3 [18] 2/-1/-1->1->3 [19] 2/-1/-1->1->3 [20] 0/-1/-1->1->-1 [21] 0/-1/-1->1->-1 [22] 0/-1/-1->1->-1 [23] 0/-1/-1->1->-1
+gpua050:1375313:1375358 [0] NCCL INFO Channel 00/24 : 0 1 3 2
+gpua050:1375314:1375360 [1] NCCL INFO P2P Chunksize set to 524288
+gpua050:1375313:1375358 [0] NCCL INFO Channel 01/24 : 0 1 2 3
+gpua050:1375313:1375358 [0] NCCL INFO Channel 02/24 : 0 3 2 1
+gpua050:1375315:1375361 [2] NCCL INFO Trees [0] -1/-1/-1->2->3 [1] -1/-1/-1->2->3 [2] -1/-1/-1->2->3 [3] -1/-1/-1->2->3 [4] -1/-1/-1->2->1 [5] -1/-1/-1->2->1 [6] -1/-1/-1->2->1 [7] -1/-1/-1->2->1 [8] 3/-1/-1->2->0 [9] 3/-1/-1->2->0 [10] 3/-1/-1->2->0 [11] 3/-1/-1->2->0 [12] -1/-1/-1->2->3 [13] -1/-1/-1->2->3 [14] -1/-1/-1->2->3 [15] -1/-1/-1->2->3 [16] -1/-1/-1->2->1 [17] -1/-1/-1->2->1 [18] -1/-1/-1->2->1 [19] -1/-1/-1->2->1 [20] 3/-1/-1->2->0 [21] 3/-1/-1->2->0 [22] 3/-1/-1->2->0 [23] 3/-1/-1->2->0
+gpua050:1375313:1375358 [0] NCCL INFO Channel 03/24 : 0 3 1 2
+gpua050:1375315:1375361 [2] NCCL INFO P2P Chunksize set to 524288
+gpua050:1375313:1375358 [0] NCCL INFO Channel 04/24 : 0 2 1 3
+gpua050:1375316:1375359 [3] NCCL INFO Trees [0] 2/-1/-1->3->1 [1] 2/-1/-1->3->1 [2] 2/-1/-1->3->1 [3] 2/-1/-1->3->1 [4] 1/-1/-1->3->0 [5] 1/-1/-1->3->0 [6] 1/-1/-1->3->0 [7] 1/-1/-1->3->0 [8] -1/-1/-1->3->2 [9] -1/-1/-1->3->2 [10] -1/-1/-1->3->2 [11] -1/-1/-1->3->2 [12] 2/-1/-1->3->1 [13] 2/-1/-1->3->1 [14] 2/-1/-1->3->1 [15] 2/-1/-1->3->1 [16] 1/-1/-1->3->0 [17] 1/-1/-1->3->0 [18] 1/-1/-1->3->0 [19] 1/-1/-1->3->0 [20] -1/-1/-1->3->2 [21] -1/-1/-1->3->2 [22] -1/-1/-1->3->2 [23] -1/-1/-1->3->2
+gpua050:1375313:1375358 [0] NCCL INFO Channel 05/24 : 0 2 3 1
+gpua050:1375316:1375359 [3] NCCL INFO P2P Chunksize set to 524288
+gpua050:1375313:1375358 [0] NCCL INFO Channel 06/24 : 0 1 3 2
+gpua050:1375313:1375358 [0] NCCL INFO Channel 07/24 : 0 1 2 3
+gpua050:1375313:1375358 [0] NCCL INFO Channel 08/24 : 0 3 2 1
+gpua050:1375313:1375358 [0] NCCL INFO Channel 09/24 : 0 3 1 2
+gpua050:1375313:1375358 [0] NCCL INFO Channel 10/24 : 0 2 1 3
+gpua050:1375313:1375358 [0] NCCL INFO Channel 11/24 : 0 2 3 1
+gpua050:1375313:1375358 [0] NCCL INFO Channel 12/24 : 0 1 3 2
+gpua050:1375313:1375358 [0] NCCL INFO Channel 13/24 : 0 1 2 3
+gpua050:1375313:1375358 [0] NCCL INFO Channel 14/24 : 0 3 2 1
+gpua050:1375313:1375358 [0] NCCL INFO Channel 15/24 : 0 3 1 2
+gpua050:1375313:1375358 [0] NCCL INFO Channel 16/24 : 0 2 1 3
+gpua050:1375313:1375358 [0] NCCL INFO Channel 17/24 : 0 2 3 1
+gpua050:1375313:1375358 [0] NCCL INFO Channel 18/24 : 0 1 3 2
+gpua050:1375313:1375358 [0] NCCL INFO Channel 19/24 : 0 1 2 3
+gpua050:1375313:1375358 [0] NCCL INFO Channel 20/24 : 0 3 2 1
+gpua050:1375313:1375358 [0] NCCL INFO Channel 21/24 : 0 3 1 2
+gpua050:1375313:1375358 [0] NCCL INFO Channel 22/24 : 0 2 1 3
+gpua050:1375313:1375358 [0] NCCL INFO Channel 23/24 : 0 2 3 1
+gpua050:1375313:1375358 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] 1/-1/-1->0->-1 [3] 1/-1/-1->0->-1 [4] 3/-1/-1->0->-1 [5] 3/-1/-1->0->-1 [6] 3/-1/-1->0->-1 [7] 3/-1/-1->0->-1 [8] 2/-1/-1->0->1 [9] 2/-1/-1->0->1 [10] 2/-1/-1->0->1 [11] 2/-1/-1->0->1 [12] 1/-1/-1->0->-1 [13] 1/-1/-1->0->-1 [14] 1/-1/-1->0->-1 [15] 1/-1/-1->0->-1 [16] 3/-1/-1->0->-1 [17] 3/-1/-1->0->-1 [18] 3/-1/-1->0->-1 [19] 3/-1/-1->0->-1 [20] 2/-1/-1->0->1 [21] 2/-1/-1->0->1 [22] 2/-1/-1->0->1 [23] 2/-1/-1->0->1
+gpua050:1375313:1375358 [0] NCCL INFO P2P Chunksize set to 524288
+gpua050:1375313:1375358 [0] NCCL INFO Check P2P Type intraNodeP2pSupport 1 directMode 0
+gpua050:1375314:1375366 [1] NCCL INFO [Proxy Service] Device 1 CPU core 32
+gpua050:1375315:1375367 [2] NCCL INFO [Proxy Service] Device 2 CPU core 26
+gpua050:1375314:1375370 [1] NCCL INFO [Proxy Service UDS] Device 1 CPU core 43
+gpua050:1375316:1375368 [3] NCCL INFO [Proxy Service] Device 3 CPU core 10
+gpua050:1375313:1375369 [0] NCCL INFO [Proxy Service] Device 0 CPU core 61
+gpua050:1375315:1375371 [2] NCCL INFO [Proxy Service UDS] Device 2 CPU core 18
+gpua050:1375313:1375373 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 50
+gpua050:1375316:1375372 [3] NCCL INFO [Proxy Service UDS] Device 3 CPU core 1
+gpua050:1375315:1375361 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+gpua050:1375315:1375361 [2] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+gpua050:1375316:1375359 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+gpua050:1375316:1375359 [3] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+gpua050:1375313:1375358 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+gpua050:1375313:1375358 [0] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+gpua050:1375313:1375358 [0] NCCL INFO CC Off, workFifoBytes 1048576
+gpua050:1375314:1375360 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+gpua050:1375314:1375360 [1] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+gpua050:1375314:1375360 [1] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpua050:1375313:1375358 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpua050:1375316:1375359 [3] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpua050:1375315:1375361 [2] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpua050:1375314:1375360 [1] NCCL INFO ncclCommInitRankConfig comm 0xaa13ea0 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 46000 commId 0x5d89044df4f5aa5f - Init COMPLETE
+gpua050:1375313:1375358 [0] NCCL INFO ncclCommInitRankConfig comm 0xbc58580 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 7000 commId 0x5d89044df4f5aa5f - Init COMPLETE
+gpua050:1375316:1375359 [3] NCCL INFO ncclCommInitRankConfig comm 0xbd6cfe0 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c7000 commId 0x5d89044df4f5aa5f - Init COMPLETE
+gpua050:1375315:1375361 [2] NCCL INFO ncclCommInitRankConfig comm 0xc14f000 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 85000 commId 0x5d89044df4f5aa5f - Init COMPLETE
+gpua050:1375314:1375360 [1] NCCL INFO Init timings - ncclCommInitRankConfig: rank 1 nranks 4 total 0.43 (kernels 0.15, alloc 0.08, bootstrap 0.00, allgathers 0.00, topo 0.15, graphs 0.00, connections 0.02, rest 0.01)
+gpua050:1375313:1375358 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 4 total 0.44 (kernels 0.17, alloc 0.08, bootstrap 0.00, allgathers 0.00, topo 0.15, graphs 0.00, connections 0.02, rest 0.01)
+gpua050:1375316:1375359 [3] NCCL INFO Init timings - ncclCommInitRankConfig: rank 3 nranks 4 total 0.43 (kernels 0.16, alloc 0.08, bootstrap 0.00, allgathers 0.00, topo 0.15, graphs 0.00, connections 0.02, rest 0.01)
+gpua050:1375315:1375361 [2] NCCL INFO Init timings - ncclCommInitRankConfig: rank 2 nranks 4 total 0.43 (kernels 0.15, alloc 0.08, bootstrap 0.00, allgathers 0.00, topo 0.15, graphs 0.00, connections 0.02, rest 0.02)
+gpua050:1375314:1375377 [1] NCCL INFO Channel 01/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 01/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 01/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 03/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 05/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 04/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 07/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 06/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 07/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 07/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 09/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 07/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 11/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 10/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 13/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 12/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 13/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 13/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 15/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 13/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 17/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 16/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 19/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 18/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 19/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 19/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 21/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 19/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 23/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 22/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 00/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 00/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 04/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 04/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 03/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 03/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 05/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 06/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 06/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 05/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 10/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 10/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 09/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 09/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 11/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 12/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 12/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 11/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 16/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 16/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 15/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 15/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 17/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 18/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 18/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 17/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 22/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 22/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 21/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 21/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 23/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 23/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 02/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 02/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 02/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 00/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 04/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 03/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 05/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 02/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 08/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 08/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 08/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 06/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 10/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 09/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 11/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 08/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 14/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 14/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 14/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 12/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 16/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 15/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 17/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 14/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 20/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 20/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 20/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 18/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua050:1375315:1375374 [2] NCCL INFO Channel 22/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua050:1375313:1375376 [0] NCCL INFO Channel 21/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua050:1375314:1375377 [1] NCCL INFO Channel 23/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Channel 20/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua050:1375316:1375375 [3] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+gpua050:1375315:1375374 [2] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+gpua050:1375314:1375377 [1] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+gpua050:1375313:1375376 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+Namespace(model='/work/hdd/bewo/mahdi/Isomorphic-Pruning/output/pruned/deit_4.2G_v2.pth', teacher_model='regnety_160.deit_in1k', data_path='/work/hdd/bewo/mahdi/imagenet', device='cuda', batch_size=256, epochs=300, workers=8, opt='adamw', lr=0.0005, momentum=0.9, weight_decay=0.05, norm_weight_decay=None, bias_weight_decay=None, transformer_embedding_decay=None, label_smoothing=0.1, mixup_alpha=0.8, cutmix_alpha=1.0, lr_scheduler='cosineannealinglr', lr_warmup_epochs=0, lr_warmup_method='linear', lr_warmup_decay=0.033, lr_step_size=30, lr_gamma=0.1, lr_min=0.0, print_freq=50, output_dir='/work/hdd/bewo/mahdi/Isomorphic-Pruning/output/finetuned/deit_4.2G_v2', resume='', start_epoch=0, cache_dataset=False, sync_bn=False, test_only=False, auto_augment='ra', ra_magnitude=9, augmix_severity=3, random_erase=0.25, color_jitter=None, amp=True, world_size=4, dist_url='env://', model_ema=False, model_ema_steps=32, model_ema_decay=0.99998, use_deterministic_algorithms=False, interpolation='bicubic', val_resize_size=256, val_crop_size=224, train_crop_size=224, clip_grad_norm=None, ra_sampler=True, ra_reps=3, weights=None, backend='pil', use_v2=False, is_huggingface=False, checkpoint_interval=10, no_imagenet_mean_std=False, stochastic_depth=0.0, rank=0, gpu=0, distributed=True, dist_backend='nccl')
+Loading data
+Loading training data
+Took 3.3704440593719482
+Loading validation data
+Creating data loaders
+Creating model
+Loading pruned model from /work/hdd/bewo/mahdi/Isomorphic-Pruning/output/pruned/deit_4.2G_v2.pth
+macs: 4.15 G, params: 20.67 M
+DistributedDataParallel(
+  (module): VisionTransformerDistilled(
+    (patch_embed): PatchEmbed(
+      (proj): Conv2d(3, 384, kernel_size=(16, 16), stride=(16, 16))
+      (norm): Identity()
+    )
+    (pos_drop): Dropout(p=0.0, inplace=False)
+    (patch_drop): Identity()
+    (norm_pre): Identity()
+    (blocks): Sequential(
+      (0): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=540, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=180, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=956, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=956, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (1): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=510, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=170, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=928, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=928, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (2): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=432, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=144, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1416, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1416, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (3): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=600, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=200, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1908, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1908, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (4): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=690, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=230, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1858, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1858, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (5): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=900, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=300, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1740, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1740, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (6): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1176, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=392, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1750, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1750, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (7): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1176, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=392, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1672, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1672, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (8): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=900, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=300, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1558, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1558, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (9): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1176, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=392, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1598, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1598, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (10): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1134, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=378, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1590, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1590, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (11): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1452, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1452, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+    )
+    (norm): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+    (fc_norm): Identity()
+    (head_drop): Dropout(p=0.0, inplace=False)
+    (head): Linear(in_features=384, out_features=1000, bias=True)
+    (head_dist): Linear(in_features=384, out_features=1000, bias=True)
+  )
+)
+Start training
+Epoch: [0]  [   0/1251]  eta: 5:44:42  lr: 0.0005  img/s: 87.63092600743279  loss_kd: 6.916598796844482  loss_ce: 6.839046955108643  loss: 6.8778 (6.8778)  acc1: 0.0000 (0.0000)  acc5: 0.3906 (0.3906)  time: 16.5326  data: 13.6105  max mem: 15363
+Epoch: [0]  [  50/1251]  eta: 0:29:06  lr: 0.0005  img/s: 884.4434977360545  loss_kd: 4.921870231628418  loss_ce: 5.379775047302246  loss: 5.7504 (6.1441)  acc1: 7.0312 (4.1131)  acc5: 17.5781 (12.0021)  time: 1.3393  data: 1.0629  max mem: 15363
+Epoch: [0]  [ 100/1251]  eta: 0:23:58  lr: 0.0005  img/s: 980.9928719304625  loss_kd: 5.069450855255127  loss_ce: 5.878154754638672  loss: 5.2269 (5.6495)  acc1: 16.4062 (9.5374)  acc5: 33.5938 (22.0722)  time: 0.9337  data: 0.6468  max mem: 15363
+Epoch: [0]  [ 150/1251]  eta: 0:21:32  lr: 0.0005  img/s: 981.6879621054132  loss_kd: 4.508816719055176  loss_ce: 5.173096656799316  loss: 4.8733 (5.3342)  acc1: 20.7031 (13.4779)  acc5: 38.6719 (28.6476)  time: 0.9659  data: 0.6798  max mem: 15363
+Epoch: [0]  [ 200/1251]  eta: 0:20:00  lr: 0.0005  img/s: 792.7734131121107  loss_kd: 3.4608349800109863  loss_ce: 3.955308437347412  loss: 4.7119 (5.1484)  acc1: 23.0469 (16.2974)  acc5: 44.9219 (32.8883)  time: 0.9732  data: 0.6845  max mem: 15363
+Epoch: [0]  [ 250/1251]  eta: 0:18:36  lr: 0.0005  img/s: 973.9958799320398  loss_kd: 3.6026830673217773  loss_ce: 4.785639762878418  loss: 4.4442 (4.9945)  acc1: 26.5625 (18.4574)  acc5: 47.2656 (36.1056)  time: 1.1113  data: 0.8324  max mem: 15363
+Epoch: [0]  [ 300/1251]  eta: 0:17:09  lr: 0.0005  img/s: 980.5467396743875  loss_kd: 4.11847448348999  loss_ce: 5.144274711608887  loss: 4.3081 (4.8764)  acc1: 31.6406 (20.3709)  acc5: 54.6875 (38.7160)  time: 0.9500  data: 0.6594  max mem: 15363
+Epoch: [0]  [ 350/1251]  eta: 0:15:58  lr: 0.0005  img/s: 981.696039906305  loss_kd: 3.972275733947754  loss_ce: 5.292335510253906  loss: 4.0748 (4.7723)  acc1: 35.1562 (22.1744)  acc5: 58.9844 (41.1035)  time: 0.9070  data: 0.6295  max mem: 15363
+Epoch: [0]  [ 400/1251]  eta: 0:14:59  lr: 0.0005  img/s: 801.134858790279  loss_kd: 4.137925148010254  loss_ce: 5.0640764236450195  loss: 4.4482 (4.7029)  acc1: 25.7812 (23.2057)  acc5: 44.1406 (42.4369)  time: 0.9585  data: 0.6754  max mem: 15363
+Epoch: [0]  [ 450/1251]  eta: 0:13:58  lr: 0.0005  img/s: 982.8138520372204  loss_kd: 3.257845163345337  loss_ce: 3.958660364151001  loss: 4.0988 (4.6239)  acc1: 33.5938 (24.5288)  acc5: 57.4219 (44.0809)  time: 1.0342  data: 0.7539  max mem: 15363
+Epoch: [0]  [ 500/1251]  eta: 0:13:01  lr: 0.0005  img/s: 756.7200237923748  loss_kd: 3.6994614601135254  loss_ce: 4.985641956329346  loss: 3.9592 (4.5508)  acc1: 39.0625 (25.7657)  acc5: 62.1094 (45.6587)  time: 0.9603  data: 0.6781  max mem: 15363
+Epoch: [0]  [ 550/1251]  eta: 0:12:02  lr: 0.0005  img/s: 980.7984230376803  loss_kd: 2.945760488510132  loss_ce: 3.5698890686035156  loss: 3.8280 (4.4872)  acc1: 40.6250 (26.8241)  acc5: 64.8438 (47.0125)  time: 0.9384  data: 0.6616  max mem: 15363
+Epoch: [0]  [ 600/1251]  eta: 0:11:07  lr: 0.0005  img/s: 870.6243033938998  loss_kd: 3.6096808910369873  loss_ce: 4.803750038146973  loss: 4.0860 (4.4447)  acc1: 31.2500 (27.5251)  acc5: 57.4219 (47.9026)  time: 0.9356  data: 0.6535  max mem: 15363
+Epoch: [0]  [ 650/1251]  eta: 0:10:13  lr: 0.0005  img/s: 980.2907105621136  loss_kd: 3.249603748321533  loss_ce: 4.275968551635742  loss: 4.1094 (4.4070)  acc1: 33.5938 (28.1790)  acc5: 55.8594 (48.6925)  time: 0.9753  data: 0.7058  max mem: 15363
+Epoch: [0]  [ 700/1251]  eta: 0:09:19  lr: 0.0005  img/s: 980.9543344579564  loss_kd: 3.6179537773132324  loss_ce: 4.880613327026367  loss: 3.8666 (4.3607)  acc1: 37.1094 (28.9519)  acc5: 58.9844 (49.6339)  time: 1.0153  data: 0.7393  max mem: 15363
+Epoch: [0]  [ 750/1251]  eta: 0:08:26  lr: 0.0005  img/s: 980.1886942646087  loss_kd: 3.357476234436035  loss_ce: 4.713393211364746  loss: 3.5035 (4.3125)  acc1: 47.2656 (29.7759)  acc5: 67.9688 (50.6060)  time: 0.9369  data: 0.6594  max mem: 15363
+Epoch: [0]  [ 800/1251]  eta: 0:07:35  lr: 0.0005  img/s: 884.9851181252926  loss_kd: 3.6065587997436523  loss_ce: 5.143097400665283  loss: 3.6920 (4.2757)  acc1: 39.8438 (30.4073)  acc5: 64.4531 (51.3406)  time: 0.9170  data: 0.6415  max mem: 15363
+Epoch: [0]  [ 850/1251]  eta: 0:06:44  lr: 0.0005  img/s: 980.4697378393432  loss_kd: 2.6422524452209473  loss_ce: 3.1872787475585938  loss: 3.9091 (4.2438)  acc1: 32.4219 (30.8231)  acc5: 56.2500 (51.8971)  time: 0.9704  data: 0.6922  max mem: 15363
+Epoch: [0]  [ 900/1251]  eta: 0:05:53  lr: 0.0005  img/s: 779.4519469206423  loss_kd: 3.502283811569214  loss_ce: 4.65532112121582  loss: 3.9890 (4.2188)  acc1: 33.9844 (31.2322)  acc5: 55.8594 (52.3637)  time: 1.0721  data: 0.7855  max mem: 15363
+Epoch: [0]  [ 950/1251]  eta: 0:05:02  lr: 0.0005  img/s: 980.6380831130781  loss_kd: 2.885078191757202  loss_ce: 3.9922783374786377  loss: 3.6956 (4.1919)  acc1: 42.5781 (31.6932)  acc5: 64.4531 (52.9139)  time: 1.0035  data: 0.7252  max mem: 15363
+Epoch: [0]  [1000/1251]  eta: 0:04:11  lr: 0.0005  img/s: 841.7615893520561  loss_kd: 2.510416269302368  loss_ce: 2.9393458366394043  loss: 3.5827 (4.1629)  acc1: 44.5312 (32.1639)  acc5: 69.1406 (53.4739)  time: 0.8089  data: 0.5218  max mem: 15363
+Epoch: [0]  [1050/1251]  eta: 0:03:20  lr: 0.0005  img/s: 980.88264489083  loss_kd: 2.599721908569336  loss_ce: 2.882180690765381  loss: 3.8467 (4.1407)  acc1: 38.6719 (32.5382)  acc5: 60.5469 (53.9263)  time: 0.8705  data: 0.5995  max mem: 15363
+Epoch: [0]  [1100/1251]  eta: 0:02:30  lr: 0.0005  img/s: 981.620652267321  loss_kd: 3.0408053398132324  loss_ce: 4.16248083114624  loss: 3.6978 (4.1130)  acc1: 43.3594 (33.0073)  acc5: 66.7969 (54.4941)  time: 1.0122  data: 0.7336  max mem: 15363
+Epoch: [0]  [1150/1251]  eta: 0:01:40  lr: 0.0005  img/s: 981.2833446960489  loss_kd: 2.7742271423339844  loss_ce: 3.556471109390259  loss: 3.6799 (4.0874)  acc1: 45.3125 (33.4424)  acc5: 66.7969 (54.9760)  time: 0.9611  data: 0.6780  max mem: 15363
+Epoch: [0]  [1200/1251]  eta: 0:00:50  lr: 0.0005  img/s: 853.0453446210265  loss_kd: 2.6718029975891113  loss_ce: 3.2635858058929443  loss: 3.4388 (4.0609)  acc1: 46.8750 (33.8940)  acc5: 69.9219 (55.4996)  time: 0.9821  data: 0.7043  max mem: 15363
+Epoch: [0]  [1250/1251]  eta: 0:00:00  lr: 0.0005  img/s: 983.5817984454939  loss_kd: 3.344748020172119  loss_ce: 4.454571723937988  loss: 3.5340 (4.0357)  acc1: 42.9688 (34.3609)  acc5: 67.9688 (56.0296)  time: 0.9675  data: 0.6956  max mem: 15363
+Epoch: [0] Total time: 0:20:44
+Test:   [ 0/49]  eta: 0:08:57  loss: 1.8025 (1.8025)  acc1: 81.6406 (81.6406)  acc5: 93.7500 (93.7500)  time: 10.9794  data: 10.6836  max mem: 15363
+Test:  Total time: 0:01:05
+Test:  Acc@1 64.556 Acc@5 86.486
+Epoch: [1]  [   0/1251]  eta: 2:09:18  lr: 0.000499986292341378  img/s: 477.44415428266774  loss_kd: 3.2700538635253906  loss_ce: 4.641659736633301  loss: 3.9559 (3.9559)  acc1: 35.5469 (35.5469)  acc5: 61.3281 (61.3281)  time: 6.2017  data: 5.6648  max mem: 15363
+Epoch: [1]  [  50/1251]  eta: 0:17:43  lr: 0.000499986292341378  img/s: 979.6020655049722  loss_kd: 3.5535941123962402  loss_ce: 5.116239547729492  loss: 3.6907 (3.6649)  acc1: 39.4531 (39.0548)  acc5: 62.8906 (62.3315)  time: 0.8925  data: 0.6170  max mem: 15363
+Epoch: [1]  [ 100/1251]  eta: 0:15:19  lr: 0.000499986292341378  img/s: 981.2474745536261  loss_kd: 3.3827221393585205  loss_ce: 4.519311904907227  loss: 3.4468 (3.5965)  acc1: 42.5781 (40.8261)  acc5: 70.7031 (64.1244)  time: 0.6696  data: 0.3994  max mem: 15363
+Epoch: [1]  [ 150/1251]  eta: 0:14:17  lr: 0.000499986292341378  img/s: 981.2474745536261  loss_kd: 3.266903877258301  loss_ce: 4.395462512969971  loss: 3.6832 (3.5891)  acc1: 42.5781 (40.9794)  acc5: 66.0156 (64.0832)  time: 0.6876  data: 0.4114  max mem: 15363
+Epoch: [1]  [ 200/1251]  eta: 0:14:02  lr: 0.000499986292341378  img/s: 722.9898198218216  loss_kd: 3.022653102874756  loss_ce: 4.158280849456787  loss: 3.6562 (3.5812)  acc1: 41.0156 (41.4607)  acc5: 63.6719 (64.3773)  time: 0.8728  data: 0.5936  max mem: 15363
+Epoch: [1]  [ 250/1251]  eta: 0:13:29  lr: 0.000499986292341378  img/s: 733.8261930960012  loss_kd: 3.1472830772399902  loss_ce: 4.8147711753845215  loss: 3.5508 (3.5629)  acc1: 44.5312 (42.0412)  acc5: 69.5312 (64.9698)  time: 0.9966  data: 0.7075  max mem: 15363
+Epoch: [1]  [ 300/1251]  eta: 0:12:39  lr: 0.000499986292341378  img/s: 922.9216582890385  loss_kd: 2.8534538745880127  loss_ce: 3.767810583114624  loss: 3.7586 (3.5520)  acc1: 35.9375 (42.2576)  acc5: 58.5938 (65.0138)  time: 0.6788  data: 0.3950  max mem: 15363
+Epoch: [1]  [ 350/1251]  eta: 0:11:49  lr: 0.000499986292341378  img/s: 979.1259464196318  loss_kd: 3.0122575759887695  loss_ce: 4.379504203796387  loss: 3.5887 (3.5377)  acc1: 45.3125 (42.7417)  acc5: 70.7031 (65.5204)  time: 0.6706  data: 0.3827  max mem: 15363
+Epoch: [1]  [ 400/1251]  eta: 0:11:04  lr: 0.000499986292341378  img/s: 919.0524328219982  loss_kd: 2.3905680179595947  loss_ce: 3.0926513671875  loss: 3.5463 (3.5339)  acc1: 47.2656 (42.7632)  acc5: 69.9219 (65.5412)  time: 0.6571  data: 0.3787  max mem: 15363
+Epoch: [1]  [ 450/1251]  eta: 0:10:22  lr: 0.000499986292341378  img/s: 773.147491382805  loss_kd: 2.8698999881744385  loss_ce: 3.9352312088012695  loss: 3.4416 (3.5183)  acc1: 46.8750 (43.0484)  acc5: 68.7500 (65.7567)  time: 0.8217  data: 0.5396  max mem: 15363
+Epoch: [1]  [ 500/1251]  eta: 0:09:38  lr: 0.000499986292341378  img/s: 979.269715961739  loss_kd: 2.690058469772339  loss_ce: 3.4829721450805664  loss: 3.6859 (3.5135)  acc1: 34.7656 (43.0639)  acc5: 60.9375 (65.8137)  time: 0.7320  data: 0.4578  max mem: 15363
+Epoch: [1]  [ 550/1251]  eta: 0:08:57  lr: 0.000499986292341378  img/s: 978.7073799883693  loss_kd: 2.894387722015381  loss_ce: 3.938908576965332  loss: 3.5051 (3.5104)  acc1: 45.3125 (43.2679)  acc5: 71.0938 (66.0603)  time: 0.6504  data: 0.3773  max mem: 15363
+Epoch: [1]  [ 600/1251]  eta: 0:08:16  lr: 0.000499986292341378  img/s: 981.4187781231748  loss_kd: 2.902646780014038  loss_ce: 4.101367950439453  loss: 3.5258 (3.5089)  acc1: 39.8438 (43.2788)  acc5: 62.8906 (66.0637)  time: 0.6942  data: 0.4206  max mem: 15363
+Epoch: [1]  [ 650/1251]  eta: 0:07:38  lr: 0.000499986292341378  img/s: 839.358513368474  loss_kd: 3.370360851287842  loss_ce: 4.616571426391602  loss: 3.5875 (3.5067)  acc1: 42.1875 (43.2652)  acc5: 67.9688 (66.0756)  time: 0.8370  data: 0.5644  max mem: 15363
+Epoch: [1]  [ 700/1251]  eta: 0:07:01  lr: 0.000499986292341378  img/s: 978.5423722326065  loss_kd: 3.3224785327911377  loss_ce: 4.419247627258301  loss: 3.3932 (3.4953)  acc1: 42.1875 (43.4848)  acc5: 67.9688 (66.2759)  time: 0.8665  data: 0.5957  max mem: 15363
+Epoch: [1]  [ 750/1251]  eta: 0:06:21  lr: 0.000499986292341378  img/s: 980.6085289618485  loss_kd: 3.196744918823242  loss_ce: 4.93543815612793  loss: 3.3402 (3.4902)  acc1: 51.5625 (43.6834)  acc5: 74.2188 (66.4463)  time: 0.6600  data: 0.3907  max mem: 15363
+Epoch: [1]  [ 800/1251]  eta: 0:05:42  lr: 0.000499986292341378  img/s: 857.6959367868288  loss_kd: 2.57415771484375  loss_ce: 3.6366913318634033  loss: 3.3293 (3.4826)  acc1: 44.1406 (43.7997)  acc5: 66.4062 (66.5730)  time: 0.6902  data: 0.4132  max mem: 15363
+Epoch: [1]  [ 850/1251]  eta: 0:05:04  lr: 0.000499986292341378  img/s: 813.2165251400371  loss_kd: 2.5273144245147705  loss_ce: 3.3830385208129883  loss: 3.5876 (3.4798)  acc1: 43.3594 (43.9364)  acc5: 67.1875 (66.6918)  time: 0.8316  data: 0.5583  max mem: 15363
+Epoch: [1]  [ 900/1251]  eta: 0:04:25  lr: 0.000499986292341378  img/s: 973.6258274182375  loss_kd: 3.039329767227173  loss_ce: 3.9582595825195312  loss: 3.4988 (3.4706)  acc1: 42.9688 (44.0526)  acc5: 70.3125 (66.8645)  time: 0.7771  data: 0.5120  max mem: 15363
+Epoch: [1]  [ 950/1251]  eta: 0:03:46  lr: 0.000499986292341378  img/s: 978.789458619338  loss_kd: 2.714097023010254  loss_ce: 3.868989944458008  loss: 3.5839 (3.4679)  acc1: 44.1406 (44.1427)  acc5: 66.4062 (66.9086)  time: 0.6208  data: 0.3519  max mem: 15363
+Epoch: [1]  [1000/1251]  eta: 0:03:08  lr: 0.000499986292341378  img/s: 982.6096884451541  loss_kd: 3.1499438285827637  loss_ce: 4.417490005493164  loss: 3.3297 (3.4579)  acc1: 51.9531 (44.3830)  acc5: 74.6094 (67.1208)  time: 0.6604  data: 0.3959  max mem: 15363
+Epoch: [1]  [1050/1251]  eta: 0:02:30  lr: 0.000499986292341378  img/s: 907.6415965484421  loss_kd: 2.9741220474243164  loss_ce: 4.264795303344727  loss: 3.1799 (3.4526)  acc1: 48.4375 (44.4562)  acc5: 73.0469 (67.1856)  time: 0.8322  data: 0.5589  max mem: 15363
+Epoch: [1]  [1100/1251]  eta: 0:01:53  lr: 0.000499986292341378  img/s: 980.6846569061732  loss_kd: 2.3462846279144287  loss_ce: 2.7529520988464355  loss: 3.2436 (3.4512)  acc1: 48.0469 (44.4255)  acc5: 71.4844 (67.1786)  time: 0.7631  data: 0.4876  max mem: 15363
+Epoch: [1]  [1150/1251]  eta: 0:01:15  lr: 0.000499986292341378  img/s: 980.3623136270257  loss_kd: 3.019810199737549  loss_ce: 4.2801361083984375  loss: 3.6370 (3.4508)  acc1: 38.6719 (44.3683)  acc5: 62.1094 (67.1230)  time: 0.6500  data: 0.3796  max mem: 15363
+Epoch: [1]  [1200/1251]  eta: 0:00:38  lr: 0.000499986292341378  img/s: 980.3023453484243  loss_kd: 2.9598939418792725  loss_ce: 4.462746620178223  loss: 3.5426 (3.4515)  acc1: 44.9219 (44.3387)  acc5: 67.1875 (67.0886)  time: 0.7281  data: 0.4539  max mem: 15363
+Epoch: [1]  [1250/1251]  eta: 0:00:00  lr: 0.000499986292341378  img/s: 794.9562365393173  loss_kd: 2.248237371444702  loss_ce: 2.6561079025268555  loss: 3.5358 (3.4482)  acc1: 43.7500 (44.3754)  acc5: 65.6250 (67.1457)  time: 0.8496  data: 0.5737  max mem: 15363
+Epoch: [1] Total time: 0:15:36
+Test:   [ 0/49]  eta: 0:01:56  loss: 1.7339 (1.7339)  acc1: 78.1250 (78.1250)  acc5: 94.1406 (94.1406)  time: 2.3825  data: 2.1869  max mem: 15363
+Test:  Total time: 0:00:13
+Test:  Acc@1 68.216 Acc@5 88.734
+Epoch: [2]  [   0/1251]  eta: 1:43:56  lr: 0.0004999451708687113  img/s: 896.7270145924381  loss_kd: 3.152315139770508  loss_ce: 4.50447940826416  loss: 3.8284 (3.8284)  acc1: 25.0000 (25.0000)  acc5: 46.8750 (46.8750)  time: 4.9855  data: 4.6991  max mem: 15363
+Epoch: [2]  [  50/1251]  eta: 0:13:45  lr: 0.0004999451708687113  img/s: 980.3811111648797  loss_kd: 2.32220721244812  loss_ce: 2.6130948066711426  loss: 3.3489 (3.2756)  acc1: 51.5625 (46.7295)  acc5: 71.0938 (69.4317)  time: 0.7026  data: 0.4210  max mem: 15363
+Epoch: [2]  [ 100/1251]  eta: 0:12:25  lr: 0.0004999451708687113  img/s: 980.3802160276837  loss_kd: 2.1640195846557617  loss_ce: 2.739520311355591  loss: 3.4890 (3.2739)  acc1: 41.4062 (47.1999)  acc5: 66.0156 (70.0302)  time: 0.5523  data: 0.2734  max mem: 15363
+Epoch: [2]  [ 150/1251]  eta: 0:11:32  lr: 0.0004999451708687113  img/s: 980.918488364551  loss_kd: 2.8723130226135254  loss_ce: 4.202233791351318  loss: 3.5640 (3.2839)  acc1: 39.0625 (47.1078)  acc5: 61.3281 (69.8572)  time: 0.5446  data: 0.2718  max mem: 15363
+Epoch: [2]  [ 200/1251]  eta: 0:11:02  lr: 0.0004999451708687113  img/s: 897.8998174500371  loss_kd: 2.490471601486206  loss_ce: 3.17156720161438  loss: 3.3705 (3.2829)  acc1: 48.4375 (46.8983)  acc5: 69.5312 (69.5818)  time: 0.6337  data: 0.3650  max mem: 15363
+Epoch: [2]  [ 250/1251]  eta: 0:10:26  lr: 0.0004999451708687113  img/s: 978.8992156894922  loss_kd: 2.9555370807647705  loss_ce: 4.101937294006348  loss: 3.5213 (3.2834)  acc1: 44.5312 (47.0664)  acc5: 67.1875 (69.6698)  time: 0.6819  data: 0.4110  max mem: 15363
+Epoch: [2]  [ 300/1251]  eta: 0:09:55  lr: 0.0004999451708687113  img/s: 754.7111017706237  loss_kd: 2.9731826782226562  loss_ce: 4.179818630218506  loss: 3.3170 (3.2895)  acc1: 49.2188 (47.0930)  acc5: 71.0938 (69.7168)  time: 0.5812  data: 0.3049  max mem: 15363
+Epoch: [2]  [ 350/1251]  eta: 0:09:21  lr: 0.0004999451708687113  img/s: 977.1078152840391  loss_kd: 2.606269359588623  loss_ce: 3.7366650104522705  loss: 3.0591 (3.2694)  acc1: 53.9062 (47.5561)  acc5: 75.7812 (70.0766)  time: 0.6432  data: 0.3681  max mem: 15363
+Epoch: [2]  [ 400/1251]  eta: 0:08:48  lr: 0.0004999451708687113  img/s: 970.7641352923254  loss_kd: 3.1327996253967285  loss_ce: 4.651306629180908  loss: 3.2421 (3.2723)  acc1: 53.5156 (47.5335)  acc5: 75.3906 (70.1362)  time: 0.5594  data: 0.2763  max mem: 15363
+Epoch: [2]  [ 450/1251]  eta: 0:08:19  lr: 0.0004999451708687113  img/s: 976.7194021840477  loss_kd: 3.0141429901123047  loss_ce: 4.648002624511719  loss: 3.3503 (3.2728)  acc1: 45.3125 (47.5003)  acc5: 71.8750 (70.2319)  time: 0.5624  data: 0.2872  max mem: 15363
+Epoch: [2]  [ 500/1251]  eta: 0:07:51  lr: 0.0004999451708687113  img/s: 860.7135090765386  loss_kd: 2.8288984298706055  loss_ce: 4.057443618774414  loss: 3.2575 (3.2682)  acc1: 49.6094 (47.6906)  acc5: 72.6562 (70.4692)  time: 0.7179  data: 0.4426  max mem: 15363
+Epoch: [2]  [ 550/1251]  eta: 0:07:18  lr: 0.0004999451708687113  img/s: 968.76455887156  loss_kd: 2.2093420028686523  loss_ce: 2.532217502593994  loss: 3.3885 (3.2764)  acc1: 43.3594 (47.4485)  acc5: 65.6250 (70.2274)  time: 0.6944  data: 0.4121  max mem: 15363
+Epoch: [2]  [ 600/1251]  eta: 0:06:47  lr: 0.0004999451708687113  img/s: 699.6168279408402  loss_kd: 2.8502016067504883  loss_ce: 3.5947957038879395  loss: 3.2559 (3.2777)  acc1: 48.8281 (47.4340)  acc5: 72.2656 (70.2423)  time: 0.5937  data: 0.3145  max mem: 15363
+Epoch: [2]  [ 650/1251]  eta: 0:06:17  lr: 0.0004999451708687113  img/s: 980.1582724618842  loss_kd: 2.799074172973633  loss_ce: 4.180015563964844  loss: 3.2071 (3.2777)  acc1: 52.3438 (47.4330)  acc5: 76.1719 (70.2675)  time: 0.5667  data: 0.3025  max mem: 15363
+Epoch: [2]  [ 700/1251]  eta: 0:05:48  lr: 0.0004999451708687113  img/s: 943.3020205924729  loss_kd: 3.0600380897521973  loss_ce: 3.9754912853240967  loss: 3.3036 (3.2813)  acc1: 51.5625 (47.4139)  acc5: 72.2656 (70.2501)  time: 0.7420  data: 0.4676  max mem: 15363
+Epoch: [2]  [ 750/1251]  eta: 0:05:16  lr: 0.0004999451708687113  img/s: 976.5710512577513  loss_kd: 2.814657211303711  loss_ce: 4.224194049835205  loss: 3.3094 (3.2812)  acc1: 41.7969 (47.3135)  acc5: 69.1406 (70.2059)  time: 0.7292  data: 0.4445  max mem: 15363
+Epoch: [2]  [ 800/1251]  eta: 0:04:45  lr: 0.0004999451708687113  img/s: 955.96076591403  loss_kd: 2.5683436393737793  loss_ce: 3.6517069339752197  loss: 3.2109 (3.2831)  acc1: 46.4844 (47.2705)  acc5: 69.9219 (70.1550)  time: 0.5648  data: 0.2896  max mem: 15363
+Epoch: [2]  [ 850/1251]  eta: 0:04:13  lr: 0.0004999451708687113  img/s: 966.1468770385967  loss_kd: 2.5724105834960938  loss_ce: 3.6472694873809814  loss: 3.3322 (3.2831)  acc1: 49.2188 (47.3074)  acc5: 73.0469 (70.1812)  time: 0.5717  data: 0.3048  max mem: 15363
+Epoch: [2]  [ 900/1251]  eta: 0:03:43  lr: 0.0004999451708687113  img/s: 977.1762862195026  loss_kd: 2.7566068172454834  loss_ce: 4.005791664123535  loss: 3.3366 (3.2766)  acc1: 50.7812 (47.4451)  acc5: 73.4375 (70.3316)  time: 0.7335  data: 0.4605  max mem: 15363
+Epoch: [2]  [ 950/1251]  eta: 0:03:11  lr: 0.0004999451708687113  img/s: 979.8711479021243  loss_kd: 2.7404425144195557  loss_ce: 4.193921089172363  loss: 3.4672 (3.2730)  acc1: 45.3125 (47.4595)  acc5: 67.1875 (70.3367)  time: 0.7436  data: 0.4747  max mem: 15363
+Epoch: [2]  [1000/1251]  eta: 0:02:40  lr: 0.0004999451708687113  img/s: 981.236714022265  loss_kd: 2.182877540588379  loss_ce: 2.944840431213379  loss: 3.1568 (3.2681)  acc1: 55.0781 (47.5524)  acc5: 75.0000 (70.4288)  time: 0.5931  data: 0.3258  max mem: 15363
+Epoch: [2]  [1050/1251]  eta: 0:02:08  lr: 0.0004999451708687113  img/s: 979.0330990930369  loss_kd: 2.7139668464660645  loss_ce: 3.7969231605529785  loss: 3.4426 (3.2703)  acc1: 44.9219 (47.5117)  acc5: 67.9688 (70.3642)  time: 0.5841  data: 0.3192  max mem: 15363
+Epoch: [2]  [1100/1251]  eta: 0:01:37  lr: 0.0004999451708687113  img/s: 744.4923262104203  loss_kd: 2.626075506210327  loss_ce: 3.745283603668213  loss: 3.1857 (3.2710)  acc1: 50.0000 (47.4828)  acc5: 75.3906 (70.3377)  time: 0.8162  data: 0.5353  max mem: 15363
+Epoch: [2]  [1150/1251]  eta: 0:01:05  lr: 0.0004999451708687113  img/s: 980.5288311916016  loss_kd: 2.4987118244171143  loss_ce: 3.504986524581909  loss: 3.1252 (3.2674)  acc1: 53.1250 (47.5605)  acc5: 75.3906 (70.4024)  time: 0.7926  data: 0.5222  max mem: 15363
+Epoch: [2]  [1200/1251]  eta: 0:00:32  lr: 0.0004999451708687113  img/s: 976.8704643979748  loss_kd: 3.052402973175049  loss_ce: 4.425403594970703  loss: 3.3621 (3.2675)  acc1: 50.7812 (47.5993)  acc5: 72.2656 (70.4572)  time: 0.6163  data: 0.3486  max mem: 15363
+Epoch: [2]  [1250/1251]  eta: 0:00:00  lr: 0.0004999451708687113  img/s: 981.5524543797455  loss_kd: 2.3392138481140137  loss_ce: 2.854860782623291  loss: 3.4359 (3.2682)  acc1: 42.1875 (47.5638)  acc5: 64.4531 (70.4115)  time: 0.6453  data: 0.3750  max mem: 15363
+Epoch: [2] Total time: 0:13:31
+Test:   [ 0/49]  eta: 0:02:10  loss: 1.5672 (1.5672)  acc1: 85.9375 (85.9375)  acc5: 97.6562 (97.6562)  time: 2.6677  data: 2.4822  max mem: 15363
+Test:  Total time: 0:00:13
+Test:  Acc@1 69.546 Acc@5 89.554
+Epoch: [3]  [   0/1251]  eta: 1:47:01  lr: 0.0004998766400914329  img/s: 905.6282421527085  loss_kd: 2.8001532554626465  loss_ce: 3.8087658882141113  loss: 3.3045 (3.3045)  acc1: 48.8281 (48.8281)  acc5: 73.4375 (73.4375)  time: 5.1332  data: 4.8500  max mem: 15363
+Epoch: [3]  [  50/1251]  eta: 0:14:22  lr: 0.0004998766400914329  img/s: 981.1416729106892  loss_kd: 2.518237590789795  loss_ce: 3.1973509788513184  loss: 3.4172 (3.2556)  acc1: 42.9688 (46.9593)  acc5: 67.5781 (70.5423)  time: 0.7606  data: 0.4866  max mem: 15363
+Epoch: [3]  [ 100/1251]  eta: 0:13:05  lr: 0.0004998766400914329  img/s: 980.2280664597407  loss_kd: 2.399542808532715  loss_ce: 3.278723955154419  loss: 3.1906 (3.2320)  acc1: 53.5156 (48.4414)  acc5: 77.3438 (71.3258)  time: 0.5506  data: 0.2863  max mem: 15363
+Epoch: [3]  [ 150/1251]  eta: 0:12:02  lr: 0.0004998766400914329  img/s: 978.0735188962054  loss_kd: 2.8805603981018066  loss_ce: 4.0871968269348145  loss: 3.4113 (3.2185)  acc1: 45.7031 (48.3495)  acc5: 66.7969 (71.3550)  time: 0.5478  data: 0.2734  max mem: 15363
+Epoch: [3]  [ 200/1251]  eta: 0:11:38  lr: 0.0004998766400914329  img/s: 822.2255078310158  loss_kd: 2.2758030891418457  loss_ce: 2.7316813468933105  loss: 3.2110 (3.1932)  acc1: 47.6562 (48.7737)  acc5: 74.6094 (71.9683)  time: 0.7231  data: 0.4468  max mem: 15363
+Epoch: [3]  [ 250/1251]  eta: 0:11:01  lr: 0.0004998766400914329  img/s: 980.8817488375493  loss_kd: 2.590824604034424  loss_ce: 3.2596335411071777  loss: 3.4460 (3.2064)  acc1: 45.3125 (48.3052)  acc5: 67.9688 (71.4953)  time: 0.7414  data: 0.4704  max mem: 15363
+Epoch: [3]  [ 300/1251]  eta: 0:10:29  lr: 0.0004998766400914329  img/s: 980.9364110837752  loss_kd: 2.5908045768737793  loss_ce: 3.896705150604248  loss: 3.2583 (3.2119)  acc1: 47.6562 (48.2143)  acc5: 73.0469 (71.4156)  time: 0.6011  data: 0.3364  max mem: 15363
+Epoch: [3]  [ 350/1251]  eta: 0:09:55  lr: 0.0004998766400914329  img/s: 977.9977957879512  loss_kd: 2.3604753017425537  loss_ce: 2.745393753051758  loss: 3.1540 (3.2021)  acc1: 50.3906 (48.4675)  acc5: 76.1719 (71.5378)  time: 0.5876  data: 0.3151  max mem: 15363
+Epoch: [3]  [ 400/1251]  eta: 0:09:24  lr: 0.0004998766400914329  img/s: 857.0339368068848  loss_kd: 2.3236939907073975  loss_ce: 2.973724126815796  loss: 2.9500 (3.1817)  acc1: 57.8125 (48.8866)  acc5: 79.6875 (71.8370)  time: 0.6753  data: 0.4079  max mem: 15363
+Epoch: [3]  [ 450/1251]  eta: 0:08:47  lr: 0.0004998766400914329  img/s: 981.3703406831943  loss_kd: 2.992476463317871  loss_ce: 4.3082733154296875  loss: 3.1519 (3.1841)  acc1: 54.2969 (48.8550)  acc5: 75.7812 (71.8317)  time: 0.6888  data: 0.4210  max mem: 15363
+Epoch: [3]  [ 500/1251]  eta: 0:08:12  lr: 0.0004998766400914329  img/s: 970.945845450468  loss_kd: 2.9822163581848145  loss_ce: 4.172164440155029  loss: 3.1963 (3.1853)  acc1: 50.0000 (48.9848)  acc5: 72.6562 (71.9709)  time: 0.5475  data: 0.2837  max mem: 15363
+Epoch: [3]  [ 550/1251]  eta: 0:07:37  lr: 0.0004998766400914329  img/s: 978.282040746042  loss_kd: 2.665193557739258  loss_ce: 3.7502310276031494  loss: 3.1387 (3.1821)  acc1: 57.0312 (49.1209)  acc5: 75.7812 (72.0643)  time: 0.5808  data: 0.3152  max mem: 15363
+Epoch: [3]  [ 600/1251]  eta: 0:07:07  lr: 0.0004998766400914329  img/s: 719.4529663464309  loss_kd: 3.211466073989868  loss_ce: 4.366120338439941  loss: 3.2861 (3.1830)  acc1: 45.3125 (49.1018)  acc5: 69.9219 (72.0082)  time: 0.7298  data: 0.4556  max mem: 15363
+Epoch: [3]  [ 650/1251]  eta: 0:06:34  lr: 0.0004998766400914329  img/s: 979.8872438927121  loss_kd: 2.953840732574463  loss_ce: 4.217596054077148  loss: 3.1954 (3.1837)  acc1: 54.6875 (49.0951)  acc5: 76.5625 (71.9626)  time: 0.7341  data: 0.4510  max mem: 15363
+Epoch: [3]  [ 700/1251]  eta: 0:06:00  lr: 0.0004998766400914329  img/s: 976.9877919953268  loss_kd: 2.6446242332458496  loss_ce: 3.6955952644348145  loss: 3.1357 (3.1802)  acc1: 53.5156 (49.1547)  acc5: 77.3438 (72.0232)  time: 0.5511  data: 0.2839  max mem: 15363
+Epoch: [3]  [ 750/1251]  eta: 0:05:26  lr: 0.0004998766400914329  img/s: 980.4196036107109  loss_kd: 2.9098310470581055  loss_ce: 4.542086124420166  loss: 3.0170 (3.1744)  acc1: 53.9062 (49.2146)  acc5: 77.7344 (72.0732)  time: 0.5520  data: 0.2798  max mem: 15363
+Epoch: [3]  [ 800/1251]  eta: 0:04:54  lr: 0.0004998766400914329  img/s: 749.33306162897  loss_kd: 2.0836496353149414  loss_ce: 2.424792766571045  loss: 3.1588 (3.1728)  acc1: 50.0000 (49.2573)  acc5: 73.4375 (72.1037)  time: 0.6967  data: 0.4225  max mem: 15363
+Epoch: [3]  [ 850/1251]  eta: 0:04:20  lr: 0.0004998766400914329  img/s: 981.7875976080318  loss_kd: 2.833315134048462  loss_ce: 3.8789191246032715  loss: 3.4208 (3.1763)  acc1: 40.2344 (49.1095)  acc5: 64.8438 (71.9636)  time: 0.6912  data: 0.4196  max mem: 15363
+Epoch: [3]  [ 900/1251]  eta: 0:03:48  lr: 0.0004998766400914329  img/s: 980.4034901260404  loss_kd: 2.2220447063446045  loss_ce: 3.3900487422943115  loss: 3.3151 (3.1820)  acc1: 50.3906 (48.9326)  acc5: 73.0469 (71.7970)  time: 0.6415  data: 0.3694  max mem: 15363
+Epoch: [3]  [ 950/1251]  eta: 0:03:16  lr: 0.0004998766400914329  img/s: 979.6985963401193  loss_kd: 2.909055233001709  loss_ce: 4.056391716003418  loss: 3.4816 (3.1862)  acc1: 38.2812 (48.7242)  acc5: 66.0156 (71.6257)  time: 0.6249  data: 0.3555  max mem: 15363
+Epoch: [3]  [1000/1251]  eta: 0:02:45  lr: 0.0004998766400914329  img/s: 671.3072344182074  loss_kd: 2.3940887451171875  loss_ce: 2.929466724395752  loss: 3.2675 (3.1854)  acc1: 51.5625 (48.7731)  acc5: 72.6562 (71.6526)  time: 0.7975  data: 0.5246  max mem: 15363
+Epoch: [3]  [1050/1251]  eta: 0:02:12  lr: 0.0004998766400914329  img/s: 979.1821990388211  loss_kd: 2.5321602821350098  loss_ce: 3.769981861114502  loss: 2.8432 (3.1834)  acc1: 58.5938 (48.8170)  acc5: 80.4688 (71.6940)  time: 0.7894  data: 0.5183  max mem: 15363
+Epoch: [3]  [1100/1251]  eta: 0:01:40  lr: 0.0004998766400914329  img/s: 981.0654739987117  loss_kd: 2.85522198677063  loss_ce: 4.256214141845703  loss: 3.2226 (3.1841)  acc1: 52.3438 (48.8246)  acc5: 73.4375 (71.7132)  time: 0.6571  data: 0.3850  max mem: 15363
+Epoch: [3]  [1150/1251]  eta: 0:01:07  lr: 0.0004998766400914329  img/s: 979.800510640783  loss_kd: 2.0885376930236816  loss_ce: 2.4873456954956055  loss: 2.9498 (3.1837)  acc1: 54.2969 (48.8746)  acc5: 79.2969 (71.7362)  time: 0.6431  data: 0.3630  max mem: 15363
+Epoch: [3]  [1200/1251]  eta: 0:00:34  lr: 0.0004998766400914329  img/s: 658.3156702087742  loss_kd: 2.612351417541504  loss_ce: 3.70158052444458  loss: 3.1614 (3.1827)  acc1: 51.9531 (48.9062)  acc5: 72.2656 (71.7690)  time: 0.9723  data: 0.6832  max mem: 15363
+Epoch: [3]  [1250/1251]  eta: 0:00:00  lr: 0.0004998766400914329  img/s: 915.7619060615158  loss_kd: 2.8182318210601807  loss_ce: 4.192549705505371  loss: 3.1652 (3.1849)  acc1: 51.9531 (48.8515)  acc5: 73.4375 (71.7504)  time: 0.9921  data: 0.7265  max mem: 15363
+Epoch: [3] Total time: 0:14:19
+Test:   [ 0/49]  eta: 0:02:24  loss: 1.5427 (1.5427)  acc1: 87.1094 (87.1094)  acc5: 98.4375 (98.4375)  time: 2.9493  data: 2.7676  max mem: 15363
+Test:  Total time: 0:00:14
+Test:  Acc@1 70.482 Acc@5 89.988
+Epoch: [4]  [   0/1251]  eta: 2:00:08  lr: 0.0004997807075247146  img/s: 845.051462156753  loss_kd: 3.183960199356079  loss_ce: 4.6271071434021  loss: 3.9055 (3.9055)  acc1: 26.1719 (26.1719)  acc5: 50.0000 (50.0000)  time: 5.7625  data: 5.4587  max mem: 15363
+Epoch: [4]  [  50/1251]  eta: 0:16:59  lr: 0.0004997807075247146  img/s: 982.1378287156878  loss_kd: 2.5195393562316895  loss_ce: 3.516907215118408  loss: 3.1776 (3.1251)  acc1: 53.1250 (50.5362)  acc5: 76.5625 (73.7975)  time: 0.8711  data: 0.5983  max mem: 15363
+Epoch: [4]  [ 100/1251]  eta: 0:15:02  lr: 0.0004997807075247146  img/s: 979.8148160991074  loss_kd: 2.5753843784332275  loss_ce: 3.633265256881714  loss: 2.9666 (3.1051)  acc1: 57.8125 (50.5569)  acc5: 78.9062 (73.5961)  time: 0.6671  data: 0.4008  max mem: 15363
+Epoch: [4]  [ 150/1251]  eta: 0:13:49  lr: 0.0004997807075247146  img/s: 980.6667433853011  loss_kd: 2.8541579246520996  loss_ce: 4.06058406829834  loss: 3.2789 (3.1286)  acc1: 48.0469 (50.0129)  acc5: 69.5312 (72.7959)  time: 0.6266  data: 0.3557  max mem: 15363
+Epoch: [4]  [ 200/1251]  eta: 0:13:12  lr: 0.0004997807075247146  img/s: 866.8198018267332  loss_kd: 2.87402081489563  loss_ce: 4.025750637054443  loss: 2.9894 (3.1182)  acc1: 53.9062 (50.5286)  acc5: 75.0000 (73.2684)  time: 0.7567  data: 0.4828  max mem: 15363
+Epoch: [4]  [ 250/1251]  eta: 0:12:28  lr: 0.0004997807075247146  img/s: 982.2591207856303  loss_kd: 2.912724256515503  loss_ce: 3.9907002449035645  loss: 3.1171 (3.1142)  acc1: 51.1719 (50.5011)  acc5: 73.0469 (73.3675)  time: 0.8043  data: 0.5211  max mem: 15363
+Epoch: [4]  [ 300/1251]  eta: 0:11:41  lr: 0.0004997807075247146  img/s: 878.0442087892588  loss_kd: 2.670571804046631  loss_ce: 3.6791133880615234  loss: 3.1582 (3.1162)  acc1: 52.3438 (50.6554)  acc5: 75.3906 (73.3700)  time: 0.7009  data: 0.4203  max mem: 15363
+Epoch: [4]  [ 350/1251]  eta: 0:10:56  lr: 0.0004997807075247146  img/s: 974.7651458550265  loss_kd: 2.895277500152588  loss_ce: 4.158926010131836  loss: 3.2412 (3.1227)  acc1: 47.6562 (50.4841)  acc5: 68.7500 (73.2739)  time: 0.6356  data: 0.3688  max mem: 15363
+Epoch: [4]  [ 400/1251]  eta: 0:10:13  lr: 0.0004997807075247146  img/s: 978.604801055762  loss_kd: 3.071823835372925  loss_ce: 4.66806173324585  loss: 3.2359 (3.1337)  acc1: 47.2656 (50.1490)  acc5: 68.7500 (72.9115)  time: 0.6015  data: 0.3375  max mem: 15363
+Epoch: [4]  [ 450/1251]  eta: 0:09:40  lr: 0.0004997807075247146  img/s: 975.6091972821752  loss_kd: 2.994821310043335  loss_ce: 4.446648597717285  loss: 3.3177 (3.1449)  acc1: 47.2656 (49.9619)  acc5: 70.3125 (72.7411)  time: 0.7737  data: 0.5041  max mem: 15363
+Epoch: [4]  [ 500/1251]  eta: 0:09:01  lr: 0.0004997807075247146  img/s: 688.7516767502605  loss_kd: 3.0064303874969482  loss_ce: 4.1668853759765625  loss: 3.2906 (3.1533)  acc1: 44.9219 (49.6756)  acc5: 69.9219 (72.5081)  time: 0.7789  data: 0.4999  max mem: 15363
+Epoch: [4]  [ 550/1251]  eta: 0:08:24  lr: 0.0004997807075247146  img/s: 980.6130067490434  loss_kd: 2.668388843536377  loss_ce: 4.052938461303711  loss: 3.3839 (3.1639)  acc1: 47.2656 (49.3754)  acc5: 71.8750 (72.3245)  time: 0.6760  data: 0.4070  max mem: 15363
+Epoch: [4]  [ 600/1251]  eta: 0:07:47  lr: 0.0004997807075247146  img/s: 980.2030110605169  loss_kd: 2.53316068649292  loss_ce: 3.4771106243133545  loss: 2.9104 (3.1574)  acc1: 56.6406 (49.4800)  acc5: 78.9062 (72.4554)  time: 0.5927  data: 0.3243  max mem: 15363
+Epoch: [4]  [ 650/1251]  eta: 0:07:13  lr: 0.0004997807075247146  img/s: 981.1613969103346  loss_kd: 2.518065929412842  loss_ce: 3.7580080032348633  loss: 3.1061 (3.1529)  acc1: 54.6875 (49.5404)  acc5: 76.9531 (72.4948)  time: 0.7871  data: 0.5124  max mem: 15363
+Epoch: [4]  [ 700/1251]  eta: 0:06:36  lr: 0.0004997807075247146  img/s: 988.7170972242045  loss_kd: 2.976141929626465  loss_ce: 4.4732465744018555  loss: 3.0868 (3.1495)  acc1: 51.1719 (49.6501)  acc5: 74.6094 (72.5738)  time: 0.8169  data: 0.5447  max mem: 15363
+Epoch: [4]  [ 750/1251]  eta: 0:05:59  lr: 0.0004997807075247146  img/s: 981.2833446960489  loss_kd: 2.5507028102874756  loss_ce: 3.5029141902923584  loss: 3.0268 (3.1463)  acc1: 54.6875 (49.7165)  acc5: 77.3438 (72.6625)  time: 0.6240  data: 0.3424  max mem: 15363
+Epoch: [4]  [ 800/1251]  eta: 0:05:23  lr: 0.0004997807075247146  img/s: 981.7768252273077  loss_kd: 2.1920342445373535  loss_ce: 2.447230339050293  loss: 3.1830 (3.1427)  acc1: 53.9062 (49.8542)  acc5: 73.4375 (72.7743)  time: 0.6425  data: 0.3676  max mem: 15363
+Epoch: [4]  [ 850/1251]  eta: 0:04:51  lr: 0.0004997807075247146  img/s: 981.8073475866786  loss_kd: 2.8341970443725586  loss_ce: 4.061728000640869  loss: 3.0588 (3.1417)  acc1: 47.2656 (49.7989)  acc5: 71.0938 (72.6976)  time: 0.9441  data: 0.6685  max mem: 15363
+Epoch: [4]  [ 900/1251]  eta: 0:04:16  lr: 0.0004997807075247146  img/s: 971.6566602990056  loss_kd: 2.3494558334350586  loss_ce: 3.3308072090148926  loss: 3.4022 (3.1425)  acc1: 48.0469 (49.8214)  acc5: 68.3594 (72.6944)  time: 0.9129  data: 0.6347  max mem: 15363
+Epoch: [4]  [ 950/1251]  eta: 0:03:41  lr: 0.0004997807075247146  img/s: 978.0637187745941  loss_kd: 2.1501035690307617  loss_ce: 2.5116984844207764  loss: 3.1700 (3.1437)  acc1: 53.1250 (49.8382)  acc5: 75.3906 (72.7232)  time: 0.6733  data: 0.4013  max mem: 15363
+Epoch: [4]  [1000/1251]  eta: 0:03:05  lr: 0.0004997807075247146  img/s: 679.680653055437  loss_kd: 2.614447593688965  loss_ce: 3.8433780670166016  loss: 3.1888 (3.1414)  acc1: 51.5625 (49.9165)  acc5: 72.6562 (72.7909)  time: 0.7850  data: 0.5037  max mem: 15363
+Epoch: [4]  [1050/1251]  eta: 0:02:29  lr: 0.0004997807075247146  img/s: 981.2967966755833  loss_kd: 2.766902446746826  loss_ce: 4.260402679443359  loss: 3.2738 (3.1389)  acc1: 50.3906 (50.0048)  acc5: 73.4375 (72.8532)  time: 0.8885  data: 0.6171  max mem: 15363
+Epoch: [4]  [1100/1251]  eta: 0:01:52  lr: 0.0004997807075247146  img/s: 975.4328265737632  loss_kd: 2.493828058242798  loss_ce: 3.6699090003967285  loss: 3.3678 (3.1444)  acc1: 44.5312 (49.8265)  acc5: 70.7031 (72.6743)  time: 0.9014  data: 0.6233  max mem: 15363
+Epoch: [4]  [1150/1251]  eta: 0:01:15  lr: 0.0004997807075247146  img/s: 967.9497554753244  loss_kd: 2.5708067417144775  loss_ce: 4.038089275360107  loss: 3.2761 (3.1416)  acc1: 43.3594 (49.8276)  acc5: 66.7969 (72.6681)  time: 0.7743  data: 0.5012  max mem: 15363
+Epoch: [4]  [1200/1251]  eta: 0:00:38  lr: 0.0004997807075247146  img/s: 978.4362615112365  loss_kd: 2.4227192401885986  loss_ce: 3.4926977157592773  loss: 3.2569 (3.1403)  acc1: 49.6094 (49.8292)  acc5: 71.8750 (72.6556)  time: 0.7868  data: 0.5125  max mem: 15363
+Epoch: [4]  [1250/1251]  eta: 0:00:00  lr: 0.0004997807075247146  img/s: 983.6052248041706  loss_kd: 2.239161252975464  loss_ce: 3.1491048336029053  loss: 3.2097 (3.1390)  acc1: 51.5625 (49.8323)  acc5: 73.8281 (72.6463)  time: 0.9694  data: 0.6910  max mem: 15363
+Epoch: [4] Total time: 0:15:53
+Test:   [ 0/49]  eta: 0:02:03  loss: 1.5709 (1.5709)  acc1: 86.7188 (86.7188)  acc5: 97.2656 (97.2656)  time: 2.5140  data: 2.3180  max mem: 15363
+Test:  Total time: 0:00:13
+Test:  Acc@1 71.058 Acc@5 90.334
+Epoch: [5]  [   0/1251]  eta: 1:55:54  lr: 0.0004996573836886435  img/s: 891.6832816519872  loss_kd: 2.540310859680176  loss_ce: 3.4650917053222656  loss: 3.0027 (3.0027)  acc1: 51.5625 (51.5625)  acc5: 77.7344 (77.7344)  time: 5.5591  data: 5.2713  max mem: 15363
+Epoch: [5]  [  50/1251]  eta: 0:14:58  lr: 0.0004996573836886435  img/s: 981.4663232232011  loss_kd: 2.8102197647094727  loss_ce: 3.96895432472229  loss: 3.1546 (3.0444)  acc1: 50.0000 (51.4246)  acc5: 73.4375 (74.2264)  time: 0.7459  data: 0.4749  max mem: 15363
+Epoch: [5]  [ 100/1251]  eta: 0:13:31  lr: 0.0004996573836886435  img/s: 980.828884591529  loss_kd: 2.274301052093506  loss_ce: 3.115764856338501  loss: 2.9718 (3.0859)  acc1: 58.5938 (50.9746)  acc5: 78.9062 (73.8707)  time: 0.5939  data: 0.3215  max mem: 15363
+Epoch: [5]  [ 150/1251]  eta: 0:12:41  lr: 0.0004996573836886435  img/s: 979.7128988226019  loss_kd: 2.714883327484131  loss_ce: 4.085357666015625  loss: 3.2175 (3.0957)  acc1: 46.0938 (50.5924)  acc5: 69.1406 (73.3677)  time: 0.5976  data: 0.3328  max mem: 15363
+Epoch: [5]  [ 200/1251]  eta: 0:12:08  lr: 0.0004996573836886435  img/s: 735.1551105222978  loss_kd: 2.2713944911956787  loss_ce: 2.777273654937744  loss: 3.0521 (3.1077)  acc1: 54.6875 (50.2002)  acc5: 76.5625 (72.9380)  time: 0.6900  data: 0.4079  max mem: 15363
+Epoch: [5]  [ 250/1251]  eta: 0:11:20  lr: 0.0004996573836886435  img/s: 980.3685793928836  loss_kd: 2.1775243282318115  loss_ce: 3.2190167903900146  loss: 3.1682 (3.1075)  acc1: 48.8281 (49.9860)  acc5: 75.3906 (72.9473)  time: 0.6989  data: 0.4254  max mem: 15363
+Epoch: [5]  [ 300/1251]  eta: 0:10:35  lr: 0.0004996573836886435  img/s: 980.7339224632022  loss_kd: 2.793971538543701  loss_ce: 3.9702327251434326  loss: 3.3449 (3.1122)  acc1: 47.6562 (49.7275)  acc5: 68.3594 (72.7328)  time: 0.5622  data: 0.2920  max mem: 15363
+Epoch: [5]  [ 350/1251]  eta: 0:09:55  lr: 0.0004996573836886435  img/s: 980.5933047912679  loss_kd: 2.7582831382751465  loss_ce: 3.9054813385009766  loss: 3.3475 (3.1151)  acc1: 44.9219 (49.7618)  acc5: 68.7500 (72.7397)  time: 0.5975  data: 0.3222  max mem: 15363
+Epoch: [5]  [ 400/1251]  eta: 0:09:23  lr: 0.0004996573836886435  img/s: 921.8021048583097  loss_kd: 2.53001070022583  loss_ce: 3.6420836448669434  loss: 3.2059 (3.1111)  acc1: 49.2188 (49.6493)  acc5: 71.4844 (72.6709)  time: 0.6781  data: 0.4108  max mem: 15363
+Epoch: [5]  [ 450/1251]  eta: 0:08:55  lr: 0.0004996573836886435  img/s: 822.8619213771001  loss_kd: 2.850743293762207  loss_ce: 4.057210445404053  loss: 3.2033 (3.1158)  acc1: 52.3438 (49.5479)  acc5: 72.2656 (72.5627)  time: 0.7602  data: 0.4917  max mem: 15363
+Epoch: [5]  [ 500/1251]  eta: 0:08:22  lr: 0.0004996573836886435  img/s: 981.444792795889  loss_kd: 2.701245069503784  loss_ce: 3.4523587226867676  loss: 3.0727 (3.1174)  acc1: 54.6875 (49.6125)  acc5: 76.9531 (72.6266)  time: 0.7414  data: 0.4680  max mem: 15363
+Epoch: [5]  [ 550/1251]  eta: 0:07:48  lr: 0.0004996573836886435  img/s: 979.235778971464  loss_kd: 2.7532122135162354  loss_ce: 3.8944108486175537  loss: 3.2288 (3.1194)  acc1: 50.3906 (49.6392)  acc5: 74.6094 (72.6917)  time: 0.5809  data: 0.3118  max mem: 15363
+Epoch: [5]  [ 600/1251]  eta: 0:07:13  lr: 0.0004996573836886435  img/s: 982.1638815229213  loss_kd: 2.335186004638672  loss_ce: 3.3264129161834717  loss: 3.2758 (3.1250)  acc1: 43.7500 (49.3910)  acc5: 67.9688 (72.4515)  time: 0.5666  data: 0.2942  max mem: 15363
+Epoch: [5]  [ 650/1251]  eta: 0:06:42  lr: 0.0004996573836886435  img/s: 810.6048868428483  loss_kd: 2.0412402153015137  loss_ce: 2.459285259246826  loss: 3.0551 (3.1249)  acc1: 56.2500 (49.3868)  acc5: 74.2188 (72.4348)  time: 0.7247  data: 0.4572  max mem: 15363
+Epoch: [5]  [ 700/1251]  eta: 0:06:08  lr: 0.0004996573836886435  img/s: 980.1341153166804  loss_kd: 2.7901225090026855  loss_ce: 4.2771735191345215  loss: 3.2321 (3.1258)  acc1: 51.1719 (49.4255)  acc5: 72.6562 (72.4763)  time: 0.7094  data: 0.4352  max mem: 15363
+Epoch: [5]  [ 750/1251]  eta: 0:05:34  lr: 0.0004996573836886435  img/s: 979.9292748057467  loss_kd: 2.7835283279418945  loss_ce: 4.072019577026367  loss: 3.3751 (3.1235)  acc1: 42.5781 (49.4367)  acc5: 67.1875 (72.4492)  time: 0.5713  data: 0.3034  max mem: 15363
+Epoch: [5]  [ 800/1251]  eta: 0:05:01  lr: 0.0004996573836886435  img/s: 981.4017347750186  loss_kd: 2.198401927947998  loss_ce: 2.521401882171631  loss: 3.2042 (3.1245)  acc1: 52.3438 (49.4860)  acc5: 73.8281 (72.4466)  time: 0.6337  data: 0.3658  max mem: 15363
+Epoch: [5]  [ 850/1251]  eta: 0:04:29  lr: 0.0004996573836886435  img/s: 866.3225479557053  loss_kd: 2.865798234939575  loss_ce: 4.255363464355469  loss: 2.9563 (3.1269)  acc1: 54.2969 (49.4248)  acc5: 78.9062 (72.4176)  time: 0.7600  data: 0.4780  max mem: 15363
+Epoch: [5]  [ 900/1251]  eta: 0:03:55  lr: 0.0004996573836886435  img/s: 979.0920193932365  loss_kd: 2.497652292251587  loss_ce: 3.9111006259918213  loss: 3.1769 (3.1263)  acc1: 52.7344 (49.4000)  acc5: 75.0000 (72.4096)  time: 0.7674  data: 0.4872  max mem: 15363
+Epoch: [5]  [ 950/1251]  eta: 0:03:21  lr: 0.0004996573836886435  img/s: 979.8470049077134  loss_kd: 2.4617528915405273  loss_ce: 3.3868465423583984  loss: 3.1402 (3.1268)  acc1: 50.7812 (49.4492)  acc5: 73.8281 (72.4525)  time: 0.6014  data: 0.3358  max mem: 15363
+Epoch: [5]  [1000/1251]  eta: 0:02:47  lr: 0.0004996573836886435  img/s: 982.1539992609206  loss_kd: 2.388848304748535  loss_ce: 3.555144786834717  loss: 2.9720 (3.1193)  acc1: 58.9844 (49.6211)  acc5: 78.9062 (72.5969)  time: 0.5923  data: 0.3267  max mem: 15363
+Epoch: [5]  [1050/1251]  eta: 0:02:14  lr: 0.0004996573836886435  img/s: 980.6864482942548  loss_kd: 2.24989652633667  loss_ce: 3.589724063873291  loss: 3.2404 (3.1209)  acc1: 48.0469 (49.5622)  acc5: 71.8750 (72.5771)  time: 0.7775  data: 0.4934  max mem: 15363
+Epoch: [5]  [1100/1251]  eta: 0:01:41  lr: 0.0004996573836886435  img/s: 981.5928335635542  loss_kd: 2.551759719848633  loss_ce: 3.707275629043579  loss: 3.1295 (3.1215)  acc1: 50.0000 (49.4966)  acc5: 73.0469 (72.5370)  time: 0.7480  data: 0.4737  max mem: 15363
+Epoch: [5]  [1150/1251]  eta: 0:01:07  lr: 0.0004996573836886435  img/s: 979.1286249692239  loss_kd: 2.474156618118286  loss_ce: 3.7700648307800293  loss: 3.2186 (3.1163)  acc1: 50.7812 (49.6518)  acc5: 72.2656 (72.6671)  time: 0.6392  data: 0.3715  max mem: 15363
+Epoch: [5]  [1200/1251]  eta: 0:00:34  lr: 0.0004996573836886435  img/s: 980.88264489083  loss_kd: 2.871636390686035  loss_ce: 4.0578765869140625  loss: 3.2265 (3.1173)  acc1: 50.3906 (49.6578)  acc5: 74.6094 (72.6611)  time: 0.6443  data: 0.3741  max mem: 15363
+Epoch: [5]  [1250/1251]  eta: 0:00:00  lr: 0.0004996573836886435  img/s: 982.6708386833437  loss_kd: 2.669934034347534  loss_ce: 4.021554470062256  loss: 3.2361 (3.1140)  acc1: 44.1406 (49.7549)  acc5: 70.3125 (72.7427)  time: 0.7913  data: 0.5180  max mem: 15363
+Epoch: [5] Total time: 0:14:05
+Test:   [ 0/49]  eta: 0:05:42  loss: 1.4710 (1.4710)  acc1: 87.5000 (87.5000)  acc5: 98.8281 (98.8281)  time: 6.9994  data: 6.8205  max mem: 15363
+Test:  Total time: 0:00:19
+Test:  Acc@1 71.570 Acc@5 90.806
+Epoch: [6]  [   0/1251]  eta: 1:42:28  lr: 0.0004995066821070679  img/s: 646.7829413050929  loss_kd: 2.954033136367798  loss_ce: 4.057409286499023  loss: 3.5057 (3.5057)  acc1: 26.9531 (26.9531)  acc5: 54.6875 (54.6875)  time: 4.9146  data: 4.5178  max mem: 15363
+Epoch: [6]  [  50/1251]  eta: 0:12:55  lr: 0.0004995066821070679  img/s: 981.0511319977231  loss_kd: 2.541651725769043  loss_ce: 3.848872661590576  loss: 3.1634 (3.0719)  acc1: 51.5625 (52.2978)  acc5: 74.2188 (74.2570)  time: 0.6343  data: 0.3462  max mem: 15363
+Epoch: [6]  [ 100/1251]  eta: 0:11:37  lr: 0.0004995066821070679  img/s: 976.7345063029987  loss_kd: 2.7838621139526367  loss_ce: 4.117574691772461  loss: 3.1155 (3.0606)  acc1: 50.0000 (51.9377)  acc5: 75.7812 (74.2381)  time: 0.5896  data: 0.3226  max mem: 15363
+Epoch: [6]  [ 150/1251]  eta: 0:10:59  lr: 0.0004995066821070679  img/s: 981.114777825495  loss_kd: 2.0139312744140625  loss_ce: 2.2596912384033203  loss: 3.1051 (3.0890)  acc1: 54.2969 (51.1745)  acc5: 75.0000 (73.8747)  time: 0.5323  data: 0.2649  max mem: 15363
+Epoch: [6]  [ 200/1251]  eta: 0:10:40  lr: 0.0004995066821070679  img/s: 859.2285441296739  loss_kd: 2.9404709339141846  loss_ce: 4.4147562980651855  loss: 3.1866 (3.0791)  acc1: 55.4688 (51.5819)  acc5: 74.2188 (74.0380)  time: 0.6738  data: 0.3920  max mem: 15363
+Epoch: [6]  [ 250/1251]  eta: 0:10:11  lr: 0.0004995066821070679  img/s: 966.664407573125  loss_kd: 2.680199384689331  loss_ce: 3.9915857315063477  loss: 3.1007 (3.0791)  acc1: 54.6875 (51.5765)  acc5: 78.1250 (74.2047)  time: 0.6871  data: 0.4103  max mem: 15363
+Epoch: [6]  [ 300/1251]  eta: 0:09:44  lr: 0.0004995066821070679  img/s: 925.1115518557513  loss_kd: 2.772481679916382  loss_ce: 4.044308185577393  loss: 3.0567 (3.0633)  acc1: 53.1250 (51.5768)  acc5: 74.2188 (74.3784)  time: 0.5979  data: 0.3243  max mem: 15363
+Epoch: [6]  [ 350/1251]  eta: 0:09:17  lr: 0.0004995066821070679  img/s: 982.1486090200117  loss_kd: 2.3201773166656494  loss_ce: 3.1686692237854004  loss: 2.9142 (3.0648)  acc1: 58.5938 (51.6293)  acc5: 80.4688 (74.3957)  time: 0.6123  data: 0.3391  max mem: 15363
+Epoch: [6]  [ 400/1251]  eta: 0:08:47  lr: 0.0004995066821070679  img/s: 896.8895541537474  loss_kd: 2.19720458984375  loss_ce: 2.432374954223633  loss: 3.1363 (3.0620)  acc1: 55.8594 (51.7145)  acc5: 76.1719 (74.4204)  time: 0.6387  data: 0.3672  max mem: 15363
+Epoch: [6]  [ 450/1251]  eta: 0:08:16  lr: 0.0004995066821070679  img/s: 980.7751301849032  loss_kd: 2.663830041885376  loss_ce: 3.8626670837402344  loss: 2.7780 (3.0534)  acc1: 55.0781 (51.8163)  acc5: 79.6875 (74.4873)  time: 0.6408  data: 0.3685  max mem: 15363
+Epoch: [6]  [ 500/1251]  eta: 0:07:45  lr: 0.0004995066821070679  img/s: 980.9480612024893  loss_kd: 2.7173120975494385  loss_ce: 3.8426146507263184  loss: 3.0854 (3.0509)  acc1: 45.3125 (51.7270)  acc5: 73.8281 (74.4176)  time: 0.5646  data: 0.2918  max mem: 15363
+Epoch: [6]  [ 550/1251]  eta: 0:07:14  lr: 0.0004995066821070679  img/s: 982.9218142105716  loss_kd: 2.752793312072754  loss_ce: 4.260778427124023  loss: 3.1487 (3.0519)  acc1: 52.7344 (51.8439)  acc5: 73.4375 (74.4548)  time: 0.5963  data: 0.3269  max mem: 15363
+Epoch: [6]  [ 600/1251]  eta: 0:06:46  lr: 0.0004995066821070679  img/s: 980.5933047912679  loss_kd: 2.1295900344848633  loss_ce: 2.7910547256469727  loss: 3.2471 (3.0588)  acc1: 48.0469 (51.5820)  acc5: 74.2188 (74.2265)  time: 0.6745  data: 0.4093  max mem: 15363
+Epoch: [6]  [ 650/1251]  eta: 0:06:14  lr: 0.0004995066821070679  img/s: 981.4582492022591  loss_kd: 2.5884976387023926  loss_ce: 3.933738946914673  loss: 3.1968 (3.0575)  acc1: 47.6562 (51.4785)  acc5: 69.5312 (74.2013)  time: 0.5954  data: 0.3288  max mem: 15363
+Epoch: [6]  [ 700/1251]  eta: 0:05:43  lr: 0.0004995066821070679  img/s: 980.7876723527665  loss_kd: 2.820225477218628  loss_ce: 4.324915885925293  loss: 3.1250 (3.0652)  acc1: 55.4688 (51.3262)  acc5: 75.0000 (74.0627)  time: 0.6080  data: 0.3387  max mem: 15363
+Epoch: [6]  [ 750/1251]  eta: 0:05:12  lr: 0.0004995066821070679  img/s: 982.5350594970114  loss_kd: 2.655961751937866  loss_ce: 4.0650177001953125  loss: 3.0854 (3.0604)  acc1: 57.4219 (51.3893)  acc5: 77.7344 (74.1173)  time: 0.6746  data: 0.4064  max mem: 15363
+Epoch: [6]  [ 800/1251]  eta: 0:04:41  lr: 0.0004995066821070679  img/s: 979.3501024278034  loss_kd: 2.7998456954956055  loss_ce: 4.029274940490723  loss: 3.1807 (3.0622)  acc1: 51.1719 (51.2787)  acc5: 73.8281 (74.0637)  time: 0.6156  data: 0.3395  max mem: 15363
+Epoch: [6]  [ 850/1251]  eta: 0:04:09  lr: 0.0004995066821070679  img/s: 981.8396674475723  loss_kd: 2.501122236251831  loss_ce: 3.724477767944336  loss: 3.0619 (3.0600)  acc1: 53.1250 (51.3633)  acc5: 76.5625 (74.1219)  time: 0.5495  data: 0.2813  max mem: 15363
+Epoch: [6]  [ 900/1251]  eta: 0:03:39  lr: 0.0004995066821070679  img/s: 980.9928719304625  loss_kd: 2.044032335281372  loss_ce: 2.5970919132232666  loss: 2.9980 (3.0580)  acc1: 57.0312 (51.4749)  acc5: 78.5156 (74.1984)  time: 0.6572  data: 0.3843  max mem: 15363
+Epoch: [6]  [ 950/1251]  eta: 0:03:09  lr: 0.0004995066821070679  img/s: 978.019175242332  loss_kd: 2.3312768936157227  loss_ce: 2.9234604835510254  loss: 3.1766 (3.0614)  acc1: 49.2188 (51.3875)  acc5: 73.0469 (74.1530)  time: 0.7149  data: 0.4305  max mem: 15363
+Epoch: [6]  [1000/1251]  eta: 0:02:37  lr: 0.0004995066821070679  img/s: 814.579335510619  loss_kd: 2.7632293701171875  loss_ce: 4.1619720458984375  loss: 2.9079 (3.0619)  acc1: 56.2500 (51.3319)  acc5: 82.0312 (74.1091)  time: 0.6924  data: 0.4157  max mem: 15363
+Epoch: [6]  [1050/1251]  eta: 0:02:06  lr: 0.0004995066821070679  img/s: 980.7419845710642  loss_kd: 2.72971773147583  loss_ce: 3.919126510620117  loss: 3.2116 (3.0646)  acc1: 50.7812 (51.2927)  acc5: 74.2188 (74.0463)  time: 0.7216  data: 0.4494  max mem: 15363
+Epoch: [6]  [1100/1251]  eta: 0:01:36  lr: 0.0004995066821070679  img/s: 981.595525627266  loss_kd: 2.902721405029297  loss_ce: 4.373169898986816  loss: 2.9059 (3.0613)  acc1: 53.5156 (51.3461)  acc5: 73.0469 (74.0932)  time: 0.6440  data: 0.3629  max mem: 15363
+Epoch: [6]  [1150/1251]  eta: 0:01:04  lr: 0.0004995066821070679  img/s: 968.3792558281318  loss_kd: 2.5128350257873535  loss_ce: 3.8833374977111816  loss: 2.9850 (3.0622)  acc1: 56.2500 (51.3103)  acc5: 76.9531 (74.0603)  time: 0.7774  data: 0.4943  max mem: 15363
+Epoch: [6]  [1200/1251]  eta: 0:00:32  lr: 0.0004995066821070679  img/s: 617.1327257846482  loss_kd: 2.279711961746216  loss_ce: 3.030332088470459  loss: 2.9318 (3.0642)  acc1: 57.8125 (51.2743)  acc5: 80.0781 (74.0203)  time: 0.7960  data: 0.5056  max mem: 15363
+Epoch: [6]  [1250/1251]  eta: 0:00:00  lr: 0.0004995066821070679  img/s: 983.179219713729  loss_kd: 2.4200263023376465  loss_ce: 3.503323554992676  loss: 3.1092 (3.0643)  acc1: 46.4844 (51.2478)  acc5: 68.7500 (73.9921)  time: 0.6578  data: 0.3840  max mem: 15363
+Epoch: [6] Total time: 0:13:29
+Test:   [ 0/49]  eta: 0:03:52  loss: 1.4726 (1.4726)  acc1: 89.0625 (89.0625)  acc5: 98.4375 (98.4375)  time: 4.7472  data: 4.5514  max mem: 15363
+Test:  Total time: 0:00:27
+Test:  Acc@1 72.104 Acc@5 91.062
+Epoch: [7]  [   0/1251]  eta: 1:47:43  lr: 0.0004993286193061145  img/s: 731.8550196946327  loss_kd: 2.3720362186431885  loss_ce: 3.4499082565307617  loss: 2.9110 (2.9110)  acc1: 57.0312 (57.0312)  acc5: 79.6875 (79.6875)  time: 5.1666  data: 4.8161  max mem: 15363
+Epoch: [7]  [  50/1251]  eta: 0:13:18  lr: 0.0004993286193061145  img/s: 981.3228048818382  loss_kd: 2.688702344894409  loss_ce: 3.9620447158813477  loss: 3.1965 (3.0677)  acc1: 43.7500 (50.8732)  acc5: 64.8438 (73.0852)  time: 0.6694  data: 0.3994  max mem: 15363
+Epoch: [7]  [ 100/1251]  eta: 0:12:06  lr: 0.0004993286193061145  img/s: 980.3632087315304  loss_kd: 2.4335455894470215  loss_ce: 3.794267416000366  loss: 3.1139 (3.0192)  acc1: 54.6875 (52.4095)  acc5: 77.3438 (74.8028)  time: 0.5913  data: 0.3266  max mem: 15363
+Epoch: [7]  [ 150/1251]  eta: 0:11:09  lr: 0.0004993286193061145  img/s: 980.5127141163858  loss_kd: 3.1082162857055664  loss_ce: 4.360357284545898  loss: 3.0247 (3.0329)  acc1: 53.5156 (52.0928)  acc5: 76.5625 (74.6740)  time: 0.5119  data: 0.2464  max mem: 15363
+Epoch: [7]  [ 200/1251]  eta: 0:10:42  lr: 0.0004993286193061145  img/s: 979.4885767272655  loss_kd: 2.6757547855377197  loss_ce: 3.928610324859619  loss: 3.0931 (3.0510)  acc1: 53.1250 (51.3410)  acc5: 75.7812 (74.1157)  time: 0.6095  data: 0.3408  max mem: 15363
+Epoch: [7]  [ 250/1251]  eta: 0:10:08  lr: 0.0004993286193061145  img/s: 975.710262505543  loss_kd: 2.4036591053009033  loss_ce: 3.621638774871826  loss: 3.2287 (3.0628)  acc1: 51.1719 (51.0225)  acc5: 73.8281 (73.9044)  time: 0.6511  data: 0.3732  max mem: 15363
+Epoch: [7]  [ 300/1251]  eta: 0:09:31  lr: 0.0004993286193061145  img/s: 977.2785658765857  loss_kd: 2.2877683639526367  loss_ce: 3.523496389389038  loss: 3.1109 (3.0609)  acc1: 51.9531 (51.0888)  acc5: 72.6562 (73.8632)  time: 0.6043  data: 0.3308  max mem: 15363
+Epoch: [7]  [ 350/1251]  eta: 0:08:58  lr: 0.0004993286193061145  img/s: 979.9104945904878  loss_kd: 2.5165176391601562  loss_ce: 3.8531551361083984  loss: 2.9868 (3.0561)  acc1: 55.8594 (51.2776)  acc5: 78.5156 (74.0296)  time: 0.5158  data: 0.2489  max mem: 15363
+Epoch: [7]  [ 400/1251]  eta: 0:08:25  lr: 0.0004993286193061145  img/s: 980.3139804109179  loss_kd: 2.73384165763855  loss_ce: 3.9532394409179688  loss: 3.1277 (3.0494)  acc1: 53.1250 (51.5586)  acc5: 77.3438 (74.2149)  time: 0.4968  data: 0.2152  max mem: 15363
+Epoch: [7]  [ 450/1251]  eta: 0:07:57  lr: 0.0004993286193061145  img/s: 980.2575976818729  loss_kd: 2.800497055053711  loss_ce: 3.938011646270752  loss: 3.2395 (3.0500)  acc1: 44.5312 (51.5019)  acc5: 70.3125 (74.2032)  time: 0.6522  data: 0.3801  max mem: 15363
+Epoch: [7]  [ 500/1251]  eta: 0:07:26  lr: 0.0004993286193061145  img/s: 977.1780648132222  loss_kd: 2.841987133026123  loss_ce: 3.973689556121826  loss: 3.0584 (3.0547)  acc1: 53.1250 (51.3769)  acc5: 76.9531 (74.1509)  time: 0.6719  data: 0.3971  max mem: 15363
+Epoch: [7]  [ 550/1251]  eta: 0:06:57  lr: 0.0004993286193061145  img/s: 877.3067103954794  loss_kd: 2.303131103515625  loss_ce: 3.5676796436309814  loss: 3.1790 (3.0521)  acc1: 46.8750 (51.3640)  acc5: 73.0469 (74.1564)  time: 0.5741  data: 0.2964  max mem: 15363
+Epoch: [7]  [ 600/1251]  eta: 0:06:28  lr: 0.0004993286193061145  img/s: 978.8742281762944  loss_kd: 2.8307576179504395  loss_ce: 4.029271602630615  loss: 3.1125 (3.0424)  acc1: 52.7344 (51.4715)  acc5: 75.3906 (74.2603)  time: 0.5583  data: 0.2780  max mem: 15363
+Epoch: [7]  [ 650/1251]  eta: 0:06:01  lr: 0.0004993286193061145  img/s: 981.1461555682467  loss_kd: 2.739588499069214  loss_ce: 4.055444717407227  loss: 3.1737 (3.0399)  acc1: 53.1250 (51.5715)  acc5: 74.6094 (74.3478)  time: 0.6662  data: 0.3926  max mem: 15363
+Epoch: [7]  [ 700/1251]  eta: 0:05:33  lr: 0.0004993286193061145  img/s: 979.6360278889333  loss_kd: 2.960763931274414  loss_ce: 4.044253826141357  loss: 3.1991 (3.0388)  acc1: 51.5625 (51.4878)  acc5: 76.1719 (74.3012)  time: 0.7389  data: 0.4648  max mem: 15363
+Epoch: [7]  [ 750/1251]  eta: 0:05:03  lr: 0.0004993286193061145  img/s: 980.3811111648797  loss_kd: 2.714355707168579  loss_ce: 3.9054651260375977  loss: 3.0766 (3.0394)  acc1: 53.9062 (51.5547)  acc5: 77.7344 (74.3327)  time: 0.5438  data: 0.2723  max mem: 15363
+Epoch: [7]  [ 800/1251]  eta: 0:04:32  lr: 0.0004993286193061145  img/s: 979.5073407735407  loss_kd: 2.7167797088623047  loss_ce: 4.045966148376465  loss: 3.0391 (3.0374)  acc1: 52.3438 (51.6191)  acc5: 76.1719 (74.3675)  time: 0.5603  data: 0.2937  max mem: 15363
+Epoch: [7]  [ 850/1251]  eta: 0:04:04  lr: 0.0004993286193061145  img/s: 979.9024461471631  loss_kd: 2.655237913131714  loss_ce: 4.121835231781006  loss: 3.0699 (3.0391)  acc1: 57.0312 (51.6557)  acc5: 77.3438 (74.3482)  time: 0.6950  data: 0.4145  max mem: 15363
+Epoch: [7]  [ 900/1251]  eta: 0:03:33  lr: 0.0004993286193061145  img/s: 981.9043135533548  loss_kd: 2.2830734252929688  loss_ce: 3.346726417541504  loss: 3.2393 (3.0451)  acc1: 47.6562 (51.5165)  acc5: 72.6562 (74.2495)  time: 0.6988  data: 0.4336  max mem: 15363
+Epoch: [7]  [ 950/1251]  eta: 0:03:03  lr: 0.0004993286193061145  img/s: 980.7876723527665  loss_kd: 2.4165797233581543  loss_ce: 3.626349449157715  loss: 2.8935 (3.0432)  acc1: 60.1562 (51.5748)  acc5: 80.0781 (74.2795)  time: 0.5895  data: 0.3227  max mem: 15363
+Epoch: [7]  [1000/1251]  eta: 0:02:33  lr: 0.0004993286193061145  img/s: 976.9451241537248  loss_kd: 2.7337355613708496  loss_ce: 3.981163740158081  loss: 3.1271 (3.0413)  acc1: 49.6094 (51.6132)  acc5: 77.7344 (74.3226)  time: 0.5473  data: 0.2796  max mem: 15363
+Epoch: [7]  [1050/1251]  eta: 0:02:03  lr: 0.0004993286193061145  img/s: 980.4652613604716  loss_kd: 2.6973795890808105  loss_ce: 4.136228084564209  loss: 3.2398 (3.0401)  acc1: 48.0469 (51.6023)  acc5: 73.0469 (74.3184)  time: 0.6897  data: 0.4194  max mem: 15363
+Epoch: [7]  [1100/1251]  eta: 0:01:32  lr: 0.0004993286193061145  img/s: 979.6333465624758  loss_kd: 2.2896409034729004  loss_ce: 3.0035343170166016  loss: 2.8737 (3.0399)  acc1: 56.2500 (51.6143)  acc5: 80.4688 (74.3138)  time: 0.7206  data: 0.4459  max mem: 15363
+Epoch: [7]  [1150/1251]  eta: 0:01:02  lr: 0.0004993286193061145  img/s: 979.518956971993  loss_kd: 2.1234140396118164  loss_ce: 2.874786138534546  loss: 2.8927 (3.0373)  acc1: 55.8594 (51.6999)  acc5: 79.2969 (74.3769)  time: 0.5486  data: 0.2803  max mem: 15363
+Epoch: [7]  [1200/1251]  eta: 0:00:31  lr: 0.0004993286193061145  img/s: 978.7841052455024  loss_kd: 2.6781721115112305  loss_ce: 3.8528084754943848  loss: 3.2300 (3.0389)  acc1: 44.1406 (51.6383)  acc5: 70.3125 (74.3449)  time: 0.5614  data: 0.2939  max mem: 15363
+Epoch: [7]  [1250/1251]  eta: 0:00:00  lr: 0.0004993286193061145  img/s: 983.1279078604135  loss_kd: 2.3430967330932617  loss_ce: 3.724055767059326  loss: 3.2108 (3.0422)  acc1: 50.7812 (51.4901)  acc5: 73.4375 (74.2300)  time: 0.7485  data: 0.4812  max mem: 15363
+Epoch: [7] Total time: 0:12:56
+Test:   [ 0/49]  eta: 0:02:10  loss: 1.4579 (1.4579)  acc1: 87.8906 (87.8906)  acc5: 98.0469 (98.0469)  time: 2.6670  data: 2.4710  max mem: 15363
+Test:  Total time: 0:00:25
+Test:  Acc@1 72.408 Acc@5 91.238
+Epoch: [8]  [   0/1251]  eta: 1:35:03  lr: 0.0004991232148123761  img/s: 521.5985076946992  loss_kd: 2.5394909381866455  loss_ce: 3.889045476913452  loss: 3.2143 (3.2143)  acc1: 38.2812 (38.2812)  acc5: 65.6250 (65.6250)  time: 4.5593  data: 4.0678  max mem: 15363
+Epoch: [8]  [  50/1251]  eta: 0:12:11  lr: 0.0004991232148123761  img/s: 982.1486090200117  loss_kd: 2.2403604984283447  loss_ce: 2.936030626296997  loss: 3.0293 (2.9943)  acc1: 53.5156 (53.0561)  acc5: 77.7344 (76.1183)  time: 0.6139  data: 0.3440  max mem: 15363
+Epoch: [8]  [ 100/1251]  eta: 0:10:58  lr: 0.0004991232148123761  img/s: 981.1228461962297  loss_kd: 2.4073429107666016  loss_ce: 3.369981050491333  loss: 2.9426 (2.9944)  acc1: 58.5938 (53.8676)  acc5: 78.5156 (76.2106)  time: 0.5564  data: 0.2805  max mem: 15363
+Epoch: [8]  [ 150/1251]  eta: 0:10:20  lr: 0.0004991232148123761  img/s: 976.8571334995178  loss_kd: 2.415879249572754  loss_ce: 3.295659065246582  loss: 3.1609 (3.0207)  acc1: 52.7344 (52.9129)  acc5: 76.1719 (75.6002)  time: 0.5195  data: 0.2319  max mem: 15363
+Epoch: [8]  [ 200/1251]  eta: 0:10:00  lr: 0.0004991232148123761  img/s: 837.3045909204689  loss_kd: 2.7437543869018555  loss_ce: 3.9204018115997314  loss: 3.0412 (3.0150)  acc1: 54.2969 (52.6255)  acc5: 75.7812 (75.4081)  time: 0.5730  data: 0.3032  max mem: 15363
+Epoch: [8]  [ 250/1251]  eta: 0:09:45  lr: 0.0004991232148123761  img/s: 977.308809180538  loss_kd: 2.623466730117798  loss_ce: 3.773038864135742  loss: 3.1736 (3.0184)  acc1: 51.1719 (52.3453)  acc5: 73.0469 (75.1292)  time: 0.7481  data: 0.4668  max mem: 15363
+Epoch: [8]  [ 300/1251]  eta: 0:09:22  lr: 0.0004991232148123761  img/s: 979.167912047026  loss_kd: 2.778372287750244  loss_ce: 4.154336929321289  loss: 3.2096 (3.0266)  acc1: 46.8750 (52.0427)  acc5: 71.0938 (74.9143)  time: 0.6871  data: 0.4159  max mem: 15363
+Epoch: [8]  [ 350/1251]  eta: 0:08:58  lr: 0.0004991232148123761  img/s: 980.7742343280446  loss_kd: 2.078927993774414  loss_ce: 2.5327067375183105  loss: 3.0815 (3.0321)  acc1: 47.6562 (51.8374)  acc5: 74.6094 (74.6784)  time: 0.5696  data: 0.3021  max mem: 15363
+Epoch: [8]  [ 400/1251]  eta: 0:08:39  lr: 0.0004991232148123761  img/s: 735.3524712482699  loss_kd: 2.5721802711486816  loss_ce: 3.4925029277801514  loss: 2.9577 (3.0306)  acc1: 53.5156 (51.8810)  acc5: 78.5156 (74.6941)  time: 0.7330  data: 0.4518  max mem: 15363
+Epoch: [8]  [ 450/1251]  eta: 0:08:16  lr: 0.0004991232148123761  img/s: 982.1414221241674  loss_kd: 2.2154595851898193  loss_ce: 2.672466278076172  loss: 3.2641 (3.0281)  acc1: 44.9219 (51.9116)  acc5: 69.9219 (74.6648)  time: 0.7654  data: 0.4884  max mem: 15363
+Epoch: [8]  [ 500/1251]  eta: 0:07:49  lr: 0.0004991232148123761  img/s: 979.7915699414539  loss_kd: 2.6801300048828125  loss_ce: 3.8854310512542725  loss: 2.9461 (3.0164)  acc1: 59.3750 (52.1636)  acc5: 78.5156 (74.8503)  time: 0.6468  data: 0.3756  max mem: 15363
+Epoch: [8]  [ 550/1251]  eta: 0:07:21  lr: 0.0004991232148123761  img/s: 981.7525882349714  loss_kd: 2.6369943618774414  loss_ce: 4.028461456298828  loss: 3.0057 (3.0141)  acc1: 54.2969 (52.1488)  acc5: 77.7344 (74.8603)  time: 0.6275  data: 0.3505  max mem: 15363
+Epoch: [8]  [ 600/1251]  eta: 0:06:55  lr: 0.0004991232148123761  img/s: 735.9396411808572  loss_kd: 2.6671559810638428  loss_ce: 4.178134441375732  loss: 3.0723 (3.0126)  acc1: 54.2969 (52.2788)  acc5: 76.1719 (74.9597)  time: 0.7775  data: 0.5036  max mem: 15363
+Epoch: [8]  [ 650/1251]  eta: 0:06:26  lr: 0.0004991232148123761  img/s: 980.6371875065643  loss_kd: 2.8590211868286133  loss_ce: 3.992011070251465  loss: 3.1982 (3.0170)  acc1: 49.2188 (52.1505)  acc5: 73.0469 (74.8572)  time: 0.7873  data: 0.5143  max mem: 15363
+Epoch: [8]  [ 700/1251]  eta: 0:05:57  lr: 0.0004991232148123761  img/s: 979.2063092829009  loss_kd: 2.5711522102355957  loss_ce: 3.98553466796875  loss: 2.8379 (3.0133)  acc1: 57.8125 (52.2925)  acc5: 79.6875 (74.9588)  time: 0.6478  data: 0.3801  max mem: 15363
+Epoch: [8]  [ 750/1251]  eta: 0:05:27  lr: 0.0004991232148123761  img/s: 982.7796689597604  loss_kd: 2.3803863525390625  loss_ce: 3.690908908843994  loss: 2.9616 (3.0107)  acc1: 56.6406 (52.2803)  acc5: 76.1719 (74.9365)  time: 0.6791  data: 0.4054  max mem: 15363
+Epoch: [8]  [ 800/1251]  eta: 0:04:58  lr: 0.0004991232148123761  img/s: 798.4148502203233  loss_kd: 2.280947208404541  loss_ce: 3.4972007274627686  loss: 3.2672 (3.0111)  acc1: 46.8750 (52.1706)  acc5: 71.8750 (74.8571)  time: 0.8642  data: 0.5805  max mem: 15363
+Epoch: [8]  [ 850/1251]  eta: 0:04:28  lr: 0.0004991232148123761  img/s: 980.6147978753717  loss_kd: 1.9775584936141968  loss_ce: 2.737480401992798  loss: 3.1236 (3.0141)  acc1: 51.9531 (52.0688)  acc5: 75.3906 (74.7856)  time: 0.8755  data: 0.5985  max mem: 15363
+Epoch: [8]  [ 900/1251]  eta: 0:03:58  lr: 0.0004991232148123761  img/s: 980.4285557755101  loss_kd: 2.497405529022217  loss_ce: 3.89361310005188  loss: 3.0853 (3.0146)  acc1: 53.5156 (52.0832)  acc5: 75.7812 (74.8062)  time: 0.7867  data: 0.5131  max mem: 15363
+Epoch: [8]  [ 950/1251]  eta: 0:03:27  lr: 0.0004991232148123761  img/s: 982.2285703308455  loss_kd: 2.0515153408050537  loss_ce: 2.917640209197998  loss: 2.8631 (3.0108)  acc1: 56.2500 (52.0957)  acc5: 80.0781 (74.8513)  time: 0.9085  data: 0.6372  max mem: 15363
+Epoch: [8]  [1000/1251]  eta: 0:02:55  lr: 0.0004991232148123761  img/s: 835.6956029040011  loss_kd: 2.3833515644073486  loss_ce: 3.9563896656036377  loss: 2.9908 (3.0072)  acc1: 53.5156 (52.1678)  acc5: 76.5625 (74.8931)  time: 0.9517  data: 0.6751  max mem: 15363
+Epoch: [8]  [1050/1251]  eta: 0:02:22  lr: 0.0004991232148123761  img/s: 981.4636318681269  loss_kd: 2.552178382873535  loss_ce: 3.714259624481201  loss: 3.0179 (3.0107)  acc1: 57.0312 (52.0921)  acc5: 78.9062 (74.8428)  time: 0.9468  data: 0.6712  max mem: 15363
+Epoch: [8]  [1100/1251]  eta: 0:01:48  lr: 0.0004991232148123761  img/s: 981.3344641804481  loss_kd: 2.752976894378662  loss_ce: 3.984957218170166  loss: 3.1811 (3.0069)  acc1: 50.7812 (52.1326)  acc5: 73.0469 (74.8687)  time: 0.8309  data: 0.5601  max mem: 15363
+Epoch: [8]  [1150/1251]  eta: 0:01:12  lr: 0.0004991232148123761  img/s: 978.3622651343203  loss_kd: 2.4321415424346924  loss_ce: 3.8184735774993896  loss: 3.1228 (3.0065)  acc1: 54.6875 (52.1215)  acc5: 75.7812 (74.8483)  time: 0.8283  data: 0.5517  max mem: 15363
+Epoch: [8]  [1200/1251]  eta: 0:00:37  lr: 0.0004991232148123761  img/s: 847.4063635473983  loss_kd: 2.1946723461151123  loss_ce: 2.5229909420013428  loss: 2.9519 (3.0077)  acc1: 58.9844 (52.0670)  acc5: 78.1250 (74.8101)  time: 0.9178  data: 0.6462  max mem: 15363
+Epoch: [8]  [1250/1251]  eta: 0:00:00  lr: 0.0004991232148123761  img/s: 983.3683096102031  loss_kd: 2.9130539894104004  loss_ce: 4.030853748321533  loss: 3.1791 (3.0106)  acc1: 51.9531 (52.0028)  acc5: 75.3906 (74.7552)  time: 0.8575  data: 0.5892  max mem: 15363
+Epoch: [8] Total time: 0:15:20
+Test:   [ 0/49]  eta: 0:06:08  loss: 1.4621 (1.4621)  acc1: 87.8906 (87.8906)  acc5: 97.2656 (97.2656)  time: 7.5173  data: 7.3218  max mem: 15363
+Test:  Total time: 0:00:47
+Test:  Acc@1 72.352 Acc@5 91.158
+Epoch: [9]  [   0/1251]  eta: 2:18:43  lr: 0.00049889049115077  img/s: 878.3674340186628  loss_kd: 2.561608076095581  loss_ce: 3.960622787475586  loss: 3.2611 (3.2611)  acc1: 46.8750 (46.8750)  acc5: 67.9688 (67.9688)  time: 6.6536  data: 6.3616  max mem: 15363
+Epoch: [9]  [  50/1251]  eta: 0:16:38  lr: 0.00049889049115077  img/s: 969.569353519191  loss_kd: 2.092653274536133  loss_ce: 2.790738821029663  loss: 3.1698 (2.9799)  acc1: 52.3438 (52.2365)  acc5: 75.7812 (75.2604)  time: 0.8249  data: 0.5568  max mem: 15363
+Epoch: [9]  [ 100/1251]  eta: 0:14:30  lr: 0.00049889049115077  img/s: 978.6208554692448  loss_kd: 2.6862590312957764  loss_ce: 4.177304267883301  loss: 3.1749 (2.9844)  acc1: 49.2188 (52.3979)  acc5: 73.0469 (75.3558)  time: 0.6573  data: 0.3885  max mem: 15363
+Epoch: [9]  [ 150/1251]  eta: 0:13:29  lr: 0.00049889049115077  img/s: 980.1099593622095  loss_kd: 2.30100154876709  loss_ce: 3.6778156757354736  loss: 3.0168 (2.9786)  acc1: 57.0312 (52.4938)  acc5: 77.3438 (75.3984)  time: 0.6007  data: 0.3289  max mem: 15363
+Epoch: [9]  [ 200/1251]  eta: 0:12:54  lr: 0.00049889049115077  img/s: 878.8714214620603  loss_kd: 2.7776219844818115  loss_ce: 4.265803813934326  loss: 3.2599 (3.0135)  acc1: 41.7969 (51.5256)  acc5: 62.8906 (74.3043)  time: 0.7651  data: 0.4981  max mem: 15363
+Epoch: [9]  [ 250/1251]  eta: 0:12:08  lr: 0.00049889049115077  img/s: 878.8038061190582  loss_kd: 2.830007314682007  loss_ce: 4.434741020202637  loss: 2.9417 (2.9968)  acc1: 57.4219 (52.1788)  acc5: 78.1250 (74.7401)  time: 0.7769  data: 0.5005  max mem: 15363
+Epoch: [9]  [ 300/1251]  eta: 0:11:23  lr: 0.00049889049115077  img/s: 979.844322426218  loss_kd: 2.862550973892212  loss_ce: 4.342466354370117  loss: 3.1788 (3.0173)  acc1: 47.2656 (51.7662)  acc5: 71.8750 (74.4134)  time: 0.6153  data: 0.3408  max mem: 15363
+Epoch: [9]  [ 350/1251]  eta: 0:10:45  lr: 0.00049889049115077  img/s: 980.2200127988724  loss_kd: 2.683873414993286  loss_ce: 3.820857048034668  loss: 3.2186 (3.0315)  acc1: 49.2188 (51.3255)  acc5: 71.4844 (74.0685)  time: 0.6311  data: 0.3626  max mem: 15363
+Epoch: [9]  [ 400/1251]  eta: 0:10:14  lr: 0.00049889049115077  img/s: 847.591656240256  loss_kd: 2.632070541381836  loss_ce: 3.9217846393585205  loss: 3.0657 (3.0213)  acc1: 50.0000 (51.6969)  acc5: 73.4375 (74.3181)  time: 0.8137  data: 0.5476  max mem: 15363
+Epoch: [9]  [ 450/1251]  eta: 0:09:36  lr: 0.00049889049115077  img/s: 854.4899553393793  loss_kd: 2.8937058448791504  loss_ce: 4.307222843170166  loss: 2.7936 (3.0133)  acc1: 60.5469 (51.8734)  acc5: 81.2500 (74.4552)  time: 0.8060  data: 0.5332  max mem: 15363
+Epoch: [9]  [ 500/1251]  eta: 0:09:00  lr: 0.00049889049115077  img/s: 981.7319428520227  loss_kd: 2.499028444290161  loss_ce: 3.704352378845215  loss: 3.1017 (3.0144)  acc1: 51.5625 (51.7691)  acc5: 76.1719 (74.4261)  time: 0.6371  data: 0.3731  max mem: 15363
+Epoch: [9]  [ 550/1251]  eta: 0:08:23  lr: 0.00049889049115077  img/s: 980.9095272505365  loss_kd: 2.6977221965789795  loss_ce: 3.955259084701538  loss: 3.1913 (3.0129)  acc1: 50.0000 (51.8439)  acc5: 73.0469 (74.4591)  time: 0.6439  data: 0.3768  max mem: 15363
+Epoch: [9]  [ 600/1251]  eta: 0:07:51  lr: 0.00049889049115077  img/s: 772.4450122872747  loss_kd: 2.1148431301116943  loss_ce: 3.0569424629211426  loss: 2.8928 (3.0033)  acc1: 57.8125 (52.1962)  acc5: 79.6875 (74.7719)  time: 0.8575  data: 0.5851  max mem: 15363
+Epoch: [9]  [ 650/1251]  eta: 0:07:15  lr: 0.00049889049115077  img/s: 834.1057456049381  loss_kd: 2.901339530944824  loss_ce: 4.152364730834961  loss: 3.0162 (3.0011)  acc1: 53.9062 (52.2399)  acc5: 78.1250 (74.8806)  time: 0.8425  data: 0.5641  max mem: 15363
+Epoch: [9]  [ 700/1251]  eta: 0:06:37  lr: 0.00049889049115077  img/s: 980.986598182089  loss_kd: 2.584195375442505  loss_ce: 3.9657344818115234  loss: 3.0065 (3.0032)  acc1: 45.3125 (52.0718)  acc5: 70.3125 (74.7777)  time: 0.6169  data: 0.3447  max mem: 15363
+Epoch: [9]  [ 750/1251]  eta: 0:05:59  lr: 0.00049889049115077  img/s: 980.3283008669866  loss_kd: 2.5776939392089844  loss_ce: 3.7476303577423096  loss: 3.1326 (3.0028)  acc1: 52.7344 (52.0842)  acc5: 73.0469 (74.7789)  time: 0.5991  data: 0.3208  max mem: 15363
+Epoch: [9]  [ 800/1251]  eta: 0:05:23  lr: 0.00049889049115077  img/s: 890.4985868021921  loss_kd: 2.840991497039795  loss_ce: 4.243432998657227  loss: 3.1692 (3.0001)  acc1: 50.7812 (52.1028)  acc5: 74.2188 (74.8200)  time: 0.7187  data: 0.4422  max mem: 15363
+Epoch: [9]  [ 850/1251]  eta: 0:04:46  lr: 0.00049889049115077  img/s: 981.5704002735163  loss_kd: 2.5375523567199707  loss_ce: 3.8800644874572754  loss: 3.0912 (3.0033)  acc1: 51.1719 (51.9696)  acc5: 75.0000 (74.7324)  time: 0.7792  data: 0.5029  max mem: 15363
+Epoch: [9]  [ 900/1251]  eta: 0:04:10  lr: 0.00049889049115077  img/s: 979.1759484286101  loss_kd: 1.9619441032409668  loss_ce: 2.4299159049987793  loss: 2.9380 (3.0010)  acc1: 56.2500 (52.0446)  acc5: 78.5156 (74.8205)  time: 0.7316  data: 0.4615  max mem: 15363
+Epoch: [9]  [ 950/1251]  eta: 0:03:34  lr: 0.00049889049115077  img/s: 978.3578078786763  loss_kd: 2.020683765411377  loss_ce: 2.231302261352539  loss: 2.8310 (2.9958)  acc1: 60.5469 (52.1367)  acc5: 79.6875 (74.8920)  time: 0.6306  data: 0.3624  max mem: 15363
+Epoch: [9]  [1000/1251]  eta: 0:02:58  lr: 0.00049889049115077  img/s: 981.1658797481251  loss_kd: 2.096669912338257  loss_ce: 2.47513484954834  loss: 3.0284 (2.9957)  acc1: 46.4844 (52.1088)  acc5: 72.6562 (74.8978)  time: 0.6540  data: 0.3887  max mem: 15363
+Epoch: [9]  [1050/1251]  eta: 0:02:24  lr: 0.00049889049115077  img/s: 981.871091574636  loss_kd: 2.406005382537842  loss_ce: 3.7638444900512695  loss: 3.1228 (2.9955)  acc1: 53.1250 (52.1579)  acc5: 75.7812 (74.9361)  time: 0.8256  data: 0.5544  max mem: 15363
+Epoch: [9]  [1100/1251]  eta: 0:01:48  lr: 0.00049889049115077  img/s: 980.7079454617194  loss_kd: 2.72406005859375  loss_ce: 4.185263633728027  loss: 3.0081 (2.9896)  acc1: 55.0781 (52.3303)  acc5: 77.7344 (75.0695)  time: 0.8830  data: 0.6129  max mem: 15363
+Epoch: [9]  [1150/1251]  eta: 0:01:12  lr: 0.00049889049115077  img/s: 979.5725737661397  loss_kd: 2.6489875316619873  loss_ce: 3.8114967346191406  loss: 3.0837 (2.9900)  acc1: 50.3906 (52.3132)  acc5: 73.8281 (75.0516)  time: 0.6964  data: 0.4303  max mem: 15363
+Epoch: [9]  [1200/1251]  eta: 0:00:37  lr: 0.00049889049115077  img/s: 981.688859632281  loss_kd: 2.1412205696105957  loss_ce: 2.776148796081543  loss: 3.0685 (2.9890)  acc1: 55.4688 (52.2507)  acc5: 73.8281 (75.0101)  time: 0.7532  data: 0.4820  max mem: 15363
+Epoch: [9]  [1250/1251]  eta: 0:00:00  lr: 0.00049889049115077  img/s: 983.8936406311994  loss_kd: 2.0498716831207275  loss_ce: 2.419631004333496  loss: 3.0809 (2.9865)  acc1: 55.0781 (52.3163)  acc5: 77.3438 (75.0781)  time: 0.9078  data: 0.6387  max mem: 15363
+Epoch: [9] Total time: 0:15:16
+Test:   [ 0/49]  eta: 0:05:58  loss: 1.4512 (1.4512)  acc1: 87.8906 (87.8906)  acc5: 97.6562 (97.6562)  time: 7.3115  data: 7.1158  max mem: 15363
+Test:  Total time: 0:00:45
+Test:  Acc@1 72.722 Acc@5 91.414
+Epoch: [10]  [   0/1251]  eta: 2:06:10  lr: 0.0004986304738420684  img/s: 896.976465831515  loss_kd: 2.195197820663452  loss_ce: 2.5919976234436035  loss: 2.3936 (2.3936)  acc1: 61.3281 (61.3281)  acc5: 82.4219 (82.4219)  time: 6.0513  data: 5.7650  max mem: 15363
+Epoch: [10]  [  50/1251]  eta: 0:17:17  lr: 0.0004986304738420684  img/s: 981.895334418494  loss_kd: 2.5854296684265137  loss_ce: 3.791130542755127  loss: 3.0944 (3.0645)  acc1: 56.2500 (48.9354)  acc5: 75.0000 (72.9856)  time: 0.9127  data: 0.6389  max mem: 15363
+Epoch: [10]  [ 100/1251]  eta: 0:15:32  lr: 0.0004986304738420684  img/s: 981.9222723157538  loss_kd: 2.541400194168091  loss_ce: 3.9346485137939453  loss: 3.1517 (3.0552)  acc1: 50.7812 (49.8646)  acc5: 73.0469 (73.3408)  time: 0.6802  data: 0.4155  max mem: 15363
+Epoch: [10]  [ 150/1251]  eta: 0:14:41  lr: 0.0004986304738420684  img/s: 979.250961018447  loss_kd: 2.117993116378784  loss_ce: 2.738434314727783  loss: 2.8054 (3.0037)  acc1: 58.2031 (51.6142)  acc5: 81.2500 (74.6016)  time: 0.7027  data: 0.4357  max mem: 15363
+Epoch: [10]  [ 200/1251]  eta: 0:14:13  lr: 0.0004986304738420684  img/s: 792.3574642301843  loss_kd: 2.006964683532715  loss_ce: 2.431008815765381  loss: 2.9647 (2.9925)  acc1: 57.0312 (51.9317)  acc5: 80.0781 (74.8426)  time: 0.8710  data: 0.6007  max mem: 15363
+Epoch: [10]  [ 250/1251]  eta: 0:13:22  lr: 0.0004986304738420684  img/s: 980.430346228088  loss_kd: 2.721651792526245  loss_ce: 3.9264793395996094  loss: 3.1748 (2.9840)  acc1: 50.3906 (52.2519)  acc5: 73.8281 (75.0342)  time: 0.8847  data: 0.6180  max mem: 15363
+Epoch: [10]  [ 300/1251]  eta: 0:12:43  lr: 0.0004986304738420684  img/s: 981.104916663697  loss_kd: 2.701936721801758  loss_ce: 3.8242125511169434  loss: 3.2037 (2.9879)  acc1: 47.2656 (52.2542)  acc5: 71.0938 (74.9273)  time: 0.7294  data: 0.4628  max mem: 15363
+Epoch: [10]  [ 350/1251]  eta: 0:12:02  lr: 0.0004986304738420684  img/s: 979.8040869662024  loss_kd: 2.518566846847534  loss_ce: 3.8159093856811523  loss: 2.9555 (2.9797)  acc1: 55.8594 (52.3148)  acc5: 77.7344 (75.0812)  time: 0.6957  data: 0.4306  max mem: 15363
+Epoch: [10]  [ 400/1251]  eta: 0:11:22  lr: 0.0004986304738420684  img/s: 919.8712761528142  loss_kd: 2.0600173473358154  loss_ce: 2.917088508605957  loss: 3.0582 (2.9744)  acc1: 53.9062 (52.5220)  acc5: 78.1250 (75.2640)  time: 0.8609  data: 0.5936  max mem: 15363
+Epoch: [10]  [ 450/1251]  eta: 0:10:41  lr: 0.0004986304738420684  img/s: 981.8270983599363  loss_kd: 2.652686834335327  loss_ce: 4.088283061981201  loss: 3.0442 (2.9736)  acc1: 55.8594 (52.7777)  acc5: 75.3906 (75.3854)  time: 0.9478  data: 0.6825  max mem: 15363
+Epoch: [10]  [ 500/1251]  eta: 0:10:01  lr: 0.0004986304738420684  img/s: 980.2334356405092  loss_kd: 2.7781894207000732  loss_ce: 4.019059658050537  loss: 3.0755 (2.9716)  acc1: 53.5156 (52.8451)  acc5: 77.3438 (75.4164)  time: 0.7050  data: 0.4375  max mem: 15363
+Epoch: [10]  [ 550/1251]  eta: 0:09:26  lr: 0.0004986304738420684  img/s: 980.4330319192163  loss_kd: 1.9880415201187134  loss_ce: 2.6153790950775146  loss: 3.0342 (2.9845)  acc1: 53.9062 (52.4125)  acc5: 75.0000 (75.0773)  time: 0.7782  data: 0.5134  max mem: 15363
+Epoch: [10]  [ 600/1251]  eta: 0:08:52  lr: 0.0004986304738420684  img/s: 865.0815571667165  loss_kd: 2.1383261680603027  loss_ce: 2.526052474975586  loss: 2.9540 (2.9847)  acc1: 57.4219 (52.4295)  acc5: 78.1250 (75.0247)  time: 0.9587  data: 0.6884  max mem: 15363
+Epoch: [10]  [ 650/1251]  eta: 0:08:09  lr: 0.0004986304738420684  img/s: 980.8190291758774  loss_kd: 2.238574743270874  loss_ce: 3.200876235961914  loss: 3.0476 (2.9938)  acc1: 48.8281 (52.1853)  acc5: 73.0469 (74.8524)  time: 0.8920  data: 0.6264  max mem: 15363
+Epoch: [10]  [ 700/1251]  eta: 0:07:26  lr: 0.0004986304738420684  img/s: 978.0663915155567  loss_kd: 2.7680559158325195  loss_ce: 4.5172438621521  loss: 3.1210 (2.9917)  acc1: 47.6562 (52.1905)  acc5: 73.0469 (74.8490)  time: 0.6434  data: 0.3799  max mem: 15363
+Epoch: [10]  [ 750/1251]  eta: 0:06:45  lr: 0.0004986304738420684  img/s: 976.1564407724218  loss_kd: 2.0208888053894043  loss_ce: 2.3532896041870117  loss: 3.0666 (2.9849)  acc1: 53.1250 (52.3552)  acc5: 76.9531 (75.0010)  time: 0.7204  data: 0.4499  max mem: 15363
+Epoch: [10]  [ 800/1251]  eta: 0:06:03  lr: 0.0004986304738420684  img/s: 895.0914221454182  loss_kd: 2.21146297454834  loss_ce: 3.4850568771362305  loss: 3.0445 (2.9876)  acc1: 52.3438 (52.2691)  acc5: 77.3438 (74.9595)  time: 0.8076  data: 0.5336  max mem: 15363
+Epoch: [10]  [ 850/1251]  eta: 0:05:23  lr: 0.0004986304738420684  img/s: 981.1461555682467  loss_kd: 2.248551845550537  loss_ce: 2.820481538772583  loss: 2.8206 (2.9851)  acc1: 59.3750 (52.2868)  acc5: 81.2500 (74.9532)  time: 0.7777  data: 0.4987  max mem: 15363
+Epoch: [10]  [ 900/1251]  eta: 0:04:42  lr: 0.0004986304738420684  img/s: 656.3739663750581  loss_kd: 2.364567756652832  loss_ce: 3.828617572784424  loss: 3.0687 (2.9849)  acc1: 56.6406 (52.3026)  acc5: 75.7812 (74.9475)  time: 0.7382  data: 0.4602  max mem: 15363
+Epoch: [10]  [ 950/1251]  eta: 0:04:01  lr: 0.0004986304738420684  img/s: 981.1102954546493  loss_kd: 2.4217042922973633  loss_ce: 3.371208667755127  loss: 2.8965 (2.9814)  acc1: 57.8125 (52.4686)  acc5: 78.5156 (75.0485)  time: 0.6799  data: 0.4095  max mem: 15363
+Epoch: [10]  [1000/1251]  eta: 0:03:21  lr: 0.0004986304738420684  img/s: 928.3894570469079  loss_kd: 2.475891351699829  loss_ce: 3.9039816856384277  loss: 2.9746 (2.9799)  acc1: 57.0312 (52.4952)  acc5: 78.1250 (75.0878)  time: 0.8362  data: 0.5593  max mem: 15363
+Epoch: [10]  [1050/1251]  eta: 0:02:40  lr: 0.0004986304738420684  img/s: 981.7534858800144  loss_kd: 2.836789131164551  loss_ce: 4.066834449768066  loss: 3.0738 (2.9790)  acc1: 51.5625 (52.5333)  acc5: 75.7812 (75.1193)  time: 0.8264  data: 0.5546  max mem: 15363
+Epoch: [10]  [1100/1251]  eta: 0:02:00  lr: 0.0004986304738420684  img/s: 982.2123973300085  loss_kd: 2.560091495513916  loss_ce: 3.7190728187561035  loss: 3.0572 (2.9788)  acc1: 51.5625 (52.4789)  acc5: 73.4375 (75.0756)  time: 0.6459  data: 0.3732  max mem: 15363
+Epoch: [10]  [1150/1251]  eta: 0:01:20  lr: 0.0004986304738420684  img/s: 981.7489976712142  loss_kd: 2.315007209777832  loss_ce: 3.508622646331787  loss: 3.0359 (2.9787)  acc1: 54.2969 (52.4510)  acc5: 75.7812 (75.0713)  time: 0.6906  data: 0.4256  max mem: 15363
+Epoch: [10]  [1200/1251]  eta: 0:00:40  lr: 0.0004986304738420684  img/s: 916.5803707323736  loss_kd: 2.584062337875366  loss_ce: 3.8515167236328125  loss: 3.0021 (2.9783)  acc1: 56.2500 (52.4748)  acc5: 78.5156 (75.0891)  time: 0.9124  data: 0.6443  max mem: 15363
+Epoch: [10]  [1250/1251]  eta: 0:00:00  lr: 0.0004986304738420684  img/s: 804.6698741295635  loss_kd: 2.291959047317505  loss_ce: 3.312804937362671  loss: 2.9851 (2.9757)  acc1: 58.2031 (52.5842)  acc5: 78.9062 (75.1749)  time: 0.9156  data: 0.6411  max mem: 15363
+Epoch: [10] Total time: 0:16:44
+Test:   [ 0/49]  eta: 0:02:19  loss: 1.4549 (1.4549)  acc1: 87.1094 (87.1094)  acc5: 95.7031 (95.7031)  time: 2.8545  data: 2.6711  max mem: 15363
+Test:  Total time: 0:00:14
+Test:  Acc@1 72.974 Acc@5 91.568
+Epoch: [11]  [   0/1251]  eta: 1:58:24  lr: 0.0004983431914000992  img/s: 483.52852828781636  loss_kd: 2.4494519233703613  loss_ce: 3.4803082942962646  loss: 2.9649 (2.9649)  acc1: 60.9375 (60.9375)  acc5: 79.6875 (79.6875)  time: 5.6795  data: 5.1494  max mem: 15363
+Epoch: [11]  [  50/1251]  eta: 0:15:17  lr: 0.0004983431914000992  img/s: 981.1730523737943  loss_kd: 2.4027414321899414  loss_ce: 3.1999969482421875  loss: 3.0415 (2.9463)  acc1: 54.2969 (55.1164)  acc5: 76.9531 (77.5506)  time: 0.7741  data: 0.4972  max mem: 15363
+Epoch: [11]  [ 100/1251]  eta: 0:13:41  lr: 0.0004983431914000992  img/s: 980.0240811662353  loss_kd: 2.5538980960845947  loss_ce: 4.018555641174316  loss: 3.0284 (2.9712)  acc1: 54.2969 (53.6471)  acc5: 76.5625 (76.3614)  time: 0.6350  data: 0.3698  max mem: 15363
+Epoch: [11]  [ 150/1251]  eta: 0:12:52  lr: 0.0004983431914000992  img/s: 980.7760260433984  loss_kd: 1.95693039894104  loss_ce: 2.906440258026123  loss: 3.0428 (2.9632)  acc1: 51.9531 (53.8933)  acc5: 76.5625 (76.5858)  time: 0.6279  data: 0.3602  max mem: 15363
+Epoch: [11]  [ 200/1251]  eta: 0:12:24  lr: 0.0004983431914000992  img/s: 873.5780189418377  loss_kd: 2.3755974769592285  loss_ce: 3.3034915924072266  loss: 3.0397 (2.9673)  acc1: 50.3906 (53.5525)  acc5: 73.8281 (76.1777)  time: 0.7474  data: 0.4814  max mem: 15363
+Epoch: [11]  [ 250/1251]  eta: 0:11:44  lr: 0.0004983431914000992  img/s: 982.1018960770505  loss_kd: 2.042816638946533  loss_ce: 2.2797131538391113  loss: 2.7390 (2.9675)  acc1: 58.9844 (53.4254)  acc5: 78.9062 (75.9711)  time: 0.8128  data: 0.5472  max mem: 15363
+Epoch: [11]  [ 300/1251]  eta: 0:11:04  lr: 0.0004983431914000992  img/s: 979.758490772635  loss_kd: 2.093531608581543  loss_ce: 3.1694796085357666  loss: 2.9308 (2.9677)  acc1: 57.0312 (53.1574)  acc5: 75.0000 (75.8137)  time: 0.6930  data: 0.4135  max mem: 15363
+Epoch: [11]  [ 350/1251]  eta: 0:10:26  lr: 0.0004983431914000992  img/s: 970.3500552618  loss_kd: 2.5954573154449463  loss_ce: 3.690514087677002  loss: 3.0900 (2.9764)  acc1: 54.2969 (52.8757)  acc5: 76.9531 (75.6232)  time: 0.5948  data: 0.3243  max mem: 15363
+Epoch: [11]  [ 400/1251]  eta: 0:09:49  lr: 0.0004983431914000992  img/s: 853.2853217118762  loss_kd: 3.0492591857910156  loss_ce: 4.213064193725586  loss: 2.9926 (2.9752)  acc1: 57.4219 (52.9594)  acc5: 76.5625 (75.6449)  time: 0.6932  data: 0.4236  max mem: 15363
+Epoch: [11]  [ 450/1251]  eta: 0:09:12  lr: 0.0004983431914000992  img/s: 981.0887806446956  loss_kd: 2.4333221912384033  loss_ce: 3.9879140853881836  loss: 3.0125 (2.9696)  acc1: 51.9531 (53.1094)  acc5: 73.8281 (75.7154)  time: 0.7503  data: 0.4680  max mem: 15363
+Epoch: [11]  [ 500/1251]  eta: 0:08:33  lr: 0.0004983431914000992  img/s: 980.4706331400228  loss_kd: 2.4468977451324463  loss_ce: 3.882558584213257  loss: 3.2100 (2.9665)  acc1: 39.8438 (53.0837)  acc5: 70.7031 (75.6409)  time: 0.6417  data: 0.3701  max mem: 15363
+Epoch: [11]  [ 550/1251]  eta: 0:07:55  lr: 0.0004983431914000992  img/s: 979.3572485301548  loss_kd: 1.9721269607543945  loss_ce: 2.306816577911377  loss: 2.8390 (2.9611)  acc1: 59.3750 (53.1994)  acc5: 81.2500 (75.7699)  time: 0.5658  data: 0.2910  max mem: 15363
+Epoch: [11]  [ 600/1251]  eta: 0:07:22  lr: 0.0004983431914000992  img/s: 682.9710558001938  loss_kd: 2.6133830547332764  loss_ce: 4.084702491760254  loss: 2.9178 (2.9613)  acc1: 57.4219 (53.1666)  acc5: 77.7344 (75.7416)  time: 0.6649  data: 0.3898  max mem: 15363
+Epoch: [11]  [ 650/1251]  eta: 0:06:49  lr: 0.0004983431914000992  img/s: 982.0390202857195  loss_kd: 2.171901226043701  loss_ce: 3.2059171199798584  loss: 3.0834 (2.9600)  acc1: 50.7812 (53.1802)  acc5: 73.4375 (75.7026)  time: 0.7362  data: 0.4591  max mem: 15363
+Epoch: [11]  [ 700/1251]  eta: 0:06:14  lr: 0.0004983431914000992  img/s: 972.9024326596885  loss_kd: 2.349128007888794  loss_ce: 3.687695264816284  loss: 3.0184 (2.9609)  acc1: 53.1250 (53.2008)  acc5: 77.3438 (75.7395)  time: 0.6664  data: 0.3922  max mem: 15363
+Epoch: [11]  [ 750/1251]  eta: 0:05:39  lr: 0.0004983431914000992  img/s: 979.6556913981242  loss_kd: 2.534641742706299  loss_ce: 3.9104127883911133  loss: 2.9496 (2.9585)  acc1: 55.8594 (53.2139)  acc5: 80.0781 (75.7708)  time: 0.6089  data: 0.3323  max mem: 15363
+Epoch: [11]  [ 800/1251]  eta: 0:05:06  lr: 0.0004983431914000992  img/s: 889.632399022329  loss_kd: 2.594484567642212  loss_ce: 3.909074306488037  loss: 2.8785 (2.9563)  acc1: 58.2031 (53.2411)  acc5: 80.8594 (75.8305)  time: 0.6857  data: 0.4194  max mem: 15363
+Epoch: [11]  [ 850/1251]  eta: 0:04:32  lr: 0.0004983431914000992  img/s: 981.8657044385698  loss_kd: 2.3609135150909424  loss_ce: 3.4726474285125732  loss: 2.8576 (2.9537)  acc1: 58.2031 (53.2760)  acc5: 78.9062 (75.8455)  time: 0.7740  data: 0.5012  max mem: 15363
+Epoch: [11]  [ 900/1251]  eta: 0:03:57  lr: 0.0004983431914000992  img/s: 974.4944379654125  loss_kd: 2.0969767570495605  loss_ce: 2.859774589538574  loss: 2.8350 (2.9538)  acc1: 59.7656 (53.2347)  acc5: 81.6406 (75.8172)  time: 0.6365  data: 0.3700  max mem: 15363
+Epoch: [11]  [ 950/1251]  eta: 0:03:23  lr: 0.0004983431914000992  img/s: 980.0231866808929  loss_kd: 1.9536592960357666  loss_ce: 2.2398407459259033  loss: 3.1159 (2.9547)  acc1: 46.4844 (53.2026)  acc5: 72.6562 (75.7919)  time: 0.5858  data: 0.3206  max mem: 15363
+Epoch: [11]  [1000/1251]  eta: 0:02:50  lr: 0.0004983431914000992  img/s: 905.3014383757989  loss_kd: 2.690197229385376  loss_ce: 3.7252230644226074  loss: 2.8169 (2.9516)  acc1: 55.0781 (53.2912)  acc5: 77.3438 (75.8663)  time: 0.6398  data: 0.3700  max mem: 15363
+Epoch: [11]  [1050/1251]  eta: 0:02:17  lr: 0.0004983431914000992  img/s: 970.1773339549744  loss_kd: 2.101346254348755  loss_ce: 2.809927225112915  loss: 2.8841 (2.9498)  acc1: 58.9844 (53.3547)  acc5: 80.0781 (75.9570)  time: 0.8340  data: 0.5614  max mem: 15363
+Epoch: [11]  [1100/1251]  eta: 0:01:42  lr: 0.0004983431914000992  img/s: 981.1811217030236  loss_kd: 2.598987579345703  loss_ce: 3.724705934524536  loss: 3.1044 (2.9492)  acc1: 52.3438 (53.3450)  acc5: 76.5625 (75.9618)  time: 0.7564  data: 0.4834  max mem: 15363
+Epoch: [11]  [1150/1251]  eta: 0:01:08  lr: 0.0004983431914000992  img/s: 979.1866638092589  loss_kd: 2.4459993839263916  loss_ce: 3.4948272705078125  loss: 2.9704 (2.9497)  acc1: 57.0312 (53.3921)  acc5: 78.9062 (75.9533)  time: 0.6010  data: 0.3268  max mem: 15363
+Epoch: [11]  [1200/1251]  eta: 0:00:34  lr: 0.0004983431914000992  img/s: 708.1893523126228  loss_kd: 2.176265001296997  loss_ce: 3.0095436573028564  loss: 2.8476 (2.9478)  acc1: 59.7656 (53.4346)  acc5: 79.6875 (75.9875)  time: 0.6691  data: 0.3983  max mem: 15363
+Epoch: [11]  [1250/1251]  eta: 0:00:00  lr: 0.0004983431914000992  img/s: 983.9630659377113  loss_kd: 2.789792060852051  loss_ce: 4.306561470031738  loss: 3.0529 (2.9502)  acc1: 51.1719 (53.3689)  acc5: 73.4375 (75.9402)  time: 0.7965  data: 0.5249  max mem: 15363
+Epoch: [11] Total time: 0:14:18
+Test:   [ 0/49]  eta: 0:02:17  loss: 1.3861 (1.3861)  acc1: 87.8906 (87.8906)  acc5: 97.6562 (97.6562)  time: 2.8066  data: 2.6237  max mem: 15363
+Test:  Total time: 0:00:14
+Test:  Acc@1 73.542 Acc@5 91.780
+Epoch: [12]  [   0/1251]  eta: 1:38:48  lr: 0.0004980286753286196  img/s: 731.6256310425583  loss_kd: 2.867288112640381  loss_ce: 4.344764232635498  loss: 3.6060 (3.6060)  acc1: 33.9844 (33.9844)  acc5: 56.2500 (56.2500)  time: 4.7389  data: 4.3882  max mem: 15363
+Epoch: [12]  [  50/1251]  eta: 0:13:26  lr: 0.0004980286753286196  img/s: 922.1567717096036  loss_kd: 1.954200267791748  loss_ce: 2.550393581390381  loss: 2.5920 (2.9017)  acc1: 60.9375 (53.9982)  acc5: 82.0312 (76.3787)  time: 0.6658  data: 0.3897  max mem: 15363
+Epoch: [12]  [ 100/1251]  eta: 0:11:58  lr: 0.0004980286753286196  img/s: 981.1111919255419  loss_kd: 2.2703588008880615  loss_ce: 3.1606874465942383  loss: 2.7062 (2.8524)  acc1: 64.0625 (56.0257)  acc5: 83.2031 (78.0283)  time: 0.5442  data: 0.2719  max mem: 15363
+Epoch: [12]  [ 150/1251]  eta: 0:11:06  lr: 0.0004980286753286196  img/s: 981.3972497817831  loss_kd: 2.396555185317993  loss_ce: 3.5593678951263428  loss: 2.9948 (2.8771)  acc1: 55.4688 (55.4765)  acc5: 77.3438 (77.4938)  time: 0.5222  data: 0.2580  max mem: 15363
+Epoch: [12]  [ 200/1251]  eta: 0:10:45  lr: 0.0004980286753286196  img/s: 508.83993752179913  loss_kd: 2.202439785003662  loss_ce: 2.7051093578338623  loss: 3.0102 (2.9056)  acc1: 54.6875 (54.7477)  acc5: 77.3438 (76.9823)  time: 0.6882  data: 0.4081  max mem: 15363
+Epoch: [12]  [ 250/1251]  eta: 0:10:10  lr: 0.0004980286753286196  img/s: 981.7229668693976  loss_kd: 2.6961162090301514  loss_ce: 4.095524787902832  loss: 2.9662 (2.8876)  acc1: 60.9375 (55.1139)  acc5: 77.7344 (77.3111)  time: 0.6549  data: 0.3872  max mem: 15363
+Epoch: [12]  [ 300/1251]  eta: 0:09:37  lr: 0.0004980286753286196  img/s: 981.566811042265  loss_kd: 2.2623696327209473  loss_ce: 3.573723554611206  loss: 2.8557 (2.8822)  acc1: 60.9375 (55.3286)  acc5: 81.6406 (77.5112)  time: 0.5905  data: 0.3140  max mem: 15363
+Epoch: [12]  [ 350/1251]  eta: 0:09:08  lr: 0.0004980286753286196  img/s: 981.1353972589221  loss_kd: 2.91526460647583  loss_ce: 4.252403259277344  loss: 2.9758 (2.8938)  acc1: 56.2500 (54.9168)  acc5: 76.9531 (77.2080)  time: 0.6317  data: 0.3522  max mem: 15363
+Epoch: [12]  [ 400/1251]  eta: 0:08:38  lr: 0.0004980286753286196  img/s: 982.5152802305897  loss_kd: 2.5826313495635986  loss_ce: 4.000356197357178  loss: 2.9302 (2.8951)  acc1: 58.5938 (54.9476)  acc5: 79.2969 (77.2746)  time: 0.5702  data: 0.2830  max mem: 15363
+Epoch: [12]  [ 450/1251]  eta: 0:08:10  lr: 0.0004980286753286196  img/s: 930.6763882460419  loss_kd: 2.3903310298919678  loss_ce: 3.400503635406494  loss: 3.0539 (2.8964)  acc1: 53.1250 (54.8832)  acc5: 78.1250 (77.2900)  time: 0.6129  data: 0.3457  max mem: 15363
+Epoch: [12]  [ 500/1251]  eta: 0:07:43  lr: 0.0004980286753286196  img/s: 981.9141907913809  loss_kd: 2.546579122543335  loss_ce: 3.5941696166992188  loss: 2.8943 (2.9019)  acc1: 58.5938 (54.8699)  acc5: 79.6875 (77.2751)  time: 0.6940  data: 0.4117  max mem: 15363
+Epoch: [12]  [ 550/1251]  eta: 0:07:13  lr: 0.0004980286753286196  img/s: 980.807382121812  loss_kd: 2.805272340774536  loss_ce: 4.394819259643555  loss: 3.1297 (2.9073)  acc1: 50.3906 (54.7598)  acc5: 76.9531 (77.1353)  time: 0.6861  data: 0.4168  max mem: 15363
+Epoch: [12]  [ 600/1251]  eta: 0:06:43  lr: 0.0004980286753286196  img/s: 979.971309324652  loss_kd: 2.3648250102996826  loss_ce: 3.5731911659240723  loss: 2.8303 (2.9021)  acc1: 61.7188 (54.8987)  acc5: 80.8594 (77.1650)  time: 0.6376  data: 0.3651  max mem: 15363
+Epoch: [12]  [ 650/1251]  eta: 0:06:12  lr: 0.0004980286753286196  img/s: 859.2890546347944  loss_kd: 2.1018404960632324  loss_ce: 2.8374462127685547  loss: 2.8492 (2.8985)  acc1: 58.2031 (55.0889)  acc5: 79.6875 (77.2777)  time: 0.5700  data: 0.2929  max mem: 15363
+Epoch: [12]  [ 700/1251]  eta: 0:05:42  lr: 0.0004980286753286196  img/s: 982.106387513091  loss_kd: 2.4918885231018066  loss_ce: 3.7784266471862793  loss: 2.9998 (2.9065)  acc1: 53.9062 (54.7165)  acc5: 78.9062 (77.0350)  time: 0.5728  data: 0.2995  max mem: 15363
+Epoch: [12]  [ 750/1251]  eta: 0:05:15  lr: 0.0004980286753286196  img/s: 901.8046510377866  loss_kd: 2.6623573303222656  loss_ce: 3.6757521629333496  loss: 2.8044 (2.9044)  acc1: 57.8125 (54.7119)  acc5: 77.7344 (77.0259)  time: 0.7854  data: 0.5090  max mem: 15363
+Epoch: [12]  [ 800/1251]  eta: 0:04:45  lr: 0.0004980286753286196  img/s: 965.8696392140213  loss_kd: 2.1779444217681885  loss_ce: 3.1521143913269043  loss: 3.0583 (2.9097)  acc1: 49.6094 (54.5778)  acc5: 75.0000 (76.9029)  time: 0.7664  data: 0.4936  max mem: 15363
+Epoch: [12]  [ 850/1251]  eta: 0:04:15  lr: 0.0004980286753286196  img/s: 967.5930013769438  loss_kd: 2.060573101043701  loss_ce: 3.0504159927368164  loss: 3.0539 (2.9163)  acc1: 53.1250 (54.3446)  acc5: 73.8281 (76.6961)  time: 0.6346  data: 0.3669  max mem: 15363
+Epoch: [12]  [ 900/1251]  eta: 0:03:45  lr: 0.0004980286753286196  img/s: 979.7486568558747  loss_kd: 2.0050926208496094  loss_ce: 2.522183418273926  loss: 3.1442 (2.9215)  acc1: 45.3125 (54.1924)  acc5: 70.7031 (76.5907)  time: 0.6394  data: 0.3613  max mem: 15363
+Epoch: [12]  [ 950/1251]  eta: 0:03:16  lr: 0.0004980286753286196  img/s: 863.0539554495992  loss_kd: 2.432279586791992  loss_ce: 3.730989694595337  loss: 2.9828 (2.9203)  acc1: 57.4219 (54.1626)  acc5: 76.9531 (76.5674)  time: 0.8717  data: 0.5852  max mem: 15363
+Epoch: [12]  [1000/1251]  eta: 0:02:44  lr: 0.0004980286753286196  img/s: 981.8531346843004  loss_kd: 2.182793617248535  loss_ce: 2.8129401206970215  loss: 3.1084 (2.9231)  acc1: 51.9531 (54.0674)  acc5: 73.4375 (76.4770)  time: 0.7599  data: 0.4888  max mem: 15363
+Epoch: [12]  [1050/1251]  eta: 0:02:13  lr: 0.0004980286753286196  img/s: 981.3030743922501  loss_kd: 2.4515089988708496  loss_ce: 3.7074830532073975  loss: 3.0328 (2.9221)  acc1: 54.2969 (54.0586)  acc5: 77.7344 (76.4681)  time: 0.6883  data: 0.4192  max mem: 15363
+Epoch: [12]  [1100/1251]  eta: 0:01:40  lr: 0.0004980286753286196  img/s: 981.496826278995  loss_kd: 2.362279176712036  loss_ce: 3.5059688091278076  loss: 2.9202 (2.9204)  acc1: 58.2031 (54.1415)  acc5: 80.0781 (76.5242)  time: 0.7658  data: 0.4926  max mem: 15363
+Epoch: [12]  [1150/1251]  eta: 0:01:08  lr: 0.0004980286753286196  img/s: 982.4532504238649  loss_kd: 2.61051082611084  loss_ce: 3.8316264152526855  loss: 2.7757 (2.9202)  acc1: 62.1094 (54.1492)  acc5: 83.2031 (76.5333)  time: 0.8828  data: 0.6127  max mem: 15363
+Epoch: [12]  [1200/1251]  eta: 0:00:34  lr: 0.0004980286753286196  img/s: 980.7052582642458  loss_kd: 1.9819369316101074  loss_ce: 2.486414909362793  loss: 3.0785 (2.9200)  acc1: 46.0938 (54.0607)  acc5: 70.7031 (76.4763)  time: 0.8265  data: 0.5428  max mem: 15363
+gpua050:1375314:1446368 [1] NCCL INFO misc/socket.cc:64 -> 3
+gpua050:1375314:1446368 [1] NCCL INFO misc/socket.cc:80 -> 3
+gpua050:1375314:1446368 [1] NCCL INFO misc/socket.cc:829 -> 3
+gpua050:1375314:1446368 [1] NCCL INFO misc/socket.cc:64 -> 3
+gpua050:1375314:1446368 [1] NCCL INFO misc/socket.cc:80 -> 3
+gpua050:1375314:1446368 [1] NCCL INFO misc/socket.cc:829 -> 3
+gpua050:1375314:1446368 [1] NCCL INFO misc/socket.cc:64 -> 3
+gpua050:1375314:1446368 [1] NCCL INFO misc/socket.cc:80 -> 3
+gpua050:1375314:1446368 [1] NCCL INFO misc/socket.cc:829 -> 3
+gpua050:1375314:1375366 [1] NCCL INFO misc/socket.cc:881 -> 3
+gpua050:1375314:1446368 [1] NCCL INFO misc/socket.cc:64 -> 3
+gpua050:1375314:1446368 [1] NCCL INFO misc/socket.cc:80 -> 3
+gpua050:1375314:1446368 [1] NCCL INFO misc/socket.cc:829 -> 3
+gpua050:1375316:1446370 [3] NCCL INFO misc/socket.cc:64 -> 3
+gpua050:1375316:1446370 [3] NCCL INFO misc/socket.cc:80 -> 3
+gpua050:1375316:1446370 [3] NCCL INFO misc/socket.cc:829 -> 3
+gpua050:1375316:1446370 [3] NCCL INFO misc/socket.cc:64 -> 3
+gpua050:1375316:1446370 [3] NCCL INFO misc/socket.cc:80 -> 3
+gpua050:1375316:1446370 [3] NCCL INFO misc/socket.cc:829 -> 3
+gpua050:1375314:1375366 [1] NCCL INFO misc/socket.cc:881 -> 3
+gpua050:1375316:1446370 [3] NCCL INFO misc/socket.cc:64 -> 3
+gpua050:1375316:1446370 [3] NCCL INFO misc/socket.cc:80 -> 3
+gpua050:1375316:1446370 [3] NCCL INFO misc/socket.cc:829 -> 3
+gpua050:1375316:1446370 [3] NCCL INFO misc/socket.cc:64 -> 3
+gpua050:1375316:1446370 [3] NCCL INFO misc/socket.cc:80 -> 3
+gpua050:1375316:1446370 [3] NCCL INFO misc/socket.cc:829 -> 3
+gpua050:1375316:1375368 [3] NCCL INFO misc/socket.cc:881 -> 3
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33m_work_hdd_bewo_mahdi_Isomorphic-Pruning_output_pruned_deit_4.2G_v2.pth[0m at: [34mhttps://wandb.ai/saisoma239-iowa-state-university/Pruning/runs/w5rtqjsi[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20250711_105031-w5rtqjsi/logs[0m
+gpua050:1375316:1375368 [3] NCCL INFO [Service thread] Connection closed by localRank 0
+gpua050:1375314:1375366 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+gpua050:1375315:1375367 [2] NCCL INFO [Service thread] Connection closed by localRank 0

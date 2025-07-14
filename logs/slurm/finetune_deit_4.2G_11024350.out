@@ -1,0 +1,769 @@
+| distributed init (rank 0): env://
+| distributed init (rank 3): env://
+| distributed init (rank 2): env://
+| distributed init (rank 1): env://
+gpua045:1209757:1209757 [0] NCCL INFO Bootstrap : Using eth1:172.28.23.45<0>
+gpua045:1209757:1209757 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+gpua045:1209757:1209757 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+gpua045:1209757:1209757 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+gpua045:1209757:1209757 [0] NCCL INFO cudaDriverVersion 12040
+NCCL version 2.21.5+cuda11.8gpua045:1209759:1209759 [2] NCCL INFO cudaDriverVersion 12040
+
+gpua045:1209758:1209758 [1] NCCL INFO cudaDriverVersion 12040
+gpua045:1209760:1209760 [3] NCCL INFO cudaDriverVersion 12040
+gpua045:1209759:1209759 [2] NCCL INFO Bootstrap : Using eth1:172.28.23.45<0>
+gpua045:1209758:1209758 [1] NCCL INFO Bootstrap : Using eth1:172.28.23.45<0>
+gpua045:1209760:1209760 [3] NCCL INFO Bootstrap : Using eth1:172.28.23.45<0>
+gpua045:1209759:1209759 [2] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+gpua045:1209759:1209759 [2] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+gpua045:1209759:1209759 [2] NCCL INFO NET/Plugin: Using internal network plugin.
+gpua045:1209758:1209758 [1] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+gpua045:1209760:1209760 [3] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+gpua045:1209758:1209758 [1] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+gpua045:1209758:1209758 [1] NCCL INFO NET/Plugin: Using internal network plugin.
+gpua045:1209760:1209760 [3] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+gpua045:1209760:1209760 [3] NCCL INFO NET/Plugin: Using internal network plugin.
+gpua045:1209760:1209802 [3] NCCL INFO NET/IB : No device found.
+gpua045:1209760:1209802 [3] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.45<0> [1]hsn0:172.28.86.45<0> [2]hsn0.561:141.142.254.45<0>
+gpua045:1209760:1209802 [3] NCCL INFO Using non-device net plugin version 0
+gpua045:1209760:1209802 [3] NCCL INFO Using network Socket
+gpua045:1209758:1209803 [1] NCCL INFO NET/IB : No device found.
+gpua045:1209759:1209804 [2] NCCL INFO NET/IB : No device found.
+gpua045:1209758:1209803 [1] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.45<0> [1]hsn0:172.28.86.45<0> [2]hsn0.561:141.142.254.45<0>
+gpua045:1209759:1209804 [2] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.45<0> [1]hsn0:172.28.86.45<0> [2]hsn0.561:141.142.254.45<0>
+gpua045:1209758:1209803 [1] NCCL INFO Using non-device net plugin version 0
+gpua045:1209759:1209804 [2] NCCL INFO Using non-device net plugin version 0
+gpua045:1209758:1209803 [1] NCCL INFO Using network Socket
+gpua045:1209759:1209804 [2] NCCL INFO Using network Socket
+gpua045:1209757:1209801 [0] NCCL INFO NET/IB : No device found.
+gpua045:1209757:1209801 [0] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.45<0> [1]hsn0:172.28.86.45<0> [2]hsn0.561:141.142.254.45<0>
+gpua045:1209757:1209801 [0] NCCL INFO Using non-device net plugin version 0
+gpua045:1209757:1209801 [0] NCCL INFO Using network Socket
+gpua045:1209758:1209803 [1] NCCL INFO ncclCommInitRank comm 0xa196100 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 46000 commId 0xaca703288af51459 - Init START
+gpua045:1209759:1209804 [2] NCCL INFO ncclCommInitRank comm 0x98e0840 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 85000 commId 0xaca703288af51459 - Init START
+gpua045:1209757:1209801 [0] NCCL INFO ncclCommInitRank comm 0xa619be0 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 7000 commId 0xaca703288af51459 - Init START
+gpua045:1209760:1209802 [3] NCCL INFO ncclCommInitRank comm 0xb061ba0 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c7000 commId 0xaca703288af51459 - Init START
+gpua045:1209758:1209803 [1] NCCL INFO Setting affinity for GPU 1 to ffff,00000000
+gpua045:1209757:1209801 [0] NCCL INFO Setting affinity for GPU 0 to ffff0000,00000000
+gpua045:1209759:1209804 [2] NCCL INFO Setting affinity for GPU 2 to ffff0000
+gpua045:1209760:1209802 [3] NCCL INFO Setting affinity for GPU 3 to ffff
+gpua045:1209757:1209801 [0] NCCL INFO comm 0xa619be0 rank 0 nRanks 4 nNodes 1 localRanks 4 localRank 0 MNNVL 0
+gpua045:1209760:1209802 [3] NCCL INFO comm 0xb061ba0 rank 3 nRanks 4 nNodes 1 localRanks 4 localRank 3 MNNVL 0
+gpua045:1209758:1209803 [1] NCCL INFO comm 0xa196100 rank 1 nRanks 4 nNodes 1 localRanks 4 localRank 1 MNNVL 0
+gpua045:1209757:1209801 [0] NCCL INFO Channel 00/24 :    0   1   2   3
+gpua045:1209757:1209801 [0] NCCL INFO Channel 01/24 :    0   1   3   2
+gpua045:1209757:1209801 [0] NCCL INFO Channel 02/24 :    0   2   3   1
+gpua045:1209757:1209801 [0] NCCL INFO Channel 03/24 :    0   2   1   3
+gpua045:1209757:1209801 [0] NCCL INFO Channel 04/24 :    0   3   1   2
+gpua045:1209760:1209802 [3] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2 [2] -1/-1/-1->3->2 [3] -1/-1/-1->3->2 [4] -1/-1/-1->3->1 [5] -1/-1/-1->3->1 [6] -1/-1/-1->3->1 [7] -1/-1/-1->3->1 [8] 2/-1/-1->3->0 [9] 2/-1/-1->3->0 [10] 2/-1/-1->3->0 [11] 2/-1/-1->3->0 [12] -1/-1/-1->3->2 [13] -1/-1/-1->3->2 [14] -1/-1/-1->3->2 [15] -1/-1/-1->3->2 [16] -1/-1/-1->3->1 [17] -1/-1/-1->3->1 [18] -1/-1/-1->3->1 [19] -1/-1/-1->3->1 [20] 2/-1/-1->3->0 [21] 2/-1/-1->3->0 [22] 2/-1/-1->3->0 [23] 2/-1/-1->3->0
+gpua045:1209757:1209801 [0] NCCL INFO Channel 05/24 :    0   3   2   1
+gpua045:1209759:1209804 [2] NCCL INFO comm 0x98e0840 rank 2 nRanks 4 nNodes 1 localRanks 4 localRank 2 MNNVL 0
+gpua045:1209760:1209802 [3] NCCL INFO P2P Chunksize set to 524288
+gpua045:1209757:1209801 [0] NCCL INFO Channel 06/24 :    0   1   2   3
+gpua045:1209758:1209803 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0 [2] 2/-1/-1->1->0 [3] 2/-1/-1->1->0 [4] 3/-1/-1->1->2 [5] 3/-1/-1->1->2 [6] 3/-1/-1->1->2 [7] 3/-1/-1->1->2 [8] 0/-1/-1->1->-1 [9] 0/-1/-1->1->-1 [10] 0/-1/-1->1->-1 [11] 0/-1/-1->1->-1 [12] 2/-1/-1->1->0 [13] 2/-1/-1->1->0 [14] 2/-1/-1->1->0 [15] 2/-1/-1->1->0 [16] 3/-1/-1->1->2 [17] 3/-1/-1->1->2 [18] 3/-1/-1->1->2 [19] 3/-1/-1->1->2 [20] 0/-1/-1->1->-1 [21] 0/-1/-1->1->-1 [22] 0/-1/-1->1->-1 [23] 0/-1/-1->1->-1
+gpua045:1209757:1209801 [0] NCCL INFO Channel 07/24 :    0   1   3   2
+gpua045:1209758:1209803 [1] NCCL INFO P2P Chunksize set to 524288
+gpua045:1209757:1209801 [0] NCCL INFO Channel 08/24 :    0   2   3   1
+gpua045:1209757:1209801 [0] NCCL INFO Channel 09/24 :    0   2   1   3
+gpua045:1209757:1209801 [0] NCCL INFO Channel 10/24 :    0   3   1   2
+gpua045:1209757:1209801 [0] NCCL INFO Channel 11/24 :    0   3   2   1
+gpua045:1209757:1209801 [0] NCCL INFO Channel 12/24 :    0   1   2   3
+gpua045:1209757:1209801 [0] NCCL INFO Channel 13/24 :    0   1   3   2
+gpua045:1209759:1209804 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1 [2] 3/-1/-1->2->1 [3] 3/-1/-1->2->1 [4] 1/-1/-1->2->0 [5] 1/-1/-1->2->0 [6] 1/-1/-1->2->0 [7] 1/-1/-1->2->0 [8] -1/-1/-1->2->3 [9] -1/-1/-1->2->3 [10] -1/-1/-1->2->3 [11] -1/-1/-1->2->3 [12] 3/-1/-1->2->1 [13] 3/-1/-1->2->1 [14] 3/-1/-1->2->1 [15] 3/-1/-1->2->1 [16] 1/-1/-1->2->0 [17] 1/-1/-1->2->0 [18] 1/-1/-1->2->0 [19] 1/-1/-1->2->0 [20] -1/-1/-1->2->3 [21] -1/-1/-1->2->3 [22] -1/-1/-1->2->3 [23] -1/-1/-1->2->3
+gpua045:1209757:1209801 [0] NCCL INFO Channel 14/24 :    0   2   3   1
+gpua045:1209759:1209804 [2] NCCL INFO P2P Chunksize set to 524288
+gpua045:1209757:1209801 [0] NCCL INFO Channel 15/24 :    0   2   1   3
+gpua045:1209757:1209801 [0] NCCL INFO Channel 16/24 :    0   3   1   2
+gpua045:1209757:1209801 [0] NCCL INFO Channel 17/24 :    0   3   2   1
+gpua045:1209757:1209801 [0] NCCL INFO Channel 18/24 :    0   1   2   3
+gpua045:1209757:1209801 [0] NCCL INFO Channel 19/24 :    0   1   3   2
+gpua045:1209757:1209801 [0] NCCL INFO Channel 20/24 :    0   2   3   1
+gpua045:1209757:1209801 [0] NCCL INFO Channel 21/24 :    0   2   1   3
+gpua045:1209757:1209801 [0] NCCL INFO Channel 22/24 :    0   3   1   2
+gpua045:1209757:1209801 [0] NCCL INFO Channel 23/24 :    0   3   2   1
+gpua045:1209757:1209801 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] 1/-1/-1->0->-1 [3] 1/-1/-1->0->-1 [4] 2/-1/-1->0->-1 [5] 2/-1/-1->0->-1 [6] 2/-1/-1->0->-1 [7] 2/-1/-1->0->-1 [8] 3/-1/-1->0->1 [9] 3/-1/-1->0->1 [10] 3/-1/-1->0->1 [11] 3/-1/-1->0->1 [12] 1/-1/-1->0->-1 [13] 1/-1/-1->0->-1 [14] 1/-1/-1->0->-1 [15] 1/-1/-1->0->-1 [16] 2/-1/-1->0->-1 [17] 2/-1/-1->0->-1 [18] 2/-1/-1->0->-1 [19] 2/-1/-1->0->-1 [20] 3/-1/-1->0->1 [21] 3/-1/-1->0->1 [22] 3/-1/-1->0->1 [23] 3/-1/-1->0->1
+gpua045:1209757:1209801 [0] NCCL INFO P2P Chunksize set to 524288
+gpua045:1209760:1209802 [3] NCCL INFO Channel 00/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 00/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 00/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 03/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 04/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 02/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 06/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 06/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 06/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 06/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 09/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 07/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 10/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 08/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 12/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 12/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 12/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 12/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 15/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 13/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 16/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 14/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 18/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 18/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 18/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 18/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 21/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 19/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 22/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 20/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 02/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 01/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 02/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 01/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 03/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 03/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 04/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 04/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 08/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 07/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 08/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 07/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 09/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 09/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 10/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 10/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 14/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 13/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 14/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 13/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 15/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 15/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 16/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 16/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 20/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 19/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 20/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 19/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 21/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 21/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 22/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 22/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 02/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 01/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 04/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 03/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 05/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 05/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 05/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 05/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 08/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 07/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 10/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 09/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 11/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 11/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 11/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 11/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 14/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 13/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 16/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 15/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 17/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 17/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 17/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 17/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 20/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 19/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 22/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 21/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 23/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 23/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 23/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 23/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Connected all rings
+gpua045:1209760:1209802 [3] NCCL INFO Connected all rings
+gpua045:1209759:1209804 [2] NCCL INFO Connected all rings
+gpua045:1209758:1209803 [1] NCCL INFO Connected all rings
+gpua045:1209757:1209801 [0] NCCL INFO Channel 02/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 03/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 08/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 09/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 01/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 08/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 10/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 03/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 10/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 11/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 09/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 11/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 14/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 01/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 10/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 20/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 15/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 02/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 11/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 22/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 20/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 03/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 13/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 23/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 21/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 05/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 15/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 22/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 07/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 21/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 23/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 13/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 22/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 14/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 23/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 15/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 17/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 19/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 05/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 04/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 06/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 05/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 07/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 06/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 04/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 17/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 07/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 05/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 18/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 16/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 05/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 06/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 19/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 17/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 06/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 16/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 18/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 17/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 17/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 19/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 18/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 18/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 00/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 02/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 03/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 08/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 09/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 10/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 08/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 12/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 09/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 14/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 00/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 20/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 00/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 15/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 01/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209757:1209801 [0] NCCL INFO Channel 21/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 01/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 20/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 03/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 02/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 21/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 09/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 04/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Channel 22/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 10/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 06/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 12/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 07/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 13/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 12/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 15/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 13/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 21/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 14/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209758:1209803 [1] NCCL INFO Channel 22/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 16/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 18/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209759:1209804 [2] NCCL INFO Channel 19/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua045:1209760:1209802 [3] NCCL INFO Connected all trees
+gpua045:1209760:1209802 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+gpua045:1209760:1209802 [3] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+gpua045:1209757:1209801 [0] NCCL INFO Connected all trees
+gpua045:1209758:1209803 [1] NCCL INFO Connected all trees
+gpua045:1209758:1209803 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+gpua045:1209759:1209804 [2] NCCL INFO Connected all trees
+gpua045:1209758:1209803 [1] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+gpua045:1209759:1209804 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+gpua045:1209759:1209804 [2] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+gpua045:1209757:1209801 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+gpua045:1209757:1209801 [0] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+gpua045:1209757:1209801 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+gpua045:1209759:1209804 [2] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+gpua045:1209760:1209802 [3] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+gpua045:1209757:1209801 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+gpua045:1209758:1209803 [1] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+gpua045:1209759:1209804 [2] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+gpua045:1209760:1209802 [3] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+gpua045:1209757:1209801 [0] NCCL INFO ncclCommInitRank comm 0xa619be0 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 7000 commId 0xaca703288af51459 - Init COMPLETE
+gpua045:1209758:1209803 [1] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+gpua045:1209759:1209804 [2] NCCL INFO ncclCommInitRank comm 0x98e0840 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 85000 commId 0xaca703288af51459 - Init COMPLETE
+gpua045:1209760:1209802 [3] NCCL INFO ncclCommInitRank comm 0xb061ba0 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c7000 commId 0xaca703288af51459 - Init COMPLETE
+gpua045:1209758:1209803 [1] NCCL INFO ncclCommInitRank comm 0xa196100 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 46000 commId 0xaca703288af51459 - Init COMPLETE
+Namespace(model='/work/hdd/bewo/mahdi/Isomorphic-Pruning/output/pruned/deit_4.2G_v2.pth', teacher_model='regnety_160.deit_in1k', data_path='/work/hdd/bewo/mahdi/imagenet', device='cuda', batch_size=256, epochs=4, workers=8, opt='adamw', lr=0.0005, momentum=0.9, weight_decay=0.05, norm_weight_decay=None, bias_weight_decay=None, transformer_embedding_decay=None, label_smoothing=0.1, mixup_alpha=0.8, cutmix_alpha=1.0, lr_scheduler='cosineannealinglr', lr_warmup_epochs=0, lr_warmup_method='linear', lr_warmup_decay=0.033, lr_step_size=30, lr_gamma=0.1, lr_min=0.0, print_freq=50, output_dir='/work/hdd/bewo/mahdi/Isomorphic-Pruning/output/finetuned/deit_4.2G_v2_4Epochs', resume='', start_epoch=0, cache_dataset=False, sync_bn=False, test_only=False, auto_augment='ra', ra_magnitude=9, augmix_severity=3, random_erase=0.25, color_jitter=None, amp=True, world_size=4, dist_url='env://', model_ema=False, model_ema_steps=32, model_ema_decay=0.99998, use_deterministic_algorithms=False, interpolation='bicubic', val_resize_size=256, val_crop_size=224, train_crop_size=224, clip_grad_norm=None, ra_sampler=True, ra_reps=3, weights=None, backend='pil', use_v2=False, is_huggingface=False, checkpoint_interval=10, no_imagenet_mean_std=False, stochastic_depth=0.0, rank=0, gpu=0, distributed=True, dist_backend='nccl')
+Loading data
+Loading training data
+Took 2.772688388824463
+Loading validation data
+Creating data loaders
+Creating model
+Loading pruned model from /work/hdd/bewo/mahdi/Isomorphic-Pruning/output/pruned/deit_4.2G_v2.pth
+macs: 4.15 G, params: 20.67 M
+DistributedDataParallel(
+  (module): VisionTransformerDistilled(
+    (patch_embed): PatchEmbed(
+      (proj): Conv2d(3, 384, kernel_size=(16, 16), stride=(16, 16))
+      (norm): Identity()
+    )
+    (pos_drop): Dropout(p=0.0, inplace=False)
+    (patch_drop): Identity()
+    (norm_pre): Identity()
+    (blocks): Sequential(
+      (0): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=540, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=180, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=956, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=956, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (1): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=510, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=170, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=928, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=928, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (2): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=432, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=144, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1416, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1416, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (3): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=600, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=200, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1908, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1908, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (4): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=690, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=230, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1858, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1858, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (5): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=900, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=300, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1740, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1740, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (6): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1176, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=392, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1750, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1750, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (7): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1176, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=392, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1672, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1672, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (8): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=900, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=300, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1558, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1558, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (9): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1176, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=392, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1598, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1598, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (10): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1134, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=378, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1590, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1590, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (11): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1452, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1452, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+    )
+    (norm): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+    (fc_norm): Identity()
+    (head_drop): Dropout(p=0.0, inplace=False)
+    (head): Linear(in_features=384, out_features=1000, bias=True)
+    (head_dist): Linear(in_features=384, out_features=1000, bias=True)
+  )
+)
+Start training
+Epoch: [0]  [   0/1251]  eta: 5:14:30  lr: 0.0005  img/s: 61.88217555583872  loss_kd: 7.088033676147461  loss_ce: 6.912405967712402  loss: 7.0002 (7.0002)  acc1: 0.0000 (0.0000)  acc5: 0.3906 (0.3906)  time: 15.0841  data: 10.9462  max mem: 31330
+Epoch: [0]  [  50/1251]  eta: 0:22:33  lr: 0.0005  img/s: 969.6017482312252  loss_kd: 5.694965839385986  loss_ce: 6.175653457641602  loss: 5.7636 (6.1348)  acc1: 5.8594 (3.9905)  acc5: 20.3125 (11.4813)  time: 0.9850  data: 0.7031  max mem: 31330
+Epoch: [0]  [ 100/1251]  eta: 0:19:05  lr: 0.0005  img/s: 970.7386837451677  loss_kd: 4.600064277648926  loss_ce: 5.245095252990723  loss: 5.4470 (5.7097)  acc1: 12.1094 (8.5860)  acc5: 26.5625 (20.3357)  time: 0.7631  data: 0.4903  max mem: 31330
+Epoch: [0]  [ 150/1251]  eta: 0:17:40  lr: 0.0005  img/s: 971.7428371034376  loss_kd: 4.661990165710449  loss_ce: 5.7794389724731445  loss: 4.6041 (5.3921)  acc1: 25.3906 (12.8053)  acc5: 47.6562 (27.3153)  time: 0.7821  data: 0.5045  max mem: 31330
+Epoch: [0]  [ 200/1251]  eta: 0:16:39  lr: 0.0005  img/s: 803.9860219554437  loss_kd: 3.664379358291626  loss_ce: 4.00244665145874  loss: 4.5125 (5.1840)  acc1: 26.9531 (15.8310)  acc5: 48.0469 (31.6387)  time: 0.8963  data: 0.6218  max mem: 31330
+Epoch: [0]  [ 250/1251]  eta: 0:15:22  lr: 0.0005  img/s: 925.0964080569942  loss_kd: 4.3734517097473145  loss_ce: 5.54948091506958  loss: 4.5867 (5.0324)  acc1: 24.6094 (18.0543)  acc5: 48.0469 (35.1438)  time: 0.8958  data: 0.6101  max mem: 31330
+Epoch: [0]  [ 300/1251]  eta: 0:14:21  lr: 0.0005  img/s: 973.0664254863331  loss_kd: 4.083507061004639  loss_ce: 5.567601203918457  loss: 4.5268 (4.9184)  acc1: 22.2656 (19.7064)  acc5: 40.2344 (37.4935)  time: 0.8428  data: 0.5550  max mem: 31330
+Epoch: [0]  [ 350/1251]  eta: 0:13:23  lr: 0.0005  img/s: 973.4166381854197  loss_kd: 4.08485746383667  loss_ce: 5.498284816741943  loss: 4.0309 (4.8163)  acc1: 30.4688 (21.2685)  acc5: 52.7344 (39.7647)  time: 0.7950  data: 0.5120  max mem: 31330
+Epoch: [0]  [ 400/1251]  eta: 0:12:31  lr: 0.0005  img/s: 847.30070941014  loss_kd: 3.1426241397857666  loss_ce: 3.6249589920043945  loss: 4.2089 (4.7269)  acc1: 27.3438 (22.6475)  acc5: 50.7812 (41.5689)  time: 0.7679  data: 0.4773  max mem: 31330
+Epoch: [0]  [ 450/1251]  eta: 0:11:49  lr: 0.0005  img/s: 818.4706499335309  loss_kd: 3.6026253700256348  loss_ce: 4.480587959289551  loss: 3.9279 (4.6492)  acc1: 38.2812 (23.9771)  acc5: 60.5469 (43.2641)  time: 0.9197  data: 0.6280  max mem: 31330
+Epoch: [0]  [ 500/1251]  eta: 0:11:05  lr: 0.0005  img/s: 972.8680540769258  loss_kd: 3.7750682830810547  loss_ce: 5.321506977081299  loss: 4.0864 (4.5938)  acc1: 34.7656 (24.8121)  acc5: 55.0781 (44.4104)  time: 0.8855  data: 0.5874  max mem: 31330
+Epoch: [0]  [ 550/1251]  eta: 0:10:16  lr: 0.0005  img/s: 972.8319151095197  loss_kd: 3.65659761428833  loss_ce: 4.6989850997924805  loss: 3.6285 (4.5341)  acc1: 42.1875 (25.7791)  acc5: 62.8906 (45.6223)  time: 0.7877  data: 0.5033  max mem: 31330
+Epoch: [0]  [ 600/1251]  eta: 0:09:28  lr: 0.0005  img/s: 853.6190735131611  loss_kd: 3.4734067916870117  loss_ce: 4.528482913970947  loss: 4.0952 (4.4843)  acc1: 30.8594 (26.5807)  acc5: 55.4688 (46.6664)  time: 0.6749  data: 0.3797  max mem: 31330
+Epoch: [0]  [ 650/1251]  eta: 0:08:40  lr: 0.0005  img/s: 701.8530525856169  loss_kd: 3.555891513824463  loss_ce: 4.467857360839844  loss: 3.8991 (4.4326)  acc1: 36.7188 (27.4326)  acc5: 62.1094 (47.7487)  time: 0.7732  data: 0.4810  max mem: 31330
+Epoch: [0]  [ 700/1251]  eta: 0:07:53  lr: 0.0005  img/s: 970.2343164212335  loss_kd: 3.3383889198303223  loss_ce: 4.550083160400391  loss: 3.6120 (4.3868)  acc1: 43.7500 (28.2381)  acc5: 65.6250 (48.7323)  time: 0.8396  data: 0.5438  max mem: 31330
+Epoch: [0]  [ 750/1251]  eta: 0:07:04  lr: 0.0005  img/s: 972.2223646801036  loss_kd: 2.9196019172668457  loss_ce: 3.5715527534484863  loss: 3.8078 (4.3445)  acc1: 39.0625 (28.9640)  acc5: 64.4531 (49.6042)  time: 0.7109  data: 0.4268  max mem: 31330
+Epoch: [0]  [ 800/1251]  eta: 0:06:19  lr: 0.0005  img/s: 864.9812050941437  loss_kd: 3.7968640327453613  loss_ce: 5.194512367248535  loss: 3.9676 (4.3098)  acc1: 26.9531 (29.5134)  acc5: 52.3438 (50.2653)  time: 0.6874  data: 0.4075  max mem: 31330
+Epoch: [0]  [ 850/1251]  eta: 0:05:35  lr: 0.0005  img/s: 676.8972646522975  loss_kd: 3.300133228302002  loss_ce: 4.649211883544922  loss: 3.6304 (4.2760)  acc1: 40.6250 (30.0602)  acc5: 66.0156 (50.9786)  time: 0.8424  data: 0.5500  max mem: 31330
+Epoch: [0]  [ 900/1251]  eta: 0:04:51  lr: 0.0005  img/s: 971.059119524157  loss_kd: 3.3586559295654297  loss_ce: 4.629647731781006  loss: 3.6500 (4.2434)  acc1: 42.9688 (30.6426)  acc5: 66.4062 (51.6687)  time: 0.8584  data: 0.5746  max mem: 31330
+Epoch: [0]  [ 950/1251]  eta: 0:04:08  lr: 0.0005  img/s: 970.1072108764866  loss_kd: 3.228665828704834  loss_ce: 4.166868686676025  loss: 3.6157 (4.2117)  acc1: 42.9688 (31.2040)  acc5: 64.4531 (52.3462)  time: 0.6525  data: 0.3653  max mem: 31330
+Epoch: [0]  [1000/1251]  eta: 0:03:25  lr: 0.0005  img/s: 972.5023811205849  loss_kd: 3.049412250518799  loss_ce: 4.132308006286621  loss: 3.5992 (4.1838)  acc1: 44.5312 (31.7226)  acc5: 67.5781 (52.9498)  time: 0.6015  data: 0.3208  max mem: 31330
+Epoch: [0]  [1050/1251]  eta: 0:02:44  lr: 0.0005  img/s: 701.1486348474995  loss_kd: 2.593432903289795  loss_ce: 2.9258322715759277  loss: 3.8417 (4.1589)  acc1: 35.5469 (32.1193)  acc5: 61.3281 (53.4261)  time: 0.8638  data: 0.5779  max mem: 31330
+Epoch: [0]  [1100/1251]  eta: 0:02:02  lr: 0.0005  img/s: 967.9113634335401  loss_kd: 3.6267027854919434  loss_ce: 4.606500625610352  loss: 3.5837 (4.1312)  acc1: 44.9219 (32.5769)  acc5: 64.8438 (53.9456)  time: 0.8347  data: 0.5488  max mem: 31330
+Epoch: [0]  [1150/1251]  eta: 0:01:21  lr: 0.0005  img/s: 945.7613923827644  loss_kd: 3.214967966079712  loss_ce: 4.563563346862793  loss: 3.6383 (4.1112)  acc1: 33.9844 (32.8508)  acc5: 54.6875 (54.3088)  time: 0.7887  data: 0.5055  max mem: 31330
+Epoch: [0]  [1200/1251]  eta: 0:00:41  lr: 0.0005  img/s: 791.3821961050802  loss_kd: 2.7597131729125977  loss_ce: 3.788663387298584  loss: 3.8658 (4.0926)  acc1: 41.0156 (33.1273)  acc5: 61.7188 (54.6078)  time: 0.8830  data: 0.5955  max mem: 31330
+Epoch: [0]  [1250/1251]  eta: 0:00:00  lr: 0.0005  img/s: 815.559376592679  loss_kd: 3.508527994155884  loss_ce: 4.86952018737793  loss: 3.7123 (4.0759)  acc1: 37.5000 (33.3705)  acc5: 60.1562 (54.9011)  time: 0.8677  data: 0.5811  max mem: 31330
+Epoch: [0] Total time: 0:17:00
+Test:   [ 0/49]  eta: 0:06:18  loss: 1.8278 (1.8278)  acc1: 81.6406 (81.6406)  acc5: 93.3594 (93.3594)  time: 7.7344  data: 7.4601  max mem: 31330
+Test:  Total time: 0:01:00
+Test:  Acc@1 64.926 Acc@5 86.498
+Epoch: [1]  [   0/1251]  eta: 2:14:55  lr: 0.00042677669529663686  img/s: 571.0806411894949  loss_kd: 2.8950977325439453  loss_ce: 3.9336748123168945  loss: 3.4144 (3.4144)  acc1: 50.0000 (50.0000)  acc5: 72.2656 (72.2656)  time: 6.4711  data: 6.0221  max mem: 31330
+Epoch: [1]  [  50/1251]  eta: 0:16:22  lr: 0.00042677669529663686  img/s: 973.4634110961622  loss_kd: 3.367251396179199  loss_ce: 4.93549919128418  loss: 3.8306 (3.5322)  acc1: 31.2500 (41.9730)  acc5: 57.0312 (65.0659)  time: 0.8178  data: 0.5332  max mem: 31330
+Epoch: [1]  [ 100/1251]  eta: 0:14:24  lr: 0.00042677669529663686  img/s: 973.1563805104408  loss_kd: 2.7752857208251953  loss_ce: 3.5162906646728516  loss: 3.4557 (3.4732)  acc1: 47.2656 (43.8970)  acc5: 70.3125 (66.9670)  time: 0.6325  data: 0.3513  max mem: 31330
+Epoch: [1]  [ 150/1251]  eta: 0:13:05  lr: 0.00042677669529663686  img/s: 972.0586562086391  loss_kd: 2.977447271347046  loss_ce: 4.2904510498046875  loss: 3.4957 (3.4954)  acc1: 45.3125 (43.4861)  acc5: 69.1406 (66.3054)  time: 0.5798  data: 0.2962  max mem: 31330
+Epoch: [1]  [ 200/1251]  eta: 0:12:22  lr: 0.00042677669529663686  img/s: 689.8167331701103  loss_kd: 2.938781976699829  loss_ce: 3.8914999961853027  loss: 3.2211 (3.4707)  acc1: 50.0000 (44.1251)  acc5: 74.2188 (66.8571)  time: 0.7172  data: 0.4296  max mem: 31330
+Epoch: [1]  [ 250/1251]  eta: 0:11:33  lr: 0.00042677669529663686  img/s: 902.5801371175721  loss_kd: 2.4465532302856445  loss_ce: 3.0985851287841797  loss: 3.4423 (3.4534)  acc1: 45.3125 (44.5888)  acc5: 71.0938 (67.3525)  time: 0.7067  data: 0.4194  max mem: 31330
+Epoch: [1]  [ 300/1251]  eta: 0:10:45  lr: 0.00042677669529663686  img/s: 968.4534967412814  loss_kd: 3.1437489986419678  loss_ce: 4.699009895324707  loss: 3.7468 (3.4498)  acc1: 38.6719 (44.3612)  acc5: 59.3750 (67.1174)  time: 0.6014  data: 0.3043  max mem: 31330
+Epoch: [1]  [ 350/1251]  eta: 0:10:09  lr: 0.00042677669529663686  img/s: 972.5975177401326  loss_kd: 2.411104679107666  loss_ce: 2.8610575199127197  loss: 3.4746 (3.4354)  acc1: 45.7031 (44.6592)  acc5: 67.1875 (67.4179)  time: 0.5907  data: 0.3145  max mem: 31330
+Epoch: [1]  [ 400/1251]  eta: 0:09:33  lr: 0.00042677669529663686  img/s: 956.0739755350048  loss_kd: 2.8624870777130127  loss_ce: 4.019866943359375  loss: 3.3521 (3.4263)  acc1: 50.3906 (44.8137)  acc5: 71.4844 (67.5450)  time: 0.6338  data: 0.3639  max mem: 31330
+Epoch: [1]  [ 450/1251]  eta: 0:08:58  lr: 0.00042677669529663686  img/s: 565.200751887219  loss_kd: 3.175253391265869  loss_ce: 4.797308921813965  loss: 3.5368 (3.4341)  acc1: 44.1406 (44.5451)  acc5: 66.0156 (67.3659)  time: 0.7157  data: 0.4376  max mem: 31330
+Epoch: [1]  [ 500/1251]  eta: 0:08:19  lr: 0.00042677669529663686  img/s: 971.3569192801908  loss_kd: 2.616790533065796  loss_ce: 3.467808246612549  loss: 3.3459 (3.4273)  acc1: 49.6094 (44.6638)  acc5: 71.0938 (67.4315)  time: 0.5956  data: 0.3073  max mem: 31330
+Epoch: [1]  [ 550/1251]  eta: 0:07:43  lr: 0.00042677669529663686  img/s: 965.0059217438272  loss_kd: 2.5002219676971436  loss_ce: 2.795992612838745  loss: 3.5482 (3.4216)  acc1: 41.4062 (44.7439)  acc5: 65.6250 (67.5016)  time: 0.5708  data: 0.2891  max mem: 31330
+Epoch: [1]  [ 600/1251]  eta: 0:07:09  lr: 0.00042677669529663686  img/s: 968.5635689234633  loss_kd: 2.497239351272583  loss_ce: 3.443134069442749  loss: 3.5581 (3.4156)  acc1: 40.2344 (44.8224)  acc5: 66.4062 (67.6236)  time: 0.6033  data: 0.3085  max mem: 31330
+Epoch: [1]  [ 650/1251]  eta: 0:06:37  lr: 0.00042677669529663686  img/s: 970.5754745122002  loss_kd: 2.4226152896881104  loss_ce: 2.993093967437744  loss: 3.2207 (3.4080)  acc1: 46.0938 (44.9321)  acc5: 69.1406 (67.7569)  time: 0.7217  data: 0.4434  max mem: 31330
+Epoch: [1]  [ 700/1251]  eta: 0:06:03  lr: 0.00042677669529663686  img/s: 970.8132868846308  loss_kd: 2.905569314956665  loss_ce: 4.2031145095825195  loss: 3.4703 (3.4020)  acc1: 44.9219 (45.0656)  acc5: 65.2344 (67.8439)  time: 0.7544  data: 0.4726  max mem: 31330
+Epoch: [1]  [ 750/1251]  eta: 0:05:34  lr: 0.00042677669529663686  img/s: 965.3772610678704  loss_kd: 2.716691493988037  loss_ce: 3.832888603210449  loss: 3.3846 (3.3930)  acc1: 48.0469 (45.2886)  acc5: 72.6562 (68.0265)  time: 0.7449  data: 0.4657  max mem: 31330
+Epoch: [1]  [ 800/1251]  eta: 0:05:03  lr: 0.00042677669529663686  img/s: 836.9104064512156  loss_kd: 3.019594430923462  loss_ce: 4.518965244293213  loss: 3.5940 (3.3919)  acc1: 45.7031 (45.3330)  acc5: 68.7500 (68.1107)  time: 0.6841  data: 0.4030  max mem: 31330
+Epoch: [1]  [ 850/1251]  eta: 0:04:32  lr: 0.00042677669529663686  img/s: 819.7566279593535  loss_kd: 2.461244583129883  loss_ce: 3.297098159790039  loss: 2.8792 (3.3860)  acc1: 54.6875 (45.4396)  acc5: 76.5625 (68.2097)  time: 0.8367  data: 0.5550  max mem: 31330
+Epoch: [1]  [ 900/1251]  eta: 0:03:58  lr: 0.00042677669529663686  img/s: 970.6316263344874  loss_kd: 2.8714966773986816  loss_ce: 4.210426330566406  loss: 3.5283 (3.3851)  acc1: 44.1406 (45.3585)  acc5: 66.4062 (68.1504)  time: 0.6866  data: 0.4112  max mem: 31330
+Epoch: [1]  [ 950/1251]  eta: 0:03:26  lr: 0.00042677669529663686  img/s: 972.2795876326  loss_kd: 2.9075613021850586  loss_ce: 3.9897336959838867  loss: 3.3718 (3.3812)  acc1: 47.6562 (45.4415)  acc5: 70.7031 (68.2230)  time: 0.7314  data: 0.4561  max mem: 31330
+Epoch: [1]  [1000/1251]  eta: 0:02:53  lr: 0.00042677669529663686  img/s: 850.1545721443298  loss_kd: 2.4422879219055176  loss_ce: 2.9974162578582764  loss: 3.1972 (3.3767)  acc1: 47.2656 (45.5447)  acc5: 71.8750 (68.3110)  time: 0.7584  data: 0.4742  max mem: 31330
+Epoch: [1]  [1050/1251]  eta: 0:02:19  lr: 0.00042677669529663686  img/s: 970.8325978005445  loss_kd: 3.0526130199432373  loss_ce: 4.412042140960693  loss: 3.3531 (3.3717)  acc1: 50.3906 (45.6124)  acc5: 73.4375 (68.4077)  time: 0.8698  data: 0.6005  max mem: 31330
+Epoch: [1]  [1100/1251]  eta: 0:01:45  lr: 0.00042677669529663686  img/s: 971.0933703776055  loss_kd: 2.3331971168518066  loss_ce: 2.50801944732666  loss: 3.3359 (3.3717)  acc1: 50.3906 (45.6531)  acc5: 71.4844 (68.4275)  time: 0.7391  data: 0.4661  max mem: 31330
+Epoch: [1]  [1150/1251]  eta: 0:01:10  lr: 0.00042677669529663686  img/s: 964.4260590579046  loss_kd: 3.165133476257324  loss_ce: 4.620676517486572  loss: 3.3578 (3.3686)  acc1: 44.9219 (45.6471)  acc5: 69.5312 (68.4575)  time: 0.6369  data: 0.3647  max mem: 31330
+Epoch: [1]  [1200/1251]  eta: 0:00:35  lr: 0.00042677669529663686  img/s: 810.7015870618969  loss_kd: 2.3967323303222656  loss_ce: 2.903164863586426  loss: 3.2982 (3.3654)  acc1: 50.7812 (45.7617)  acc5: 73.4375 (68.5422)  time: 0.8442  data: 0.5641  max mem: 31330
+Epoch: [1]  [1250/1251]  eta: 0:00:00  lr: 0.00042677669529663686  img/s: 972.8874468248971  loss_kd: 2.738361120223999  loss_ce: 3.855236291885376  loss: 3.2968 (3.3664)  acc1: 50.3906 (45.7493)  acc5: 75.0000 (68.5352)  time: 0.8303  data: 0.5475  max mem: 31330
+Epoch: [1] Total time: 0:14:41
+Test:   [ 0/49]  eta: 0:04:48  loss: 1.6393 (1.6393)  acc1: 85.1562 (85.1562)  acc5: 96.8750 (96.8750)  time: 5.8913  data: 5.6936  max mem: 31330
+Test:  Total time: 0:00:37
+Test:  Acc@1 69.018 Acc@5 89.338
+Epoch: [2]  [   0/1251]  eta: 1:44:58  lr: 0.00025  img/s: 723.5739833497536  loss_kd: 3.1122841835021973  loss_ce: 4.778616905212402  loss: 3.9455 (3.9455)  acc1: 30.4688 (30.4688)  acc5: 51.5625 (51.5625)  time: 5.0350  data: 4.6804  max mem: 31330
+Epoch: [2]  [  50/1251]  eta: 0:14:10  lr: 0.00025  img/s: 972.8768688665252  loss_kd: 2.327416181564331  loss_ce: 2.8324739933013916  loss: 3.3558 (3.2084)  acc1: 47.6562 (47.5720)  acc5: 67.1875 (70.0674)  time: 0.7009  data: 0.4079  max mem: 31330
+Epoch: [2]  [ 100/1251]  eta: 0:12:43  lr: 0.00025  img/s: 965.6134009725004  loss_kd: 2.417890787124634  loss_ce: 3.4974522590637207  loss: 2.9307 (3.1782)  acc1: 56.2500 (48.7740)  acc5: 80.8594 (71.3335)  time: 0.6025  data: 0.3211  max mem: 31330
+Epoch: [2]  [ 150/1251]  eta: 0:11:57  lr: 0.00025  img/s: 972.2408513589744  loss_kd: 2.814973831176758  loss_ce: 4.131983757019043  loss: 3.3169 (3.1971)  acc1: 49.6094 (48.4194)  acc5: 71.8750 (70.8764)  time: 0.5922  data: 0.2968  max mem: 31330
+Epoch: [2]  [ 200/1251]  eta: 0:11:30  lr: 0.00025  img/s: 603.8041067426946  loss_kd: 2.694188117980957  loss_ce: 3.9335200786590576  loss: 3.1017 (3.1681)  acc1: 54.6875 (49.0672)  acc5: 76.5625 (71.6554)  time: 0.6605  data: 0.3739  max mem: 31330
+Epoch: [2]  [ 250/1251]  eta: 0:10:52  lr: 0.00025  img/s: 972.0322567796088  loss_kd: 2.7739341259002686  loss_ce: 3.836595296859741  loss: 3.2325 (3.1577)  acc1: 50.7812 (49.7946)  acc5: 73.0469 (72.2703)  time: 0.6903  data: 0.4090  max mem: 31330
+Epoch: [2]  [ 300/1251]  eta: 0:10:20  lr: 0.00025  img/s: 673.7283920561249  loss_kd: 2.8109633922576904  loss_ce: 3.917517900466919  loss: 3.3310 (3.1642)  acc1: 48.0469 (49.6237)  acc5: 71.8750 (72.1968)  time: 0.6446  data: 0.3409  max mem: 31330
+Epoch: [2]  [ 350/1251]  eta: 0:09:49  lr: 0.00025  img/s: 973.1846051219583  loss_kd: 2.901553153991699  loss_ce: 4.088624954223633  loss: 3.2668 (3.1661)  acc1: 49.2188 (49.3645)  acc5: 73.4375 (72.0809)  time: 0.6868  data: 0.3853  max mem: 31330
+Epoch: [2]  [ 400/1251]  eta: 0:09:19  lr: 0.00025  img/s: 701.4527770882057  loss_kd: 2.7671685218811035  loss_ce: 4.328080177307129  loss: 3.1749 (3.1565)  acc1: 50.0000 (49.5266)  acc5: 73.0469 (72.1955)  time: 0.6332  data: 0.3390  max mem: 31330
+Epoch: [2]  [ 450/1251]  eta: 0:08:47  lr: 0.00025  img/s: 969.9976638574537  loss_kd: 2.467195749282837  loss_ce: 3.303650379180908  loss: 3.0881 (3.1534)  acc1: 54.2969 (49.6449)  acc5: 76.1719 (72.2812)  time: 0.6547  data: 0.3774  max mem: 31330
+Epoch: [2]  [ 500/1251]  eta: 0:08:15  lr: 0.00025  img/s: 972.3799641563753  loss_kd: 2.3643617630004883  loss_ce: 3.519510269165039  loss: 3.3286 (3.1472)  acc1: 43.7500 (49.6406)  acc5: 68.7500 (72.3272)  time: 0.6471  data: 0.3620  max mem: 31330
+Epoch: [2]  [ 550/1251]  eta: 0:07:40  lr: 0.00025  img/s: 972.6292340831807  loss_kd: 2.2889201641082764  loss_ce: 3.2187957763671875  loss: 2.7816 (3.1384)  acc1: 56.6406 (49.7845)  acc5: 73.8281 (72.4301)  time: 0.6388  data: 0.3627  max mem: 31330
+Epoch: [2]  [ 600/1251]  eta: 0:07:06  lr: 0.00025  img/s: 618.801106733126  loss_kd: 2.322866678237915  loss_ce: 3.602640390396118  loss: 3.2449 (3.1395)  acc1: 49.6094 (49.8109)  acc5: 74.6094 (72.4372)  time: 0.5926  data: 0.3043  max mem: 31330
+Epoch: [2]  [ 650/1251]  eta: 0:06:31  lr: 0.00025  img/s: 970.7781780965461  loss_kd: 2.9058260917663574  loss_ce: 4.162635803222656  loss: 3.2129 (3.1389)  acc1: 48.4375 (49.7912)  acc5: 71.4844 (72.4636)  time: 0.5685  data: 0.2673  max mem: 31330
+Epoch: [2]  [ 700/1251]  eta: 0:05:59  lr: 0.00025  img/s: 833.0431649597072  loss_kd: 2.0361289978027344  loss_ce: 2.6018571853637695  loss: 3.3188 (3.1314)  acc1: 47.6562 (49.9493)  acc5: 69.9219 (72.5598)  time: 0.6980  data: 0.4147  max mem: 31330
+Epoch: [2]  [ 750/1251]  eta: 0:05:25  lr: 0.00025  img/s: 963.9922682518007  loss_kd: 2.241048574447632  loss_ce: 3.0392706394195557  loss: 3.2095 (3.1277)  acc1: 48.8281 (50.0042)  acc5: 71.8750 (72.6224)  time: 0.6912  data: 0.3707  max mem: 31330
+Epoch: [2]  [ 800/1251]  eta: 0:04:52  lr: 0.00025  img/s: 904.3597623168631  loss_kd: 2.235342502593994  loss_ce: 2.910315990447998  loss: 3.2327 (3.1251)  acc1: 49.6094 (50.0166)  acc5: 71.4844 (72.6392)  time: 0.6067  data: 0.3231  max mem: 31330
+Epoch: [2]  [ 850/1251]  eta: 0:04:19  lr: 0.00025  img/s: 969.8820090598283  loss_kd: 2.1100411415100098  loss_ce: 2.814969062805176  loss: 3.3883 (3.1287)  acc1: 38.2812 (49.8701)  acc5: 62.8906 (72.5130)  time: 0.5888  data: 0.2985  max mem: 31330
+Epoch: [2]  [ 900/1251]  eta: 0:03:48  lr: 0.00025  img/s: 694.1482446885537  loss_kd: 2.640598773956299  loss_ce: 4.000178337097168  loss: 3.2377 (3.1227)  acc1: 50.0000 (50.0191)  acc5: 73.8281 (72.6363)  time: 0.7197  data: 0.4355  max mem: 31330
+Epoch: [2]  [ 950/1251]  eta: 0:03:16  lr: 0.00025  img/s: 786.7081929642292  loss_kd: 2.1205599308013916  loss_ce: 2.878009796142578  loss: 2.7872 (3.1160)  acc1: 62.8906 (50.2128)  acc5: 81.2500 (72.7799)  time: 0.7150  data: 0.4311  max mem: 31330
+Epoch: [2]  [1000/1251]  eta: 0:02:43  lr: 0.00025  img/s: 969.4126637180046  loss_kd: 2.871764659881592  loss_ce: 4.138439178466797  loss: 2.9707 (3.1097)  acc1: 54.6875 (50.3961)  acc5: 77.3438 (72.9290)  time: 0.6856  data: 0.4198  max mem: 31330
+Epoch: [2]  [1050/1251]  eta: 0:02:11  lr: 0.00025  img/s: 966.4642880288029  loss_kd: 2.1958885192871094  loss_ce: 2.8035364151000977  loss: 2.8595 (3.1048)  acc1: 51.9531 (50.5014)  acc5: 74.6094 (73.0246)  time: 0.6780  data: 0.3968  max mem: 31330
+Epoch: [2]  [1100/1251]  eta: 0:01:40  lr: 0.00025  img/s: 678.7174238440066  loss_kd: 2.66544508934021  loss_ce: 4.0089111328125  loss: 3.1759 (3.1056)  acc1: 43.3594 (50.3683)  acc5: 70.7031 (72.9188)  time: 0.7587  data: 0.4374  max mem: 31330
+Epoch: [2]  [1150/1251]  eta: 0:01:07  lr: 0.00025  img/s: 827.1151191247418  loss_kd: 2.8082425594329834  loss_ce: 4.295665740966797  loss: 3.1669 (3.1069)  acc1: 51.1719 (50.3346)  acc5: 72.6562 (72.8741)  time: 0.7657  data: 0.4861  max mem: 31330
+Epoch: [2]  [1200/1251]  eta: 0:00:33  lr: 0.00025  img/s: 965.7923191155029  loss_kd: 2.1386356353759766  loss_ce: 2.2883963584899902  loss: 2.8124 (3.1035)  acc1: 59.7656 (50.4066)  acc5: 80.0781 (72.9509)  time: 0.7273  data: 0.4541  max mem: 31330
+Epoch: [2]  [1250/1251]  eta: 0:00:00  lr: 0.00025  img/s: 973.1114009195123  loss_kd: 2.3459877967834473  loss_ce: 3.5852527618408203  loss: 2.9289 (3.0980)  acc1: 58.9844 (50.5065)  acc5: 79.6875 (73.0366)  time: 0.6106  data: 0.3374  max mem: 31330
+Epoch: [2] Total time: 0:13:54
+Test:   [ 0/49]  eta: 0:03:10  loss: 1.4771 (1.4771)  acc1: 90.6250 (90.6250)  acc5: 98.0469 (98.0469)  time: 3.8920  data: 3.6944  max mem: 31330
+Test:  Total time: 0:00:20
+Test:  Acc@1 72.648 Acc@5 91.286
+Epoch: [3]  [   0/1251]  eta: 1:50:03  lr: 7.322330470336314e-05  img/s: 566.5038802184044  loss_kd: 2.6156582832336426  loss_ce: 3.7457878589630127  loss: 3.1807 (3.1807)  acc1: 53.5156 (53.5156)  acc5: 76.5625 (76.5625)  time: 5.2787  data: 4.8262  max mem: 31330
+Epoch: [3]  [  50/1251]  eta: 0:13:51  lr: 7.322330470336314e-05  img/s: 964.4563783949347  loss_kd: 2.5218846797943115  loss_ce: 3.5310263633728027  loss: 3.1766 (3.0411)  acc1: 48.8281 (50.4136)  acc5: 73.0469 (73.9047)  time: 0.6678  data: 0.3837  max mem: 31330
+Epoch: [3]  [ 100/1251]  eta: 0:12:20  lr: 7.322330470336314e-05  img/s: 971.7375605332628  loss_kd: 2.3624961376190186  loss_ce: 3.502063512802124  loss: 2.9323 (2.9716)  acc1: 58.5938 (52.2857)  acc5: 78.5156 (75.3442)  time: 0.5771  data: 0.3049  max mem: 31330
+Epoch: [3]  [ 150/1251]  eta: 0:11:25  lr: 7.322330470336314e-05  img/s: 973.8271576274261  loss_kd: 2.349323034286499  loss_ce: 3.7312521934509277  loss: 2.8294 (2.9430)  acc1: 62.1094 (53.1948)  acc5: 80.0781 (75.7968)  time: 0.5168  data: 0.2422  max mem: 31330
+Epoch: [3]  [ 200/1251]  eta: 0:11:05  lr: 7.322330470336314e-05  img/s: 619.4251022095257  loss_kd: 2.224907398223877  loss_ce: 3.4697723388671875  loss: 2.8473 (2.9375)  acc1: 58.5938 (53.4690)  acc5: 77.3438 (75.9231)  time: 0.6947  data: 0.4165  max mem: 31330
+Epoch: [3]  [ 250/1251]  eta: 0:10:26  lr: 7.322330470336314e-05  img/s: 971.9513074711604  loss_kd: 2.44763445854187  loss_ce: 3.870016098022461  loss: 2.8196 (2.9412)  acc1: 57.4219 (53.6572)  acc5: 78.9062 (76.1439)  time: 0.6822  data: 0.3936  max mem: 31330
+Epoch: [3]  [ 300/1251]  eta: 0:09:51  lr: 7.322330470336314e-05  img/s: 972.6045656376077  loss_kd: 2.026805877685547  loss_ce: 3.358031749725342  loss: 2.6714 (2.9329)  acc1: 64.4531 (53.7583)  acc5: 82.8125 (76.1446)  time: 0.5303  data: 0.2529  max mem: 31330
+Epoch: [3]  [ 350/1251]  eta: 0:09:18  lr: 7.322330470336314e-05  img/s: 973.6867475123757  loss_kd: 1.9785664081573486  loss_ce: 2.2909083366394043  loss: 2.8834 (2.9181)  acc1: 59.7656 (54.0632)  acc5: 81.2500 (76.4078)  time: 0.5642  data: 0.2862  max mem: 31330
+Epoch: [3]  [ 400/1251]  eta: 0:08:56  lr: 7.322330470336314e-05  img/s: 638.1774310213353  loss_kd: 2.0868778228759766  loss_ce: 2.866940975189209  loss: 2.7116 (2.9171)  acc1: 61.3281 (54.1225)  acc5: 81.6406 (76.4339)  time: 0.7883  data: 0.5005  max mem: 31330
+Epoch: [3]  [ 450/1251]  eta: 0:08:29  lr: 7.322330470336314e-05  img/s: 971.4896263570422  loss_kd: 2.0947959423065186  loss_ce: 2.9753026962280273  loss: 3.0121 (2.9146)  acc1: 57.0312 (54.1427)  acc5: 76.9531 (76.4863)  time: 0.7859  data: 0.4997  max mem: 31330
+Epoch: [3]  [ 500/1251]  eta: 0:08:01  lr: 7.322330470336314e-05  img/s: 971.9715435342467  loss_kd: 2.201227903366089  loss_ce: 3.073228597640991  loss: 3.0057 (2.9168)  acc1: 52.7344 (54.0521)  acc5: 78.1250 (76.3972)  time: 0.6024  data: 0.3221  max mem: 31330
+Epoch: [3]  [ 550/1251]  eta: 0:07:33  lr: 7.322330470336314e-05  img/s: 972.926234640334  loss_kd: 2.398420810699463  loss_ce: 3.7024922370910645  loss: 3.0453 (2.9199)  acc1: 55.4688 (53.9779)  acc5: 77.7344 (76.3363)  time: 0.6052  data: 0.3302  max mem: 31330
+Epoch: [3]  [ 600/1251]  eta: 0:07:07  lr: 7.322330470336314e-05  img/s: 716.6783409646114  loss_kd: 2.3936610221862793  loss_ce: 3.3705496788024902  loss: 2.9339 (2.9245)  acc1: 58.5938 (53.9011)  acc5: 79.6875 (76.2856)  time: 0.8158  data: 0.5265  max mem: 31330
+Epoch: [3]  [ 650/1251]  eta: 0:06:35  lr: 7.322330470336314e-05  img/s: 974.1487521728559  loss_kd: 2.299854040145874  loss_ce: 3.6249561309814453  loss: 2.6426 (2.9165)  acc1: 64.0625 (54.0251)  acc5: 82.8125 (76.3537)  time: 0.7899  data: 0.5112  max mem: 31330
+Epoch: [3]  [ 700/1251]  eta: 0:06:07  lr: 7.322330470336314e-05  img/s: 897.1016182624962  loss_kd: 2.7042276859283447  loss_ce: 4.276440143585205  loss: 3.1549 (2.9183)  acc1: 49.2188 (53.9074)  acc5: 75.0000 (76.3318)  time: 0.7721  data: 0.4874  max mem: 31330
+Epoch: [3]  [ 750/1251]  eta: 0:05:36  lr: 7.322330470336314e-05  img/s: 972.7376138643909  loss_kd: 2.5226268768310547  loss_ce: 3.6836793422698975  loss: 3.0726 (2.9174)  acc1: 55.4688 (53.9016)  acc5: 76.9531 (76.3212)  time: 0.7778  data: 0.5039  max mem: 31330
+Epoch: [3]  [ 800/1251]  eta: 0:05:07  lr: 7.322330470336314e-05  img/s: 666.245038569599  loss_kd: 2.493326187133789  loss_ce: 3.8027725219726562  loss: 3.0329 (2.9204)  acc1: 53.1250 (53.7736)  acc5: 75.0000 (76.2401)  time: 0.8149  data: 0.5352  max mem: 31330
+Epoch: [3]  [ 850/1251]  eta: 0:04:35  lr: 7.322330470336314e-05  img/s: 967.7700371608498  loss_kd: 1.8341089487075806  loss_ce: 2.366617441177368  loss: 2.9295 (2.9219)  acc1: 55.0781 (53.8181)  acc5: 80.4688 (76.2476)  time: 0.8665  data: 0.5843  max mem: 31330
+Epoch: [3]  [ 900/1251]  eta: 0:04:02  lr: 7.322330470336314e-05  img/s: 952.1182400198627  loss_kd: 2.449435234069824  loss_ce: 3.8019304275512695  loss: 2.9933 (2.9179)  acc1: 55.8594 (53.9227)  acc5: 77.7344 (76.3457)  time: 0.7150  data: 0.4262  max mem: 31330
+Epoch: [3]  [ 950/1251]  eta: 0:03:28  lr: 7.322330470336314e-05  img/s: 969.2612742080206  loss_kd: 2.6696176528930664  loss_ce: 3.824256420135498  loss: 2.9565 (2.9180)  acc1: 57.8125 (53.8952)  acc5: 78.9062 (76.3144)  time: 0.7090  data: 0.4137  max mem: 31330
+Epoch: [3]  [1000/1251]  eta: 0:02:55  lr: 7.322330470336314e-05  img/s: 597.1595422233246  loss_kd: 2.123521327972412  loss_ce: 2.864710569381714  loss: 2.9184 (2.9160)  acc1: 55.0781 (53.9297)  acc5: 79.6875 (76.3502)  time: 0.8065  data: 0.5005  max mem: 31330
+Epoch: [3]  [1050/1251]  eta: 0:02:21  lr: 7.322330470336314e-05  img/s: 972.5384956084854  loss_kd: 2.372427225112915  loss_ce: 3.8553545475006104  loss: 3.0607 (2.9160)  acc1: 51.9531 (53.8479)  acc5: 72.6562 (76.2927)  time: 0.8775  data: 0.5658  max mem: 31330
+Epoch: [3]  [1100/1251]  eta: 0:01:46  lr: 7.322330470336314e-05  img/s: 850.426601784266  loss_kd: 2.49487566947937  loss_ce: 3.791518211364746  loss: 2.8582 (2.9126)  acc1: 54.2969 (53.9385)  acc5: 80.0781 (76.3780)  time: 0.6982  data: 0.4030  max mem: 31330
+Epoch: [3]  [1150/1251]  eta: 0:01:11  lr: 7.322330470336314e-05  img/s: 973.2631134323569  loss_kd: 2.557945966720581  loss_ce: 3.9477336406707764  loss: 3.0674 (2.9124)  acc1: 49.6094 (53.9409)  acc5: 71.8750 (76.3612)  time: 0.6848  data: 0.3944  max mem: 31330
+Epoch: [3]  [1200/1251]  eta: 0:00:36  lr: 7.322330470336314e-05  img/s: 558.3788268417021  loss_kd: 2.4300625324249268  loss_ce: 3.8307480812072754  loss: 2.7999 (2.9100)  acc1: 60.1562 (53.9772)  acc5: 82.8125 (76.3940)  time: 0.8803  data: 0.5765  max mem: 31330
+Epoch: [3]  [1250/1251]  eta: 0:00:00  lr: 7.322330470336314e-05  img/s: 974.8244385694779  loss_kd: 2.1513614654541016  loss_ce: 3.1284918785095215  loss: 2.8460 (2.9085)  acc1: 58.9844 (54.0508)  acc5: 80.0781 (76.4492)  time: 0.8511  data: 0.5442  max mem: 31330
+Epoch: [3] Total time: 0:14:53
+Test:   [ 0/49]  eta: 0:06:39  loss: 1.4376 (1.4376)  acc1: 90.2344 (90.2344)  acc5: 98.0469 (98.0469)  time: 8.1621  data: 7.9814  max mem: 31330
+Test:  Total time: 0:00:49
+Test:  Acc@1 74.902 Acc@5 92.542
+gpua045:1209760:1209805 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+gpua045:1209758:1209806 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+gpua045:1209759:1209811 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+gpua045:1209760:1233606 [3] NCCL INFO comm 0xb061ba0 rank 3 nranks 4 cudaDev 3 busId c7000 - Abort COMPLETE
+gpua045:1209758:1233607 [1] NCCL INFO comm 0xa196100 rank 1 nranks 4 cudaDev 1 busId 46000 - Abort COMPLETE
+gpua045:1209759:1233608 [2] NCCL INFO comm 0x98e0840 rank 2 nranks 4 cudaDev 2 busId 85000 - Abort COMPLETE
+Training time 1:03:22
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33m_work_hdd_bewo_mahdi_Isomorphic-Pruning_output_pruned_deit_4.2G_v2.pth[0m at: [34mhttps://wandb.ai/saisoma239-iowa-state-university/Pruning/runs/y0dusetl[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20250714_133616-y0dusetl/logs[0m
+gpua045:1209757:1209807 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+gpua045:1209757:1233612 [0] NCCL INFO comm 0xa619be0 rank 0 nranks 4 cudaDev 0 busId 7000 - Abort COMPLETE

@@ -1,0 +1,580 @@
+| distributed init (rank 0): env://
+| distributed init (rank 3): env://
+| distributed init (rank 2): env://
+| distributed init (rank 1): env://
+gpua001:3091038:3091038 [0] NCCL INFO Bootstrap: Using eth1:172.28.23.1<0>
+gpua001:3091038:3091038 [0] NCCL INFO cudaDriverVersion 12040
+gpua001:3091038:3091038 [0] NCCL INFO NCCL version 2.26.2+cuda12.2
+gpua001:3091038:3091038 [0] NCCL INFO Comm config Blocking set to 1
+gpua001:3091041:3091041 [3] NCCL INFO cudaDriverVersion 12040
+gpua001:3091041:3091041 [3] NCCL INFO Bootstrap: Using eth1:172.28.23.1<0>
+gpua001:3091041:3091041 [3] NCCL INFO NCCL version 2.26.2+cuda12.2
+gpua001:3091039:3091039 [1] NCCL INFO cudaDriverVersion 12040
+gpua001:3091040:3091040 [2] NCCL INFO cudaDriverVersion 12040
+gpua001:3091041:3091041 [3] NCCL INFO Comm config Blocking set to 1
+gpua001:3091039:3091039 [1] NCCL INFO Bootstrap: Using eth1:172.28.23.1<0>
+gpua001:3091039:3091039 [1] NCCL INFO NCCL version 2.26.2+cuda12.2
+gpua001:3091040:3091040 [2] NCCL INFO Bootstrap: Using eth1:172.28.23.1<0>
+gpua001:3091040:3091040 [2] NCCL INFO NCCL version 2.26.2+cuda12.2
+gpua001:3091039:3091039 [1] NCCL INFO Comm config Blocking set to 1
+gpua001:3091040:3091040 [2] NCCL INFO Comm config Blocking set to 1
+gpua001:3091038:3091080 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal net plugin.
+gpua001:3091038:3091080 [0] NCCL INFO NET/IB : No device found.
+gpua001:3091038:3091080 [0] NCCL INFO NET/IB : Using [RO]; OOB eth1:172.28.23.1<0>
+gpua001:3091038:3091080 [0] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.1<0> [1]hsn0:172.28.86.1<0> [2]hsn0.561:141.142.254.1<0>
+gpua001:3091038:3091080 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpua001:3091038:3091080 [0] NCCL INFO Using network Socket
+gpua001:3091041:3091081 [3] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal net plugin.
+gpua001:3091039:3091082 [1] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal net plugin.
+gpua001:3091040:3091083 [2] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal net plugin.
+gpua001:3091038:3091080 [0] NCCL INFO ncclCommInitRankConfig comm 0xb3071c0 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 7000 commId 0xf55b5320522f88e9 - Init START
+gpua001:3091039:3091082 [1] NCCL INFO NET/IB : No device found.
+gpua001:3091041:3091081 [3] NCCL INFO NET/IB : No device found.
+gpua001:3091039:3091082 [1] NCCL INFO NET/IB : Using [RO]; OOB eth1:172.28.23.1<0>
+gpua001:3091041:3091081 [3] NCCL INFO NET/IB : Using [RO]; OOB eth1:172.28.23.1<0>
+gpua001:3091040:3091083 [2] NCCL INFO NET/IB : No device found.
+gpua001:3091040:3091083 [2] NCCL INFO NET/IB : Using [RO]; OOB eth1:172.28.23.1<0>
+gpua001:3091041:3091081 [3] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.1<0> [1]hsn0:172.28.86.1<0> [2]hsn0.561:141.142.254.1<0>
+gpua001:3091039:3091082 [1] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.1<0> [1]hsn0:172.28.86.1<0> [2]hsn0.561:141.142.254.1<0>
+gpua001:3091039:3091082 [1] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpua001:3091039:3091082 [1] NCCL INFO Using network Socket
+gpua001:3091040:3091083 [2] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.1<0> [1]hsn0:172.28.86.1<0> [2]hsn0.561:141.142.254.1<0>
+gpua001:3091041:3091081 [3] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpua001:3091041:3091081 [3] NCCL INFO Using network Socket
+gpua001:3091040:3091083 [2] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+gpua001:3091040:3091083 [2] NCCL INFO Using network Socket
+gpua001:3091039:3091082 [1] NCCL INFO ncclCommInitRankConfig comm 0xb4dd4a0 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 46000 commId 0xf55b5320522f88e9 - Init START
+gpua001:3091041:3091081 [3] NCCL INFO ncclCommInitRankConfig comm 0xc1580d0 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c7000 commId 0xf55b5320522f88e9 - Init START
+gpua001:3091040:3091083 [2] NCCL INFO ncclCommInitRankConfig comm 0xb57a0e0 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 85000 commId 0xf55b5320522f88e9 - Init START
+gpua001:3091038:3091080 [0] NCCL INFO RAS client listening socket at ::1<28028>
+gpua001:3091039:3091082 [1] NCCL INFO RAS client listening socket at ::1<28028>
+gpua001:3091041:3091081 [3] NCCL INFO RAS client listening socket at ::1<28028>
+gpua001:3091040:3091083 [2] NCCL INFO RAS client listening socket at ::1<28028>
+gpua001:3091039:3091082 [1] NCCL INFO Bootstrap timings total 0.001664 (create 0.000030, send 0.000125, recv 0.000975, ring 0.000166, delay 0.000000)
+gpua001:3091041:3091081 [3] NCCL INFO Bootstrap timings total 0.000952 (create 0.000026, send 0.000109, recv 0.000136, ring 0.000078, delay 0.000000)
+gpua001:3091038:3091080 [0] NCCL INFO Bootstrap timings total 0.048657 (create 0.000025, send 0.000113, recv 0.047147, ring 0.000246, delay 0.000000)
+gpua001:3091040:3091083 [2] NCCL INFO Bootstrap timings total 0.000905 (create 0.000028, send 0.000117, recv 0.000324, ring 0.000071, delay 0.000000)
+gpua001:3091038:3091080 [0] NCCL INFO Setting affinity for GPU 0 to ffff0000,00000000
+gpua001:3091038:3091080 [0] NCCL INFO NVLS multicast support is not available on dev 0
+gpua001:3091039:3091082 [1] NCCL INFO Setting affinity for GPU 1 to ffff,00000000
+gpua001:3091039:3091082 [1] NCCL INFO NVLS multicast support is not available on dev 1
+gpua001:3091040:3091083 [2] NCCL INFO Setting affinity for GPU 2 to ffff0000
+gpua001:3091040:3091083 [2] NCCL INFO NVLS multicast support is not available on dev 2
+gpua001:3091041:3091081 [3] NCCL INFO Setting affinity for GPU 3 to ffff
+gpua001:3091041:3091081 [3] NCCL INFO NVLS multicast support is not available on dev 3
+gpua001:3091040:3091083 [2] NCCL INFO comm 0xb57a0e0 rank 2 nRanks 4 nNodes 1 localRanks 4 localRank 2 MNNVL 0
+gpua001:3091039:3091082 [1] NCCL INFO comm 0xb4dd4a0 rank 1 nRanks 4 nNodes 1 localRanks 4 localRank 1 MNNVL 0
+gpua001:3091041:3091081 [3] NCCL INFO comm 0xc1580d0 rank 3 nRanks 4 nNodes 1 localRanks 4 localRank 3 MNNVL 0
+gpua001:3091038:3091080 [0] NCCL INFO comm 0xb3071c0 rank 0 nRanks 4 nNodes 1 localRanks 4 localRank 0 MNNVL 0
+gpua001:3091040:3091083 [2] NCCL INFO Trees [0] -1/-1/-1->2->3 [1] -1/-1/-1->2->3 [2] -1/-1/-1->2->3 [3] -1/-1/-1->2->3 [4] -1/-1/-1->2->1 [5] -1/-1/-1->2->1 [6] -1/-1/-1->2->1 [7] -1/-1/-1->2->1 [8] 3/-1/-1->2->0 [9] 3/-1/-1->2->0 [10] 3/-1/-1->2->0 [11] 3/-1/-1->2->0 [12] -1/-1/-1->2->3 [13] -1/-1/-1->2->3 [14] -1/-1/-1->2->3 [15] -1/-1/-1->2->3 [16] -1/-1/-1->2->1 [17] -1/-1/-1->2->1 [18] -1/-1/-1->2->1 [19] -1/-1/-1->2->1 [20] 3/-1/-1->2->0 [21] 3/-1/-1->2->0 [22] 3/-1/-1->2->0 [23] 3/-1/-1->2->0
+gpua001:3091038:3091080 [0] NCCL INFO Channel 00/24 : 0 1 3 2
+gpua001:3091040:3091083 [2] NCCL INFO P2P Chunksize set to 524288
+gpua001:3091038:3091080 [0] NCCL INFO Channel 01/24 : 0 1 2 3
+gpua001:3091038:3091080 [0] NCCL INFO Channel 02/24 : 0 3 2 1
+gpua001:3091041:3091081 [3] NCCL INFO Trees [0] 2/-1/-1->3->1 [1] 2/-1/-1->3->1 [2] 2/-1/-1->3->1 [3] 2/-1/-1->3->1 [4] 1/-1/-1->3->0 [5] 1/-1/-1->3->0 [6] 1/-1/-1->3->0 [7] 1/-1/-1->3->0 [8] -1/-1/-1->3->2 [9] -1/-1/-1->3->2 [10] -1/-1/-1->3->2 [11] -1/-1/-1->3->2 [12] 2/-1/-1->3->1 [13] 2/-1/-1->3->1 [14] 2/-1/-1->3->1 [15] 2/-1/-1->3->1 [16] 1/-1/-1->3->0 [17] 1/-1/-1->3->0 [18] 1/-1/-1->3->0 [19] 1/-1/-1->3->0 [20] -1/-1/-1->3->2 [21] -1/-1/-1->3->2 [22] -1/-1/-1->3->2 [23] -1/-1/-1->3->2
+gpua001:3091038:3091080 [0] NCCL INFO Channel 03/24 : 0 3 1 2
+gpua001:3091041:3091081 [3] NCCL INFO P2P Chunksize set to 524288
+gpua001:3091038:3091080 [0] NCCL INFO Channel 04/24 : 0 2 1 3
+gpua001:3091039:3091082 [1] NCCL INFO Trees [0] 3/-1/-1->1->0 [1] 3/-1/-1->1->0 [2] 3/-1/-1->1->0 [3] 3/-1/-1->1->0 [4] 2/-1/-1->1->3 [5] 2/-1/-1->1->3 [6] 2/-1/-1->1->3 [7] 2/-1/-1->1->3 [8] 0/-1/-1->1->-1 [9] 0/-1/-1->1->-1 [10] 0/-1/-1->1->-1 [11] 0/-1/-1->1->-1 [12] 3/-1/-1->1->0 [13] 3/-1/-1->1->0 [14] 3/-1/-1->1->0 [15] 3/-1/-1->1->0 [16] 2/-1/-1->1->3 [17] 2/-1/-1->1->3 [18] 2/-1/-1->1->3 [19] 2/-1/-1->1->3 [20] 0/-1/-1->1->-1 [21] 0/-1/-1->1->-1 [22] 0/-1/-1->1->-1 [23] 0/-1/-1->1->-1
+gpua001:3091038:3091080 [0] NCCL INFO Channel 05/24 : 0 2 3 1
+gpua001:3091039:3091082 [1] NCCL INFO P2P Chunksize set to 524288
+gpua001:3091038:3091080 [0] NCCL INFO Channel 06/24 : 0 1 3 2
+gpua001:3091038:3091080 [0] NCCL INFO Channel 07/24 : 0 1 2 3
+gpua001:3091038:3091080 [0] NCCL INFO Channel 08/24 : 0 3 2 1
+gpua001:3091038:3091080 [0] NCCL INFO Channel 09/24 : 0 3 1 2
+gpua001:3091038:3091080 [0] NCCL INFO Channel 10/24 : 0 2 1 3
+gpua001:3091038:3091080 [0] NCCL INFO Channel 11/24 : 0 2 3 1
+gpua001:3091038:3091080 [0] NCCL INFO Channel 12/24 : 0 1 3 2
+gpua001:3091038:3091080 [0] NCCL INFO Channel 13/24 : 0 1 2 3
+gpua001:3091038:3091080 [0] NCCL INFO Channel 14/24 : 0 3 2 1
+gpua001:3091038:3091080 [0] NCCL INFO Channel 15/24 : 0 3 1 2
+gpua001:3091038:3091080 [0] NCCL INFO Channel 16/24 : 0 2 1 3
+gpua001:3091038:3091080 [0] NCCL INFO Channel 17/24 : 0 2 3 1
+gpua001:3091038:3091080 [0] NCCL INFO Channel 18/24 : 0 1 3 2
+gpua001:3091038:3091080 [0] NCCL INFO Channel 19/24 : 0 1 2 3
+gpua001:3091038:3091080 [0] NCCL INFO Channel 20/24 : 0 3 2 1
+gpua001:3091038:3091080 [0] NCCL INFO Channel 21/24 : 0 3 1 2
+gpua001:3091038:3091080 [0] NCCL INFO Channel 22/24 : 0 2 1 3
+gpua001:3091038:3091080 [0] NCCL INFO Channel 23/24 : 0 2 3 1
+gpua001:3091038:3091080 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] 1/-1/-1->0->-1 [3] 1/-1/-1->0->-1 [4] 3/-1/-1->0->-1 [5] 3/-1/-1->0->-1 [6] 3/-1/-1->0->-1 [7] 3/-1/-1->0->-1 [8] 2/-1/-1->0->1 [9] 2/-1/-1->0->1 [10] 2/-1/-1->0->1 [11] 2/-1/-1->0->1 [12] 1/-1/-1->0->-1 [13] 1/-1/-1->0->-1 [14] 1/-1/-1->0->-1 [15] 1/-1/-1->0->-1 [16] 3/-1/-1->0->-1 [17] 3/-1/-1->0->-1 [18] 3/-1/-1->0->-1 [19] 3/-1/-1->0->-1 [20] 2/-1/-1->0->1 [21] 2/-1/-1->0->1 [22] 2/-1/-1->0->1 [23] 2/-1/-1->0->1
+gpua001:3091038:3091080 [0] NCCL INFO P2P Chunksize set to 524288
+gpua001:3091038:3091080 [0] NCCL INFO Check P2P Type intraNodeP2pSupport 1 directMode 0
+gpua001:3091038:3091088 [0] NCCL INFO [Proxy Service] Device 0 CPU core 55
+gpua001:3091038:3091089 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 59
+gpua001:3091041:3091092 [3] NCCL INFO [Proxy Service UDS] Device 3 CPU core 1
+gpua001:3091041:3091090 [3] NCCL INFO [Proxy Service] Device 3 CPU core 11
+gpua001:3091039:3091091 [1] NCCL INFO [Proxy Service] Device 1 CPU core 43
+gpua001:3091039:3091093 [1] NCCL INFO [Proxy Service UDS] Device 1 CPU core 41
+gpua001:3091040:3091094 [2] NCCL INFO [Proxy Service] Device 2 CPU core 17
+gpua001:3091040:3091095 [2] NCCL INFO [Proxy Service UDS] Device 2 CPU core 27
+gpua001:3091039:3091082 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+gpua001:3091039:3091082 [1] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+gpua001:3091038:3091080 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+gpua001:3091038:3091080 [0] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+gpua001:3091041:3091081 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+gpua001:3091041:3091081 [3] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+gpua001:3091038:3091080 [0] NCCL INFO CC Off, workFifoBytes 1048576
+gpua001:3091040:3091083 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+gpua001:3091040:3091083 [2] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+gpua001:3091040:3091083 [2] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpua001:3091038:3091080 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpua001:3091040:3091083 [2] NCCL INFO ncclCommInitRankConfig comm 0xb57a0e0 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 85000 commId 0xf55b5320522f88e9 - Init COMPLETE
+gpua001:3091041:3091081 [3] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpua001:3091038:3091080 [0] NCCL INFO ncclCommInitRankConfig comm 0xb3071c0 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 7000 commId 0xf55b5320522f88e9 - Init COMPLETE
+gpua001:3091040:3091083 [2] NCCL INFO Init timings - ncclCommInitRankConfig: rank 2 nranks 4 total 0.33 (kernels 0.08, alloc 0.05, bootstrap 0.00, allgathers 0.00, topo 0.16, graphs 0.00, connections 0.02, rest 0.01)
+gpua001:3091041:3091081 [3] NCCL INFO ncclCommInitRankConfig comm 0xc1580d0 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c7000 commId 0xf55b5320522f88e9 - Init COMPLETE
+gpua001:3091038:3091080 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 4 total 0.34 (kernels 0.08, alloc 0.02, bootstrap 0.05, allgathers 0.00, topo 0.16, graphs 0.00, connections 0.02, rest 0.01)
+gpua001:3091039:3091082 [1] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+gpua001:3091041:3091081 [3] NCCL INFO Init timings - ncclCommInitRankConfig: rank 3 nranks 4 total 0.33 (kernels 0.08, alloc 0.05, bootstrap 0.00, allgathers 0.00, topo 0.16, graphs 0.00, connections 0.02, rest 0.01)
+gpua001:3091039:3091082 [1] NCCL INFO ncclCommInitRankConfig comm 0xb4dd4a0 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 46000 commId 0xf55b5320522f88e9 - Init COMPLETE
+gpua001:3091039:3091082 [1] NCCL INFO Init timings - ncclCommInitRankConfig: rank 1 nranks 4 total 0.33 (kernels 0.08, alloc 0.05, bootstrap 0.00, allgathers 0.00, topo 0.16, graphs 0.00, connections 0.02, rest 0.01)
+gpua001:3091040:3091096 [2] NCCL INFO Channel 01/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 05/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 07/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 11/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 01/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 13/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 03/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 01/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 17/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 07/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 04/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 19/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 06/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 09/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 07/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 23/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 07/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 13/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 10/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 12/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 15/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 13/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 13/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 19/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 16/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 18/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 21/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 19/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 19/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 22/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 00/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 04/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 00/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 03/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 05/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 03/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 04/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 06/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 10/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 05/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 06/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 09/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 11/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 09/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 10/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 12/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 16/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 11/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 12/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 15/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 17/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 15/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 16/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 18/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 22/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 17/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 18/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 21/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 23/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 21/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 22/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 23/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 02/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 02/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 04/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 03/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 02/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 00/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 08/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 08/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 05/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 02/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 10/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 09/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 08/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 06/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 14/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 14/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 11/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 08/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 16/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 15/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 14/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 12/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 20/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 20/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 17/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 14/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua001:3091040:3091096 [2] NCCL INFO Channel 22/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+gpua001:3091038:3091098 [0] NCCL INFO Channel 21/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 20/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 18/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua001:3091039:3091097 [1] NCCL INFO Channel 23/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Channel 20/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+gpua001:3091041:3091099 [3] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+gpua001:3091040:3091096 [2] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+gpua001:3091039:3091097 [1] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+gpua001:3091038:3091098 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+Namespace(model='/work/hdd/bewo/mahdi/Isomorphic-Pruning/output/pruned/deit_4.2G_v2.pth', teacher_model='regnety_160.deit_in1k', data_path='/work/hdd/bewo/mahdi/imagenet', device='cuda', batch_size=256, epochs=300, workers=8, opt='adamw', lr=0.0005, momentum=0.9, weight_decay=0.05, norm_weight_decay=None, bias_weight_decay=None, transformer_embedding_decay=None, label_smoothing=0.1, mixup_alpha=0.8, cutmix_alpha=1.0, lr_scheduler='cosineannealinglr', lr_warmup_epochs=0, lr_warmup_method='linear', lr_warmup_decay=0.033, lr_step_size=30, lr_gamma=0.1, lr_min=0.0, print_freq=50, output_dir='/work/hdd/bewo/mahdi/Isomorphic-Pruning/output/finetuned/deit_4.2G_v2', resume='', start_epoch=0, cache_dataset=False, sync_bn=False, test_only=False, auto_augment='ra', ra_magnitude=9, augmix_severity=3, random_erase=0.25, color_jitter=None, amp=True, world_size=4, dist_url='env://', model_ema=False, model_ema_steps=32, model_ema_decay=0.99998, use_deterministic_algorithms=False, interpolation='bicubic', val_resize_size=256, val_crop_size=224, train_crop_size=224, clip_grad_norm=None, ra_sampler=True, ra_reps=3, weights=None, backend='pil', use_v2=False, is_huggingface=False, checkpoint_interval=10, no_imagenet_mean_std=False, stochastic_depth=0.0, rank=0, gpu=0, distributed=True, dist_backend='nccl')
+Loading data
+Loading training data
+Took 2.8055686950683594
+Loading validation data
+Creating data loaders
+Creating model
+Loading pruned model from /work/hdd/bewo/mahdi/Isomorphic-Pruning/output/pruned/deit_4.2G_v2.pth
+macs: 4.15 G, params: 20.67 M
+DistributedDataParallel(
+  (module): VisionTransformerDistilled(
+    (patch_embed): PatchEmbed(
+      (proj): Conv2d(3, 384, kernel_size=(16, 16), stride=(16, 16))
+      (norm): Identity()
+    )
+    (pos_drop): Dropout(p=0.0, inplace=False)
+    (patch_drop): Identity()
+    (norm_pre): Identity()
+    (blocks): Sequential(
+      (0): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=540, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=180, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=956, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=956, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (1): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=510, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=170, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=928, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=928, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (2): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=432, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=144, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1416, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1416, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (3): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=600, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=200, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1908, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1908, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (4): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=690, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=230, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1858, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1858, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (5): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=900, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=300, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1740, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1740, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (6): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1176, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=392, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1750, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1750, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (7): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1176, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=392, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1672, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1672, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (8): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=900, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=300, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1558, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1558, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (9): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1176, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=392, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1598, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1598, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (10): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1134, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=378, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1590, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1590, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (11): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1452, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1452, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+    )
+    (norm): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+    (fc_norm): Identity()
+    (head_drop): Dropout(p=0.0, inplace=False)
+    (head): Linear(in_features=384, out_features=1000, bias=True)
+    (head_dist): Linear(in_features=384, out_features=1000, bias=True)
+  )
+)
+Start training
+Epoch: [0]  [   0/1251]  eta: 4:38:14  lr: 0.0005  img/s: 92.30841518719902  loss_kd: 6.894778728485107  loss_ce: 6.852982521057129  loss: 6.8739 (6.8739)  acc1: 0.0000 (0.0000)  acc5: 0.7812 (0.7812)  time: 13.3450  data: 10.5700  max mem: 15363
+Epoch: [0]  [  50/1251]  eta: 0:23:28  lr: 0.0005  img/s: 851.9603560685827  loss_kd: 5.505486488342285  loss_ce: 6.099312782287598  loss: 5.9551 (6.2516)  acc1: 4.6875 (3.2169)  acc5: 14.4531 (9.8192)  time: 1.1331  data: 0.8463  max mem: 15363
+Epoch: [0]  [ 100/1251]  eta: 0:20:02  lr: 0.0005  img/s: 980.5189818048992  loss_kd: 4.138516426086426  loss_ce: 4.514817714691162  loss: 4.9944 (5.7877)  acc1: 17.9688 (8.1180)  acc5: 38.2812 (19.3147)  time: 0.8330  data: 0.5547  max mem: 15363
+Epoch: [0]  [ 150/1251]  eta: 0:18:05  lr: 0.0005  img/s: 982.0390202857195  loss_kd: 4.535953521728516  loss_ce: 5.785892486572266  loss: 5.0218 (5.4877)  acc1: 18.3594 (11.7550)  acc5: 35.1562 (25.6804)  time: 0.7932  data: 0.5215  max mem: 15363
+Epoch: [0]  [ 200/1251]  eta: 0:17:17  lr: 0.0005  img/s: 608.1376511293747  loss_kd: 4.522914886474609  loss_ce: 5.52004337310791  loss: 4.7873 (5.2635)  acc1: 24.6094 (15.0323)  acc5: 42.9688 (30.6825)  time: 0.9623  data: 0.6846  max mem: 15363
+Epoch: [0]  [ 250/1251]  eta: 0:16:03  lr: 0.0005  img/s: 975.1847747408191  loss_kd: 3.9286201000213623  loss_ce: 4.995544910430908  loss: 4.5533 (5.0996)  acc1: 25.0000 (17.3929)  acc5: 46.0938 (34.2707)  time: 0.9696  data: 0.6949  max mem: 15363
+Epoch: [0]  [ 300/1251]  eta: 0:15:01  lr: 0.0005  img/s: 980.3614185241556  loss_kd: 4.1495137214660645  loss_ce: 5.444438457489014  loss: 4.5083 (4.9536)  acc1: 27.7344 (19.5468)  acc5: 49.6094 (37.3339)  time: 0.9340  data: 0.6537  max mem: 15363
+Epoch: [0]  [ 350/1251]  eta: 0:14:05  lr: 0.0005  img/s: 980.39364325726  loss_kd: 3.4922971725463867  loss_ce: 4.676366806030273  loss: 4.1173 (4.8317)  acc1: 34.3750 (21.4710)  acc5: 59.7656 (39.9784)  time: 0.8099  data: 0.5365  max mem: 15363
+Epoch: [0]  [ 400/1251]  eta: 0:13:11  lr: 0.0005  img/s: 815.4416967088181  loss_kd: 4.1319899559021  loss_ce: 5.065651893615723  loss: 4.4236 (4.7482)  acc1: 30.0781 (22.7819)  acc5: 50.3906 (41.7969)  time: 0.8276  data: 0.5447  max mem: 15363
+Epoch: [0]  [ 450/1251]  eta: 0:12:19  lr: 0.0005  img/s: 981.3766193408754  loss_kd: 3.285752534866333  loss_ce: 4.219614028930664  loss: 4.1235 (4.6785)  acc1: 30.8594 (23.8021)  acc5: 53.9062 (43.1706)  time: 0.9610  data: 0.6814  max mem: 15363
+Epoch: [0]  [ 500/1251]  eta: 0:11:23  lr: 0.0005  img/s: 971.3481320120787  loss_kd: 3.903413772583008  loss_ce: 4.988339424133301  loss: 4.1385 (4.6180)  acc1: 35.1562 (24.6897)  acc5: 53.9062 (44.2911)  time: 0.8304  data: 0.5626  max mem: 15363
+Epoch: [0]  [ 550/1251]  eta: 0:10:31  lr: 0.0005  img/s: 977.8223414185476  loss_kd: 3.4034364223480225  loss_ce: 4.229053020477295  loss: 3.8103 (4.5510)  acc1: 42.1875 (25.8883)  acc5: 66.4062 (45.7655)  time: 0.7093  data: 0.4431  max mem: 15363
+Epoch: [0]  [ 600/1251]  eta: 0:09:42  lr: 0.0005  img/s: 889.5984941126566  loss_kd: 3.6736156940460205  loss_ce: 5.306678771972656  loss: 3.8437 (4.4920)  acc1: 40.6250 (26.9226)  acc5: 61.7188 (46.9731)  time: 0.7885  data: 0.5052  max mem: 15363
+Epoch: [0]  [ 650/1251]  eta: 0:08:54  lr: 0.0005  img/s: 979.8845611908916  loss_kd: 3.670550584793091  loss_ce: 5.0872883796691895  loss: 3.9180 (4.4413)  acc1: 34.7656 (27.7902)  acc5: 58.5938 (48.0181)  time: 0.8637  data: 0.5889  max mem: 15363
+Epoch: [0]  [ 700/1251]  eta: 0:08:09  lr: 0.0005  img/s: 981.3712376293729  loss_kd: 2.7709150314331055  loss_ce: 3.339509963989258  loss: 3.8595 (4.4028)  acc1: 38.2812 (28.4164)  acc5: 62.1094 (48.8042)  time: 0.9369  data: 0.6681  max mem: 15363
+Epoch: [0]  [ 750/1251]  eta: 0:07:21  lr: 0.0005  img/s: 982.1504057604075  loss_kd: 3.4522366523742676  loss_ce: 4.784359931945801  loss: 3.9714 (4.3591)  acc1: 36.7188 (29.1310)  acc5: 60.5469 (49.6458)  time: 0.8097  data: 0.5392  max mem: 15363
+Epoch: [0]  [ 800/1251]  eta: 0:06:36  lr: 0.0005  img/s: 960.2249863398852  loss_kd: 3.194063425064087  loss_ce: 4.085015773773193  loss: 3.7290 (4.3181)  acc1: 39.8438 (29.7806)  acc5: 63.6719 (50.4135)  time: 0.7764  data: 0.5085  max mem: 15363
+Epoch: [0]  [ 850/1251]  eta: 0:05:51  lr: 0.0005  img/s: 981.9034156324786  loss_kd: 2.708134651184082  loss_ce: 3.328608989715576  loss: 3.8101 (4.2805)  acc1: 38.6719 (30.3549)  acc5: 63.6719 (51.1466)  time: 0.8664  data: 0.5964  max mem: 15363
+Epoch: [0]  [ 900/1251]  eta: 0:05:06  lr: 0.0005  img/s: 980.562857868215  loss_kd: 2.8717873096466064  loss_ce: 3.347336769104004  loss: 3.7542 (4.2536)  acc1: 42.5781 (30.8143)  acc5: 65.6250 (51.6722)  time: 0.8939  data: 0.6048  max mem: 15363
+Epoch: [0]  [ 950/1251]  eta: 0:04:22  lr: 0.0005  img/s: 974.6165032989715  loss_kd: 2.740046262741089  loss_ce: 3.596534013748169  loss: 3.8760 (4.2279)  acc1: 35.1562 (31.2188)  acc5: 57.8125 (52.1544)  time: 0.8261  data: 0.5439  max mem: 15363
+Epoch: [0]  [1000/1251]  eta: 0:03:37  lr: 0.0005  img/s: 973.917253364632  loss_kd: 2.4951815605163574  loss_ce: 2.815156936645508  loss: 3.8475 (4.2018)  acc1: 34.3750 (31.5872)  acc5: 58.5938 (52.5814)  time: 0.7324  data: 0.4558  max mem: 15363
+Epoch: [0]  [1050/1251]  eta: 0:02:54  lr: 0.0005  img/s: 980.1645356198384  loss_kd: 3.3404600620269775  loss_ce: 4.56440544128418  loss: 3.9383 (4.1746)  acc1: 34.3750 (31.9722)  acc5: 57.4219 (53.0458)  time: 0.8127  data: 0.5228  max mem: 15363

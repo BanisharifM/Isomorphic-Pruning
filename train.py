@@ -307,7 +307,8 @@ def main(args):
     print("Creating model")
     if os.path.isfile(args.model):
         print(f"Loading pruned model from {args.model}")
-        model = torch.load(args.model, map_location='cpu') #torchvision.models.get_model(args.model, weights=args.weights, num_classes=num_classes)
+        # model = torch.load(args.model, map_location='cpu') #torchvision.models.get_model(args.model, weights=args.weights, num_classes=num_classes)
+        model = torch.load(args.model, map_location='cpu', weights_only=False)
         if isinstance(model, dict):
             model = model['model']
     elif args.is_huggingface:

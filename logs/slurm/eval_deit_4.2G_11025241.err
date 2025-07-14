@@ -1,0 +1,4 @@
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/evaluate.py", line 167
+    else:
+    ^
+SyntaxError: invalid syntax
