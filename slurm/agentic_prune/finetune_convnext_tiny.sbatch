@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=finetune_convnext_small
+#SBATCH --job-name=finetune_convnext_tiny
 #SBATCH --account=bewo-delta-gpu
 #SBATCH --partition=gpuA100x4-interactive
 #SBATCH --nodes=1
@@ -8,8 +8,8 @@
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=64G
 #SBATCH --time=01:00:00
-#SBATCH --output=logs/slurm/agentic_prune/finetune_convnext_small_%j.out
-#SBATCH --error=logs/slurm/agentic_prune/finetune_convnext_small_%j.err
+#SBATCH --output=logs/slurm/agentic_prune/finetune_convnext_tiny_%j.out
+#SBATCH --error=logs/slurm/agentic_prune/finetune_convnext_tiny_%j.err
 
 module load cuda
 
@@ -27,9 +27,9 @@ $CONDA_PYTHON -m torch.distributed.run \
     --master_port=23355 \
     convnext_train.py \
     --data-dir "/work/hdd/bewo/mahdi/imagenet" \
-    --model "convnext_small.fb_in1k" \
+    --model "convnext_tiny.fb_in1k" \
     --num-classes 1000 \
-    --pruned-model "/work/hdd/bewo/mahdi/agentic_prune_models/pruned_convnext_small_imagenet_cnn_learning.pth" \
+    --pruned-model "/work/hdd/bewo/mahdi/agentic_prune_models/pruned_convnext_tiny_imagenet_cnn_learning.pth" \
     --epochs 4 \
     --batch-size 256 \
     --opt adamw \
@@ -44,7 +44,7 @@ $CONDA_PYTHON -m torch.distributed.run \
     --drop 0.1 \
     --mixup 0.2 \
     --cutmix 1.0 \
-    --output "/work/hdd/bewo/mahdi/agentic_prune_models/finetuned_convnext_small" \
+    --output "/work/hdd/bewo/mahdi/agentic_prune_models/finetuned_convnext_tiny" \
     --model-ema \
     --model-ema-decay 0.9999 \
     --color-jitter 0.0           
