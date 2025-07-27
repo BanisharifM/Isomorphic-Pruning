@@ -29,7 +29,7 @@ $CONDA_PYTHON -m torch.distributed.run \
     --data-dir "/work/hdd/bewo/mahdi/imagenet" \
     --model "convnext_small.fb_in1k" \
     --num-classes 1000 \
-    --pruned-model "/work/hdd/bewo/mahdi/agentic_prune_models/pruned_convnext_small_imagenet_cnn_learning.pth" \
+    --pruned-model "/work/hdd/bewo/mahdi/agentic_prune/models/pruned_convnext_small_imagenet_cnn_learning.pth" \
     --epochs 4 \
     --batch-size 256 \
     --opt adamw \
@@ -44,7 +44,7 @@ $CONDA_PYTHON -m torch.distributed.run \
     --drop 0.1 \
     --mixup 0.2 \
     --cutmix 1.0 \
-    --output "/work/hdd/bewo/mahdi/agentic_prune_models/finetuned_convnext_small" \
+    --output "/work/hdd/bewo/mahdi/agentic_prune/finetuned_convnext_small" \
     --model-ema \
     --model-ema-decay 0.9999 \
     --color-jitter 0.0           
