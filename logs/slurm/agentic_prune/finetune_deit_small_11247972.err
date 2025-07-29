@@ -1,0 +1,208 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+usage: train.py [-h] [--model MODEL] [--teacher-model TEACHER_MODEL]
+                [--data-path DATA_PATH] [--device DEVICE] [-b BATCH_SIZE]
+                [--epochs N] [-j N] [--opt OPT] [--lr LR] [--momentum M]
+                [--wd W] [--norm-weight-decay NORM_WEIGHT_DECAY]
+                [--bias-weight-decay BIAS_WEIGHT_DECAY]
+                [--transformer-embedding-decay TRANSFORMER_EMBEDDING_DECAY]
+                [--label-smoothing LABEL_SMOOTHING]
+                [--mixup-alpha MIXUP_ALPHA] [--cutmix-alpha CUTMIX_ALPHA]
+                [--lr-scheduler LR_SCHEDULER]
+                [--lr-warmup-epochs LR_WARMUP_EPOCHS]
+                [--lr-warmup-method LR_WARMUP_METHOD]
+                [--lr-warmup-decay LR_WARMUP_DECAY]
+                [--lr-step-size LR_STEP_SIZE] [--lr-gamma LR_GAMMA]
+                [--lr-min LR_MIN] [--print-freq PRINT_FREQ]
+                [--output-dir OUTPUT_DIR] [--resume RESUME] [--start-epoch N]
+                [--cache-dataset] [--sync-bn] [--test-only]
+                [--auto-augment AUTO_AUGMENT] [--ra-magnitude RA_MAGNITUDE]
+                [--augmix-severity AUGMIX_SEVERITY]
+                [--random-erase RANDOM_ERASE] [--color-jitter COLOR_JITTER]
+                [--amp] [--world-size WORLD_SIZE] [--dist-url DIST_URL]
+                [--model-ema] [--model-ema-steps MODEL_EMA_STEPS]
+                [--model-ema-decay MODEL_EMA_DECAY]
+                [--use-deterministic-algorithms]
+                [--interpolation INTERPOLATION]
+                [--val-resize-size VAL_RESIZE_SIZE]
+                [--val-crop-size VAL_CROP_SIZE]
+                [--train-crop-size TRAIN_CROP_SIZE]
+                [--clip-grad-norm CLIP_GRAD_NORM] [--ra-sampler]
+                [--ra-reps RA_REPS] [--weights WEIGHTS] [--backend BACKEND]
+                [--use-v2] [--is_huggingface]
+                [--checkpoint-interval CHECKPOINT_INTERVAL]
+                [--no_imagenet_mean_std] [--stochastic-depth STOCHASTIC_DEPTH]
+                [--train-fraction TRAIN_FRACTION]
+                [--max-train-steps MAX_TRAIN_STEPS]
+usage: train.py [-h] [--model MODEL] [--teacher-model TEACHER_MODEL]
+                [--data-path DATA_PATH] [--device DEVICE] [-b BATCH_SIZE]
+                [--epochs N] [-j N] [--opt OPT] [--lr LR] [--momentum M]
+                [--wd W] [--norm-weight-decay NORM_WEIGHT_DECAY]
+                [--bias-weight-decay BIAS_WEIGHT_DECAY]
+                [--transformer-embedding-decay TRANSFORMER_EMBEDDING_DECAY]
+                [--label-smoothing LABEL_SMOOTHING]
+                [--mixup-alpha MIXUP_ALPHA] [--cutmix-alpha CUTMIX_ALPHA]
+                [--lr-scheduler LR_SCHEDULER]
+                [--lr-warmup-epochs LR_WARMUP_EPOCHS]
+                [--lr-warmup-method LR_WARMUP_METHOD]
+                [--lr-warmup-decay LR_WARMUP_DECAY]
+                [--lr-step-size LR_STEP_SIZE] [--lr-gamma LR_GAMMA]
+                [--lr-min LR_MIN] [--print-freq PRINT_FREQ]
+                [--output-dir OUTPUT_DIR] [--resume RESUME] [--start-epoch N]
+                [--cache-dataset] [--sync-bn] [--test-only]
+                [--auto-augment AUTO_AUGMENT] [--ra-magnitude RA_MAGNITUDE]
+                [--augmix-severity AUGMIX_SEVERITY]
+                [--random-erase RANDOM_ERASE] [--color-jitter COLOR_JITTER]
+                [--amp] [--world-size WORLD_SIZE] [--dist-url DIST_URL]
+                [--model-ema] [--model-ema-steps MODEL_EMA_STEPS]
+                [--model-ema-decay MODEL_EMA_DECAY]
+                [--use-deterministic-algorithms]
+                [--interpolation INTERPOLATION]
+                [--val-resize-size VAL_RESIZE_SIZE]
+                [--val-crop-size VAL_CROP_SIZE]
+                [--train-crop-size TRAIN_CROP_SIZE]
+                [--clip-grad-norm CLIP_GRAD_NORM] [--ra-sampler]
+                [--ra-reps RA_REPS] [--weights WEIGHTS] [--backend BACKEND]
+                [--use-v2] [--is_huggingface]
+                [--checkpoint-interval CHECKPOINT_INTERVAL]
+                [--no_imagenet_mean_std] [--stochastic-depth STOCHASTIC_DEPTH]
+                [--train-fraction TRAIN_FRACTION]
+                [--max-train-steps MAX_TRAIN_STEPS]
+usage: train.py [-h] [--model MODEL] [--teacher-model TEACHER_MODEL]
+                [--data-path DATA_PATH] [--device DEVICE] [-b BATCH_SIZE]
+                [--epochs N] [-j N] [--opt OPT] [--lr LR] [--momentum M]
+                [--wd W] [--norm-weight-decay NORM_WEIGHT_DECAY]
+                [--bias-weight-decay BIAS_WEIGHT_DECAY]
+                [--transformer-embedding-decay TRANSFORMER_EMBEDDING_DECAY]
+                [--label-smoothing LABEL_SMOOTHING]
+                [--mixup-alpha MIXUP_ALPHA] [--cutmix-alpha CUTMIX_ALPHA]
+                [--lr-scheduler LR_SCHEDULER]
+                [--lr-warmup-epochs LR_WARMUP_EPOCHS]
+                [--lr-warmup-method LR_WARMUP_METHOD]
+                [--lr-warmup-decay LR_WARMUP_DECAY]
+                [--lr-step-size LR_STEP_SIZE] [--lr-gamma LR_GAMMA]
+                [--lr-min LR_MIN] [--print-freq PRINT_FREQ]
+                [--output-dir OUTPUT_DIR] [--resume RESUME] [--start-epoch N]
+                [--cache-dataset] [--sync-bn] [--test-only]
+                [--auto-augment AUTO_AUGMENT] [--ra-magnitude RA_MAGNITUDE]
+                [--augmix-severity AUGMIX_SEVERITY]
+                [--random-erase RANDOM_ERASE] [--color-jitter COLOR_JITTER]
+                [--amp] [--world-size WORLD_SIZE] [--dist-url DIST_URL]
+                [--model-ema] [--model-ema-steps MODEL_EMA_STEPS]
+                [--model-ema-decay MODEL_EMA_DECAY]
+                [--use-deterministic-algorithms]
+                [--interpolation INTERPOLATION]
+                [--val-resize-size VAL_RESIZE_SIZE]
+                [--val-crop-size VAL_CROP_SIZE]
+                [--train-crop-size TRAIN_CROP_SIZE]
+                [--clip-grad-norm CLIP_GRAD_NORM] [--ra-sampler]
+                [--ra-reps RA_REPS] [--weights WEIGHTS] [--backend BACKEND]
+                [--use-v2] [--is_huggingface]
+                [--checkpoint-interval CHECKPOINT_INTERVAL]
+                [--no_imagenet_mean_std] [--stochastic-depth STOCHASTIC_DEPTH]
+                [--train-fraction TRAIN_FRACTION]
+                [--max-train-steps MAX_TRAIN_STEPS]
+usage: train.py [-h] [--model MODEL] [--teacher-model TEACHER_MODEL]
+                [--data-path DATA_PATH] [--device DEVICE] [-b BATCH_SIZE]
+                [--epochs N] [-j N] [--opt OPT] [--lr LR] [--momentum M]
+                [--wd W] [--norm-weight-decay NORM_WEIGHT_DECAY]
+                [--bias-weight-decay BIAS_WEIGHT_DECAY]
+                [--transformer-embedding-decay TRANSFORMER_EMBEDDING_DECAY]
+                [--label-smoothing LABEL_SMOOTHING]
+                [--mixup-alpha MIXUP_ALPHA] [--cutmix-alpha CUTMIX_ALPHA]
+                [--lr-scheduler LR_SCHEDULER]
+                [--lr-warmup-epochs LR_WARMUP_EPOCHS]
+                [--lr-warmup-method LR_WARMUP_METHOD]
+                [--lr-warmup-decay LR_WARMUP_DECAY]
+                [--lr-step-size LR_STEP_SIZE] [--lr-gamma LR_GAMMA]
+                [--lr-min LR_MIN] [--print-freq PRINT_FREQ]
+                [--output-dir OUTPUT_DIR] [--resume RESUME] [--start-epoch N]
+                [--cache-dataset] [--sync-bn] [--test-only]
+                [--auto-augment AUTO_AUGMENT] [--ra-magnitude RA_MAGNITUDE]
+                [--augmix-severity AUGMIX_SEVERITY]
+                [--random-erase RANDOM_ERASE] [--color-jitter COLOR_JITTER]
+                [--amp] [--world-size WORLD_SIZE] [--dist-url DIST_URL]
+                [--model-ema] [--model-ema-steps MODEL_EMA_STEPS]
+                [--model-ema-decay MODEL_EMA_DECAY]
+                [--use-deterministic-algorithms]
+                [--interpolation INTERPOLATION]
+                [--val-resize-size VAL_RESIZE_SIZE]
+                [--val-crop-size VAL_CROP_SIZE]
+                [--train-crop-size TRAIN_CROP_SIZE]
+                [--clip-grad-norm CLIP_GRAD_NORM] [--ra-sampler]
+                [--ra-reps RA_REPS] [--weights WEIGHTS] [--backend BACKEND]
+                [--use-v2] [--is_huggingface]
+                [--checkpoint-interval CHECKPOINT_INTERVAL]
+                [--no_imagenet_mean_std] [--stochastic-depth STOCHASTIC_DEPTH]
+                [--train-fraction TRAIN_FRACTION]
+                [--max-train-steps MAX_TRAIN_STEPS]
+train.py: error: unrecognized arguments: --pruned-model /work/hdd/bewo/mahdi/agentic_prune/models/FINAL_BEST_PRUNED_deit_small_patch16_224_imagenet_rev1_ratio0.077_selectedByTop173.9.pth  
+train.py: error: unrecognized arguments: --pruned-model /work/hdd/bewo/mahdi/agentic_prune/models/FINAL_BEST_PRUNED_deit_small_patch16_224_imagenet_rev1_ratio0.077_selectedByTop173.9.pth  
+train.py: error: unrecognized arguments: --pruned-model /work/hdd/bewo/mahdi/agentic_prune/models/FINAL_BEST_PRUNED_deit_small_patch16_224_imagenet_rev1_ratio0.077_selectedByTop173.9.pth  
+train.py: error: unrecognized arguments: --pruned-model /work/hdd/bewo/mahdi/agentic_prune/models/FINAL_BEST_PRUNED_deit_small_patch16_224_imagenet_rev1_ratio0.077_selectedByTop173.9.pth  
+E0728 23:40:02.367625 3976470 torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 2) local_rank: 0 (pid: 3976503) of binary: /u/ssoma1/.conda/envs/iso_env/bin/python
+Traceback (most recent call last):
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 896, in <module>
+    main()
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-07-28_23:40:02
+  host      : gpua030.delta.ncsa.illinois.edu
+  rank      : 1 (local_rank: 1)
+  exitcode  : 2 (pid: 3976504)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-07-28_23:40:02
+  host      : gpua030.delta.ncsa.illinois.edu
+  rank      : 2 (local_rank: 2)
+  exitcode  : 2 (pid: 3976505)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-07-28_23:40:02
+  host      : gpua030.delta.ncsa.illinois.edu
+  rank      : 3 (local_rank: 3)
+  exitcode  : 2 (pid: 3976506)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-07-28_23:40:02
+  host      : gpua030.delta.ncsa.illinois.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 2 (pid: 3976503)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+/var/spool/slurmd/job11247972/slurm_script: line 49: --max-train-steps: command not found
+/var/spool/slurmd/job11247972/slurm_script: line 50: --output-dir: command not found

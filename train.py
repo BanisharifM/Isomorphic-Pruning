@@ -29,6 +29,12 @@ import timm
 import torch_pruning as tp
 import wandb
 
+from torch.serialization import add_safe_globals          # <‑‑ NEW
+from timm.models.vision_transformer import VisionTransformer   # <‑‑ NEW
+
+
+add_safe_globals([VisionTransformer]) 
+
 def kldiv( logits, targets, T=1.0, reduction='batchmean'):
     q = F.log_softmax(logits/T, dim=1)
     p = F.softmax( targets/T, dim=1 )
@@ -44,6 +50,8 @@ def train_one_epoch(model, teacher_model, criterion, optimizer, data_loader, dev
 
     header = f"Epoch: [{epoch}]"
     for i, (image, target) in enumerate(metric_logger.log_every(data_loader, args.print_freq, header)):
+        if args.max_train_steps is not None and i >= args.max_train_steps:
+            break
         start_time = time.time()
         image, target = image.to(device), target.to(device)
         with torch.cuda.amp.autocast(enabled=scaler is not None):
@@ -196,6 +204,15 @@ def load_data(traindir, valdir, args):
                 use_v2=args.use_v2,
             ),
         )
+        if args.train_fraction < 1.0:
+            subset_len = int(len(dataset) * args.train_fraction)
+            # deterministic across all ranks
+            g = torch.Generator().manual_seed(42)
+            idx = torch.randperm(len(dataset), generator=g)[:subset_len]
+            dataset = torch.utils.data.Subset(dataset, idx)
+            dataset.classes = dataset.dataset.classes
+            dataset.class_to_idx = dataset.dataset.class_to_idx
+
         if args.cache_dataset:
             print(f"Saving dataset_train to {cache_path}")
             utils.mkdir(os.path.dirname(cache_path))
@@ -250,6 +267,8 @@ def load_data(traindir, valdir, args):
 
 def main(args):
 
+    print(">>> Running train.py version updated at:", __file__)
+    
     os.makedirs(args.output_dir, exist_ok=True)
     with open(os.path.join(args.output_dir, 'train.sh'), 'w') as f:
         f.write('python ' + ' '.join(sys.argv))
@@ -280,6 +299,10 @@ def main(args):
     val_dir = os.path.join(args.data_path, "val")
     dataset, dataset_test, train_sampler, test_sampler = load_data(train_dir, val_dir, args)
 
+    if not hasattr(dataset, "classes") and isinstance(dataset, torch.utils.data.Subset):
+        dataset.classes = dataset.dataset.classes
+        dataset.class_to_idx = dataset.dataset.class_to_idx
+
     num_classes = len(dataset.classes)
     mixup_cutmix = get_mixup_cutmix(
         mixup_alpha=args.mixup_alpha, cutmix_alpha=args.cutmix_alpha, num_classes=num_classes, use_v2=args.use_v2
@@ -305,19 +328,37 @@ def main(args):
     )
 
     print("Creating model")
-    if os.path.isfile(args.model):
-        print(f"Loading pruned model from {args.model}")
-        # model = torch.load(args.model, map_location='cpu') #torchvision.models.get_model(args.model, weights=args.weights, num_classes=num_classes)
-        model = torch.load(args.model, map_location='cpu', weights_only=False)
-        if isinstance(model, dict):
-            model = model['model']
-    elif args.is_huggingface:
-        print(f"Loading Huggingface model from {args.model}")
-        from transformers import ViTForImageClassification
-        model = ViTForImageClassification.from_pretrained(args.model)
+
+    def build_skeleton(sd, num_classes):
+        """
+        Build a VisionTransformer skeleton that matches *either* a
+        plain DeiT‑small or a DeiT‑small‑Distilled state‑dict.
+        """
+        distilled = any(k.startswith("head_dist") for k in sd)
+        return timm.create_model(
+            "deit_small_patch16_224",
+            num_classes=num_classes,
+            distilled=distilled,      # adds dist_token + head_dist if needed
+            pretrained=False,
+        )
+
+    ckpt = torch.load(args.model, map_location="cpu", weights_only=False)
+
+    # ──• case A: the file already *is* a pickled nn.Module ────────────
+    if isinstance(ckpt, torch.nn.Module):
+        model = ckpt
+
+    # ──• case B: checkpoint dict that *contains* a pickled model ─────
+    elif isinstance(ckpt, dict) and isinstance(ckpt.get("model"), torch.nn.Module):
+        model = ckpt["model"]
+
+    # ──• case C: checkpoint dict or plain state‑dict ─────────────────
     else:
-        print(f"Loading timm model from {args.model}")
-        model = timm.create_model(args.model, pretrained=True)
+        state_dict = ckpt.get("model_state_dict", ckpt)   # fall‑back to whole dict
+        model = build_skeleton(state_dict, num_classes)
+        missing, unexpected = model.load_state_dict(state_dict, strict=False)
+        print(f"‑ Loaded state‑dict ▶  {len(missing)} missing  {len(unexpected)} unexpected keys")
+
     
     if args.teacher_model is not None:
         teacher_model = timm.create_model(args.teacher_model, pretrained=True).eval().to(device)
@@ -633,6 +674,9 @@ def get_args_parser(add_help=True):
     parser.add_argument("--checkpoint-interval", default=10, type=int, help="checkpoint interval (default: 10)")
     parser.add_argument("--no_imagenet_mean_std", default=False, action="store_true", help="disable imagenet mean and std")
     parser.add_argument("--stochastic-depth", default=0.0, type=float, help="stochastic depth rate")
+
+    parser.add_argument("--train-fraction", default=1.0, type=float, help="Fraction of the training set to use (e.g. 0.1 = 10 %)")
+    parser.add_argument("--max-train-steps", default=None, type=int, help="Optional hard cap on update steps (ignores remaining batches)")
 
     return parser
 

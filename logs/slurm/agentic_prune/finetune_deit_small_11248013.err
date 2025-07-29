@@ -1,0 +1,74 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 296
+    num_classes = len(dataset.classes)
+    ^
+SyntaxError: invalid syntax
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 296
+    num_classes = len(dataset.classes)
+    ^
+SyntaxError: invalid syntax
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 296
+    num_classes = len(dataset.classes)
+    ^
+SyntaxError: invalid syntax
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 296
+    num_classes = len(dataset.classes)
+    ^
+SyntaxError: invalid syntax
+E0729 00:00:01.643890 3232250 torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 3232626) of binary: /u/ssoma1/.conda/envs/iso_env/bin/python
+Traceback (most recent call last):
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 896, in <module>
+    main()
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-07-29_00:00:01
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 3232627)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-07-29_00:00:01
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 3232628)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-07-29_00:00:01
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 3232629)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-07-29_00:00:01
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3232626)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

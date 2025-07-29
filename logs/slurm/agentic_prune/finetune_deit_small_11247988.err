@@ -1,0 +1,98 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank0]:[W728 23:46:22.476956808 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank3]:[W728 23:46:22.477619228 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank2]:[W728 23:46:22.478719556 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank1]:[W728 23:46:22.480868837 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+wandb: Currently logged in as: msharif (msharif-iowa-state-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.0
+wandb: Run data is saved locally in /u/ssoma1/mahdi/Isomorphic-Pruning/wandb/run-20250728_234623-foozsrav
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run _work_hdd_bewo_mahdi_agentic_prune_models_FINAL_BEST_PRUNED_deit_small_patch16_224_imagenet_rev1_ratio0.077_selectedByTop173.9.pth
+wandb: ⭐️ View project at https://wandb.ai/msharif-iowa-state-university/Pruning
+wandb: 🚀 View run at https://wandb.ai/msharif-iowa-state-university/Pruning/runs/foozsrav
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 653, in <module>
+    main(args)
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 292, in main
+    num_classes = len(dataset.classes)
+AttributeError: 'Subset' object has no attribute 'classes'
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 653, in <module>
+[rank2]:     main(args)
+[rank2]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 292, in main
+[rank2]:     num_classes = len(dataset.classes)
+[rank2]: AttributeError: 'Subset' object has no attribute 'classes'
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 653, in <module>
+[rank3]:     main(args)
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 292, in main
+[rank3]:     num_classes = len(dataset.classes)
+[rank3]: AttributeError: 'Subset' object has no attribute 'classes'
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 653, in <module>
+[rank1]:     main(args)
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 292, in main
+[rank1]:     num_classes = len(dataset.classes)
+[rank1]: AttributeError: 'Subset' object has no attribute 'classes'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 653, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 292, in main
+[rank0]:     num_classes = len(dataset.classes)
+[rank0]: AttributeError: 'Subset' object has no attribute 'classes'
+W0728 23:46:31.397424 3227289 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3227322 closing signal SIGTERM
+W0728 23:46:31.398251 3227289 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3227324 closing signal SIGTERM
+W0728 23:46:31.398441 3227289 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3227325 closing signal SIGTERM
+E0728 23:46:32.213153 3227289 torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 1 (pid: 3227323) of binary: /u/ssoma1/.conda/envs/iso_env/bin/python
+Traceback (most recent call last):
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 896, in <module>
+    main()
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-07-28_23:46:31
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 3227323)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

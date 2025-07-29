@@ -5,8 +5,8 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=32
-#SBATCH --mem=64G
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=32G
 #SBATCH --time=01:00:00
 #SBATCH --output=logs/slurm/eval_deit_4.2G_%j.out
 #SBATCH --error=logs/slurm/eval_deit_4.2G_%j.err

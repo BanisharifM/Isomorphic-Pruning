@@ -1,34 +1,30 @@
 #!/bin/bash
-#SBATCH --job-name=finetune_deit_small
+#SBATCH --job-name=finetune_deit_small_10p1e
 #SBATCH --account=bewo-delta-gpu
-#SBATCH --partition=gpuA100x4
+#SBATCH --partition=gpuA100x4-interactive
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:4
-#SBATCH --cpus-per-task=64
-#SBATCH --mem=128G
-#SBATCH --time=48:00:00
+#SBATCH --cpus-per-task=32
+#SBATCH --mem=64G
+#SBATCH --time=01:00:00
 #SBATCH --output=logs/slurm/agentic_prune/finetune_deit_small_%j.out
 #SBATCH --error=logs/slurm/agentic_prune/finetune_deit_small_%j.err
 
 module load cuda
-
-# === Define your env-specific Python ===
 CONDA_PYTHON="/u/ssoma1/.conda/envs/iso_env/bin/python"
 
 export NCCL_DEBUG=INFO
 export PYTHONUSERBASE=/u/ssoma1/.local
 export PYTHONPATH=$PYTHONPATH:/u/ssoma1/mahdi/Isomorphic-Pruning
 
-# === Use correct GPU count ===
 $CONDA_PYTHON -m torch.distributed.run \
     --nproc_per_node=4 \
     --master_port=23355 \
     train.py \
-    --model deit_small_patch16_224.fb_in1k \
-    --pruned-model /work/hdd/bewo/mahdi/agentic_prune/models/pruned_deit_small.pth \
+    --model /work/hdd/bewo/mahdi/agentic_prune/models/FINAL_BEST_PRUNED_deit_small_patch16_224_imagenet_rev1_ratio0.077_selectedByTop173.9.pth \
     --teacher-model regnety_160.deit_in1k \
-    --epochs 300 \
+    --epochs 1 \
     --batch-size 256 \
     --opt adamw \
     --lr 0.0005 \
@@ -45,6 +41,8 @@ $CONDA_PYTHON -m torch.distributed.run \
     --random-erase 0.25 \
     --cutmix-alpha 1.0 \
     --data-path /work/hdd/bewo/mahdi/imagenet \
-    --output-dir /work/hdd/bewo/mahdi/agentic_prune/finetuned_deit_small \
-    --interpolation bicubic \
-    --resume "/work/hdd/bewo/mahdi/agentic_prune/finetuned_deit_small/checkpoint.pth"
+    --train-fraction 0.1 \
+    --max-train-steps 5000 \
+    --output-dir /work/hdd/bewo/mahdi/agentic_prune/finetuned_deit_small_10p1e \
+    --interpolation bicubic
+    # --resume /work/hdd/bewo/mahdi/agentic_prune/finetuned_deit_small_10p1e/checkpoint.pth
