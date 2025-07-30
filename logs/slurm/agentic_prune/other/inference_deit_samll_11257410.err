@@ -1,0 +1,6 @@
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/inference.py", line 17, in <module>
+    from timm.layers.class_token import ClassToken
+ModuleNotFoundError: No module named 'timm.layers.class_token'

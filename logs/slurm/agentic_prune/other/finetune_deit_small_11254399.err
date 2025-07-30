@@ -1,0 +1,224 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank2]:[W729 19:52:13.984587204 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank0]:[W729 19:52:13.994037463 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank1]:[W729 19:52:13.998796446 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank3]:[W729 19:52:13.998990659 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+wandb: Currently logged in as: msharif (msharif-iowa-state-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.0
+wandb: Run data is saved locally in /u/ssoma1/mahdi/Isomorphic-Pruning/wandb/run-20250729_195214-evscihcg
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run _work_hdd_bewo_mahdi_agentic_prune_models_Final_final_pruned_deit_small_patch16_224_imagenet_rev1_ratio0.077.pt
+wandb: ⭐️ View project at https://wandb.ai/msharif-iowa-state-university/Pruning
+wandb: 🚀 View run at https://wandb.ai/msharif-iowa-state-university/Pruning/runs/evscihcg
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:435: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if args.amp else None
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:435: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if args.amp else None
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:435: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if args.amp else None
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:435: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if args.amp else None
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:59: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=scaler is not None):
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:59: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=scaler is not None):
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:59: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=scaler is not None):
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:59: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=scaler is not None):
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 716, in <module>
+    main(args)
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 531, in main
+    train_one_epoch(model, teacher_model, criterion, optimizer, data_loader, device, epoch, args, model_ema, scaler)
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 62, in train_one_epoch
+    out = model(image)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1637, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1464, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 994, in forward
+    x = self.forward_head(x)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 987, in forward_head
+    x = self.pool(x)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 973, in pool
+    reduce_include_prefix=self.pool_include_prefix,
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1940, in __getattr__
+    raise AttributeError(
+AttributeError: 'VisionTransformer' object has no attribute 'pool_include_prefix'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 716, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 531, in main
+[rank0]:     train_one_epoch(model, teacher_model, criterion, optimizer, data_loader, device, epoch, args, model_ema, scaler)
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 62, in train_one_epoch
+[rank0]:     out = model(image)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1637, in forward
+[rank0]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1464, in _run_ddp_forward
+[rank0]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 994, in forward
+[rank0]:     x = self.forward_head(x)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 987, in forward_head
+[rank0]:     x = self.pool(x)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 973, in pool
+[rank0]:     reduce_include_prefix=self.pool_include_prefix,
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1940, in __getattr__
+[rank0]:     raise AttributeError(
+[rank0]: AttributeError: 'VisionTransformer' object has no attribute 'pool_include_prefix'
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 716, in <module>
+[rank2]:     main(args)
+[rank2]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 531, in main
+[rank2]:     train_one_epoch(model, teacher_model, criterion, optimizer, data_loader, device, epoch, args, model_ema, scaler)
+[rank2]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 62, in train_one_epoch
+[rank2]:     out = model(image)
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1637, in forward
+[rank2]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1464, in _run_ddp_forward
+[rank2]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 994, in forward
+[rank2]:     x = self.forward_head(x)
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 987, in forward_head
+[rank2]:     x = self.pool(x)
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 973, in pool
+[rank2]:     reduce_include_prefix=self.pool_include_prefix,
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1940, in __getattr__
+[rank2]:     raise AttributeError(
+[rank2]: AttributeError: 'VisionTransformer' object has no attribute 'pool_include_prefix'
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 716, in <module>
+[rank1]:     main(args)
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 531, in main
+[rank1]:     train_one_epoch(model, teacher_model, criterion, optimizer, data_loader, device, epoch, args, model_ema, scaler)
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 62, in train_one_epoch
+[rank1]:     out = model(image)
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1637, in forward
+[rank1]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1464, in _run_ddp_forward
+[rank1]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 994, in forward
+[rank1]:     x = self.forward_head(x)
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 987, in forward_head
+[rank1]:     x = self.pool(x)
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 973, in pool
+[rank1]:     reduce_include_prefix=self.pool_include_prefix,
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1940, in __getattr__
+[rank1]:     raise AttributeError(
+[rank1]: AttributeError: 'VisionTransformer' object has no attribute 'pool_include_prefix'
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 716, in <module>
+[rank3]:     main(args)
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 531, in main
+[rank3]:     train_one_epoch(model, teacher_model, criterion, optimizer, data_loader, device, epoch, args, model_ema, scaler)
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 62, in train_one_epoch
+[rank3]:     out = model(image)
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1637, in forward
+[rank3]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1464, in _run_ddp_forward
+[rank3]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 994, in forward
+[rank3]:     x = self.forward_head(x)
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 987, in forward_head
+[rank3]:     x = self.pool(x)
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 973, in pool
+[rank3]:     reduce_include_prefix=self.pool_include_prefix,
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1940, in __getattr__
+[rank3]:     raise AttributeError(
+[rank3]: AttributeError: 'VisionTransformer' object has no attribute 'pool_include_prefix'
+W0729 19:52:45.186262 3800381 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3800446 closing signal SIGTERM
+W0729 19:52:45.186965 3800381 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3800447 closing signal SIGTERM
+W0729 19:52:45.187153 3800381 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3800449 closing signal SIGTERM
+E0729 19:52:47.253400 3800381 torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 2 (pid: 3800448) of binary: /u/ssoma1/.conda/envs/iso_env/bin/python
+Traceback (most recent call last):
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 896, in <module>
+    main()
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-07-29_19:52:45
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 3800448)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

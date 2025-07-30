@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --job-name=finetune_deit_small_10p1e
 #SBATCH --account=bewo-delta-gpu
-#SBATCH --partition=gpuA100x4-interactive
+#SBATCH --partition=gpuA100x4
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:4
-#SBATCH --cpus-per-task=16
-#SBATCH --mem=32G
-#SBATCH --time=01:00:00
+#SBATCH --cpus-per-task=64
+#SBATCH --mem=128G
+#SBATCH --time=48:00:00
 #SBATCH --output=logs/slurm/agentic_prune/finetune_deit_small_%j.out
 #SBATCH --error=logs/slurm/agentic_prune/finetune_deit_small_%j.err
 
@@ -24,7 +24,7 @@ $CONDA_PYTHON -m torch.distributed.run \
     train.py \
     --model /work/hdd/bewo/mahdi/agentic_prune/models/Final/final_pruned_deit_small_patch16_224_imagenet_rev1_ratio0.077.pt \
     --teacher-model regnety_160.deit_in1k \
-    --epochs 1 \
+    --epochs 300 \
     --batch-size 256 \
     --opt adamw \
     --lr 0.0005 \
@@ -42,7 +42,7 @@ $CONDA_PYTHON -m torch.distributed.run \
     --cutmix-alpha 0.0 \
     --data-path /work/hdd/bewo/mahdi/imagenet \
     --train-fraction 1 \
-    --max-train-steps 5000 \
-    --output-dir  /work/hdd/bewo/mahdi/agentic_prune/finetuned_deit_small/patch16_224_imagenet_rev1_1ep \
+    --output-dir  /work/hdd/bewo/mahdi/agentic_prune/final/finetuned_deit_small/patch16_224_imagenet_rev1_300ep \
     --interpolation bicubic
+    # --max-train-steps 5000 \
     # --resume /work/hdd/bewo/mahdi/agentic_prune/finetuned_deit_small_10p1e/checkpoint.pth

@@ -1,0 +1,4 @@
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/inference.py", line 9
+    from timm.models.vision_transformer 
+                                        ^
+SyntaxError: invalid syntax

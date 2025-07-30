@@ -7,3 +7,5 @@ tqdm
 huggingface_hub==0.15.1
 importlib_metadata
 fastcore
+fvcore
+ptflops

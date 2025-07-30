@@ -1,0 +1,8 @@
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/inference.py", line 102, in <module>
+    main(args)
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/inference.py", line 52, in main
+    checkpoint = torch.load(args.model, map_location=device, weights_only=False)
+AttributeError: 'Namespace' object has no attribute 'model'

@@ -1,0 +1,6 @@
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/inference.py", line 15, in <module>
+    sys.stderr = open(os.devnull, 'w')
+NameError: name 'os' is not defined

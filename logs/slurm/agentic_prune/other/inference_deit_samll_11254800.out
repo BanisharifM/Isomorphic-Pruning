@@ -1,0 +1,7 @@
+#Params: 22.05M
+MACs: 4.25G
+Top-1 Acc: 67.08%
+Top-5 Acc: 87.40%
+
+LaTeX row:
+ModelX & 22.05 & 4.25 & 67.08 \\

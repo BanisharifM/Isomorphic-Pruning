@@ -1,0 +1,10 @@
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/inference.py", line 102, in <module>
+    main(args)
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/inference.py", line 54, in main
+    model.load_state_dict(checkpoint['model'])
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 2525, in load_state_dict
+    raise TypeError(
+TypeError: Expected state_dict to be dict-like, got <class 'timm.models.vision_transformer.VisionTransformer'>.

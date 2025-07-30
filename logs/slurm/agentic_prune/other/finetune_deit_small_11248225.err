@@ -47,3 +47,4 @@ wandb: 🚀 View run at https://wandb.ai/msharif-iowa-state-university/Pruning/r
   with torch.cuda.amp.autocast(enabled=scaler is not None):
 /u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
   warnings.warn(  # warn only once
+slurmstepd: error: *** JOB 11248225 ON gpua097 CANCELLED AT 2025-07-30T18:47:36 ***

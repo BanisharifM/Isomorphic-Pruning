@@ -1,0 +1,38 @@
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/inference.py", line 96, in <module>
+    main(args)
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/inference.py", line 68, in main
+    top1, top5 = evaluate(model, val_loader, device)
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/inference.py", line 40, in evaluate
+    outputs = model(images)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 993, in forward
+    x = self.forward_features(x, attn_mask=attn_mask)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 948, in forward_features
+    x = self.blocks(x)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 176, in forward
+    x = x + self.drop_path1(self.ls1(self.attn(self.norm1(x), attn_mask=attn_mask)))
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/layers/attention.py", line 94, in forward
+    x = self.norm(x)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1940, in __getattr__
+    raise AttributeError(
+AttributeError: 'Attention' object has no attribute 'norm'

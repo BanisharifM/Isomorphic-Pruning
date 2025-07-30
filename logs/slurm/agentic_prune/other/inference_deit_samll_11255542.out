@@ -1,0 +1,7 @@
+#Params: 22.05M
+MACs: 3.22G
+Top-1 Acc: 67.08%
+Top-5 Acc: 87.40%
+
+LaTeX row:
+checkpoint_best & 22.05 & 3.22 & 67.08 \\
