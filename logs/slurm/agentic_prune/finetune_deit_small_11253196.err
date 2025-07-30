@@ -1,0 +1,126 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank3]:[W729 18:29:12.705157824 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank2]:[W729 18:29:12.710257487 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank1]:[W729 18:29:12.722248083 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank0]:[W729 18:29:12.722831357 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+wandb: Currently logged in as: msharif (msharif-iowa-state-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.0
+wandb: Run data is saved locally in /u/ssoma1/mahdi/Isomorphic-Pruning/wandb/run-20250729_182913-cg7np3qj
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run _work_hdd_bewo_mahdi_agentic_prune_models_Final_final_pruned_deit_small_patch16_224_imagenet_rev1_ratio0.077.pt
+wandb: ⭐️ View project at https://wandb.ai/msharif-iowa-state-university/Pruning
+wandb: 🚀 View run at https://wandb.ai/msharif-iowa-state-university/Pruning/runs/cg7np3qj
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:464: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if args.amp else None
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:464: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if args.amp else None
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:464: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if args.amp else None
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py:464: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if args.amp else None
+Traceback (most recent call last):
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 738, in <module>
+[rank1]:     main(args)
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 502, in main
+[rank1]:     model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu])
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 749, in __init__
+[rank1]:     self._log_and_throw(
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1135, in _log_and_throw
+[rank1]:     raise err_type(err_msg)
+[rank1]: ValueError: DistributedDataParallel device_ids and output_device arguments only work with single-device/multiple-device GPU modules or CPU modules, but got device_ids [1], output_device None, and module parameters {device(type='cpu')}.
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 738, in <module>
+[rank3]:     main(args)
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 502, in main
+[rank3]:     model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu])
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 749, in __init__
+[rank3]:     self._log_and_throw(
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1135, in _log_and_throw
+[rank3]:     raise err_type(err_msg)
+[rank3]: ValueError: DistributedDataParallel device_ids and output_device arguments only work with single-device/multiple-device GPU modules or CPU modules, but got device_ids [3], output_device None, and module parameters {device(type='cpu')}.
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 738, in <module>
+[rank2]:     main(args)
+[rank2]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 502, in main
+[rank2]:     model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu])
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 749, in __init__
+[rank2]:     self._log_and_throw(
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1135, in _log_and_throw
+[rank2]:     raise err_type(err_msg)
+[rank2]: ValueError: DistributedDataParallel device_ids and output_device arguments only work with single-device/multiple-device GPU modules or CPU modules, but got device_ids [2], output_device None, and module parameters {device(type='cpu')}.
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 738, in <module>
+    main(args)
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 502, in main
+    model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu])
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 749, in __init__
+    self._log_and_throw(
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1135, in _log_and_throw
+    raise err_type(err_msg)
+ValueError: DistributedDataParallel device_ids and output_device arguments only work with single-device/multiple-device GPU modules or CPU modules, but got device_ids [0], output_device None, and module parameters {device(type='cpu')}.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 738, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 502, in main
+[rank0]:     model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu])
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 749, in __init__
+[rank0]:     self._log_and_throw(
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1135, in _log_and_throw
+[rank0]:     raise err_type(err_msg)
+[rank0]: ValueError: DistributedDataParallel device_ids and output_device arguments only work with single-device/multiple-device GPU modules or CPU modules, but got device_ids [0], output_device None, and module parameters {device(type='cpu')}.
+W0729 18:29:24.340907 1213577 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1213926 closing signal SIGTERM
+W0729 18:29:24.341844 1213577 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1213927 closing signal SIGTERM
+W0729 18:29:24.342036 1213577 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1213929 closing signal SIGTERM
+E0729 18:29:24.906495 1213577 torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 2 (pid: 1213928) of binary: /u/ssoma1/.conda/envs/iso_env/bin/python
+Traceback (most recent call last):
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 896, in <module>
+    main()
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-07-29_18:29:24
+  host      : gpua027.delta.ncsa.illinois.edu
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 1213928)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

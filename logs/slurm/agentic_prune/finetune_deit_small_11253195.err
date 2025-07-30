@@ -1,0 +1,288 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank2]:[W729 18:24:21.733980292 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank3]:[W729 18:24:21.757911619 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank0]:[W729 18:24:21.758060418 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank1]:[W729 18:24:21.758117294 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+wandb: Currently logged in as: msharif (msharif-iowa-state-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.0
+wandb: Run data is saved locally in /u/ssoma1/mahdi/Isomorphic-Pruning/wandb/run-20250729_182422-9043qyub
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run _work_hdd_bewo_mahdi_agentic_prune_models_Final_final_pruned_deit_small_patch16_224_imagenet_rev1_ratio0.077.pt
+wandb: ⭐️ View project at https://wandb.ai/msharif-iowa-state-university/Pruning
+wandb: 🚀 View run at https://wandb.ai/msharif-iowa-state-university/Pruning/runs/9043qyub
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 724, in <module>
+[rank2]:     main(args)
+[rank2]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 411, in main
+[rank2]:     missing, unexpected = model.load_state_dict(sd, strict=False)
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 2593, in load_state_dict
+[rank2]:     raise RuntimeError(
+[rank2]: RuntimeError: Error(s) in loading state_dict for VisionTransformer:
+[rank2]: 	size mismatch for blocks.0.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank2]: 	size mismatch for blocks.0.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank2]: 	size mismatch for blocks.0.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank2]: 	size mismatch for blocks.1.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank2]: 	size mismatch for blocks.1.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank2]: 	size mismatch for blocks.1.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank2]: 	size mismatch for blocks.2.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank2]: 	size mismatch for blocks.2.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank2]: 	size mismatch for blocks.2.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank2]: 	size mismatch for blocks.3.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank2]: 	size mismatch for blocks.3.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank2]: 	size mismatch for blocks.3.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank2]: 	size mismatch for blocks.4.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank2]: 	size mismatch for blocks.4.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank2]: 	size mismatch for blocks.4.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank2]: 	size mismatch for blocks.5.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank2]: 	size mismatch for blocks.5.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank2]: 	size mismatch for blocks.5.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank2]: 	size mismatch for blocks.6.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank2]: 	size mismatch for blocks.6.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank2]: 	size mismatch for blocks.6.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank2]: 	size mismatch for blocks.7.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank2]: 	size mismatch for blocks.7.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank2]: 	size mismatch for blocks.7.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank2]: 	size mismatch for blocks.8.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank2]: 	size mismatch for blocks.8.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank2]: 	size mismatch for blocks.8.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank2]: 	size mismatch for blocks.9.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank2]: 	size mismatch for blocks.9.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank2]: 	size mismatch for blocks.9.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank2]: 	size mismatch for blocks.10.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank2]: 	size mismatch for blocks.10.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank2]: 	size mismatch for blocks.10.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank2]: 	size mismatch for blocks.11.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank2]: 	size mismatch for blocks.11.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank2]: 	size mismatch for blocks.11.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 724, in <module>
+[rank1]:     main(args)
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 411, in main
+[rank1]:     missing, unexpected = model.load_state_dict(sd, strict=False)
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 2593, in load_state_dict
+[rank1]:     raise RuntimeError(
+[rank1]: RuntimeError: Error(s) in loading state_dict for VisionTransformer:
+[rank1]: 	size mismatch for blocks.0.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank1]: 	size mismatch for blocks.0.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank1]: 	size mismatch for blocks.0.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank1]: 	size mismatch for blocks.1.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank1]: 	size mismatch for blocks.1.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank1]: 	size mismatch for blocks.1.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank1]: 	size mismatch for blocks.2.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank1]: 	size mismatch for blocks.2.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank1]: 	size mismatch for blocks.2.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank1]: 	size mismatch for blocks.3.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank1]: 	size mismatch for blocks.3.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank1]: 	size mismatch for blocks.3.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank1]: 	size mismatch for blocks.4.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank1]: 	size mismatch for blocks.4.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank1]: 	size mismatch for blocks.4.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank1]: 	size mismatch for blocks.5.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank1]: 	size mismatch for blocks.5.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank1]: 	size mismatch for blocks.5.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank1]: 	size mismatch for blocks.6.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank1]: 	size mismatch for blocks.6.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank1]: 	size mismatch for blocks.6.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank1]: 	size mismatch for blocks.7.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank1]: 	size mismatch for blocks.7.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank1]: 	size mismatch for blocks.7.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank1]: 	size mismatch for blocks.8.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank1]: 	size mismatch for blocks.8.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank1]: 	size mismatch for blocks.8.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank1]: 	size mismatch for blocks.9.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank1]: 	size mismatch for blocks.9.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank1]: 	size mismatch for blocks.9.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank1]: 	size mismatch for blocks.10.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank1]: 	size mismatch for blocks.10.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank1]: 	size mismatch for blocks.10.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank1]: 	size mismatch for blocks.11.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank1]: 	size mismatch for blocks.11.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank1]: 	size mismatch for blocks.11.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 724, in <module>
+[rank3]:     main(args)
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 411, in main
+[rank3]:     missing, unexpected = model.load_state_dict(sd, strict=False)
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 2593, in load_state_dict
+[rank3]:     raise RuntimeError(
+[rank3]: RuntimeError: Error(s) in loading state_dict for VisionTransformer:
+[rank3]: 	size mismatch for blocks.0.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank3]: 	size mismatch for blocks.0.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank3]: 	size mismatch for blocks.0.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank3]: 	size mismatch for blocks.1.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank3]: 	size mismatch for blocks.1.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank3]: 	size mismatch for blocks.1.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank3]: 	size mismatch for blocks.2.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank3]: 	size mismatch for blocks.2.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank3]: 	size mismatch for blocks.2.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank3]: 	size mismatch for blocks.3.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank3]: 	size mismatch for blocks.3.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank3]: 	size mismatch for blocks.3.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank3]: 	size mismatch for blocks.4.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank3]: 	size mismatch for blocks.4.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank3]: 	size mismatch for blocks.4.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank3]: 	size mismatch for blocks.5.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank3]: 	size mismatch for blocks.5.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank3]: 	size mismatch for blocks.5.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank3]: 	size mismatch for blocks.6.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank3]: 	size mismatch for blocks.6.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank3]: 	size mismatch for blocks.6.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank3]: 	size mismatch for blocks.7.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank3]: 	size mismatch for blocks.7.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank3]: 	size mismatch for blocks.7.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank3]: 	size mismatch for blocks.8.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank3]: 	size mismatch for blocks.8.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank3]: 	size mismatch for blocks.8.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank3]: 	size mismatch for blocks.9.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank3]: 	size mismatch for blocks.9.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank3]: 	size mismatch for blocks.9.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank3]: 	size mismatch for blocks.10.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank3]: 	size mismatch for blocks.10.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank3]: 	size mismatch for blocks.10.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank3]: 	size mismatch for blocks.11.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank3]: 	size mismatch for blocks.11.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank3]: 	size mismatch for blocks.11.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 724, in <module>
+    main(args)
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 411, in main
+    missing, unexpected = model.load_state_dict(sd, strict=False)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 2593, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for VisionTransformer:
+	size mismatch for blocks.0.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+	size mismatch for blocks.0.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+	size mismatch for blocks.0.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+	size mismatch for blocks.1.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+	size mismatch for blocks.1.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+	size mismatch for blocks.1.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+	size mismatch for blocks.2.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+	size mismatch for blocks.2.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+	size mismatch for blocks.2.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+	size mismatch for blocks.3.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+	size mismatch for blocks.3.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+	size mismatch for blocks.3.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+	size mismatch for blocks.4.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+	size mismatch for blocks.4.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+	size mismatch for blocks.4.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+	size mismatch for blocks.5.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+	size mismatch for blocks.5.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+	size mismatch for blocks.5.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+	size mismatch for blocks.6.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+	size mismatch for blocks.6.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+	size mismatch for blocks.6.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+	size mismatch for blocks.7.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+	size mismatch for blocks.7.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+	size mismatch for blocks.7.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+	size mismatch for blocks.8.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+	size mismatch for blocks.8.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+	size mismatch for blocks.8.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+	size mismatch for blocks.9.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+	size mismatch for blocks.9.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+	size mismatch for blocks.9.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+	size mismatch for blocks.10.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+	size mismatch for blocks.10.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+	size mismatch for blocks.10.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+	size mismatch for blocks.11.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+	size mismatch for blocks.11.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+	size mismatch for blocks.11.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 724, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 411, in main
+[rank0]:     missing, unexpected = model.load_state_dict(sd, strict=False)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 2593, in load_state_dict
+[rank0]:     raise RuntimeError(
+[rank0]: RuntimeError: Error(s) in loading state_dict for VisionTransformer:
+[rank0]: 	size mismatch for blocks.0.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank0]: 	size mismatch for blocks.0.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank0]: 	size mismatch for blocks.0.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank0]: 	size mismatch for blocks.1.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank0]: 	size mismatch for blocks.1.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank0]: 	size mismatch for blocks.1.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank0]: 	size mismatch for blocks.2.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank0]: 	size mismatch for blocks.2.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank0]: 	size mismatch for blocks.2.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank0]: 	size mismatch for blocks.3.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank0]: 	size mismatch for blocks.3.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank0]: 	size mismatch for blocks.3.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank0]: 	size mismatch for blocks.4.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank0]: 	size mismatch for blocks.4.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank0]: 	size mismatch for blocks.4.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank0]: 	size mismatch for blocks.5.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank0]: 	size mismatch for blocks.5.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank0]: 	size mismatch for blocks.5.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank0]: 	size mismatch for blocks.6.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank0]: 	size mismatch for blocks.6.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank0]: 	size mismatch for blocks.6.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank0]: 	size mismatch for blocks.7.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank0]: 	size mismatch for blocks.7.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank0]: 	size mismatch for blocks.7.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank0]: 	size mismatch for blocks.8.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank0]: 	size mismatch for blocks.8.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank0]: 	size mismatch for blocks.8.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank0]: 	size mismatch for blocks.9.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank0]: 	size mismatch for blocks.9.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank0]: 	size mismatch for blocks.9.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank0]: 	size mismatch for blocks.10.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank0]: 	size mismatch for blocks.10.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank0]: 	size mismatch for blocks.10.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+[rank0]: 	size mismatch for blocks.11.mlp.fc1.weight: copying a param with shape torch.Size([1351, 384]) from checkpoint, the shape in current model is torch.Size([1536, 384]).
+[rank0]: 	size mismatch for blocks.11.mlp.fc1.bias: copying a param with shape torch.Size([1351]) from checkpoint, the shape in current model is torch.Size([1536]).
+[rank0]: 	size mismatch for blocks.11.mlp.fc2.weight: copying a param with shape torch.Size([384, 1351]) from checkpoint, the shape in current model is torch.Size([384, 1536]).
+W0729 18:24:27.372961 3769171 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3769188 closing signal SIGTERM
+W0729 18:24:27.373578 3769171 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3769189 closing signal SIGTERM
+W0729 18:24:27.373787 3769171 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3769192 closing signal SIGTERM
+E0729 18:24:28.188497 3769171 torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 2 (pid: 3769190) of binary: /u/ssoma1/.conda/envs/iso_env/bin/python
+Traceback (most recent call last):
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 896, in <module>
+    main()
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-07-29_18:24:27
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 3769190)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

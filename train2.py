@@ -29,11 +29,6 @@ import timm
 import torch_pruning as tp
 import wandb
 
-from torch.serialization import add_safe_globals
-from timm.models.vision_transformer import (VisionTransformer)
-
-add_safe_globals([VisionTransformer]) 
-
 def kldiv( logits, targets, T=1.0, reduction='batchmean'):
     q = F.log_softmax(logits/T, dim=1)
     p = F.softmax( targets/T, dim=1 )
@@ -49,31 +44,21 @@ def train_one_epoch(model, teacher_model, criterion, optimizer, data_loader, dev
 
     header = f"Epoch: [{epoch}]"
     for i, (image, target) in enumerate(metric_logger.log_every(data_loader, args.print_freq, header)):
-        if args.max_train_steps is not None and i >= args.max_train_steps:
-            break
         start_time = time.time()
         image, target = image.to(device), target.to(device)
         with torch.cuda.amp.autocast(enabled=scaler is not None):
 
-            # ── forward pass ─ supports plain & distilled DeiT
-            out = model(image)
-            if isinstance(out, tuple):          # distilled ckpt
-                output, output_distill = out
-            else:                               # plain ckpt
-                output, output_distill = out, None
-
-            # ── loss
-            if teacher_model is not None and output_distill is not None:
+            if teacher_model is not None:
+                output, output_distill = model(image)
                 with torch.no_grad():
                     output_teacher = teacher_model(image)
-                loss_kd = criterion(output_distill, output_teacher.argmax(1))
+                loss_kd = criterion(output_distill, output_teacher.max(1)[1])
                 loss_ce = criterion(output, target)
-                loss    = 0.5 * loss_kd + 0.5 * loss_ce
+                loss = 0.5 * loss_kd + 0.5 * loss_ce
             else:
-                loss_ce = criterion(output, target)
-                loss_kd = loss_ce          # for logging
-                loss    = loss_ce
-
+                output = model(image)
+                loss = criterion(output, target)
+                loss_kd = loss_ce = loss
         optimizer.zero_grad()
         if scaler is not None:
             scaler.scale(loss).backward()
@@ -211,15 +196,6 @@ def load_data(traindir, valdir, args):
                 use_v2=args.use_v2,
             ),
         )
-        if args.train_fraction < 1.0:
-            subset_len = int(len(dataset) * args.train_fraction)
-            # deterministic across all ranks
-            g = torch.Generator().manual_seed(42)
-            idx = torch.randperm(len(dataset), generator=g)[:subset_len]
-            dataset = torch.utils.data.Subset(dataset, idx)
-            dataset.classes = dataset.dataset.classes
-            dataset.class_to_idx = dataset.dataset.class_to_idx
-
         if args.cache_dataset:
             print(f"Saving dataset_train to {cache_path}")
             utils.mkdir(os.path.dirname(cache_path))
@@ -274,8 +250,6 @@ def load_data(traindir, valdir, args):
 
 def main(args):
 
-    print(">>> Running train.py version updated at:", __file__)
-    
     os.makedirs(args.output_dir, exist_ok=True)
     with open(os.path.join(args.output_dir, 'train.sh'), 'w') as f:
         f.write('python ' + ' '.join(sys.argv))
@@ -294,6 +268,7 @@ def main(args):
             # track hyperparameters and run metadata
             config=args,
         )
+    device = torch.device(args.device)
 
     if args.use_deterministic_algorithms:
         torch.backends.cudnn.benchmark = False
@@ -304,10 +279,6 @@ def main(args):
     train_dir = os.path.join(args.data_path, "train")
     val_dir = os.path.join(args.data_path, "val")
     dataset, dataset_test, train_sampler, test_sampler = load_data(train_dir, val_dir, args)
-
-    if not hasattr(dataset, "classes") and isinstance(dataset, torch.utils.data.Subset):
-        dataset.classes = dataset.dataset.classes
-        dataset.class_to_idx = dataset.dataset.class_to_idx
 
     num_classes = len(dataset.classes)
     mixup_cutmix = get_mixup_cutmix(
@@ -335,61 +306,38 @@ def main(args):
 
     print("Creating model")
 
-    # ─────────────────────────  Creating / loading the model  ─────────────────────────
-    print("Creating / loading model")
+    # OLD
+    # if os.path.isfile(args.model):
+    #     print(f"Loading pruned model from {args.model}")
+    #     model = torch.load(args.model, map_location='cpu') #torchvision.models.get_model(args.model, weights=args.weights, num_classes=num_classes)
+    #     if isinstance(model, dict):
+    #         model = model['model']
 
-    def try_build_from_state_dict(sd, num_classes):
-        "Return a model matching `sd`; raise SizeMismatch if it can’t be loaded."
-        from torch.nn.modules.module import _IncompatibleKeys
-        distilled = any(k.startswith("head_dist") for k in sd)
-        name = "deit_small_distilled_patch16_224" if distilled else "deit_small_patch16_224"
-        model = timm.create_model(name, num_classes=num_classes, pretrained=False)
-        try:
-            # strict=False allows missing/unexpected keys but not size mismatches
-            model.load_state_dict(sd, strict=False)
-            return model
-        except RuntimeError as e:        # size mismatch → give up
-            raise _IncompatibleKeys([], [])  # dummy to signal failure
+    print(f"Loading pruned model from {args.model}")
+    # OLD: model = torch.load(args.model, map_location='cpu')
+    model = torch.load(args.model, map_location='cpu', weights_only=False)
+    if isinstance(model, dict):
+        model = model['model']
 
-    ckpt   = torch.load(args.model, map_location="cpu", weights_only=False)
-    model  = None                       # will be set in one of the branches
-
-    # ── 1) Checkpoint *is* a pruned model already ─────────────────────────
-    if isinstance(ckpt, torch.nn.Module):
-        model = ckpt
-
-    # ── 2) Checkpoint dict contains a pickled model ───────────────────────
-    elif isinstance(ckpt, dict) and isinstance(ckpt.get("model"), torch.nn.Module):
-        model = ckpt["model"]
-
-    # ── 3) Checkpoint gives only a (pruned) state‑dict ────────────────────
+    elif args.is_huggingface:
+        print(f"Loading Huggingface model from {args.model}")
+        from transformers import ViTForImageClassification
+        model = ViTForImageClassification.from_pretrained(args.model)
     else:
-        sd = ckpt.get("model_state_dict", ckpt)   # plain or wrapped sd
-        try:
-            model = try_build_from_state_dict(sd, num_classes)
-            print("✓ built fresh skeleton & loaded pruned state_dict")
-        except Exception:
-            # state‑dict does not fit a vanilla skeleton → last resort fail
-            raise RuntimeError(
-                "Checkpoint only contains a *pruned* state_dict whose layer "
-                "sizes no longer match any stock DeiT backbone.  "
-                "Save the full pruned model (`torch.save(model, ...)`) during "
-                "pruning so we can load it directly."
-            )
-
-    assert isinstance(model, torch.nn.Module), "Model loading failed"
-    print("✔ model loaded → type:", type(model))
-
-    local_device = torch.device(f"cuda:{args.gpu}")        # e.g. cuda:0, cuda:1 …
-    model = model.to(local_device)
-
+        print(f"Loading timm model from {args.model}")
+        model = timm.create_model(args.model, pretrained=True)
+    
     if args.teacher_model is not None:
-        teacher_model = timm.create_model(
-            args.teacher_model, pretrained=True
-        ).eval().to(local_device)
+        teacher_model = timm.create_model(args.teacher_model, pretrained=True).eval().to(device)
         model.distilled_training = True
     else:
         teacher_model = None
+
+    #if args.stochastic_depth > 0.0:
+    #    pbench.pruning.set_stochastic_depth(model, args.stochastic_depth)
+    model.to(device)
+    macs, params = tp.utils.count_ops_and_params(model, torch.randn(1, 3, 224, 224).to(device))
+    print("macs: {:.2f} G, params: {:.2f} M".format(macs/1e9, params/1e6))
 
     if args.distributed and args.sync_bn:
         model = torch.nn.SyncBatchNorm.convert_sync_batchnorm(model)
@@ -427,8 +375,7 @@ def main(args):
     else:
         raise RuntimeError(f"Invalid optimizer {args.opt}. Only SGD, RMSprop and AdamW are supported.")
 
-    scaler = torch.amp.GradScaler(device_type="cuda") if args.amp else None
-
+    scaler = torch.cuda.amp.GradScaler() if args.amp else None
 
     args.lr_scheduler = args.lr_scheduler.lower()
     if args.lr_scheduler == "steplr":
@@ -464,36 +411,35 @@ def main(args):
     else:
         lr_scheduler = main_lr_scheduler
 
-    # model_without_ddp = model
-    # if args.distributed:
-    #     model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu])
-    #     if args.teacher_model is not None:
-    #         teacher_model = torch.nn.parallel.DistributedDataParallel(teacher_model, device_ids=[args.gpu])
-    #     model_without_ddp = model.module
-
     model_without_ddp = model
     if args.distributed:
-        model = torch.nn.parallel.DistributedDataParallel(
-            model,
-            device_ids=[args.gpu],         # must match the cuda:N you just used
-            output_device=args.gpu
-        )
-        if teacher_model is not None:
-            teacher_model = torch.nn.parallel.DistributedDataParallel(
-                teacher_model, device_ids=[args.gpu], output_device=args.gpu
-            )
+        model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu])
+        if args.teacher_model is not None:
+            teacher_model = torch.nn.parallel.DistributedDataParallel(teacher_model, device_ids=[args.gpu])
         model_without_ddp = model.module
 
     model_ema = None
     if args.model_ema:
+        # Decay adjustment that aims to keep the decay independent of other hyper-parameters originally proposed at:
+        # https://github.com/facebookresearch/pycls/blob/f8cd9627/pycls/core/net.py#L123
+        #
+        # total_ema_updates = (Dataset_size / n_GPUs) * epochs / (batch_size_per_gpu * EMA_steps)
+        # We consider constant = Dataset_size for a given dataset/setup and omit it. Thus:
+        # adjust = 1 / total_ema_updates ~= n_GPUs * batch_size_per_gpu * EMA_steps / epochs
         adjust = args.world_size * args.batch_size * args.model_ema_steps / args.epochs
         alpha = 1.0 - args.model_ema_decay
         alpha = min(1.0, alpha * adjust)
         model_ema = utils.ExponentialMovingAverage(model_without_ddp, device=device, decay=1.0 - alpha)
 
     if args.resume:
+        # OLD
+        # print("loading checkpoint")
+        # checkpoint = torch.load(args.resume, map_location="cpu")
+
         print("loading checkpoint")
-        checkpoint = torch.load(args.resume, map_location="cpu")
+        # OLD: checkpoint = torch.load(args.resume, map_location="cpu")
+        checkpoint = torch.load(args.resume, map_location="cpu", weights_only=False)
+
         if isinstance(checkpoint["model"], torch.nn.Module):
             model_without_ddp.load_state_dict( checkpoint["model"].state_dict() )
         else:
@@ -701,9 +647,6 @@ def get_args_parser(add_help=True):
     parser.add_argument("--checkpoint-interval", default=10, type=int, help="checkpoint interval (default: 10)")
     parser.add_argument("--no_imagenet_mean_std", default=False, action="store_true", help="disable imagenet mean and std")
     parser.add_argument("--stochastic-depth", default=0.0, type=float, help="stochastic depth rate")
-
-    parser.add_argument("--train-fraction", default=1.0, type=float, help="Fraction of the training set to use (e.g. 0.1 = 10 %)")
-    parser.add_argument("--max-train-steps", default=None, type=int, help="Optional hard cap on update steps (ignores remaining batches)")
 
     return parser
 

@@ -1,0 +1,550 @@
+>>> Running train.py version updated at:>>> Running train.py version updated at: >>> Running train.py version updated at:/u/ssoma1/mahdi/Isomorphic-Pruning/train.py 
+>>> Running train.py version updated at:/u/ssoma1/mahdi/Isomorphic-Pruning/train.py 
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py 
+/u/ssoma1/mahdi/Isomorphic-Pruning/train.py
+| distributed init (rank 3): env://
+| distributed init (rank 1): env://
+| distributed init (rank 2): env://
+| distributed init (rank 0): env://
+NCCL version 2.21.5+cuda11.0
+Namespace(model='/work/hdd/bewo/mahdi/agentic_prune/models/FINAL_BEST_PRUNED_deit_small_patch16_224_imagenet_rev1_ratio0.077_selectedByTop173.9.pth', teacher_model='regnety_160.deit_in1k', data_path='/work/hdd/bewo/mahdi/imagenet', device='cuda', batch_size=256, epochs=30, workers=8, opt='adamw', lr=0.0005, momentum=0.9, weight_decay=0.05, norm_weight_decay=None, bias_weight_decay=None, transformer_embedding_decay=None, label_smoothing=0.1, mixup_alpha=0.2, cutmix_alpha=0.0, lr_scheduler='cosineannealinglr', lr_warmup_epochs=0, lr_warmup_method='linear', lr_warmup_decay=0.033, lr_step_size=30, lr_gamma=0.1, lr_min=0.0, print_freq=50, output_dir='/work/hdd/bewo/mahdi/agentic_prune/finetuned_deit_small_30ep', resume='', start_epoch=0, cache_dataset=False, sync_bn=False, test_only=False, auto_augment='ra', ra_magnitude=9, augmix_severity=3, random_erase=0.25, color_jitter=None, amp=True, world_size=4, dist_url='env://', model_ema=False, model_ema_steps=32, model_ema_decay=0.99998, use_deterministic_algorithms=False, interpolation='bicubic', val_resize_size=256, val_crop_size=224, train_crop_size=224, clip_grad_norm=None, ra_sampler=True, ra_reps=3, weights=None, backend='pil', use_v2=False, is_huggingface=False, checkpoint_interval=10, no_imagenet_mean_std=False, stochastic_depth=0.0, train_fraction=0.1, max_train_steps=5000, rank=0, gpu=0, distributed=True, dist_backend='nccl')
+Loading data
+Loading training data
+Took 2.795959711074829
+Loading validation data
+Creating data loaders
+Creating model
+‑ Loaded state‑dict ▶  0 missing  0 unexpected keys
+macs: 4.61 G, params: 22.05 M
+DistributedDataParallel(
+  (module): VisionTransformer(
+    (patch_embed): PatchEmbed(
+      (proj): Conv2d(3, 384, kernel_size=(16, 16), stride=(16, 16))
+      (norm): Identity()
+    )
+    (pos_drop): Dropout(p=0.0, inplace=False)
+    (patch_drop): Identity()
+    (norm_pre): Identity()
+    (blocks): Sequential(
+      (0): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1536, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1536, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (1): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1536, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1536, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (2): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1536, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1536, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (3): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1536, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1536, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (4): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1536, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1536, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (5): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1536, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1536, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (6): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1536, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1536, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (7): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1536, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1536, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (8): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1536, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1536, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (9): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1536, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1536, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (10): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1536, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1536, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (11): Block(
+        (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=384, out_features=1152, bias=True)
+          (q_norm): Identity()
+          (k_norm): Identity()
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=384, out_features=1536, bias=True)
+          (act): GELU(approximate='none')
+          (drop1): Dropout(p=0.0, inplace=False)
+          (norm): Identity()
+          (fc2): Linear(in_features=1536, out_features=384, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+    )
+    (norm): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+    (fc_norm): Identity()
+    (head_drop): Dropout(p=0.0, inplace=False)
+    (head): Linear(in_features=384, out_features=1000, bias=True)
+  )
+)
+Start training
+Epoch: [0]  [  0/125]  eta: 0:25:29  lr: 0.0005  img/s: 467.8858258383881  loss_kd: 7.001182556152344  loss_ce: 7.001182556152344  loss: 7.0012 (7.0012)  acc1: 0.0000 (0.0000)  acc5: 0.3906 (0.3906)  time: 12.2372  data: 11.6892  max mem: 9566
+Epoch: [0]  [ 50/125]  eta: 0:01:37  lr: 0.0005  img/s: 2265.7752418252107  loss_kd: 6.780844688415527  loss_ce: 6.780844688415527  loss: 6.8186 (6.9178)  acc1: 0.0000 (0.2834)  acc5: 1.5625 (1.3174)  time: 1.2915  data: 1.1624  max mem: 9735
+Epoch: [0]  [100/125]  eta: 0:00:28  lr: 0.0005  img/s: 2310.468733390858  loss_kd: 6.64143180847168  loss_ce: 6.64143180847168  loss: 6.7402 (6.8345)  acc1: 0.3906 (0.4100)  acc5: 2.7344 (1.9647)  time: 0.7890  data: 0.6698  max mem: 9735
+Epoch: [0] Total time: 0:02:17
+Test:   [ 0/49]  eta: 0:07:54  loss: 5.9968 (5.9968)  acc1: 5.4688 (5.4688)  acc5: 16.4062 (16.4062)  time: 9.6900  data: 9.3474  max mem: 9735
+Test:  Total time: 0:00:31
+Test:  Acc@1 1.280 Acc@5 5.012
+Epoch: [1]  [  0/125]  eta: 0:14:43  lr: 0.0004986304738420684  img/s: 572.5102474116208  loss_kd: 6.807194709777832  loss_ce: 6.807194709777832  loss: 6.8072 (6.8072)  acc1: 0.3906 (0.3906)  acc5: 1.5625 (1.5625)  time: 7.0661  data: 6.6180  max mem: 9735
+Epoch: [1]  [ 50/125]  eta: 0:01:12  lr: 0.0004986304738420684  img/s: 2295.8850669580333  loss_kd: 6.443356513977051  loss_ce: 6.443356513977051  loss: 6.5132 (6.6006)  acc1: 0.7812 (1.1029)  acc5: 4.6875 (4.3888)  time: 0.9886  data: 0.8733  max mem: 9735
+Epoch: [1]  [100/125]  eta: 0:00:22  lr: 0.0004986304738420684  img/s: 2307.9558158779973  loss_kd: 6.208431720733643  loss_ce: 6.208431720733643  loss: 6.5111 (6.5648)  acc1: 1.5625 (1.2956)  acc5: 5.8594 (5.0317)  time: 0.7033  data: 0.5728  max mem: 9735
+Epoch: [1] Total time: 0:01:49
+Test:   [ 0/49]  eta: 0:02:12  loss: 5.6773 (5.6773)  acc1: 10.9375 (10.9375)  acc5: 25.3906 (25.3906)  time: 2.7054  data: 2.5194  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 3.278 Acc@5 10.270
+Epoch: [2]  [  0/125]  eta: 0:12:57  lr: 0.0004945369001834514  img/s: 637.5132099086486  loss_kd: 6.275197505950928  loss_ce: 6.275197505950928  loss: 6.2752 (6.2752)  acc1: 1.9531 (1.9531)  acc5: 5.8594 (5.8594)  time: 6.2198  data: 5.8172  max mem: 9735
+Epoch: [2]  [ 50/125]  eta: 0:00:59  lr: 0.0004945369001834514  img/s: 2285.9724297384123  loss_kd: 6.240874290466309  loss_ce: 6.240874290466309  loss: 6.2728 (6.3371)  acc1: 3.1250 (2.5582)  acc5: 8.9844 (8.5248)  time: 0.8260  data: 0.6914  max mem: 9735
+Epoch: [2]  [100/125]  eta: 0:00:18  lr: 0.0004945369001834514  img/s: 2301.3027219340734  loss_kd: 6.179849147796631  loss_ce: 6.179849147796631  loss: 6.1798 (6.3207)  acc1: 2.7344 (2.7305)  acc5: 10.1562 (8.9805)  time: 0.5612  data: 0.4369  max mem: 9735
+Epoch: [2] Total time: 0:01:29
+Test:   [ 0/49]  eta: 0:02:14  loss: 5.3360 (5.3360)  acc1: 8.2031 (8.2031)  acc5: 29.2969 (29.2969)  time: 2.7425  data: 2.5609  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 5.612 Acc@5 15.464
+Epoch: [3]  [  0/125]  eta: 0:10:59  lr: 0.0004877641290737884  img/s: 669.9911108116017  loss_kd: 6.507399559020996  loss_ce: 6.507399559020996  loss: 6.5074 (6.5074)  acc1: 3.1250 (3.1250)  acc5: 11.3281 (11.3281)  time: 5.2751  data: 4.8923  max mem: 9735
+Epoch: [3]  [ 50/125]  eta: 0:00:59  lr: 0.0004877641290737884  img/s: 1310.756801033232  loss_kd: 6.655215263366699  loss_ce: 6.655215263366699  loss: 6.0372 (6.2118)  acc1: 3.5156 (3.5922)  acc5: 11.3281 (10.8839)  time: 0.8797  data: 0.6782  max mem: 9735
+Epoch: [3]  [100/125]  eta: 0:00:17  lr: 0.0004877641290737884  img/s: 2219.942573602382  loss_kd: 5.832151412963867  loss_ce: 5.832151412963867  loss: 5.9649 (6.1558)  acc1: 4.2969 (3.9991)  acc5: 13.2812 (11.7922)  time: 0.6764  data: 0.5217  max mem: 9735
+Epoch: [3] Total time: 0:01:26
+Test:   [ 0/49]  eta: 0:04:11  loss: 4.9250 (4.9250)  acc1: 10.9375 (10.9375)  acc5: 37.1094 (37.1094)  time: 5.1389  data: 4.9597  max mem: 9735
+Test:  Total time: 0:00:43
+Test:  Acc@1 7.364 Acc@5 20.074
+Epoch: [4]  [  0/125]  eta: 0:10:27  lr: 0.00047838636441065017  img/s: 1576.16486479742  loss_kd: 5.920539379119873  loss_ce: 5.920539379119873  loss: 5.9205 (5.9205)  acc1: 4.6875 (4.6875)  acc5: 13.2812 (13.2812)  time: 5.0184  data: 4.8551  max mem: 9735
+Epoch: [4]  [ 50/125]  eta: 0:00:52  lr: 0.00047838636441065017  img/s: 2244.7110629820027  loss_kd: 5.862176895141602  loss_ce: 5.862176895141602  loss: 6.1510 (5.9660)  acc1: 4.6875 (5.3845)  acc5: 13.6719 (15.2191)  time: 0.7225  data: 0.5239  max mem: 9735
+Epoch: [4]  [100/125]  eta: 0:00:16  lr: 0.00047838636441065017  img/s: 2139.6994215045665  loss_kd: 5.892399787902832  loss_ce: 5.892399787902832  loss: 5.8246 (5.9862)  acc1: 5.8594 (5.5616)  acc5: 16.4062 (15.2653)  time: 0.5669  data: 0.4167  max mem: 9735
+Epoch: [4] Total time: 0:01:20
+Test:   [ 0/49]  eta: 0:02:30  loss: 4.9374 (4.9374)  acc1: 16.0156 (16.0156)  acc5: 37.8906 (37.8906)  time: 3.0682  data: 2.8735  max mem: 9735
+Test:  Total time: 0:00:14
+Test:  Acc@1 8.766 Acc@5 23.372
+Epoch: [5]  [  0/125]  eta: 0:11:12  lr: 0.00046650635094610973  img/s: 1977.5489146650066  loss_kd: 5.737448692321777  loss_ce: 5.737448692321777  loss: 5.7374 (5.7374)  acc1: 5.0781 (5.0781)  acc5: 17.5781 (17.5781)  time: 5.3803  data: 5.2498  max mem: 9735
+Epoch: [5]  [ 50/125]  eta: 0:00:50  lr: 0.00046650635094610973  img/s: 2140.603747555357  loss_kd: 5.7217254638671875  loss_ce: 5.7217254638671875  loss: 5.7217 (5.8338)  acc1: 7.0312 (6.7632)  acc5: 20.3125 (18.0070)  time: 0.6999  data: 0.5311  max mem: 9735
+Epoch: [5]  [100/125]  eta: 0:00:15  lr: 0.00046650635094610973  img/s: 2247.8031003694905  loss_kd: 5.677675247192383  loss_ce: 5.677675247192383  loss: 5.6726 (5.8030)  acc1: 7.4219 (7.1473)  acc5: 19.1406 (18.6108)  time: 0.5062  data: 0.3777  max mem: 9735
+Epoch: [5] Total time: 0:01:17
+Test:   [ 0/49]  eta: 0:02:30  loss: 4.6934 (4.6934)  acc1: 19.9219 (19.9219)  acc5: 45.7031 (45.7031)  time: 3.0792  data: 2.8952  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 10.674 Acc@5 26.552
+Epoch: [6]  [  0/125]  eta: 0:09:29  lr: 0.00045225424859373693  img/s: 1343.4048161507578  loss_kd: 5.661637306213379  loss_ce: 5.661637306213379  loss: 5.6616 (5.6616)  acc1: 6.6406 (6.6406)  acc5: 22.2656 (22.2656)  time: 4.5536  data: 4.3621  max mem: 9735
+Epoch: [6]  [ 50/125]  eta: 0:00:47  lr: 0.00045225424859373693  img/s: 1229.5842502084154  loss_kd: 5.677334308624268  loss_ce: 5.677334308624268  loss: 5.6648 (5.7440)  acc1: 7.8125 (8.1572)  acc5: 21.0938 (20.7721)  time: 0.6691  data: 0.5388  max mem: 9735
+Epoch: [6]  [100/125]  eta: 0:00:14  lr: 0.00045225424859373693  img/s: 2289.2231911001572  loss_kd: 5.742438793182373  loss_ce: 5.742438793182373  loss: 5.7605 (5.7922)  acc1: 6.6406 (7.8241)  acc5: 19.5312 (20.3744)  time: 0.5469  data: 0.3635  max mem: 9735
+Epoch: [6] Total time: 0:01:14
+Test:   [ 0/49]  eta: 0:02:17  loss: 4.5267 (4.5267)  acc1: 22.6562 (22.6562)  acc5: 46.0938 (46.0938)  time: 2.7992  data: 2.6118  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 12.076 Acc@5 28.804
+Epoch: [7]  [  0/125]  eta: 0:10:28  lr: 0.0004357862063693486  img/s: 2009.9996705353801  loss_kd: 5.544690132141113  loss_ce: 5.544690132141113  loss: 5.5447 (5.5447)  acc1: 9.3750 (9.3750)  acc5: 23.4375 (23.4375)  time: 5.0318  data: 4.9035  max mem: 9735
+Epoch: [7]  [ 50/125]  eta: 0:00:48  lr: 0.0004357862063693486  img/s: 2249.69635205947  loss_kd: 6.4742631912231445  loss_ce: 6.4742631912231445  loss: 5.4740 (5.6724)  acc1: 8.5938 (8.7316)  acc5: 23.8281 (21.6376)  time: 0.6591  data: 0.5303  max mem: 9735
+Epoch: [7]  [100/125]  eta: 0:00:14  lr: 0.0004357862063693486  img/s: 2242.0628262630817  loss_kd: 5.393905162811279  loss_ce: 5.393905162811279  loss: 5.3915 (5.6285)  acc1: 9.7656 (9.1545)  acc5: 23.8281 (22.4319)  time: 0.4768  data: 0.3522  max mem: 9735
+Epoch: [7] Total time: 0:01:13
+Test:   [ 0/49]  eta: 0:03:25  loss: 4.3859 (4.3859)  acc1: 25.7812 (25.7812)  acc5: 48.4375 (48.4375)  time: 4.1852  data: 4.0021  max mem: 9735
+Test:  Total time: 0:00:18
+Test:  Acc@1 14.108 Acc@5 31.948
+Epoch: [8]  [  0/125]  eta: 0:10:03  lr: 0.0004172826515897146  img/s: 1171.8490243157114  loss_kd: 5.258642673492432  loss_ce: 5.258642673492432  loss: 5.2586 (5.2586)  acc1: 14.4531 (14.4531)  acc5: 27.3438 (27.3438)  time: 4.8247  data: 4.6055  max mem: 9735
+Epoch: [8]  [ 50/125]  eta: 0:00:49  lr: 0.0004172826515897146  img/s: 2136.191738470445  loss_kd: 5.4843549728393555  loss_ce: 5.4843549728393555  loss: 5.3648 (5.4980)  acc1: 10.9375 (10.7307)  acc5: 26.9531 (25.5744)  time: 0.6763  data: 0.5222  max mem: 9735
+Epoch: [8]  [100/125]  eta: 0:00:15  lr: 0.0004172826515897146  img/s: 2268.9783634492537  loss_kd: 5.111639976501465  loss_ce: 5.111639976501465  loss: 5.2692 (5.4767)  acc1: 11.7188 (11.0690)  acc5: 26.9531 (26.0404)  time: 0.5349  data: 0.3994  max mem: 9735
+Epoch: [8] Total time: 0:01:14
+Test:   [ 0/49]  eta: 0:02:55  loss: 4.5175 (4.5175)  acc1: 24.2188 (24.2188)  acc5: 48.4375 (48.4375)  time: 3.5902  data: 3.3932  max mem: 9735
+Test:  Total time: 0:00:19
+Test:  Acc@1 15.504 Acc@5 34.180
+Epoch: [9]  [  0/125]  eta: 0:09:45  lr: 0.0003969463130731183  img/s: 551.0683617376274  loss_kd: 5.127602577209473  loss_ce: 5.127602577209473  loss: 5.1276 (5.1276)  acc1: 16.4062 (16.4062)  acc5: 31.2500 (31.2500)  time: 4.6867  data: 4.2215  max mem: 9735
+Epoch: [9]  [ 50/125]  eta: 0:00:47  lr: 0.0003969463130731183  img/s: 2258.768662462187  loss_kd: 6.329191207885742  loss_ce: 6.329191207885742  loss: 5.3565 (5.4946)  acc1: 12.1094 (11.5885)  acc5: 28.9062 (26.6085)  time: 0.6505  data: 0.5102  max mem: 9735
+Epoch: [9]  [100/125]  eta: 0:00:14  lr: 0.0003969463130731183  img/s: 2288.3059991901628  loss_kd: 5.550919532775879  loss_ce: 5.550919532775879  loss: 5.1452 (5.4433)  acc1: 13.2812 (12.0707)  acc5: 30.8594 (27.5797)  time: 0.4842  data: 0.3630  max mem: 9735
+Epoch: [9] Total time: 0:01:13
+Test:   [ 0/49]  eta: 0:02:23  loss: 4.2514 (4.2514)  acc1: 24.2188 (24.2188)  acc5: 55.4688 (55.4688)  time: 2.9297  data: 2.7320  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 16.912 Acc@5 36.546
+Epoch: [10]  [  0/125]  eta: 0:08:42  lr: 0.000375  img/s: 601.4774044434885  loss_kd: 6.131870269775391  loss_ce: 6.131870269775391  loss: 6.1319 (6.1319)  acc1: 7.8125 (7.8125)  acc5: 18.7500 (18.7500)  time: 4.1829  data: 3.7560  max mem: 9735
+Epoch: [10]  [ 50/125]  eta: 0:00:49  lr: 0.000375  img/s: 2241.5058524884817  loss_kd: 4.869548797607422  loss_ce: 4.869548797607422  loss: 5.1064 (5.3717)  acc1: 12.5000 (12.6532)  acc5: 30.4688 (28.7837)  time: 0.7051  data: 0.5214  max mem: 9735
+Epoch: [10]  [100/125]  eta: 0:00:15  lr: 0.000375  img/s: 2270.619334510505  loss_kd: 4.7943115234375  loss_ce: 4.7943115234375  loss: 5.2975 (5.4095)  acc1: 14.8438 (12.9022)  acc5: 30.0781 (28.6394)  time: 0.5068  data: 0.3845  max mem: 9735
+Epoch: [10] Total time: 0:01:18
+Test:   [ 0/49]  eta: 0:03:07  loss: 4.2051 (4.2051)  acc1: 26.9531 (26.9531)  acc5: 51.5625 (51.5625)  time: 3.8202  data: 3.6408  max mem: 9735
+Test:  Total time: 0:00:16
+Test:  Acc@1 18.156 Acc@5 38.344
+Epoch: [11]  [  0/125]  eta: 0:11:18  lr: 0.00035168416076895013  img/s: 1265.2754214769102  loss_kd: 5.060312747955322  loss_ce: 5.060312747955322  loss: 5.0603 (5.0603)  acc1: 16.4062 (16.4062)  acc5: 35.1562 (35.1562)  time: 5.4261  data: 5.2227  max mem: 9735
+Epoch: [11]  [ 50/125]  eta: 0:00:55  lr: 0.00035168416076895013  img/s: 2285.0383889372442  loss_kd: 6.247396469116211  loss_ce: 6.247396469116211  loss: 5.0740 (5.2923)  acc1: 14.4531 (14.0625)  acc5: 33.5938 (31.2500)  time: 0.7796  data: 0.6311  max mem: 9735
+Epoch: [11]  [100/125]  eta: 0:00:16  lr: 0.00035168416076895013  img/s: 2231.6526597137645  loss_kd: 5.335284233093262  loss_ce: 5.335284233093262  loss: 5.1490 (5.2438)  acc1: 14.4531 (14.3603)  acc5: 32.0312 (31.4937)  time: 0.5163  data: 0.3946  max mem: 9735
+Epoch: [11] Total time: 0:01:23
+Test:   [ 0/49]  eta: 0:02:22  loss: 4.1431 (4.1431)  acc1: 29.2969 (29.2969)  acc5: 55.8594 (55.8594)  time: 2.9037  data: 2.7122  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 19.442 Acc@5 40.480
+Epoch: [12]  [  0/125]  eta: 0:11:48  lr: 0.0003272542485937369  img/s: 437.1211719292589  loss_kd: 4.972269058227539  loss_ce: 4.972269058227539  loss: 4.9723 (4.9723)  acc1: 17.5781 (17.5781)  acc5: 41.4062 (41.4062)  time: 5.6693  data: 5.0829  max mem: 9735
+Epoch: [12]  [ 50/125]  eta: 0:00:53  lr: 0.0003272542485937369  img/s: 2054.44600616482  loss_kd: 4.892350196838379  loss_ce: 4.892350196838379  loss: 5.3574 (5.3795)  acc1: 12.5000 (13.9170)  acc5: 26.5625 (30.0628)  time: 0.7212  data: 0.6002  max mem: 9735
+Epoch: [12]  [100/125]  eta: 0:00:16  lr: 0.0003272542485937369  img/s: 2285.821569378805  loss_kd: 5.670659065246582  loss_ce: 5.670659065246582  loss: 5.0381 (5.2963)  acc1: 15.6250 (14.7471)  acc5: 35.1562 (31.8147)  time: 0.6234  data: 0.5003  max mem: 9735
+Epoch: [12] Total time: 0:01:21
+Test:   [ 0/49]  eta: 0:03:35  loss: 3.7733 (3.7733)  acc1: 33.5938 (33.5938)  acc5: 62.8906 (62.8906)  time: 4.3915  data: 4.1958  max mem: 9735
+Test:  Total time: 0:00:22
+Test:  Acc@1 20.706 Acc@5 41.924
+Epoch: [13]  [  0/125]  eta: 0:09:51  lr: 0.00030197792270443986  img/s: 599.6396963105473  loss_kd: 5.515186786651611  loss_ce: 5.515186786651611  loss: 5.5152 (5.5152)  acc1: 15.2344 (15.2344)  acc5: 31.6406 (31.6406)  time: 4.7358  data: 4.3067  max mem: 9735
+Epoch: [13]  [ 50/125]  eta: 0:00:50  lr: 0.00030197792270443986  img/s: 833.2804251528048  loss_kd: 4.89715576171875  loss_ce: 4.89715576171875  loss: 4.8088 (5.0866)  acc1: 18.3594 (16.9807)  acc5: 37.8906 (35.0873)  time: 0.7112  data: 0.5658  max mem: 9735
+Epoch: [13]  [100/125]  eta: 0:00:15  lr: 0.00030197792270443986  img/s: 2268.2689706891997  loss_kd: 4.866720676422119  loss_ce: 4.866720676422119  loss: 4.8158 (5.0908)  acc1: 19.5312 (16.8472)  acc5: 37.5000 (34.8817)  time: 0.5673  data: 0.4443  max mem: 9735
+Epoch: [13] Total time: 0:01:17
+Test:   [ 0/49]  eta: 0:02:23  loss: 3.8818 (3.8818)  acc1: 29.6875 (29.6875)  acc5: 64.0625 (64.0625)  time: 2.9381  data: 2.7397  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 21.660 Acc@5 43.278
+Epoch: [14]  [  0/125]  eta: 0:12:30  lr: 0.00027613211581691346  img/s: 1984.4308987715378  loss_kd: 4.843708515167236  loss_ce: 4.843708515167236  loss: 4.8437 (4.8437)  acc1: 18.7500 (18.7500)  acc5: 35.1562 (35.1562)  time: 6.0004  data: 5.8703  max mem: 9735
+Epoch: [14]  [ 50/125]  eta: 0:00:54  lr: 0.00027613211581691346  img/s: 2283.1094837741175  loss_kd: 4.518632411956787  loss_ce: 4.518632411956787  loss: 4.7451 (4.9833)  acc1: 19.5312 (18.8496)  acc5: 40.2344 (37.8830)  time: 0.7498  data: 0.6312  max mem: 9735
+Epoch: [14]  [100/125]  eta: 0:00:16  lr: 0.00027613211581691346  img/s: 2325.596427163606  loss_kd: 5.113461494445801  loss_ce: 5.113461494445801  loss: 4.9394 (5.0269)  acc1: 19.5312 (18.4870)  acc5: 38.6719 (37.3182)  time: 0.5368  data: 0.4187  max mem: 9735
+Epoch: [14] Total time: 0:01:23
+Test:   [ 0/49]  eta: 0:02:51  loss: 3.6013 (3.6013)  acc1: 38.6719 (38.6719)  acc5: 69.1406 (69.1406)  time: 3.4983  data: 3.3033  max mem: 9735
+Test:  Total time: 0:00:27
+Test:  Acc@1 23.162 Acc@5 45.376
+Epoch: [15]  [  0/125]  eta: 0:10:46  lr: 0.0002500000000000001  img/s: 1988.2487797290592  loss_kd: 5.622304916381836  loss_ce: 5.622304916381836  loss: 5.6223 (5.6223)  acc1: 15.2344 (15.2344)  acc5: 35.5469 (35.5469)  time: 5.1758  data: 5.0460  max mem: 9735
+Epoch: [15]  [ 50/125]  eta: 0:00:49  lr: 0.0002500000000000001  img/s: 2297.2800937960665  loss_kd: 5.702420234680176  loss_ce: 5.702420234680176  loss: 4.7593 (4.9010)  acc1: 19.5312 (19.8453)  acc5: 40.6250 (39.7825)  time: 0.6635  data: 0.5416  max mem: 9735
+Epoch: [15]  [100/125]  eta: 0:00:15  lr: 0.0002500000000000001  img/s: 2271.5608444452905  loss_kd: 5.7526421546936035  loss_ce: 5.7526421546936035  loss: 4.6152 (4.8926)  acc1: 19.9219 (19.8677)  acc5: 41.4062 (39.6697)  time: 0.5045  data: 0.3872  max mem: 9735
+Epoch: [15] Total time: 0:01:17
+Test:   [ 0/49]  eta: 0:02:14  loss: 3.6980 (3.6980)  acc1: 37.8906 (37.8906)  acc5: 64.8438 (64.8438)  time: 2.7506  data: 2.5549  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 23.542 Acc@5 46.004
+Epoch: [16]  [  0/125]  eta: 0:10:03  lr: 0.0002238678841830867  img/s: 648.1603719427574  loss_kd: 4.747200012207031  loss_ce: 4.747200012207031  loss: 4.7472 (4.7472)  acc1: 21.0938 (21.0938)  acc5: 36.7188 (36.7188)  time: 4.8288  data: 4.4327  max mem: 9735
+Epoch: [16]  [ 50/125]  eta: 0:00:50  lr: 0.0002238678841830867  img/s: 2195.804522318133  loss_kd: 6.126222133636475  loss_ce: 6.126222133636475  loss: 4.5250 (4.8586)  acc1: 22.2656 (20.5346)  acc5: 42.5781 (40.7169)  time: 0.7049  data: 0.5751  max mem: 9735
+Epoch: [16]  [100/125]  eta: 0:00:15  lr: 0.0002238678841830867  img/s: 2281.5570675154795  loss_kd: 5.918527126312256  loss_ce: 5.918527126312256  loss: 4.5437 (4.8236)  acc1: 22.2656 (20.8888)  acc5: 44.5312 (41.4256)  time: 0.4888  data: 0.3708  max mem: 9735
+Epoch: [16] Total time: 0:01:17
+Test:   [ 0/49]  eta: 0:02:18  loss: 3.6282 (3.6282)  acc1: 38.2812 (38.2812)  acc5: 66.7969 (66.7969)  time: 2.8200  data: 2.6245  max mem: 9735
+Test:  Total time: 0:00:14
+Test:  Acc@1 24.494 Acc@5 46.928
+Epoch: [17]  [  0/125]  eta: 0:10:10  lr: 0.00019802207729556018  img/s: 451.0580248822094  loss_kd: 4.546402931213379  loss_ce: 4.546402931213379  loss: 4.5464 (4.5464)  acc1: 23.0469 (23.0469)  acc5: 44.1406 (44.1406)  time: 4.8879  data: 4.3195  max mem: 9735
+Epoch: [17]  [ 50/125]  eta: 0:00:50  lr: 0.00019802207729556018  img/s: 2146.440477927727  loss_kd: 4.62335205078125  loss_ce: 4.62335205078125  loss: 4.5606 (4.7696)  acc1: 23.0469 (22.0129)  acc5: 43.7500 (42.4096)  time: 0.6818  data: 0.5625  max mem: 9735
+Epoch: [17]  [100/125]  eta: 0:00:15  lr: 0.00019802207729556018  img/s: 2133.7381071139716  loss_kd: 4.64179801940918  loss_ce: 4.64179801940918  loss: 4.5409 (4.7607)  acc1: 22.2656 (22.3314)  acc5: 44.5312 (42.8140)  time: 0.5509  data: 0.4209  max mem: 9735
+Epoch: [17] Total time: 0:01:18
+Test:   [ 0/49]  eta: 0:07:01  loss: 3.6364 (3.6364)  acc1: 36.7188 (36.7188)  acc5: 64.8438 (64.8438)  time: 8.5991  data: 8.4055  max mem: 9735
+Test:  Total time: 0:00:40
+Test:  Acc@1 25.752 Acc@5 48.794
+Epoch: [18]  [  0/125]  eta: 0:08:05  lr: 0.0001727457514062632  img/s: 1744.2908240263168  loss_kd: 4.242093086242676  loss_ce: 4.242093086242676  loss: 4.2421 (4.2421)  acc1: 26.1719 (26.1719)  acc5: 48.4375 (48.4375)  time: 3.8878  data: 3.7396  max mem: 9735
+Epoch: [18]  [ 50/125]  eta: 0:00:50  lr: 0.0001727457514062632  img/s: 1393.9412897965967  loss_kd: 4.087772846221924  loss_ce: 4.087772846221924  loss: 4.4521 (4.7141)  acc1: 25.0000 (23.3839)  acc5: 45.7031 (43.9491)  time: 0.7100  data: 0.5696  max mem: 9735
+Epoch: [18]  [100/125]  eta: 0:00:16  lr: 0.0001727457514062632  img/s: 2077.730093307481  loss_kd: 4.131984710693359  loss_ce: 4.131984710693359  loss: 4.4047 (4.7439)  acc1: 24.6094 (23.1281)  acc5: 46.4844 (43.7461)  time: 0.6334  data: 0.5056  max mem: 9735
+Epoch: [18] Total time: 0:01:19
+Test:   [ 0/49]  eta: 0:02:17  loss: 3.5206 (3.5206)  acc1: 41.0156 (41.0156)  acc5: 67.5781 (67.5781)  time: 2.7977  data: 2.6103  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 26.586 Acc@5 49.996
+Epoch: [19]  [  0/125]  eta: 0:09:57  lr: 0.00014831583923105002  img/s: 1988.4623379124644  loss_kd: 4.060632705688477  loss_ce: 4.060632705688477  loss: 4.0606 (4.0606)  acc1: 28.9062 (28.9062)  acc5: 53.1250 (53.1250)  time: 4.7767  data: 4.6465  max mem: 9735
+Epoch: [19]  [ 50/125]  eta: 0:00:48  lr: 0.00014831583923105002  img/s: 2305.3939092048986  loss_kd: 4.364171504974365  loss_ce: 4.364171504974365  loss: 4.4041 (4.7101)  acc1: 26.1719 (23.3915)  acc5: 48.4375 (43.9108)  time: 0.6719  data: 0.5535  max mem: 9735
+Epoch: [19]  [100/125]  eta: 0:00:15  lr: 0.00014831583923105002  img/s: 2266.047801046347  loss_kd: 4.258040428161621  loss_ce: 4.258040428161621  loss: 4.2560 (4.6210)  acc1: 25.7812 (24.2342)  acc5: 50.7812 (45.6567)  time: 0.4915  data: 0.3742  max mem: 9735
+Epoch: [19] Total time: 0:01:15
+Test:   [ 0/49]  eta: 0:02:29  loss: 3.5521 (3.5521)  acc1: 41.0156 (41.0156)  acc5: 68.3594 (68.3594)  time: 3.0501  data: 2.8534  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 27.006 Acc@5 50.282
+Epoch: [20]  [  0/125]  eta: 0:09:53  lr: 0.00012500000000000008  img/s: 1608.0551243247614  loss_kd: 4.455539226531982  loss_ce: 4.455539226531982  loss: 4.4555 (4.4555)  acc1: 28.5156 (28.5156)  acc5: 47.6562 (47.6562)  time: 4.7477  data: 4.5875  max mem: 9735
+Epoch: [20]  [ 50/125]  eta: 0:00:51  lr: 0.00012500000000000008  img/s: 2148.639616113469  loss_kd: 4.190092086791992  loss_ce: 4.190092086791992  loss: 4.3141 (4.7375)  acc1: 26.5625 (24.0273)  acc5: 50.7812 (45.0521)  time: 0.6921  data: 0.5563  max mem: 9735
+Epoch: [20]  [100/125]  eta: 0:00:15  lr: 0.00012500000000000008  img/s: 2238.1371553398867  loss_kd: 4.353754997253418  loss_ce: 4.353754997253418  loss: 4.3489 (4.6854)  acc1: 26.5625 (24.5746)  acc5: 48.8281 (45.6838)  time: 0.5252  data: 0.4036  max mem: 9735
+Epoch: [20] Total time: 0:01:18
+Test:   [ 0/49]  eta: 0:03:20  loss: 3.5195 (3.5195)  acc1: 41.0156 (41.0156)  acc5: 66.7969 (66.7969)  time: 4.0832  data: 3.8961  max mem: 9735
+Test:  Total time: 0:00:20
+Test:  Acc@1 28.390 Acc@5 51.592
+Epoch: [21]  [  0/125]  eta: 0:10:03  lr: 0.00010305368692688177  img/s: 1456.175824652719  loss_kd: 4.161627292633057  loss_ce: 4.161627292633057  loss: 4.1616 (4.1616)  acc1: 30.8594 (30.8594)  acc5: 56.6406 (56.6406)  time: 4.8241  data: 4.6472  max mem: 9735
+Epoch: [21]  [ 50/125]  eta: 0:00:50  lr: 0.00010305368692688177  img/s: 2254.5476046496  loss_kd: 3.8769278526306152  loss_ce: 3.8769278526306152  loss: 4.2521 (4.5779)  acc1: 27.7344 (26.7157)  acc5: 52.3438 (48.8664)  time: 0.7240  data: 0.5791  max mem: 9735
+Epoch: [21]  [100/125]  eta: 0:00:15  lr: 0.00010305368692688177  img/s: 2274.2696314119535  loss_kd: 4.054936408996582  loss_ce: 4.054936408996582  loss: 4.1458 (4.6362)  acc1: 29.2969 (26.2686)  acc5: 52.3438 (47.6408)  time: 0.5355  data: 0.4003  max mem: 9735
+Epoch: [21] Total time: 0:01:17
+Test:   [ 0/49]  eta: 0:02:09  loss: 3.3652 (3.3652)  acc1: 44.9219 (44.9219)  acc5: 71.4844 (71.4844)  time: 2.6360  data: 2.4424  max mem: 9735
+Test:  Total time: 0:00:14
+Test:  Acc@1 28.696 Acc@5 52.468
+Epoch: [22]  [  0/125]  eta: 0:09:00  lr: 8.271734841028554e-05  img/s: 826.5751806162314  loss_kd: 4.44536828994751  loss_ce: 4.44536828994751  loss: 4.4454 (4.4454)  acc1: 30.4688 (30.4688)  acc5: 51.1719 (51.1719)  time: 4.3268  data: 4.0158  max mem: 9735
+Epoch: [22]  [ 50/125]  eta: 0:00:47  lr: 8.271734841028554e-05  img/s: 2285.3982934143846  loss_kd: 4.220498085021973  loss_ce: 4.220498085021973  loss: 4.1446 (4.5098)  acc1: 29.2969 (27.0527)  acc5: 51.5625 (48.8664)  time: 0.6647  data: 0.5000  max mem: 9735
+Epoch: [22]  [100/125]  eta: 0:00:14  lr: 8.271734841028554e-05  img/s: 2273.763950270101  loss_kd: 5.292611122131348  loss_ce: 5.292611122131348  loss: 4.2948 (4.5494)  acc1: 29.2969 (27.1426)  acc5: 51.5625 (48.9248)  time: 0.5644  data: 0.4405  max mem: 9735
+Epoch: [22] Total time: 0:01:14
+Test:   [ 0/49]  eta: 0:02:28  loss: 3.3340 (3.3340)  acc1: 44.5312 (44.5312)  acc5: 70.3125 (70.3125)  time: 3.0399  data: 2.8590  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 29.508 Acc@5 53.160
+Epoch: [23]  [  0/125]  eta: 0:08:45  lr: 6.421379363065152e-05  img/s: 1903.706425401621  loss_kd: 3.9393324851989746  loss_ce: 3.9393324851989746  loss: 3.9393 (3.9393)  acc1: 33.5938 (33.5938)  acc5: 57.4219 (57.4219)  time: 4.2035  data: 4.0675  max mem: 9735
+Epoch: [23]  [ 50/125]  eta: 0:00:45  lr: 6.421379363065152e-05  img/s: 2127.1691823089495  loss_kd: 3.8696670532226562  loss_ce: 3.8696670532226562  loss: 4.0493 (4.3580)  acc1: 30.8594 (29.7105)  acc5: 55.0781 (51.7387)  time: 0.6226  data: 0.4675  max mem: 9735
+Epoch: [23]  [100/125]  eta: 0:00:13  lr: 6.421379363065152e-05  img/s: 888.2745411753027  loss_kd: 4.8751044273376465  loss_ce: 4.8751044273376465  loss: 4.0967 (4.4673)  acc1: 28.9062 (28.4421)  acc5: 53.9062 (50.2359)  time: 0.5005  data: 0.3410  max mem: 9735
+Epoch: [23] Total time: 0:01:08
+Test:   [ 0/49]  eta: 0:02:16  loss: 3.3324 (3.3324)  acc1: 48.0469 (48.0469)  acc5: 69.5312 (69.5312)  time: 2.7795  data: 2.5906  max mem: 9735
+Test:  Total time: 0:00:14
+Test:  Acc@1 30.010 Acc@5 53.576
+Epoch: [24]  [  0/125]  eta: 0:08:14  lr: 4.7745751406263184e-05  img/s: 1594.6550231830076  loss_kd: 3.9844655990600586  loss_ce: 3.9844655990600586  loss: 3.9845 (3.9845)  acc1: 33.5938 (33.5938)  acc5: 53.9062 (53.9062)  time: 3.9535  data: 3.7922  max mem: 9735
+Epoch: [24]  [ 50/125]  eta: 0:00:48  lr: 4.7745751406263184e-05  img/s: 2285.2621000095774  loss_kd: 3.856588363647461  loss_ce: 3.856588363647461  loss: 4.0114 (4.3599)  acc1: 31.2500 (29.4501)  acc5: 55.4688 (51.3404)  time: 0.6827  data: 0.5504  max mem: 9735
+Epoch: [24]  [100/125]  eta: 0:00:15  lr: 4.7745751406263184e-05  img/s: 2275.8603803338733  loss_kd: 4.106894493103027  loss_ce: 4.106894493103027  loss: 4.1066 (4.3296)  acc1: 31.6406 (30.1864)  acc5: 54.2969 (52.2239)  time: 0.5261  data: 0.4003  max mem: 9735
+Epoch: [24] Total time: 0:01:14
+Test:   [ 0/49]  eta: 0:02:57  loss: 3.3136 (3.3136)  acc1: 45.3125 (45.3125)  acc5: 69.1406 (69.1406)  time: 3.6265  data: 3.4299  max mem: 9735
+Test:  Total time: 0:00:18
+Test:  Acc@1 30.270 Acc@5 53.992
+Epoch: [25]  [  0/125]  eta: 0:09:37  lr: 3.349364905389034e-05  img/s: 1997.7855789947644  loss_kd: 4.076578140258789  loss_ce: 4.076578140258789  loss: 4.0766 (4.0766)  acc1: 28.1250 (28.1250)  acc5: 53.1250 (53.1250)  time: 4.6209  data: 4.4918  max mem: 9735
+Epoch: [25]  [ 50/125]  eta: 0:00:48  lr: 3.349364905389034e-05  img/s: 2253.412041234344  loss_kd: 4.010152339935303  loss_ce: 4.010152339935303  loss: 3.9447 (4.4227)  acc1: 32.8125 (29.3352)  acc5: 56.6406 (51.4400)  time: 0.6838  data: 0.5349  max mem: 9735
+Epoch: [25]  [100/125]  eta: 0:00:15  lr: 3.349364905389034e-05  img/s: 2297.2702637361226  loss_kd: 4.073177337646484  loss_ce: 4.073177337646484  loss: 4.0732 (4.4510)  acc1: 32.0312 (29.0261)  acc5: 55.4688 (50.9476)  time: 0.5179  data: 0.3830  max mem: 9735
+Epoch: [25] Total time: 0:01:16
+Test:   [ 0/49]  eta: 0:02:14  loss: 3.3065 (3.3065)  acc1: 46.8750 (46.8750)  acc5: 71.8750 (71.8750)  time: 2.7355  data: 2.5407  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 30.682 Acc@5 54.354
+Epoch: [26]  [  0/125]  eta: 0:09:26  lr: 2.1613635589349765e-05  img/s: 932.7087928506404  loss_kd: 4.248437881469727  loss_ce: 4.248437881469727  loss: 4.2484 (4.2484)  acc1: 35.1562 (35.1562)  acc5: 53.5156 (53.5156)  time: 4.5290  data: 4.2537  max mem: 9735
+Epoch: [26]  [ 50/125]  eta: 0:00:51  lr: 2.1613635589349765e-05  img/s: 2283.4007970431994  loss_kd: 4.493240833282471  loss_ce: 4.493240833282471  loss: 4.0507 (4.5317)  acc1: 31.2500 (28.8833)  acc5: 55.4688 (50.2374)  time: 0.7373  data: 0.5930  max mem: 9735
+Epoch: [26]  [100/125]  eta: 0:00:15  lr: 2.1613635589349765e-05  img/s: 2284.5424901543183  loss_kd: 3.7470970153808594  loss_ce: 3.7470970153808594  loss: 4.0376 (4.4630)  acc1: 32.8125 (29.7494)  acc5: 55.8594 (51.7443)  time: 0.5979  data: 0.4535  max mem: 9735
+Epoch: [26] Total time: 0:01:18
+Test:   [ 0/49]  eta: 0:02:25  loss: 3.3119 (3.3119)  acc1: 46.0938 (46.0938)  acc5: 70.3125 (70.3125)  time: 2.9757  data: 2.7929  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 30.884 Acc@5 54.524
+Epoch: [27]  [  0/125]  eta: 0:08:34  lr: 1.223587092621162e-05  img/s: 629.8743843462631  loss_kd: 3.8338782787323  loss_ce: 3.8338782787323  loss: 3.8339 (3.8339)  acc1: 36.3281 (36.3281)  acc5: 57.4219 (57.4219)  time: 4.1191  data: 3.7113  max mem: 9735
+Epoch: [27]  [ 50/125]  eta: 0:00:48  lr: 1.223587092621162e-05  img/s: 2272.618571800478  loss_kd: 4.908514499664307  loss_ce: 4.908514499664307  loss: 3.9953 (4.4086)  acc1: 31.6406 (30.1164)  acc5: 55.8594 (51.6621)  time: 0.6807  data: 0.5471  max mem: 9735
+Epoch: [27]  [100/125]  eta: 0:00:15  lr: 1.223587092621162e-05  img/s: 2296.3515246393176  loss_kd: 3.831235408782959  loss_ce: 3.831235408782959  loss: 3.9861 (4.3817)  acc1: 30.0781 (30.0665)  acc5: 55.0781 (52.2277)  time: 0.4972  data: 0.3533  max mem: 9735
+Epoch: [27] Total time: 0:01:14
+Test:   [ 0/49]  eta: 0:02:15  loss: 3.2630 (3.2630)  acc1: 47.6562 (47.6562)  acc5: 71.0938 (71.0938)  time: 2.7636  data: 2.5651  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 31.072 Acc@5 54.776
+Epoch: [28]  [  0/125]  eta: 0:09:20  lr: 5.46309981654858e-06  img/s: 2004.850559775343  loss_kd: 4.891571044921875  loss_ce: 4.891571044921875  loss: 4.8916 (4.8916)  acc1: 31.6406 (31.6406)  acc5: 52.3438 (52.3438)  time: 4.4852  data: 4.3566  max mem: 9735
+Epoch: [28]  [ 50/125]  eta: 0:00:48  lr: 5.46309981654858e-06  img/s: 2298.1700626690867  loss_kd: 4.031518936157227  loss_ce: 4.031518936157227  loss: 3.9713 (4.2453)  acc1: 32.4219 (31.3113)  acc5: 57.0312 (54.4271)  time: 0.6814  data: 0.5328  max mem: 9735
+Epoch: [28]  [100/125]  eta: 0:00:14  lr: 5.46309981654858e-06  img/s: 2287.204389761767  loss_kd: 5.797471523284912  loss_ce: 5.797471523284912  loss: 4.1269 (4.4134)  acc1: 32.0312 (29.9312)  acc5: 55.0781 (52.2393)  time: 0.4856  data: 0.3647  max mem: 9735
+Epoch: [28] Total time: 0:01:13
+Test:   [ 0/49]  eta: 0:02:16  loss: 3.2798 (3.2798)  acc1: 46.0938 (46.0938)  acc5: 72.2656 (72.2656)  time: 2.7794  data: 2.5891  max mem: 9735
+Test:  Total time: 0:00:15
+Test:  Acc@1 31.006 Acc@5 54.822
+Epoch: [29]  [  0/125]  eta: 0:08:22  lr: 1.3695261579316502e-06  img/s: 999.6414055321205  loss_kd: 4.009200572967529  loss_ce: 4.009200572967529  loss: 4.0092 (4.0092)  acc1: 34.7656 (34.7656)  acc5: 57.0312 (57.0312)  time: 4.0216  data: 3.7640  max mem: 9735
+Epoch: [29]  [ 50/125]  eta: 0:00:52  lr: 1.3695261579316502e-06  img/s: 2160.7245681536456  loss_kd: 3.812579870223999  loss_ce: 3.812579870223999  loss: 3.9573 (4.3397)  acc1: 32.4219 (31.2270)  acc5: 58.2031 (53.5156)  time: 0.7548  data: 0.6333  max mem: 9735
+Epoch: [29]  [100/125]  eta: 0:00:16  lr: 1.3695261579316502e-06  img/s: 2298.002833600856  loss_kd: 4.626428127288818  loss_ce: 4.626428127288818  loss: 4.0869 (4.4117)  acc1: 31.6406 (30.3721)  acc5: 55.0781 (52.5255)  time: 0.5548  data: 0.4255  max mem: 9735
+Epoch: [29] Total time: 0:01:21
+Test:   [ 0/49]  eta: 0:06:13  loss: 3.2906 (3.2906)  acc1: 46.4844 (46.4844)  acc5: 71.4844 (71.4844)  time: 7.6315  data: 7.4486  max mem: 9735
+Test:  Total time: 0:00:45
+Test:  Acc@1 31.074 Acc@5 54.822
+Training time 0:51:06
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33m_work_hdd_bewo_mahdi_agentic_prune_models_FINAL_BEST_PRUNED_deit_small_patch16_224_imagenet_rev1_ratio0.077_selectedByTop173.9.pth[0m at: [34mhttps://wandb.ai/msharif-iowa-state-university/Pruning/runs/tfbzy9yu[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20250729_011722-tfbzy9yu/logs[0m

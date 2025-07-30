@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --job-name=finetune_resnet50
 #SBATCH --account=bewo-delta-gpu
-#SBATCH --partition=gpuA100x4
+#SBATCH --partition=gpuA100x4-interactive
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:4
-#SBATCH --cpus-per-task=64
-#SBATCH --mem=128G
-#SBATCH --time=48:00:00
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=64G
+#SBATCH --time=01:00:00
 #SBATCH --output=logs/slurm/agentic_prune/finetune_resnet50_%j.out
 #SBATCH --error=logs/slurm/agentic_prune/finetune_resnet50_%j.err
 
@@ -27,8 +27,8 @@ $CONDA_PYTHON -m torch.distributed.run \
     train.py \
     --data-path /work/hdd/bewo/mahdi/imagenet \
     --model resnet50.fb_in1k \
-    --pruned-model /work/hdd/bewo/mahdi/agentic_prune/models/pruned_resnet50_imagenet_cnn_learning.pth \
-    --epochs 100 \
+    --pruned-model /work/hdd/bewo/mahdi/agentic_prune/models/final_pruned_resnet50_imagenet_rev4_ratio0.098.pt \
+    --epochs 1 \
     --batch-size 64 \
     --opt sgd \
     --lr-scheduler steplr \
@@ -36,6 +36,6 @@ $CONDA_PYTHON -m torch.distributed.run \
     --lr 0.04 \
     --weight-decay 1e-4 \
     --amp \
-    --output-dir /work/hdd/bewo/mahdi/agentic_prune/finetuned_resnet50 \
+    --output-dir /work/hdd/bewo/mahdi/agentic_prune/final/finetuned_resnet50_1ep \
     --val-resize 256 \
     --interpolation bilinear
