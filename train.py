@@ -29,9 +29,8 @@ import timm
 import torch_pruning as tp
 import wandb
 
-from torch.serialization import add_safe_globals          # <‑‑ NEW
-from timm.models.vision_transformer import VisionTransformer   # <‑‑ NEW
-
+from torch.serialization import add_safe_globals
+from timm.models.vision_transformer import (VisionTransformer)
 
 add_safe_globals([VisionTransformer]) 
 
@@ -56,17 +55,25 @@ def train_one_epoch(model, teacher_model, criterion, optimizer, data_loader, dev
         image, target = image.to(device), target.to(device)
         with torch.cuda.amp.autocast(enabled=scaler is not None):
 
-            if teacher_model is not None:
-                output, output_distill = model(image)
+            # ── forward pass ─ supports plain & distilled DeiT
+            out = model(image)
+            if isinstance(out, tuple):          # distilled ckpt
+                output, output_distill = out
+            else:                               # plain ckpt
+                output, output_distill = out, None
+
+            # ── loss
+            if teacher_model is not None and output_distill is not None:
                 with torch.no_grad():
                     output_teacher = teacher_model(image)
-                loss_kd = criterion(output_distill, output_teacher.max(1)[1])
+                loss_kd = criterion(output_distill, output_teacher.argmax(1))
                 loss_ce = criterion(output, target)
-                loss = 0.5 * loss_kd + 0.5 * loss_ce
+                loss    = 0.5 * loss_kd + 0.5 * loss_ce
             else:
-                output = model(image)
-                loss = criterion(output, target)
-                loss_kd = loss_ce = loss
+                loss_ce = criterion(output, target)
+                loss_kd = loss_ce          # for logging
+                loss    = loss_ce
+
         optimizer.zero_grad()
         if scaler is not None:
             scaler.scale(loss).backward()
@@ -287,7 +294,8 @@ def main(args):
             # track hyperparameters and run metadata
             config=args,
         )
-    device = torch.device(args.device)
+    # OLD
+    # device = torch.device(args.device)
 
     if args.use_deterministic_algorithms:
         torch.backends.cudnn.benchmark = False
@@ -329,48 +337,104 @@ def main(args):
 
     print("Creating model")
 
-    def build_skeleton(sd, num_classes):
-        """
-        Build a VisionTransformer skeleton that matches *either* a
-        plain DeiT‑small or a DeiT‑small‑Distilled state‑dict.
-        """
+    # def build_skeleton(sd, num_classes):
+    #     """
+    #     Build a VisionTransformer skeleton that matches *either* a
+    #     plain DeiT‑small or a DeiT‑small‑Distilled state‑dict.
+    #     """
+    #     distilled = any(k.startswith("head_dist") for k in sd)
+    #     model_name = (
+    #         "deit_small_distilled_patch16_224"   # has dist_token + head_dist
+    #         if distilled
+    #         else "deit_small_patch16_224"
+    #     )
+    #     return timm.create_model(model_name, num_classes=num_classes, pretrained=False)
+
+    # ckpt = torch.load(args.model, map_location="cpu", weights_only=False)
+
+    # # ──• case A: the file already *is* a pickled nn.Module ────────────
+    # if isinstance(ckpt, torch.nn.Module):
+    #     model = ckpt
+
+    # # ──• case B: checkpoint dict that *contains* a pickled model ─────
+    # elif isinstance(ckpt, dict) and isinstance(ckpt.get("model"), torch.nn.Module):
+    #     model = ckpt["model"]
+
+    # # ──• case C: checkpoint dict or plain state‑dict ─────────────────
+    # else:
+    #     sd = ckpt.get("model_state_dict", ckpt)           # sd = state‑dict
+    #     model = build_skeleton(sd, num_classes)
+    #     missing, unexpected = model.load_state_dict(sd, strict=False)
+    #     print(f"‑ Loaded state‑dict ▶  {len(missing)} missing  {len(unexpected)} unexpected keys")
+
+    
+    # if args.teacher_model is not None:
+    #     teacher_model = timm.create_model(args.teacher_model, pretrained=True).eval().to(device)
+    #     model.distilled_training = True
+    # else:
+    #     teacher_model = None
+
+    # #if args.stochastic_depth > 0.0:
+    # #    pbench.pruning.set_stochastic_depth(model, args.stochastic_depth)
+    # model.to(device)
+    # macs, params = tp.utils.count_ops_and_params(model, torch.randn(1, 3, 224, 224).to(device))
+    # print("macs: {:.2f} G, params: {:.2f} M".format(macs/1e9, params/1e6))
+
+    # ─────────────────────────  Creating / loading the model  ─────────────────────────
+    print("Creating / loading model")
+
+    def try_build_from_state_dict(sd, num_classes):
+        "Return a model matching `sd`; raise SizeMismatch if it can’t be loaded."
+        from torch.nn.modules.module import _IncompatibleKeys
         distilled = any(k.startswith("head_dist") for k in sd)
-        return timm.create_model(
-            "deit_small_patch16_224",
-            num_classes=num_classes,
-            distilled=distilled,      # adds dist_token + head_dist if needed
-            pretrained=False,
-        )
+        name = "deit_small_distilled_patch16_224" if distilled else "deit_small_patch16_224"
+        model = timm.create_model(name, num_classes=num_classes, pretrained=False)
+        try:
+            # strict=False allows missing/unexpected keys but not size mismatches
+            model.load_state_dict(sd, strict=False)
+            return model
+        except RuntimeError as e:        # size mismatch → give up
+            raise _IncompatibleKeys([], [])  # dummy to signal failure
 
-    ckpt = torch.load(args.model, map_location="cpu", weights_only=False)
+    ckpt   = torch.load(args.model, map_location="cpu", weights_only=False)
+    model  = None                       # will be set in one of the branches
 
-    # ──• case A: the file already *is* a pickled nn.Module ────────────
+    # ── 1) Checkpoint *is* a pruned model already ─────────────────────────
     if isinstance(ckpt, torch.nn.Module):
         model = ckpt
 
-    # ──• case B: checkpoint dict that *contains* a pickled model ─────
+    # ── 2) Checkpoint dict contains a pickled model ───────────────────────
     elif isinstance(ckpt, dict) and isinstance(ckpt.get("model"), torch.nn.Module):
         model = ckpt["model"]
 
-    # ──• case C: checkpoint dict or plain state‑dict ─────────────────
+    # ── 3) Checkpoint gives only a (pruned) state‑dict ────────────────────
     else:
-        state_dict = ckpt.get("model_state_dict", ckpt)   # fall‑back to whole dict
-        model = build_skeleton(state_dict, num_classes)
-        missing, unexpected = model.load_state_dict(state_dict, strict=False)
-        print(f"‑ Loaded state‑dict ▶  {len(missing)} missing  {len(unexpected)} unexpected keys")
+        sd = ckpt.get("model_state_dict", ckpt)   # plain or wrapped sd
+        try:
+            model = try_build_from_state_dict(sd, num_classes)
+            print("✓ built fresh skeleton & loaded pruned state_dict")
+        except Exception:
+            # state‑dict does not fit a vanilla skeleton → last resort fail
+            raise RuntimeError(
+                "Checkpoint only contains a *pruned* state_dict whose layer "
+                "sizes no longer match any stock DeiT backbone.  "
+                "Save the full pruned model (`torch.save(model, ...)`) during "
+                "pruning so we can load it directly."
+            )
 
-    
+    assert isinstance(model, torch.nn.Module), "Model loading failed"
+    print("✔ model loaded → type:", type(model))
+
+    local_device = torch.device(f"cuda:{args.gpu}")        # e.g. cuda:0, cuda:1 …
+    model = model.to(local_device)
+
     if args.teacher_model is not None:
-        teacher_model = timm.create_model(args.teacher_model, pretrained=True).eval().to(device)
+        teacher_model = timm.create_model(
+            args.teacher_model, pretrained=True
+        ).eval().to(local_device)
         model.distilled_training = True
     else:
         teacher_model = None
-
-    #if args.stochastic_depth > 0.0:
-    #    pbench.pruning.set_stochastic_depth(model, args.stochastic_depth)
-    model.to(device)
-    macs, params = tp.utils.count_ops_and_params(model, torch.randn(1, 3, 224, 224).to(device))
-    print("macs: {:.2f} G, params: {:.2f} M".format(macs/1e9, params/1e6))
 
     if args.distributed and args.sync_bn:
         model = torch.nn.SyncBatchNorm.convert_sync_batchnorm(model)
@@ -408,7 +472,10 @@ def main(args):
     else:
         raise RuntimeError(f"Invalid optimizer {args.opt}. Only SGD, RMSprop and AdamW are supported.")
 
-    scaler = torch.cuda.amp.GradScaler() if args.amp else None
+    # OLD
+    # scaler = torch.cuda.amp.GradScaler() if args.amp else None
+    scaler = torch.amp.GradScaler(device_type="cuda") if args.amp else None
+
 
     args.lr_scheduler = args.lr_scheduler.lower()
     if args.lr_scheduler == "steplr":
@@ -444,11 +511,24 @@ def main(args):
     else:
         lr_scheduler = main_lr_scheduler
 
+    # model_without_ddp = model
+    # if args.distributed:
+    #     model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu])
+    #     if args.teacher_model is not None:
+    #         teacher_model = torch.nn.parallel.DistributedDataParallel(teacher_model, device_ids=[args.gpu])
+    #     model_without_ddp = model.module
+
     model_without_ddp = model
     if args.distributed:
-        model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu])
-        if args.teacher_model is not None:
-            teacher_model = torch.nn.parallel.DistributedDataParallel(teacher_model, device_ids=[args.gpu])
+        model = torch.nn.parallel.DistributedDataParallel(
+            model,
+            device_ids=[args.gpu],         # must match the cuda:N you just used
+            output_device=args.gpu
+        )
+        if teacher_model is not None:
+            teacher_model = torch.nn.parallel.DistributedDataParallel(
+                teacher_model, device_ids=[args.gpu], output_device=args.gpu
+            )
         model_without_ddp = model.module
 
     model_ema = None
