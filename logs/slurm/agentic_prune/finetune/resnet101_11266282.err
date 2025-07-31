@@ -1,0 +1,119 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank2]:[W730 19:26:17.916798695 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank0]:[W730 19:26:17.917664715 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank1]:[W730 19:26:17.918363422 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank3]:[W730 19:26:17.923477729 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+wandb: Currently logged in as: msharif (msharif-iowa-state-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.0
+wandb: Run data is saved locally in /u/ssoma1/mahdi/Isomorphic-Pruning/wandb/run-20250730_192618-2e7ydxj2
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run results_pruned_ResNet101_final_pruned_resnet101_imagenet_rev12_ratio0.447_full.pt
+wandb: ⭐️ View project at https://wandb.ai/msharif-iowa-state-university/Pruning
+wandb: 🚀 View run at https://wandb.ai/msharif-iowa-state-university/Pruning/runs/2e7ydxj2
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/scripts_new/finetune.py", line 640, in <module>
+[rank3]:     main(args)
+[rank3]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/scripts_new/finetune.py", line 310, in main
+[rank3]:     model = torch.load(args.model, map_location='cpu') #torchvision.models.get_model(args.model, weights=args.weights, num_classes=num_classes)
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/serialization.py", line 1486, in load
+[rank3]:     with _open_zipfile_reader(opened_file) as opened_zipfile:
+[rank3]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/serialization.py", line 771, in __init__
+[rank3]:     super().__init__(torch._C.PyTorchFileReader(name_or_buffer))
+[rank3]: RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/scripts_new/finetune.py", line 640, in <module>
+[rank2]:     main(args)
+[rank2]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/scripts_new/finetune.py", line 310, in main
+[rank2]:     model = torch.load(args.model, map_location='cpu') #torchvision.models.get_model(args.model, weights=args.weights, num_classes=num_classes)
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/serialization.py", line 1486, in load
+[rank2]:     with _open_zipfile_reader(opened_file) as opened_zipfile:
+[rank2]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/serialization.py", line 771, in __init__
+[rank2]:     super().__init__(torch._C.PyTorchFileReader(name_or_buffer))
+[rank2]: RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/scripts_new/finetune.py", line 640, in <module>
+[rank1]:     main(args)
+[rank1]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/scripts_new/finetune.py", line 310, in main
+[rank1]:     model = torch.load(args.model, map_location='cpu') #torchvision.models.get_model(args.model, weights=args.weights, num_classes=num_classes)
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/serialization.py", line 1486, in load
+[rank1]:     with _open_zipfile_reader(opened_file) as opened_zipfile:
+[rank1]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/serialization.py", line 771, in __init__
+[rank1]:     super().__init__(torch._C.PyTorchFileReader(name_or_buffer))
+[rank1]: RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/scripts_new/finetune.py", line 640, in <module>
+    main(args)
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/scripts_new/finetune.py", line 310, in main
+    model = torch.load(args.model, map_location='cpu') #torchvision.models.get_model(args.model, weights=args.weights, num_classes=num_classes)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/serialization.py", line 1486, in load
+    with _open_zipfile_reader(opened_file) as opened_zipfile:
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/serialization.py", line 771, in __init__
+    super().__init__(torch._C.PyTorchFileReader(name_or_buffer))
+RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/scripts_new/finetune.py", line 640, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/scripts_new/finetune.py", line 310, in main
+[rank0]:     model = torch.load(args.model, map_location='cpu') #torchvision.models.get_model(args.model, weights=args.weights, num_classes=num_classes)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/serialization.py", line 1486, in load
+[rank0]:     with _open_zipfile_reader(opened_file) as opened_zipfile:
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/serialization.py", line 771, in __init__
+[rank0]:     super().__init__(torch._C.PyTorchFileReader(name_or_buffer))
+[rank0]: RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory
+[rank0]:[W730 19:26:25.186754458 ProcessGroupNCCL.cpp:1479] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0730 19:26:26.106308 593621 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 593640 closing signal SIGTERM
+W0730 19:26:26.107022 593621 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 593641 closing signal SIGTERM
+W0730 19:26:26.107249 593621 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 593642 closing signal SIGTERM
+E0730 19:26:26.721751 593621 torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 3 (pid: 593643) of binary: /u/ssoma1/.conda/envs/iso_env/bin/python
+Traceback (most recent call last):
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 896, in <module>
+    main()
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts_new/finetune.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-07-30_19:26:26
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 593643)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

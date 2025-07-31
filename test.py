@@ -1,14 +1,21 @@
 import torch
-from timm.models.vision_transformer import VisionTransformer
-from timm.layers.patch_embed import PatchEmbed
+import timm
 
-# Trust these timm classes (safe if file is from your source)
-torch.serialization.add_safe_globals([
-    VisionTransformer,
-    PatchEmbed
-])
+# path = "results/pruned/ResNet101/final_pruned_resnet101_imagenet_rev12_ratio0.447_weights.pth"
+# try:
+#     obj = torch.load(path)
+#     print("SUCCESS: Loaded.")
+#     print("Type:", type(obj))
+# except Exception as e:
+#     print("FAILED:", e)
 
-# Now load the checkpoint
-ckpt = torch.load("/work/hdd/bewo/mahdi/agentic_prune/models/Final/final_pruned_deit_small_patch16_224_imagenet_rev1_ratio0.077.pt")
-print("✅ Checkpoint loaded successfully!")
-print("Type:", type(ckpt))
+
+
+
+# Reconstruct the architecture (must match original)
+model = timm.create_model("resnet101", pretrained=False, num_classes=1000)  # Change num_classes if needed
+
+# Load weights
+state_dict = torch.load("results/pruned/ResNet101/final_pruned_resnet101_imagenet_rev12_ratio0.447_full.pt", map_location='cpu')
+model.load_state_dict(state_dict)
+print("Model loaded successfully.")

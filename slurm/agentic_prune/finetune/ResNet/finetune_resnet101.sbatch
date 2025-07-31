@@ -8,8 +8,8 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=64G
 #SBATCH --time=01:00:00
-#SBATCH --output=logs/slurm/agentic_prune/finetune_resnet50_%j.out
-#SBATCH --error=logs/slurm/agentic_prune/finetune_resnet50_%j.err
+#SBATCH --output=logs/slurm/agentic_prune/finetune/resnet101_%j.out
+#SBATCH --error=logs/slurm/agentic_prune/finetune/resnet101_%j.err
 
 module load cuda
 
@@ -24,18 +24,17 @@ export PYTHONPATH=$PYTHONPATH:/u/ssoma1/mahdi/Isomorphic-Pruning
 $CONDA_PYTHON -m torch.distributed.run \
     --nproc_per_node=4 \
     --master_port=24552 \
-    train.py \
+    scripts_new/finetune.py \
     --data-path /work/hdd/bewo/mahdi/imagenet \
-    --model resnet50.fb_in1k \
-    --pruned-model /work/hdd/bewo/mahdi/agentic_prune/models/final_pruned_resnet50_imagenet_rev4_ratio0.098.pt \
+    --model results/pruned/ResNet101/final_pruned_resnet101_imagenet_rev12_ratio0.447_full.pt \
     --epochs 1 \
-    --batch-size 64 \
+    --batch-size 256 \
     --opt sgd \
     --lr-scheduler steplr \
     --lr-step-size 30 \
     --lr 0.04 \
     --weight-decay 1e-4 \
     --amp \
-    --output-dir /work/hdd/bewo/mahdi/agentic_prune/final/finetuned_resnet50_1ep \
-    --val-resize 256 \
+    --output-dir results/finetuned/ResNet101 \
+    --val-resize-size 256 \
     --interpolation bilinear
