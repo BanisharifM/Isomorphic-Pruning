@@ -9,28 +9,38 @@ import torch.nn as nn
 import timm
 import torch_pruning as tp
 import pbench
-pbench.forward_patch.patch_timm_forward()
+pbench.forward_patch.patch_timm_forward() # patch timm.forward() to support pruning on ViT
+
+from timm.models.convnext import ConvNeXt
+torch.serialization.add_safe_globals([ConvNeXt])
 
 import argparse
 
 def parse_args():
-    parser = argparse.ArgumentParser(description='Timm/Pruned Model Evaluation')
-    parser.add_argument('--model', default='resnet50', type=str, help='model name or path to pruned model')
-    parser.add_argument('--ckpt', default=None, type=str, help='fine-tuned checkpoint path')
+    parser = argparse.ArgumentParser(description='Timm ResNet Pruning')
+    
+    # Model
+    parser.add_argument('--model', default='resnet50', type=str, help='model name')
+    parser.add_argument('--ckpt', default=None, type=str, help='model name')
     parser.add_argument('--is-torchvision', default=False, action='store_true', help='use torchvision model')
-    parser.add_argument('--use-pruned', action='store_true', help='Use pruned model as base (if True, --model points to pruned model pth).')
-    parser.add_argument('--data-path', default='data/imagenet', type=str)
-    parser.add_argument('--disable-imagenet-mean-std', action='store_true')
-    parser.add_argument('--train-batch-size', default=64, type=int)
-    parser.add_argument('--val-batch-size', default=64, type=int)
-    parser.add_argument('--interpolation', default='bicubic', type=str, choices=['nearest', 'bilinear', 'bicubic', 'area', 'lanczos'])
-    parser.add_argument('--val-resize', default=256, type=int)
-    return parser.parse_args()
+    # Data
+    parser.add_argument('--data-path', default='data/imagenet', type=str, help='model name')
+    parser.add_argument('--disable-imagenet-mean-std', default=False, action='store_true', help='use imagenet mean and std')
+    parser.add_argument('--train-batch-size', default=64, type=int, help='train batch size')
+    parser.add_argument('--val-batch-size', default=64, type=int, help='val batch size')
+    parser.add_argument('--interpolation', default='bicubic', type=str, help='interpolation mode', choices=['nearest', 'bilinear', 'bicubic', 'area', 'lanczos'])
+    parser.add_argument('--val-resize', default=256, type=int, help='resize size')
+    
+    args = parser.parse_args()
+    return args
 
 def prepare_imagenet(imagenet_root, train_batch_size=64, val_batch_size=128, num_workers=4, use_imagenet_mean_std=True, interpolation='bicubic', val_resize=256):
+    """The imagenet_root should contain train and val folders.
+    """
     interpolation = getattr(T.InterpolationMode, interpolation.upper())
+
     print('Parsing dataset...')
-    train_dst = ImageFolder(os.path.join(imagenet_root, 'train'),
+    train_dst = ImageFolder(os.path.join(imagenet_root, 'train'), 
                             transform=pbench.data.presets.ClassificationPresetEval(
                                 mean=[0.485, 0.456, 0.406] if use_imagenet_mean_std else [0.5, 0.5, 0.5],
                                 std=[0.229, 0.224, 0.225] if use_imagenet_mean_std else [0.5, 0.5, 0.5],
@@ -39,7 +49,7 @@ def prepare_imagenet(imagenet_root, train_batch_size=64, val_batch_size=128, num
                                 interpolation=interpolation,
                             )
     )
-    val_dst = ImageFolder(os.path.join(imagenet_root, 'val'),
+    val_dst = ImageFolder(os.path.join(imagenet_root, 'val'), 
                           transform=pbench.data.presets.ClassificationPresetEval(
                                 mean=[0.485, 0.456, 0.406] if use_imagenet_mean_std else [0.5, 0.5, 0.5],
                                 std=[0.229, 0.224, 0.225] if use_imagenet_mean_std else [0.5, 0.5, 0.5],
@@ -68,46 +78,46 @@ def validate_model(model, val_loader, device):
 def main():
     args = parse_args()
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    train_loader, val_loader = prepare_imagenet(args.data_path, train_batch_size=args.train_batch_size,
-                                                val_batch_size=args.val_batch_size,
-                                                use_imagenet_mean_std=not args.disable_imagenet_mean_std,
-                                                val_resize=args.val_resize, interpolation=args.interpolation)
+    example_inputs = torch.randn(1,3,224,224)
+    train_loader, val_loader = prepare_imagenet(args.data_path, train_batch_size=args.train_batch_size, val_batch_size=args.val_batch_size, use_imagenet_mean_std = not args.disable_imagenet_mean_std, val_resize=args.val_resize, interpolation=args.interpolation)
 
-    # === Load base model
-    if args.use_pruned:
-        print(f"Loading pruned model object from {args.model}...")
-        model = torch.load(args.model, map_location='cpu')
+    # Load the model
+    
+    if os.path.isfile(args.model):
+        print("Loading model %s..."%args.model)
+        state = torch.load(args.model, map_location='cpu', weights_only=False)
+        if isinstance(state, dict):
+            if 'model' in state:
+                model = state['model']
+            elif 'state_dict_ema' in state:
+                model = state['state_dict_ema'] # compatible to convnext EMA
+            elif 'state_dict' in state:
+                model = state['state_dict']
+            else:
+                raise ValueError("Invalid checkpoint")
+        else:
+            model = state
+        model.eval()
     elif args.is_torchvision:
         import torchvision.models as models
-        print(f"Loading torchvision model {args.model}...")
-        model = models.__dict__[args.model](pretrained=True)
+        print("Loading torchvision model %s..."%args.model)
+        model = models.__dict__[args.model](pretrained=True).eval()
     else:
-        print(f"Loading timm model {args.model}...")
-        model = timm.create_model(args.model, pretrained=True)
-
-    # === Load fine-tuned checkpoint (if provided)
+        print("Loading timm model %s..."%args.model)
+        model = timm.create_model(args.model, pretrained=True).eval()
     if args.ckpt is not None:
-        print(f"Loading checkpoint from {args.ckpt}...")
-        state = torch.load(args.ckpt, map_location='cpu')
-        if isinstance(state, dict) and "model" in state:
-            if isinstance(state["model"], torch.nn.Module):
-                model.load_state_dict(state["model"].state_dict())
-            else:
-                model.load_state_dict(state["model"])
-        else:
-            model.load_state_dict(state)
-
+        print("Loading checkpoint from %s..."%args.ckpt)
+        ckpt = torch.load(args.ckpt, map_location='cpu')
+        model.load_state_dict(ckpt['model'])
     model.to(device)
-    model.eval()
-
     print(model)
     input_size = [3, 224, 224]
     example_inputs = torch.randn(1, *input_size).to(device)
     base_macs, base_params = tp.utils.count_ops_and_params(model, example_inputs)
-    print("MACs: %.4f G, Params: %.4f M" % (base_macs / 1e9, base_params / 1e6))
-    print(f"Evaluating {args.model}...")
+    print("MACs: %.4f G, Params: %.4f M"%(base_macs/1e9, base_params/1e6))
+    print("Evaluating %s..."%(args.model))
     acc_ori, loss_ori = validate_model(model, val_loader, device)
-    print("Accuracy: %.4f, Loss: %.4f" % (acc_ori, loss_ori))
+    print("Accuracy: %.4f, Loss: %.4f"%(acc_ori, loss_ori))
 
-if __name__ == '__main__':
+if __name__=='__main__':
     main()
