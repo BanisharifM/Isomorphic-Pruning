@@ -1,0 +1,318 @@
+| distributed init (rank 0): env://
+gpua046:252446:252446 [0] NCCL INFO Bootstrap : Using eth1:172.28.23.46<0>
+gpua046:252446:252446 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+gpua046:252446:252446 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+gpua046:252446:252446 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+gpua046:252446:252446 [0] NCCL INFO cudaDriverVersion 12040
+NCCL version 2.21.5+cuda11.0
+gpua046:252446:252446 [0] NCCL INFO Comm config Blocking set to 1
+gpua046:252446:252472 [0] NCCL INFO NET/IB : No device found.
+gpua046:252446:252472 [0] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.46<0> [1]hsn0:172.28.86.46<0> [2]hsn0.561:141.142.254.46<0>
+gpua046:252446:252472 [0] NCCL INFO Using non-device net plugin version 0
+gpua046:252446:252472 [0] NCCL INFO Using network Socket
+gpua046:252446:252472 [0] NCCL INFO ncclCommInitRank comm 0xe5805a0 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 85000 commId 0x6ad240fb743cae5e - Init START
+gpua046:252446:252472 [0] NCCL INFO Setting affinity for GPU 0 to 0f0000
+gpua046:252446:252472 [0] NCCL INFO comm 0xe5805a0 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+gpua046:252446:252472 [0] NCCL INFO Channel 00/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 01/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 02/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 03/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 04/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 05/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 06/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 07/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 08/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 09/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 10/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 11/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 12/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 13/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 14/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 15/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 16/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 17/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 18/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 19/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 20/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 21/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 22/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 23/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 24/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 25/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 26/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 27/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 28/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 29/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 30/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Channel 31/32 :    0
+gpua046:252446:252472 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+gpua046:252446:252472 [0] NCCL INFO P2P Chunksize set to 131072
+gpua046:252446:252472 [0] NCCL INFO Connected all rings
+gpua046:252446:252472 [0] NCCL INFO Connected all trees
+gpua046:252446:252472 [0] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+gpua046:252446:252472 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+gpua046:252446:252472 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+gpua046:252446:252472 [0] NCCL INFO ncclCommInitRank comm 0xe5805a0 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 85000 commId 0x6ad240fb743cae5e - Init COMPLETE
+Namespace(model='results/pruned/ResNet50/final_pruned_resnet50_imagenet_rev3_ratio0.508_full.pt', teacher_model=None, data_path='/work/hdd/bewo/mahdi/imagenet', device='cuda', batch_size=256, epochs=1, workers=8, opt='sgd', lr=0.04, momentum=0.9, weight_decay=0.0001, norm_weight_decay=None, bias_weight_decay=None, transformer_embedding_decay=None, label_smoothing=0.0, mixup_alpha=0.0, cutmix_alpha=0.0, lr_scheduler='steplr', lr_warmup_epochs=0, lr_warmup_method='constant', lr_warmup_decay=0.01, lr_step_size=30, lr_gamma=0.1, lr_min=0.0, print_freq=50, output_dir='results/finetuned/ResNet101', resume='', start_epoch=0, cache_dataset=False, sync_bn=False, test_only=False, auto_augment=None, ra_magnitude=9, augmix_severity=3, random_erase=0.0, color_jitter=None, amp=True, world_size=1, dist_url='env://', model_ema=False, model_ema_steps=32, model_ema_decay=0.99998, use_deterministic_algorithms=False, interpolation='bilinear', val_resize_size=256, val_crop_size=224, train_crop_size=224, clip_grad_norm=None, ra_sampler=False, ra_reps=3, weights=None, backend='pil', use_v2=False, is_huggingface=False, checkpoint_interval=10, no_imagenet_mean_std=False, stochastic_depth=0.0, rank=0, gpu=0, distributed=True, dist_backend='nccl')
+Loading data
+Loading training data
+Took 4.397830963134766
+Loading validation data
+Creating data loaders
+Creating model
+Loading pruned model from results/pruned/ResNet50/final_pruned_resnet50_imagenet_rev3_ratio0.508_full.pt
+macs: 2.41 G, params: 17.79 M
+DistributedDataParallel(
+  (module): ResNet(
+    (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+    (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (act1): ReLU(inplace=True)
+    (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+    (layer1): Sequential(
+      (0): Bottleneck(
+        (conv1): Conv2d(64, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(24, 28, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(28, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(28, 168, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(168, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 168, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): BatchNorm2d(168, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): Bottleneck(
+        (conv1): Conv2d(168, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(32, 36, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(36, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(36, 168, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(168, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+      )
+      (2): Bottleneck(
+        (conv1): Conv2d(168, 52, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(52, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(52, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(48, 168, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(168, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+      )
+    )
+    (layer2): Sequential(
+      (0): Bottleneck(
+        (conv1): Conv2d(168, 100, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(100, 84, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(84, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(84, 372, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(372, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv2d(168, 372, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(372, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): Bottleneck(
+        (conv1): Conv2d(372, 60, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(60, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(60, 80, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(80, 372, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(372, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+      )
+      (2): Bottleneck(
+        (conv1): Conv2d(372, 84, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(84, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(84, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(96, 372, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(372, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+      )
+      (3): Bottleneck(
+        (conv1): Conv2d(372, 76, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(76, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(76, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(72, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(72, 372, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(372, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+      )
+    )
+    (layer3): Sequential(
+      (0): Bottleneck(
+        (conv1): Conv2d(372, 228, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(228, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(228, 156, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(156, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(156, 952, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(952, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv2d(372, 952, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(952, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): Bottleneck(
+        (conv1): Conv2d(952, 184, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(184, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(184, 156, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(156, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(156, 952, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(952, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+      )
+      (2): Bottleneck(
+        (conv1): Conv2d(952, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(192, 952, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(952, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+      )
+      (3): Bottleneck(
+        (conv1): Conv2d(952, 212, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(212, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(212, 208, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(208, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(208, 952, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(952, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+      )
+      (4): Bottleneck(
+        (conv1): Conv2d(952, 216, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(216, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(216, 200, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(200, 952, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(952, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+      )
+      (5): Bottleneck(
+        (conv1): Conv2d(952, 216, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(216, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(216, 200, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(200, 952, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(952, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+      )
+    )
+    (layer4): Sequential(
+      (0): Bottleneck(
+        (conv1): Conv2d(952, 484, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(484, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(484, 492, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(492, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(492, 1580, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1580, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv2d(952, 1580, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(1580, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): Bottleneck(
+        (conv1): Conv2d(1580, 496, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(496, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(496, 448, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(448, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(448, 1580, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1580, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+      )
+      (2): Bottleneck(
+        (conv1): Conv2d(1580, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(384, 400, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (drop_block): Identity()
+        (act2): ReLU(inplace=True)
+        (aa): Identity()
+        (conv3): Conv2d(400, 1580, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1580, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (act3): ReLU(inplace=True)
+      )
+    )
+    (global_pool): SelectAdaptivePool2d(pool_type=avg, flatten=Flatten(start_dim=1, end_dim=-1))
+    (fc): Linear(in_features=1580, out_features=1000, bias=True)
+  )
+)
+Start training
+Epoch: [0]  [   0/5005]  eta: 23:28:08  lr: 0.04  img/s: 68.59931269194378  loss_kd: 4.326534271240234  loss_ce: 4.326534271240234  loss: 4.3265 (4.3265)  acc1: 24.6094 (24.6094)  acc5: 44.1406 (44.1406)  time: 16.8808  data: 13.1482  max mem: 14930
+Epoch: [0]  [  50/5005]  eta: 2:19:54  lr: 0.04  img/s: 1559.9592976461324  loss_kd: 2.800900459289551  loss_ce: 2.800900459289551  loss: 2.9749 (3.7132)  acc1: 39.8438 (30.5530)  acc5: 63.6719 (52.5123)  time: 1.6597  data: 1.4922  max mem: 14930
+Epoch: [0]  [ 100/5005]  eta: 2:04:51  lr: 0.04  img/s: 1559.1936478802065  loss_kd: 2.452106475830078  loss_ce: 2.452106475830078  loss: 2.2587 (3.0692)  acc1: 50.0000 (39.2791)  acc5: 75.7812 (62.5464)  time: 1.3850  data: 1.2161  max mem: 14930
+Epoch: [0]  [ 150/5005]  eta: 1:56:03  lr: 0.04  img/s: 1560.4013608111388  loss_kd: 2.295882225036621  loss_ce: 2.295882225036621  loss: 2.0260 (2.7435)  acc1: 55.4688 (44.1355)  acc5: 77.7344 (67.5135)  time: 0.8627  data: 0.6947  max mem: 14930
+Epoch: [0]  [ 200/5005]  eta: 1:37:33  lr: 0.04  img/s: 1558.421963648397  loss_kd: 1.7728312015533447  loss_ce: 1.7728312015533447  loss: 1.7947 (2.5295)  acc1: 58.5938 (47.4930)  acc5: 80.8594 (70.6254)  time: 0.4361  data: 0.2691  max mem: 14930
+Epoch: [0]  [ 250/5005]  eta: 1:22:05  lr: 0.04  img/s: 1559.3906515724732  loss_kd: 1.8408516645431519  loss_ce: 1.8408516645431519  loss: 1.7313 (2.3818)  acc1: 58.9844 (49.8724)  acc5: 82.0312 (72.7948)  time: 0.1877  data: 0.0232  max mem: 14930
+Epoch: [0]  [ 300/5005]  eta: 1:10:04  lr: 0.04  img/s: 1560.5260905962236  loss_kd: 1.5146408081054688  loss_ce: 1.5146408081054688  loss: 1.7450 (2.2737)  acc1: 60.5469 (51.6871)  acc5: 81.2500 (74.3070)  time: 0.1693  data: 0.0047  max mem: 14930
+Epoch: [0]  [ 350/5005]  eta: 1:06:50  lr: 0.04  img/s: 1564.345649082729  loss_kd: 1.6165660619735718  loss_ce: 1.6165660619735718  loss: 1.6447 (2.1884)  acc1: 60.9375 (53.1395)  acc5: 82.4219 (75.4930)  time: 1.2240  data: 1.0574  max mem: 14930
+Epoch: [0]  [ 400/5005]  eta: 1:13:45  lr: 0.04  img/s: 1399.836547386865  loss_kd: 1.615302562713623  loss_ce: 1.615302562713623  loss: 1.5793 (2.1154)  acc1: 63.2812 (54.3777)  acc5: 83.5938 (76.5109)  time: 1.7420  data: 1.5748  max mem: 14930
+Epoch: [0]  [ 450/5005]  eta: 1:16:54  lr: 0.04  img/s: 1564.4094668073128  loss_kd: 1.467214822769165  loss_ce: 1.467214822769165  loss: 1.4699 (2.0529)  acc1: 66.0156 (55.4653)  acc5: 85.9375 (77.4096)  time: 1.8091  data: 1.6408  max mem: 14930
+Epoch: [0]  [ 500/5005]  eta: 1:18:48  lr: 0.04  img/s: 1567.4513944036996  loss_kd: 1.4290868043899536  loss_ce: 1.4290868043899536  loss: 1.5036 (2.0020)  acc1: 64.8438 (56.3903)  acc5: 83.5938 (78.1133)  time: 1.1722  data: 1.0061  max mem: 14930

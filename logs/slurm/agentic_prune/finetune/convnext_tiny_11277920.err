@@ -1,0 +1,63 @@
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank0]:[W801 02:13:33.918065204 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+wandb: Currently logged in as: msharif (msharif-iowa-state-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.0
+wandb: Run data is saved locally in /u/ssoma1/mahdi/Isomorphic-Pruning/wandb/run-20250801_021333-zcgeh82s
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run results_pruned_ConvNext_Small_final_pruned_convnext_small_imagenet_rev4_ratio0.282_full.pt
+wandb: ⭐️ View project at https://wandb.ai/msharif-iowa-state-university/Pruning
+wandb: 🚀 View run at https://wandb.ai/msharif-iowa-state-university/Pruning/runs/zcgeh82s
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train2.py", line 655, in <module>
+    main(args)
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train2.py", line 328, in main
+    model = timm.create_model(args.model, pretrained=True)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/_factory.py", line 134, in create_model
+    raise RuntimeError('Unknown model (%s)' % model_name)
+RuntimeError: Unknown model (final_pruned_convnext_small_imagenet_rev4_ratio0)
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train2.py", line 655, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train2.py", line 328, in main
+[rank0]:     model = timm.create_model(args.model, pretrained=True)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/timm/models/_factory.py", line 134, in create_model
+[rank0]:     raise RuntimeError('Unknown model (%s)' % model_name)
+[rank0]: RuntimeError: Unknown model (final_pruned_convnext_small_imagenet_rev4_ratio0)
+[rank0]:[W801 02:13:39.783241266 ProcessGroupNCCL.cpp:1479] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+E0801 02:13:40.665319 255108 torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 255141) of binary: /u/ssoma1/.conda/envs/iso_env/bin/python
+Traceback (most recent call last):
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 896, in <module>
+    main()
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train2.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-08-01_02:13:40
+  host      : gpua055.delta.ncsa.illinois.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 255141)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

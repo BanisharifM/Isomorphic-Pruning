@@ -1,0 +1,16 @@
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank0]:[W801 03:36:45.402918541 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+wandb: Currently logged in as: msharif (msharif-iowa-state-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.0
+wandb: Run data is saved locally in /u/ssoma1/mahdi/Isomorphic-Pruning/wandb/run-20250801_033645-0iikwiv5
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run results_pruned_ResNet50_final_pruned_resnet50_imagenet_rev3_ratio0.508_full.pt
+wandb: ⭐️ View project at https://wandb.ai/msharif-iowa-state-university/Pruning
+wandb: 🚀 View run at https://wandb.ai/msharif-iowa-state-university/Pruning/runs/0iikwiv5
+/u/ssoma1/mahdi/Isomorphic-Pruning/train_ResNet50.py:397: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if args.amp else None
+/u/ssoma1/mahdi/Isomorphic-Pruning/train_ResNet50.py:53: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=scaler is not None):

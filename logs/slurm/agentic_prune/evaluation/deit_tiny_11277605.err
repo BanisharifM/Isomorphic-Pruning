@@ -1,0 +1,4 @@
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/evaluate_DeiT.py", line 97
+    elif args.is_torchvision:
+    ^
+SyntaxError: invalid syntax

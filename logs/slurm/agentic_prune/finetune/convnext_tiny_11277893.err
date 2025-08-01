@@ -1,0 +1,69 @@
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+usage: train.py [-h] [--model MODEL] [--teacher-model TEACHER_MODEL]
+                [--data-path DATA_PATH] [--device DEVICE] [-b BATCH_SIZE]
+                [--epochs N] [-j N] [--opt OPT] [--lr LR] [--momentum M]
+                [--wd W] [--norm-weight-decay NORM_WEIGHT_DECAY]
+                [--bias-weight-decay BIAS_WEIGHT_DECAY]
+                [--transformer-embedding-decay TRANSFORMER_EMBEDDING_DECAY]
+                [--label-smoothing LABEL_SMOOTHING]
+                [--mixup-alpha MIXUP_ALPHA] [--cutmix-alpha CUTMIX_ALPHA]
+                [--lr-scheduler LR_SCHEDULER]
+                [--lr-warmup-epochs LR_WARMUP_EPOCHS]
+                [--lr-warmup-method LR_WARMUP_METHOD]
+                [--lr-warmup-decay LR_WARMUP_DECAY]
+                [--lr-step-size LR_STEP_SIZE] [--lr-gamma LR_GAMMA]
+                [--lr-min LR_MIN] [--print-freq PRINT_FREQ]
+                [--output-dir OUTPUT_DIR] [--resume RESUME] [--start-epoch N]
+                [--cache-dataset] [--sync-bn] [--test-only]
+                [--auto-augment AUTO_AUGMENT] [--ra-magnitude RA_MAGNITUDE]
+                [--augmix-severity AUGMIX_SEVERITY]
+                [--random-erase RANDOM_ERASE] [--color-jitter COLOR_JITTER]
+                [--amp] [--world-size WORLD_SIZE] [--dist-url DIST_URL]
+                [--model-ema] [--model-ema-steps MODEL_EMA_STEPS]
+                [--model-ema-decay MODEL_EMA_DECAY]
+                [--use-deterministic-algorithms]
+                [--interpolation INTERPOLATION]
+                [--val-resize-size VAL_RESIZE_SIZE]
+                [--val-crop-size VAL_CROP_SIZE]
+                [--train-crop-size TRAIN_CROP_SIZE]
+                [--clip-grad-norm CLIP_GRAD_NORM] [--ra-sampler]
+                [--ra-reps RA_REPS] [--weights WEIGHTS] [--backend BACKEND]
+                [--use-v2] [--is_huggingface]
+                [--checkpoint-interval CHECKPOINT_INTERVAL]
+                [--no_imagenet_mean_std] [--stochastic-depth STOCHASTIC_DEPTH]
+train.py: error: unrecognized arguments: --sched cosine --smoothing 0.1 --aa rand-m9-mstd0.5-inc1 --reprob 0.25 --drop-path 0.1 --drop 0.1
+E0801 02:03:37.159171 251001 torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 2) local_rank: 0 (pid: 251034) of binary: /u/ssoma1/.conda/envs/iso_env/bin/python
+Traceback (most recent call last):
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 896, in <module>
+    main()
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-08-01_02:03:37
+  host      : gpua055.delta.ncsa.illinois.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 2 (pid: 251034)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

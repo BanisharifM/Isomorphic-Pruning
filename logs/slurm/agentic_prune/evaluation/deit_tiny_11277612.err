@@ -1,0 +1,9 @@
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+usage: evaluate_DeiT.py [-h] [--model MODEL] [--ckpt CKPT] [--is-torchvision]
+                        [--data-path DATA_PATH] [--disable-imagenet-mean-std]
+                        [--train-batch-size TRAIN_BATCH_SIZE]
+                        [--val-batch-size VAL_BATCH_SIZE]
+                        [--interpolation {nearest,bilinear,bicubic,area,lanczos}]
+                        [--val-resize VAL_RESIZE]
+evaluate_DeiT.py: error: unrecognized arguments: --model-arch deit_tiny_patch16_224 --checkpoint results/pruned/DeiT/Tiny/pruned_deit_tiny_patch16_224_imagenet_rev0_ratio0.5431.pth

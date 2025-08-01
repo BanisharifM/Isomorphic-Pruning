@@ -1,0 +1,8 @@
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/evaluate.py", line 123, in <module>
+    main()
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/evaluate.py", line 100, in main
+    model.eval()
+AttributeError: 'collections.OrderedDict' object has no attribute 'eval'

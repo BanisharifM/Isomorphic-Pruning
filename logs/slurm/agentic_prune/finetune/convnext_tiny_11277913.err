@@ -1,0 +1,73 @@
+/u/ssoma1/.local/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank0]:[W801 02:09:20.892860323 ProcessGroupNCCL.cpp:4718] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+wandb: Currently logged in as: msharif (msharif-iowa-state-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.0
+wandb: Run data is saved locally in /u/ssoma1/mahdi/Isomorphic-Pruning/wandb/run-20250801_020921-i9vrebx9
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run results_pruned_ConvNext_Small_final_pruned_convnext_small_imagenet_rev4_ratio0.282_full.pt
+wandb: ⭐️ View project at https://wandb.ai/msharif-iowa-state-university/Pruning
+wandb: 🚀 View run at https://wandb.ai/msharif-iowa-state-university/Pruning/runs/i9vrebx9
+Traceback (most recent call last):
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 640, in <module>
+    main(args)
+  File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 310, in main
+    model = torch.load(args.model, map_location='cpu') #torchvision.models.get_model(args.model, weights=args.weights, num_classes=num_classes)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/serialization.py", line 1524, in load
+    raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
+_pickle.UnpicklingError: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL timm.models.convnext.ConvNeXt was not an allowed global by default. Please use `torch.serialization.add_safe_globals([timm.models.convnext.ConvNeXt])` or the `torch.serialization.safe_globals([timm.models.convnext.ConvNeXt])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 640, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/u/ssoma1/mahdi/Isomorphic-Pruning/train.py", line 310, in main
+[rank0]:     model = torch.load(args.model, map_location='cpu') #torchvision.models.get_model(args.model, weights=args.weights, num_classes=num_classes)
+[rank0]:   File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/serialization.py", line 1524, in load
+[rank0]:     raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
+[rank0]: _pickle.UnpicklingError: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+[rank0]: 	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+[rank0]: 	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+[rank0]: 	WeightsUnpickler error: Unsupported global: GLOBAL timm.models.convnext.ConvNeXt was not an allowed global by default. Please use `torch.serialization.add_safe_globals([timm.models.convnext.ConvNeXt])` or the `torch.serialization.safe_globals([timm.models.convnext.ConvNeXt])` context manager to allowlist this global if you trust this class/function.
+
+[rank0]: Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+[rank0]:[W801 02:09:27.802399289 ProcessGroupNCCL.cpp:1479] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+E0801 02:09:28.753514 253217 torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 253250) of binary: /u/ssoma1/.conda/envs/iso_env/bin/python
+Traceback (most recent call last):
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/u/ssoma1/.conda/envs/iso_env/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 896, in <module>
+    main()
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/ssoma1/.local/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-08-01_02:09:28
+  host      : gpua055.delta.ncsa.illinois.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 253250)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
